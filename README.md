@@ -37,6 +37,12 @@ A web application for making your life easier while playing PokeRole.
 
 * Each user can have any number of trainers.
 
+* Each trainer is related to one or more settings.
+
+* NPC support.
+
+* Trainers can have relations to other trainers.
+
 * Each trainer has a profile (trainer card) with all their information.
 
 * Browse other public trainer cards.
@@ -62,3 +68,6 @@ A web application for making your life easier while playing PokeRole.
 ### Contest
 
 * Just do the board game.
+
+## Notes
+
