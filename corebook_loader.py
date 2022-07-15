@@ -1,26 +1,13 @@
 import xml.etree.ElementTree as ET
 import json
 import re
+import os
 
 data = 'data.xml'
 tree = ET.parse(data)
 root = tree.getroot()
 
-dex_entries = [dex for dex in root[3]]
-
-poke_dict = {}
-for child in dex_entries[1]:
-    poke_dict[child.tag.split('}')[-1]] = child.text
-
-class Pokemon():
-    def __init__(self):
-        self.a = 1
-
-
-input_dict = {}
-replace_dict = {}
-
-def fill_dict(input_dict, xml_entry):
+def fill_dict(input_dict, replace_dict, xml_entry, trim = True):
     for i,child in enumerate(xml_entry):
         # Hack so that child elements with the same tag doesn't overwrite
         # each other.
@@ -32,22 +19,46 @@ def fill_dict(input_dict, xml_entry):
         if list(child) == []:
             input_dict[child.tag] = {child.tag: child.text}
         else:
-            fill_dict(input_dict[child.tag], child)
+            fill_dict(input_dict[child.tag], replace_dict, child)
 
         for i,key in enumerate(child.attrib):
             input_dict[child.tag][key] = child.attrib[key]
     
-    return input_dict
+    json_string = json.dumps(input_dict, indent = 4)
+    
+    for key in replace_dict:
+        json_string=json_string.replace(key,replace_dict[key])
+    
+    if trim:
+        json_string = re.sub('{.*?}','',json_string)
 
-input_dict = fill_dict(input_dict, dex_entries[1])
-
-json_string = json.dumps(input_dict, indent = 4)
-
-for key in replace_dict:
-    json_string=json_string.replace(key,replace_dict[key])
-
-json_string = re.sub('{.*?}','',json_string)
+    return json_string
 
 
-with open('Bulbasaur.txt','w') as f:
-    f.write(json_string)
+def write_all_files(root):
+    os.mkdir('data')
+    os.chdir('data')
+    cur_dir = os.getcwd()
+    for i, entry_type in enumerate(root):
+        if i not in [1,6]:  # Hack to avoid Images and MonInstances, 
+                            # respectively. The former contains strange data 
+                            # strings and has no good way of being referenced
+                            # independently, while the latter is empty.
+            entry_type_name = entry_type.tag.split('}')[1]
+            os.mkdir(entry_type_name)
+            os.chdir(entry_type_name)
+            for child in entry_type:
+                print(child.tag)
+                temp_dict = {}
+                replace_dict = {}
+                json_string = fill_dict(temp_dict, replace_dict, child)
+                name_line = [line.replace(' ','').replace('"','') for line in json_string.split('\n') if '"Name": "' in line]
+                filename = name_line[0].split(':')[1]+'.txt'
+                with open(filename, 'w') as f:
+                    f.write(json_string)
+            os.chdir(cur_dir)
+        
+# json_string = fill_dict(input_dict, dex_entries[1])
+
+# with open('Bulbasaur.txt','w') as f:
+#     f.write(json_string)
