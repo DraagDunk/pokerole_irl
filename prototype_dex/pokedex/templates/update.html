@@ -1,0 +1,15 @@
+<h1>Update Pokedex Entry</h1>
+
+<form action="updaterecord/{{ dex_member.id }}" method="post">
+{% csrf_token %}
+Name:<br>
+<input name="name" value="{{ mymember.name }}">
+<br><br>
+Primary Type:<br>
+<input name="primarytype" value="{{ mymember.primarytype }}">
+<br><br>
+Secondary Type:<br>
+<input name="secondarytype" value="{{ mymember.secondarytype }}">
+<br><br>
+<input type="submit" value="Submit">
+</form>

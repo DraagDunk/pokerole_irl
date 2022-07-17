@@ -1,23 +1,18 @@
 <!DOCTYPE html>
-<html>
-<body>
-
-<h1>Pokédex</h1>
+<h1>Members</h1>
 
 <table border="1">
-{% for x in mypokemon %}
+{% for x in mypokedex %}
 <tr>
-<td>{{ x.id }}</td>
+<td><a href="update/{{ x.id }}">{{ x.id }}</a></td>
 <td>{{ x.name }}</td>
 <td>{{ x.primarytype }}</td>
 <td>{{ x.secondarytype }}</td>
+<td><a href="delete/{{ x.id }}">delete</a></td>
 </tr>
 {% endfor %}
 </table>
 
 <p>
-<a href="add/">Add pokémon</a>
+<a href="add/">Add member</a>
 </p>
-
-</body>
-</html>
