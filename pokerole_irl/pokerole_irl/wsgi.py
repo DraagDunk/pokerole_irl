@@ -1,5 +1,5 @@
 """
-WSGI config for prototype_dex project.
+WSGI config for pokerole_irl project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'prototype_dex.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pokerole_irl.settings')
 
 application = get_wsgi_application()

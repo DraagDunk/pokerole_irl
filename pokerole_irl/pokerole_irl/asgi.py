@@ -1,5 +1,5 @@
 """
-ASGI config for prototype_dex project.
+ASGI config for pokerole_irl project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'prototype_dex.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pokerole_irl.settings')
 
 application = get_asgi_application()
