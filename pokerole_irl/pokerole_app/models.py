@@ -15,36 +15,39 @@ class Move(models.Model):
 
 class PokemonSpecies(models.Model):
 
-    name = models.TextField()
-    types = models.ManyToManyField(Type, related_name="species")
-    abilities = models.ManyToManyField(Ability, related_name="species")
+    name = models.CharField(max_length=30)
+    variant = models.CharField(max_length=30, null=True, blank=True)
+    types = models.ManyToManyField(Type, related_name="species", blank=True)
+    abilities = models.ManyToManyField(
+        Ability, related_name="species", blank=True)
 
     height = models.FloatField(verbose_name="height (m)")
     weight = models.FloatField(verbose_name="weight (kg)")
 
     description = models.TextField()
 
-    evolves_by = models.TextField()
+    evolves_by = models.CharField(max_length=30, null=True, blank=True)
 
-    evolutions = models.ManyToManyField(related_name="preevolution")
+    evolutions = models.ManyToManyField(
+        'self', related_name="preevolution", blank=True)
 
     # Base stats
-    base_strength = models.IntegerField()
-    base_dexterity = models.IntegerField()
-    base_vitality = models.IntegerField()
-    base_special = models.IntegerField()
-    base_insight = models.IntegerField()
+    base_strength = models.PositiveIntegerField()
+    base_dexterity = models.PositiveIntegerField()
+    base_vitality = models.PositiveIntegerField()
+    base_special = models.PositiveIntegerField()
+    base_insight = models.PositiveIntegerField()
 
-    base_hp = models.IntegerField(verbose_name="base hit points")
+    base_hp = models.PositiveIntegerField(verbose_name="base hit points")
 
     # Maximum stats
-    max_strength = models.IntegerField()
-    max_dexterity = models.IntegerField()
-    max_vitality = models.IntegerField()
-    max_special = models.IntegerField()
-    max_insight = models.IntegerField()
+    max_strength = models.PositiveIntegerField()
+    max_dexterity = models.PositiveIntegerField()
+    max_vitality = models.PositiveIntegerField()
+    max_special = models.PositiveIntegerField()
+    max_insight = models.PositiveIntegerField()
 
-    moveset = models.ManyToManyField(Move, related_name="species")
+    moveset = models.ManyToManyField(Move, related_name="species", blank=True)
 
     @property
     def weight_lbs(self):
@@ -53,3 +56,6 @@ class PokemonSpecies(models.Model):
     @property
     def height_ft(self):
         return 3.28*self.height
+
+    def __str__(self):
+        return f"{self.variant} {self.name}" if self.variant else f"{self.name}"
