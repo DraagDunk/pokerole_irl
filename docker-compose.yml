@@ -1,24 +1,28 @@
 version: "3.9"
 
 services:
-  db:
+  postgres:
     image: postgres
+    ports:
+      - "5432"
     volumes:
       - ./data/db:/var/lib/postgresql/data
     environment:
       - POSTGRES_DB=postgres
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
+      - PGDATA=/var/lib/postgresql/data/
   web:
     build: .
-    command: python pokerole_irl/manage.py runserver 0.0.0.0:8000
+    command: python manage.py runserver
     volumes:
-      - .:/code
+      - ./pokerole_irl:/code
     ports:
       - "8000:8000"
     environment:
       - POSTGRES_NAME=postgres
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
+      - DOCKER_SETTINGS_MODULE=pokerole_irl.settings
     depends_on:
-      - db
+      - postgres
