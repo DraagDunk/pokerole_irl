@@ -13,6 +13,11 @@
 
 <body>
     <h1>Pokérole_irl</h1>
+    {% if user.is_authenticated %}
+    <h2>Your name is: {{ user.username }}</h2>
+    {% else %}
+    <h2>You are not logged in!</h2>
+    {% endif %}
 </body>
 
 <div class="BOX"></div>
