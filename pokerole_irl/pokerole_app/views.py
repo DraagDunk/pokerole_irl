@@ -1,8 +1,11 @@
+from urllib import request
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate, login
+from django.http import HttpResponseRedirect
 
 from django.views.generic import TemplateView
+from django.views import View
 
 # Create your views here.
 
@@ -10,8 +13,10 @@ from django.views.generic import TemplateView
 class MainPageView(TemplateView):
     template_name = "index.html"
 
-def register(request):
-    if request.method == "POST":
+class Register(View):
+    template_name = 'registration/register.html'
+
+    def post(self, request, *args, **kwargs):
         form = UserCreationForm(request.POST)
 
         if form.is_valid():
@@ -20,9 +25,10 @@ def register(request):
             password = form.cleaned_data['password1']
             user = authenticate(username=username, password=password)
             login(request, user)
-            return redirect('MainPageView')
-    else:
-        form = UserCreationForm()
+            return redirect(MainPageView)
 
-    context = {'form' : form}
-    return render(request, 'registration/register.html', context)
+        return render(request, self.template_name, {'form' : form})
+
+    def get(self, request, *args, **kwargs):
+        form = UserCreationForm()
+        return render(request, self.template_name, {'form' : form})
