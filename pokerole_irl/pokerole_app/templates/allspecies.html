@@ -1,0 +1,62 @@
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'styles.css' %}" rel="stylesheet">
+    <title>Pokerole_irl</title>
+</head>
+
+<body>
+    <h1>All Pokémon species</h1>
+
+    <table class="species-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Types</th>
+                <th>Abilities</th>
+                <th>Height</th>
+                <th>Weight</th>
+                <th>Evolutions</th>
+                <th>Base HP</th>
+                <th>Strength</th>
+                <th>Dexterity</th>
+                <th>Vitality</th>
+                <th>Special</th>
+                <th>Insight</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for pokemon in species %}
+                <tr>
+                    <td>{{ pokemon }}</td>
+                    <td><ul>
+                        {% for type in pokemon.types.all %}
+                            <li>{{ type }}</li>
+                        {% endfor %}
+                    </ul></td>
+                    <td><ul>
+                        {% for ability in pokemon.abilities.all %}
+                            <li>{{ ability }}</li>
+                        {% endfor %}
+                    </td></ul>
+                    <td>{{ pokemon.height }}m/{{ pokemon.height_ft }}ft</td>
+                    <td>{{ pokemon.weight }}kg/{{ pokemon.weight_lbs }}lbs</td>
+                    <td><ul>
+                        {% for evo in pokemon.evolutions.all %}
+                            <li>{{ evo }}</li>
+                        {% endfor %}
+                    </td></ul>
+                    <td>{{ pokemon.base_hp }}</td>
+                    <td>{{ pokemon.base_strength }}/{{ pokemon.max_strength }}</td>
+                    <td>{{ pokemon.base_dexterity }}/{{ pokemon.max_dexterity }}</td>
+                    <td>{{ pokemon.base_vitality }}/{{ pokemon.max_vitality }}</td>
+                    <td>{{ pokemon.base_special }}/{{ pokemon.max_special }}</td>
+                    <td>{{ pokemon.base_insight }}/{{ pokemon.max_insight }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
