@@ -12,7 +12,7 @@ from django.views import View
 class MainPageView(TemplateView):
     template_name = "index.html"
 
-class Register(CreateView):
+class RegisterView(CreateView):
     template_name = 'registration/register.html'
     success_url = '/'
 
