@@ -17,24 +17,4 @@ class Register(CreateView):
     success_url = '/'
 
     model = get_user_model()
-    fields = ['username', 'password']
-
-
-    """
-    def post(self, request, *args, **kwargs):
-        form = UserCreationForm(request.POST)
-
-        if form.is_valid():
-            form.save()
-            username = form.cleaned_data['username']
-            password = form.cleaned_data['password1']
-            user = authenticate(username=username, password=password)
-            login(request, user)
-            return redirect(MainPageView)
-
-        return render(request, self.template_name, {'form' : form})
-
-    def get(self, request, *args, **kwargs):
-        form = UserCreationForm()
-        return render(request, self.template_name, {'form' : form})
-    """
+    fields = ['username', 'password']  
