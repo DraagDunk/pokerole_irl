@@ -1,10 +1,9 @@
 from urllib import request
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth import authenticate, login
-from django.http import HttpResponseRedirect
+from django.contrib.auth import authenticate, login, get_user_model
 
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, CreateView
 from django.views import View
 
 # Create your views here.
@@ -13,9 +12,15 @@ from django.views import View
 class MainPageView(TemplateView):
     template_name = "index.html"
 
-class Register(View):
+class Register(CreateView):
     template_name = 'registration/register.html'
+    success_url = '/'
 
+    model = get_user_model()
+    fields = ['username', 'password']
+
+
+    """
     def post(self, request, *args, **kwargs):
         form = UserCreationForm(request.POST)
 
@@ -32,3 +37,4 @@ class Register(View):
     def get(self, request, *args, **kwargs):
         form = UserCreationForm()
         return render(request, self.template_name, {'form' : form})
+    """

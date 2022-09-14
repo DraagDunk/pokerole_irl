@@ -1,4 +1,0 @@
-Superuser for pokerole_app:
-    Name: Youngster_Joey
-    Pass: Top%Rattata
-    Mail: toprattata@poke.com
