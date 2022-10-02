@@ -2,6 +2,7 @@ from urllib import request
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate, login, get_user_model
+from django.contrib.auth.decorators import login_required
 
 from django.views.generic import TemplateView, ListView, CreateView
 
@@ -25,3 +26,7 @@ class RegisterView(CreateView):
 
     model = get_user_model()
     fields = ['username', 'password']  
+
+@login_required
+def profile(request):
+    return render(request, 'users/profile.html')
