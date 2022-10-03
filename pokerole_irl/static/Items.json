@@ -1,0 +1,6765 @@
+{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "389afc4e-6a4c-4055-b3e2-c55c0721dabb"
+        }
+    },
+    "Name": {
+        "Name": "Name"
+    },
+    "Description": {
+        "Description": "Description"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "cc368c51-6be4-4bc6-b7c8-4616e5555529"
+        }
+    },
+    "Name": {
+        "Name": "Black Belt"
+    },
+    "Description": {
+        "Description": "Adds 1 damage die to Fighting type moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "b644440f-b2a6-4dca-b9dd-1704932973ce"
+        }
+    },
+    "Name": {
+        "Name": "Black Glasses"
+    },
+    "Description": {
+        "Description": "Adds 1 damage die to Dark type moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "734bb3db-d2be-4fd5-83e2-2e499f243260"
+        }
+    },
+    "Name": {
+        "Name": "Charcoal"
+    },
+    "Description": {
+        "Description": "Adds 1 damage die to Fire type moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "39ea7670-1dd8-4f9c-b87e-cc24c9ea94aa"
+        }
+    },
+    "Name": {
+        "Name": "Dragon Fang"
+    },
+    "Description": {
+        "Description": "Adds 1 damage die to Dragon type moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "8d26e4ec-a3db-496e-a416-7a2baf664798"
+        }
+    },
+    "Name": {
+        "Name": "Hard Stone"
+    },
+    "Description": {
+        "Description": "Adds 1 damage die to Rock type moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "e3b30bcd-6693-4f35-bfc4-5c0d31f837be"
+        }
+    },
+    "Name": {
+        "Name": "Magnet"
+    },
+    "Description": {
+        "Description": "Adds 1 damage die to Electric type moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "bb01564e-704f-48df-80d0-8251e68bdc84"
+        }
+    },
+    "Name": {
+        "Name": "Metal Coat"
+    },
+    "Description": {
+        "Description": "Adds 1 damage die to Steel type moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "8b3b4fcc-49d8-45a5-b9f6-25fbe8194f85"
+        }
+    },
+    "Name": {
+        "Name": "Miracle Seed"
+    },
+    "Description": {
+        "Description": "Adds 1 damage die to Grass type moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "06005f29-be97-4995-8acb-2d672c9f2c6b"
+        }
+    },
+    "Name": {
+        "Name": "Mystic Water"
+    },
+    "Description": {
+        "Description": "Adds 1 damage die to Water type moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "89178403-4ed2-4aac-865d-5bb4f8db8801"
+        }
+    },
+    "Name": {
+        "Name": "Never-Melt Ice"
+    },
+    "Description": {
+        "Description": "Adds 1 damage die to Ice type moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "8b5ca7a1-87b6-40a4-8360-e41b3fa5d877"
+        }
+    },
+    "Name": {
+        "Name": "Poison Barb"
+    },
+    "Description": {
+        "Description": "Adds 1 damage die to Poison type moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "a4a16e38-a0d5-45f6-9116-fb99d595b9ee"
+        }
+    },
+    "Name": {
+        "Name": "Sharp Beak"
+    },
+    "Description": {
+        "Description": "Adds 1 damage die to Flying type moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "645ae145-4cc1-4a0e-ba27-3eb2be447c44"
+        }
+    },
+    "Name": {
+        "Name": "Silk Scarf"
+    },
+    "Description": {
+        "Description": "Adds 1 damage die to Normal type moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "40e0b9f2-0d25-4881-afdf-d94f37bd3901"
+        }
+    },
+    "Name": {
+        "Name": "Silver Powder"
+    },
+    "Description": {
+        "Description": "Adds 1 damage die to Bug type moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "e836c626-3952-4705-b820-d48c3a22e9f7"
+        }
+    },
+    "Name": {
+        "Name": "Soft Sand"
+    },
+    "Description": {
+        "Description": "Adds 1 damage die to Ground type moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "c085fc9b-563a-4228-8a75-818b86ab6f3b"
+        }
+    },
+    "Name": {
+        "Name": "Spell Tag"
+    },
+    "Description": {
+        "Description": "Adds 1 damage die to Ghost type moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "f87af627-8525-4642-8b68-bd168bac5f10"
+        }
+    },
+    "Name": {
+        "Name": "Twisted Spoon"
+    },
+    "Description": {
+        "Description": "Adds 1 damage die to Psychic type moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "6ae8ecae-5540-4ab6-b19b-2dcc869404a8"
+        }
+    },
+    "Name": {
+        "Name": "Bug Gem"
+    },
+    "Description": {
+        "Description": "Adds 2 damage dice to Bug type moves. Will be immediately consumed on move use."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "edc3a958-4205-4c32-9040-65dbc63cce5b"
+        }
+    },
+    "Name": {
+        "Name": "Dark Gem"
+    },
+    "Description": {
+        "Description": "Adds 2 damage dice to Dark type moves. Will be immediately consumed on move use."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "ef13f9ef-fd49-47bd-b467-73d65f8d4627"
+        }
+    },
+    "Name": {
+        "Name": "Dragon Gem"
+    },
+    "Description": {
+        "Description": "Adds 2 damage dice to Dragon type moves. Will be immediately consumed on move use."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "bd06b2fc-c7b5-4a3e-8ee5-a0d3a857870e"
+        }
+    },
+    "Name": {
+        "Name": "Electric Gem"
+    },
+    "Description": {
+        "Description": "Adds 2 damage dice to Electric type moves. Will be immediately consumed on move use."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "1d7cc48d-bf20-451f-885d-926bfcec7d6e"
+        }
+    },
+    "Name": {
+        "Name": "Fire Gem"
+    },
+    "Description": {
+        "Description": "Adds 2 damage dice to Fire type moves. Will be immediately consumed on move use."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "43d21847-5f74-4853-881d-98ba24a68530"
+        }
+    },
+    "Name": {
+        "Name": "Fighting Gem"
+    },
+    "Description": {
+        "Description": "Adds 2 damage dice to Fighting type moves. Will be immediately consumed on move use."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "74d6fe55-1bfe-4774-a03c-d25e11880c8a"
+        }
+    },
+    "Name": {
+        "Name": "Flying Gem"
+    },
+    "Description": {
+        "Description": "Adds 2 damage dice to Flying type moves. Will be immediately consumed on move use."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "ae3c824a-ff26-48f9-8ad2-b8e874bdce08"
+        }
+    },
+    "Name": {
+        "Name": "Grass Gem"
+    },
+    "Description": {
+        "Description": "Adds 2 damage dice to Grass type moves. Will be immediately consumed on move use."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "4cef2ddf-a295-4128-9a5e-726f031d5a10"
+        }
+    },
+    "Name": {
+        "Name": "Ghost Gem"
+    },
+    "Description": {
+        "Description": "Adds 2 damage dice to Ghost type moves. Will be immediately consumed on move use."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "b4c6463a-9214-42a5-8e0d-31fe385c4a36"
+        }
+    },
+    "Name": {
+        "Name": "Ground Gem"
+    },
+    "Description": {
+        "Description": "Adds 2 damage dice to Ground type moves. Will be immediately consumed on move use."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "450cffa8-e7d2-4247-9e44-b1cbfa90e174"
+        }
+    },
+    "Name": {
+        "Name": "Ice Gem"
+    },
+    "Description": {
+        "Description": "Adds 2 damage dice to Ice type moves. Will be immediately consumed on move use."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "3600b1af-c46f-4dc1-ac17-38334bcd9f72"
+        }
+    },
+    "Name": {
+        "Name": "Normal Gem"
+    },
+    "Description": {
+        "Description": "Adds 2 damage dice to Normal type moves. Will be immediately consumed on move use."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "d53438b6-486d-444e-89fe-f6c2741bf745"
+        }
+    },
+    "Name": {
+        "Name": "Poison Gem"
+    },
+    "Description": {
+        "Description": "Adds 2 damage dice to Poison type moves. Will be immediately consumed on move use."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "850ab9ef-0ebd-4eb3-9b0b-afbd0c7ac835"
+        }
+    },
+    "Name": {
+        "Name": "Psychic Gem"
+    },
+    "Description": {
+        "Description": "Adds 2 damage dice to Psychic type moves. Will be immediately consumed on move use."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "b8fce001-a0bf-4035-8a31-4d1528906eae"
+        }
+    },
+    "Name": {
+        "Name": "Rock Gem"
+    },
+    "Description": {
+        "Description": "Adds 2 damage dice to Rock type moves. Will be immediately consumed on move use."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "26ed6f65-d084-4202-a201-fc7e1f4b0f0c"
+        }
+    },
+    "Name": {
+        "Name": "Steel Gem"
+    },
+    "Description": {
+        "Description": "Adds 2 damage dice to Steel type moves. Will be immediately consumed on move use."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "958bdba4-70b7-4a3c-bb10-b6ef48000982"
+        }
+    },
+    "Name": {
+        "Name": "Water Gem"
+    },
+    "Description": {
+        "Description": "Adds 2 damage dice to Water type moves. Will be immediately consumed on move use."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "a4df14f7-c30f-46ea-b595-768da4bc34ee"
+        }
+    },
+    "Name": {
+        "Name": "Full Incense"
+    },
+    "Description": {
+        "Description": "This holder always goes last in the the initiative order."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "2eb517cd-83f4-4c7f-bd0b-0f6aa38b515f"
+        }
+    },
+    "Name": {
+        "Name": "Lax Incense"
+    },
+    "Description": {
+        "Description": "Removes 1 die from the opponent's accuracy pool."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "5182cf27-746c-492e-80a5-12f2df284326"
+        }
+    },
+    "Name": {
+        "Name": "Luck Incense"
+    },
+    "Description": {
+        "Description": "Doubles all prize money."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "81a8940e-834c-4317-864e-03bfc69d0baa"
+        }
+    },
+    "Name": {
+        "Name": "Odd Incense"
+    },
+    "Description": {
+        "Description": "Adds 1 damage die to Psychic type moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "f863efad-aaab-4f0e-85eb-55250e5c6df5"
+        }
+    },
+    "Name": {
+        "Name": "Pure Incense"
+    },
+    "Description": {
+        "Description": "Reduces the chance of random Wild Pok\u00e9mon encounters."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "25361bff-8a9c-4d54-a1a0-8f54daa28e12"
+        }
+    },
+    "Name": {
+        "Name": "Rock Incense"
+    },
+    "Description": {
+        "Description": "Adds 1 damage die to Rock type moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "9ca5a04e-89b7-4a8c-b0b3-8c3fa7fa4726"
+        }
+    },
+    "Name": {
+        "Name": "Rose Incense"
+    },
+    "Description": {
+        "Description": "Adds 1 damage die to Grass type moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "cf08865e-0bed-447d-9817-5f7bf1563732"
+        }
+    },
+    "Name": {
+        "Name": "Sea Incense"
+    },
+    "Description": {
+        "Description": "Adds 1 damage die to Water type moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "a6e5cbc9-d91b-45b3-adf9-117fd0f37ca3"
+        }
+    },
+    "Name": {
+        "Name": "Wave Incense"
+    },
+    "Description": {
+        "Description": "Adds 1 damage die to Water type moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "6ec10496-11fc-48ad-bc17-f1e16fa5072a"
+        }
+    },
+    "Name": {
+        "Name": "Adamant Orb"
+    },
+    "Description": {
+        "Description": "Adds 1 damage die to Dragon and Steel type moves when held by Dialga."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "24b931e1-c327-41a2-a73b-8213542b7a3e"
+        }
+    },
+    "Name": {
+        "Name": "Deep Sea Scale"
+    },
+    "Description": {
+        "Description": "Increases Clamperl's Special Defense by 2."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "51cf7fe1-61a4-4e2c-84e9-61174a05a43b"
+        }
+    },
+    "Name": {
+        "Name": "Deep Sea Tooth"
+    },
+    "Description": {
+        "Description": "Increases Clamperl's Special by 2."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "634150ca-4cb2-4976-8c41-ba457edd902a"
+        }
+    },
+    "Name": {
+        "Name": "Gaseous Orb"
+    },
+    "Description": {
+        "Description": "Adds 1 damage die to Dragon and Ghost type moves when held by Giratina"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "21c69a12-4ae5-4f3b-b006-6e54db7dda67"
+        }
+    },
+    "Name": {
+        "Name": "Light Ball"
+    },
+    "Description": {
+        "Description": "Pikachu gains 2 Strength and 2 Special."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "d8dfef42-4289-4605-9bfb-25e6eb313e73"
+        }
+    },
+    "Name": {
+        "Name": "Lucky Punch"
+    },
+    "Description": {
+        "Description": "Increases Chansey's or Blissey's Strength by 2."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "8ffbc6a4-ed47-44d4-a7ad-3e8b109689a0"
+        }
+    },
+    "Name": {
+        "Name": "Lustrous Orb"
+    },
+    "Description": {
+        "Description": "Adds 1 damage die to Dragon and Water type moves when held by Palkia."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "9b2d0cb9-781f-47ef-8a80-8e73ab533ce0"
+        }
+    },
+    "Name": {
+        "Name": "Leek"
+    },
+    "Description": {
+        "Description": "All of Farfetch'd's attacks are now High Criticals."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "adb51ff0-8172-487b-b449-853e8ede9195"
+        }
+    },
+    "Name": {
+        "Name": "Metal Powder"
+    },
+    "Description": {
+        "Description": "Increases Ditto's Defense by 2. Does not work when transformed."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "1aac2785-878c-4d79-b0ff-9d8d74493a74"
+        }
+    },
+    "Name": {
+        "Name": "Quick Powder"
+    },
+    "Description": {
+        "Description": "Increases Ditto's Dexterity by 2. Does not work when transformed."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "7664343c-d1b7-4264-bbb2-c72e0fa6a7a6"
+        }
+    },
+    "Name": {
+        "Name": "Soul Dew"
+    },
+    "Description": {
+        "Description": "Adds 1 damage die to Dragon and Psychic moves when held by Latios/Latias."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "47d9e6a0-69c4-45a5-a357-f1b4620ca842"
+        }
+    },
+    "Name": {
+        "Name": "Thick Club"
+    },
+    "Description": {
+        "Description": "Increases Cubone's and Marowak's Strength by 2."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "f06311a5-1e0f-4a87-b33a-f7d7ada7ea37"
+        }
+    },
+    "Name": {
+        "Name": "Amulet Coin"
+    },
+    "Description": {
+        "Description": "Doubles all prize money."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "e205f258-30bf-4c90-b31e-51d8e82fe133"
+        }
+    },
+    "Name": {
+        "Name": "Eviolite"
+    },
+    "Description": {
+        "Description": "Unevolved Pokemon gain 1 Defense and Special Defense."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "16ed83e8-6ed0-4008-8b3b-f23e9400a00f"
+        }
+    },
+    "Name": {
+        "Name": "Expert Belt"
+    },
+    "Description": {
+        "Description": "Super effective moves deal 1 additional damage."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "2a7d74aa-2a16-4bbd-90ac-c41edf7b9c5c"
+        }
+    },
+    "Name": {
+        "Name": "Life Orb"
+    },
+    "Description": {
+        "Description": "All moves deal 2 extra damage but will now have the recoil effect."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "78240060-8e49-4ef0-b012-db6a933ffac5"
+        }
+    },
+    "Name": {
+        "Name": "King's Rock"
+    },
+    "Description": {
+        "Description": "All attacks have a chance to flinch (Roll 1 dice)"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "7a5e8bd0-d688-4c94-b612-6e266740335d"
+        }
+    },
+    "Name": {
+        "Name": "Lucky Egg"
+    },
+    "Description": {
+        "Description": "Each victory counts as two victories."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "bcf2f67a-7276-4479-9e5d-8e300cf78665"
+        }
+    },
+    "Name": {
+        "Name": "Quick Claw"
+    },
+    "Description": {
+        "Description": "Gain 2 extra initiative."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "0702ec66-d8fc-4f7c-b2b5-85182dcc275c"
+        }
+    },
+    "Name": {
+        "Name": "Razor Claw"
+    },
+    "Description": {
+        "Description": "All attacks are now High Criticals."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "f2c3ae05-a3d7-406b-b45a-93f058e04ae4"
+        }
+    },
+    "Name": {
+        "Name": "Razor Fang"
+    },
+    "Description": {
+        "Description": "All attacks have a chance to flinch (Roll 1 dice)"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "f43048da-7f4f-4183-9435-7e7d4b4095f6"
+        }
+    },
+    "Name": {
+        "Name": "Rocky Helmet"
+    },
+    "Description": {
+        "Description": "Deal 1 damage roll against a foe who has hit you with a non-ranged physical move."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "86af576d-820b-422c-bf54-f3c02388bf92"
+        }
+    },
+    "Name": {
+        "Name": "Wide Lens"
+    },
+    "Description": {
+        "Description": "Increase accuracy by 1."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "bf144a8c-2e93-4183-937d-b993f672d7ea"
+        }
+    },
+    "Name": {
+        "Name": "Bug Memory"
+    },
+    "Description": {
+        "Description": "Changes Silvally and Multi-attack's typing to Bug."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "f214a511-3003-4697-b677-54791a9a28b1"
+        }
+    },
+    "Name": {
+        "Name": "Dark Memory"
+    },
+    "Description": {
+        "Description": "Changes Silvally and Multi-attack's typing to Dark."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "76b695d4-8f55-48e3-8593-dd41b30f68b3"
+        }
+    },
+    "Name": {
+        "Name": "Dragon Memory"
+    },
+    "Description": {
+        "Description": "Changes Silvally and Multi-attack's typing to Dragon."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "7ea3693c-3c02-4595-a4e3-1000e7f5b7c2"
+        }
+    },
+    "Name": {
+        "Name": "Electric Memory"
+    },
+    "Description": {
+        "Description": "Changes Silvally and Multi-attack's typing to Electric."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "8e9d0a42-1273-46e4-ad0a-b210cef8a416"
+        }
+    },
+    "Name": {
+        "Name": "Fairy Memory"
+    },
+    "Description": {
+        "Description": "Changes Silvally and Multi-attack's typing to Fairy."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "d9040a83-483c-4429-9a25-9254ef0c6e38"
+        }
+    },
+    "Name": {
+        "Name": "Fighting Memory"
+    },
+    "Description": {
+        "Description": "Changes Silvally and Multi-attack's typing to Fighting."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "0b911ef7-eef0-4d1a-aba5-8f0bb64cf815"
+        }
+    },
+    "Name": {
+        "Name": "Ghost Memory"
+    },
+    "Description": {
+        "Description": "Changes Silvally and Multi-attack's typing to Ghost."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "70a66111-b4b8-487a-9c3d-43ffc25dd5e5"
+        }
+    },
+    "Name": {
+        "Name": "Grass Memory"
+    },
+    "Description": {
+        "Description": "Changes Silvally and Multi-attack's typing to Grass."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "e18e69db-77da-495d-8521-6b0996d82eb0"
+        }
+    },
+    "Name": {
+        "Name": "Ground Memory"
+    },
+    "Description": {
+        "Description": "Changes Silvally and Multi-attack's typing to Ground."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "d2fb7053-0279-4ef4-b6f0-34ac68041d81"
+        }
+    },
+    "Name": {
+        "Name": "Ice Memory"
+    },
+    "Description": {
+        "Description": "Changes Silvally and Multi-attack's typing to Ice."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "7a36d6c3-5365-49d5-8bd0-cafba0f0f6e2"
+        }
+    },
+    "Name": {
+        "Name": "Poison Memory"
+    },
+    "Description": {
+        "Description": "Changes Silvally and Multi-attack's typing to Poison."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "7fef0c09-9f21-430f-a2a7-28c7a9ab03ab"
+        }
+    },
+    "Name": {
+        "Name": "Psychic Memory"
+    },
+    "Description": {
+        "Description": "Changes Silvally and Multi-attack's typing to Psychic."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "688f99cf-cc98-40a4-b8be-191ad7c0c4ea"
+        }
+    },
+    "Name": {
+        "Name": "Rock Memory"
+    },
+    "Description": {
+        "Description": "Changes Silvally and Multi-attack's typing to Rock."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "197f3138-6d29-4df4-9a9b-e5a2a242450a"
+        }
+    },
+    "Name": {
+        "Name": "Steel Memory"
+    },
+    "Description": {
+        "Description": "Changes Silvally and Multi-attack's typing to Steel."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "76284b84-185a-4369-a433-7b89b23cdbb8"
+        }
+    },
+    "Name": {
+        "Name": "Water Memory"
+    },
+    "Description": {
+        "Description": "Changes Silvally and Multi-attack's typing to Water."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "7d4feb55-f059-438f-92eb-dc32ddacf9f5"
+        }
+    },
+    "Name": {
+        "Name": "Draco Plate"
+    },
+    "Description": {
+        "Description": "Adds 1 damage dice to Dragon type moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "5808b697-7026-4820-a9cf-05fda54a797c"
+        }
+    },
+    "Name": {
+        "Name": "Dread Plate"
+    },
+    "Description": {
+        "Description": "Adds 1 damage dice to Dark type moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "3bcf3c79-0100-4398-895f-b04355dc34cd"
+        }
+    },
+    "Name": {
+        "Name": "Earth Plate"
+    },
+    "Description": {
+        "Description": "Adds 1 damage dice to Ground type moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "da2d3c66-8664-4011-98d6-3466b2211b05"
+        }
+    },
+    "Name": {
+        "Name": "Fist Plate"
+    },
+    "Description": {
+        "Description": "Adds 1 damage dice to Fighting type moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "ec185ed1-6048-4d64-b4b4-9f4faf1e0126"
+        }
+    },
+    "Name": {
+        "Name": "Flame Plate"
+    },
+    "Description": {
+        "Description": "Adds 1 damage dice to Fire type moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "ba670c0f-23a5-4130-bb04-4cac995ccc5f"
+        }
+    },
+    "Name": {
+        "Name": "Icicle Plate"
+    },
+    "Description": {
+        "Description": "Adds 1 damage dice to Ice type moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "fd9d2861-9079-4e58-8e5b-eceed0c22ed7"
+        }
+    },
+    "Name": {
+        "Name": "Insect Plate"
+    },
+    "Description": {
+        "Description": "Adds 1 damage dice to Bug type moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "202e5462-8f84-44ce-b955-e45822633ae7"
+        }
+    },
+    "Name": {
+        "Name": "Iron Plate"
+    },
+    "Description": {
+        "Description": "Adds 1 damage dice to Steel type moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "f7d5dff9-0968-421a-8ae0-d1bd18c3a299"
+        }
+    },
+    "Name": {
+        "Name": "Meadow Plate"
+    },
+    "Description": {
+        "Description": "Adds 1 damage dice to Grass type moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "9afb9368-16c1-49d2-8e6c-bb57863d9c2b"
+        }
+    },
+    "Name": {
+        "Name": "Mind Plate"
+    },
+    "Description": {
+        "Description": "Adds 1 damage dice to Psychic type moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "9d980115-6147-4873-a7ca-193aa4ca2598"
+        }
+    },
+    "Name": {
+        "Name": "Pixie Plate"
+    },
+    "Description": {
+        "Description": "Adds 1 damage dice to Fairy type moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "37376c27-e9fa-40c7-964a-54d7a3a3dff1"
+        }
+    },
+    "Name": {
+        "Name": "Sky Plate"
+    },
+    "Description": {
+        "Description": "Adds 1 damage dice to Flying type moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "0a662f20-ba4b-42d6-9c2b-a9a80e4133c9"
+        }
+    },
+    "Name": {
+        "Name": "Splash Plate"
+    },
+    "Description": {
+        "Description": "Adds 1 damage dice to Water type moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "db26878a-5867-4bf9-a020-bd7c04751c3b"
+        }
+    },
+    "Name": {
+        "Name": "Spooky Plate"
+    },
+    "Description": {
+        "Description": "Adds 1 damage dice to Ghost type moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "6b6eac8d-7276-461e-9a34-6d80a8953537"
+        }
+    },
+    "Name": {
+        "Name": "Stone Plate"
+    },
+    "Description": {
+        "Description": "Adds 1 damage dice to Rock type moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "4063f832-37d1-406d-b149-d4162191b0f3"
+        }
+    },
+    "Name": {
+        "Name": "Toxic Plate"
+    },
+    "Description": {
+        "Description": "Adds 1 damage dice to Poison type moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "aa2b7cd8-101b-4def-b8cc-98533d5783af"
+        }
+    },
+    "Name": {
+        "Name": "Zap Plate"
+    },
+    "Description": {
+        "Description": "Adds 1 damage dice to Electric type moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "de52f792-efa7-4de4-90f0-1dabe073d716"
+        }
+    },
+    "Name": {
+        "Name": "Shock Drive"
+    },
+    "Description": {
+        "Description": "Changes Techno blast to Electric."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "aae5cc60-5b8d-4d61-b935-e58cd5bac558"
+        }
+    },
+    "Name": {
+        "Name": "Burn Drive"
+    },
+    "Description": {
+        "Description": "Changes Techno blast to Fire."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "82cf5ca0-565a-4d08-925e-0fd4db8a6fee"
+        }
+    },
+    "Name": {
+        "Name": "Chill Drive"
+    },
+    "Description": {
+        "Description": "Changes Techno blast to Ice."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "c416ab3a-2a23-4758-aeae-7abdb8f57633"
+        }
+    },
+    "Name": {
+        "Name": "Douse Drive"
+    },
+    "Description": {
+        "Description": "Changes Techno blast to Water."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "e3849ef1-971e-4d64-9599-0bca94168e51"
+        }
+    },
+    "Name": {
+        "Name": "Absorb Bulb"
+    },
+    "Description": {
+        "Description": "Boosts the Special by 1 of the user when hit with a Water type move. Consumed on use."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "13154fc1-277d-4a5a-9ad2-c819be93794b"
+        }
+    },
+    "Name": {
+        "Name": "Air Balloon"
+    },
+    "Description": {
+        "Description": "The user is immune to Ground type moves. This item bursts once the user is hit."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "c49d9660-b736-4f8e-b22c-5dccec838897"
+        }
+    },
+    "Name": {
+        "Name": "Assault Vest"
+    },
+    "Description": {
+        "Description": "Increases Special Defense by 2. But the user cannot use Support moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "caed8d3c-d119-4dad-ad7b-adb1b5ab612d"
+        }
+    },
+    "Name": {
+        "Name": "Big Root"
+    },
+    "Description": {
+        "Description": "When using absorbing hp, roll 3 chance dice to heal 1 additional hp."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "a85c6a16-4cd3-4311-8ff3-27de443140f0"
+        }
+    },
+    "Name": {
+        "Name": "Binding Band"
+    },
+    "Description": {
+        "Description": "Binding moves now have double the damage pool."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "4db6703f-475d-4e57-a144-94a38139cd57"
+        }
+    },
+    "Name": {
+        "Name": "Black Sludge"
+    },
+    "Description": {
+        "Description": "Poison type Pokemon may heal 1 hp as a bonus action. This can be done 10 times before depleting. Non-poison types take 1 damage per turn from holding this."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "aad5930d-23a2-4e9e-83bd-f21ee4ab0d47"
+        }
+    },
+    "Name": {
+        "Name": "Blue Scarf"
+    },
+    "Description": {
+        "Description": "Increases Beauty by 1 during contests."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "85bf1602-8cb2-42a5-9f71-cd6f704deee0"
+        }
+    },
+    "Name": {
+        "Name": "Blunder Policy"
+    },
+    "Description": {
+        "Description": "Raises Dexterity by 2 when the Pokemon misses."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "c42aa9ae-cc74-47a2-861c-f28ff06d527d"
+        }
+    },
+    "Name": {
+        "Name": "Bright Powder"
+    },
+    "Description": {
+        "Description": "Removes 1 die from the opponent's accuracy pool."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "ed71804c-8340-4e95-8beb-8c08b43eb5c0"
+        }
+    },
+    "Name": {
+        "Name": "Cell Battery"
+    },
+    "Description": {
+        "Description": "Boosts the Strength by 1 of the user when hit with a Electric type move. Consumed on use."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "ed18fa72-46c9-4eda-aaec-c9b8c8ff1254"
+        }
+    },
+    "Name": {
+        "Name": "Choice Band"
+    },
+    "Description": {
+        "Description": "Increases the Strength by 1 but the Pokemon may only use the first move it used at the start, but it can still evade. This effect is rest on switch in."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "0ffee0f6-701e-4f0d-b363-1bddac58d339"
+        }
+    },
+    "Name": {
+        "Name": "Choice Scarf"
+    },
+    "Description": {
+        "Description": "Increases the Dexterity by 1 but the Pokemon may only use the first move it used at the start, but it can still evade. This effect is rest on switch in."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "271a11ca-399f-497e-92fd-7d13d25e2d8f"
+        }
+    },
+    "Name": {
+        "Name": "Choice Specs"
+    },
+    "Description": {
+        "Description": "Increases the Special by 1 but the Pokemon may only use the first move it used at the start, but it can still evade. This effect is rest on switch in."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "30678709-05fb-49a8-bc38-15201fe352d0"
+        }
+    },
+    "Name": {
+        "Name": "Cleanse Tag"
+    },
+    "Description": {
+        "Description": "Reduces the chance of random Wild Pok\u00e9mon encounters."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "e04b6061-c525-495e-99ea-9d073ccce351"
+        }
+    },
+    "Name": {
+        "Name": "Damp Rock"
+    },
+    "Description": {
+        "Description": "Rain Dance now sets Rainy Weather for 7 turns."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "6c31f1f3-6b97-42cd-a3ae-4378e5a1e4c6"
+        }
+    },
+    "Name": {
+        "Name": "Dark Rock"
+    },
+    "Description": {
+        "Description": "New Moon now sets New Moon for 7 turns."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "0a07a04c-0adb-4c35-811d-0b5c7d67e2b6"
+        }
+    },
+    "Name": {
+        "Name": "Destiny Knot"
+    },
+    "Description": {
+        "Description": "When the Pokemon is infatuated, the opponent also becomes infatuated."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "91dbc2b2-cd23-41bd-ba75-c7a354e71777"
+        }
+    },
+    "Name": {
+        "Name": "Eject Button"
+    },
+    "Description": {
+        "Description": "When the Pokemon is hit with a damaging move, it switches out immediately and the item is consumed."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "11007ac7-357e-4796-b0c8-63c719c238b2"
+        }
+    },
+    "Name": {
+        "Name": "Eject Pack"
+    },
+    "Description": {
+        "Description": "When the Pokemon's stats are reduced, it switches out immediately and the item is consumed."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "88925379-3378-45d4-a980-bdfb918a40f9"
+        }
+    },
+    "Name": {
+        "Name": "Electric Seed"
+    },
+    "Description": {
+        "Description": "Increases Defense by 1 in Electric Terrain, it is consumed on use."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "379a7ed1-620e-453d-b82d-91f2c6cbdfd9"
+        }
+    },
+    "Name": {
+        "Name": "Flame Orb"
+    },
+    "Description": {
+        "Description": "Inflicts the user with Burn 1 when held."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "bf2447e4-aa05-48a4-8785-6978adeea5ed"
+        }
+    },
+    "Name": {
+        "Name": "Float Stone"
+    },
+    "Description": {
+        "Description": "The Pokemon's weight is halved."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "4128f281-1831-4c0b-9ff0-d5fcce75d5fc"
+        }
+    },
+    "Name": {
+        "Name": "Focus Band"
+    },
+    "Description": {
+        "Description": "If an attack were to reduce the user's hp to 0 by a damaging move. Roll 1 chance dice to survive at 1 hp."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "4d833945-7c5e-416b-9376-df872fac17a0"
+        }
+    },
+    "Name": {
+        "Name": "Focus Sash"
+    },
+    "Description": {
+        "Description": "If this Pokemon were to faint from a damaging move, reduce its hp to 1 instead. The item breaks upon use."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "f15ad8bc-87c4-4b89-b9f5-678be38ef546"
+        }
+    },
+    "Name": {
+        "Name": "Grassy Seed"
+    },
+    "Description": {
+        "Description": "Increases Defense by 1 in Grassy Terrain, it is consumed on use."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "1e786975-4e52-4439-be1c-4e2ed80b8cdc"
+        }
+    },
+    "Name": {
+        "Name": "Green Scarf"
+    },
+    "Description": {
+        "Description": "Increases Clever by 1 during contests."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "623ca956-1700-48dd-b2fe-6fbf7aaa9d63"
+        }
+    },
+    "Name": {
+        "Name": "Grip Claw"
+    },
+    "Description": {
+        "Description": "Binding moves now lasts an additional 2 rounds."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "b13b41e5-a3e8-4e17-b708-a3f14ccef8cd"
+        }
+    },
+    "Name": {
+        "Name": "Heat Rock"
+    },
+    "Description": {
+        "Description": "Sunny Day now sets Sunny Weather for 7 turns."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "6be9f5c4-66b8-4507-b004-4435645c2c98"
+        }
+    },
+    "Name": {
+        "Name": "Heavy Duty Boots"
+    },
+    "Description": {
+        "Description": "The user is now immune to entry hazards."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "815ba88b-bcff-49ca-a778-76eb8fdea49a"
+        }
+    },
+    "Name": {
+        "Name": "Icy Rock"
+    },
+    "Description": {
+        "Description": "Hail now sets Hail Weather for 7 turns."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "08a70409-2fd6-4a63-96e9-8e8a1963d90f"
+        }
+    },
+    "Name": {
+        "Name": "Iron Ball"
+    },
+    "Description": {
+        "Description": "Reduces the holder's Dexterity by 2 and makes them subsceptable to Ground type moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "98e14e58-0cb4-493c-a74c-6aacae8affdb"
+        }
+    },
+    "Name": {
+        "Name": "Lagging Tail"
+    },
+    "Description": {
+        "Description": "This holder always goes last in the the initiative order."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "3f61ccaa-2e37-4f5d-ae68-43746ae724ff"
+        }
+    },
+    "Name": {
+        "Name": "Leftovers"
+    },
+    "Description": {
+        "Description": "The holder may heal 1 hp as a bonus action. This can be done 10 times before depleting."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "e90f7439-4f4f-4207-8eed-99c24ff6285e"
+        }
+    },
+    "Name": {
+        "Name": "Light Clay"
+    },
+    "Description": {
+        "Description": "Light Screen and Reflect now lasts 7 rounds."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "c5cfd09d-8bfb-4eee-a006-5026318615ec"
+        }
+    },
+    "Name": {
+        "Name": "Luminous Moss"
+    },
+    "Description": {
+        "Description": "Boosts the Special Defense by 1 of the user when hit with a Water type move. Consumed on use."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "1c741c3d-6649-4e4a-976c-662df5388718"
+        }
+    },
+    "Name": {
+        "Name": "Mental Herb"
+    },
+    "Description": {
+        "Description": "If the user is Infatuated or affected by Taunt, Torment, Encore, or Disable, then they are cured but the item gets consumed."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "ac106d77-8f4a-4f56-a052-1c4f13cb30d3"
+        }
+    },
+    "Name": {
+        "Name": "Metronome"
+    },
+    "Description": {
+        "Description": "Increases the damage pool of moves by 1 when used consecutively up to 3 times."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "8d181284-225a-4a6e-8fc5-22f203131e13"
+        }
+    },
+    "Name": {
+        "Name": "Misty Seed"
+    },
+    "Description": {
+        "Description": "Increases Special Defense by 1 in Misty Terrain, it is consumed on use."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "36e1694b-f400-4096-b27d-923a2df52849"
+        }
+    },
+    "Name": {
+        "Name": "Muscle Band"
+    },
+    "Description": {
+        "Description": "Boosts the power of all Physical moves by 1."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "535a74c3-e5fd-4665-89e2-b7188142f3e3"
+        }
+    },
+    "Name": {
+        "Name": "Pink Scarf"
+    },
+    "Description": {
+        "Description": "Increases Cute by 1 during contests."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "5db93d42-9a8f-4b83-a4e4-8af327318a7b"
+        }
+    },
+    "Name": {
+        "Name": "Power Herb"
+    },
+    "Description": {
+        "Description": "Allows the user to use Charge moves immediately. It is consumed upon use."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "d329b818-0880-4647-98ba-89a387d11742"
+        }
+    },
+    "Name": {
+        "Name": "Protective Pad"
+    },
+    "Description": {
+        "Description": "The user is immune to contact effects."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "24d0f678-94a8-49d4-ae85-353615b19fe8"
+        }
+    },
+    "Name": {
+        "Name": "Psychic Seed"
+    },
+    "Description": {
+        "Description": "Increases Special Defense by 1 in Psychic Terrain Terrain, it is consumed on use."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "758d0086-6be2-49ca-885f-0daf2f540b2d"
+        }
+    },
+    "Name": {
+        "Name": "Red Card"
+    },
+    "Description": {
+        "Description": "When the Pokemon is hit with a damaging move, the attacker switches out immediately and the item is consumed."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "0dcbac28-aac1-46be-aebe-85d289954b6f"
+        }
+    },
+    "Name": {
+        "Name": "Red Scarf"
+    },
+    "Description": {
+        "Description": "Increases Cool by 1 during contests."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "145da4d0-0b7e-4c2d-8383-108f5273c9af"
+        }
+    },
+    "Name": {
+        "Name": "Ring Target"
+    },
+    "Description": {
+        "Description": "The user loses their type immunity to moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "d746a375-6e83-484d-8b26-ea055f3c48fc"
+        }
+    },
+    "Name": {
+        "Name": "Room Service"
+    },
+    "Description": {
+        "Description": "Reduces the user's Initiative by 2 during Trick Room."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "7ad3fa75-b8c8-4b7d-af45-cc79600d1d5e"
+        }
+    },
+    "Name": {
+        "Name": "Safety Goggles"
+    },
+    "Description": {
+        "Description": "The user is immune to Weather related damage as well as Powder moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "cd298fa5-a17b-4087-800b-d76ab1936e94"
+        }
+    },
+    "Name": {
+        "Name": "Scope Lens"
+    },
+    "Description": {
+        "Description": "All moves are now High Critical."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "a8d18774-3376-4ef4-84fb-f3839aea784b"
+        }
+    },
+    "Name": {
+        "Name": "Shed Shell"
+    },
+    "Description": {
+        "Description": "The user is immune to effects that would prevent them from switching out."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "0e7f438d-a65a-4510-b9d3-24866bc2a60c"
+        }
+    },
+    "Name": {
+        "Name": "Shell Bell"
+    },
+    "Description": {
+        "Description": "Restores 1 hp everytime the user inflicts damage."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "fcf6371a-e551-472a-99e2-1566fcf7baef"
+        }
+    },
+    "Name": {
+        "Name": "Smoke Bomb"
+    },
+    "Description": {
+        "Description": "The user can escape from any Wild Encounter."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "d39c904b-fcae-4184-aec3-ce896016f654"
+        }
+    },
+    "Name": {
+        "Name": "Smooth Rock"
+    },
+    "Description": {
+        "Description": "Sandstorm now sets Sandstorm Weather for 7 rounds."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "c141d852-24f6-4a6c-bc22-f30ffe9a18c1"
+        }
+    },
+    "Name": {
+        "Name": "Snowball"
+    },
+    "Description": {
+        "Description": "Boosts the Strength by 1 of the user when hit with a Ice type move. Consumed on use."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "b9b14d33-bd3e-4682-9470-87b174fe0724"
+        }
+    },
+    "Name": {
+        "Name": "Sticky Barb"
+    },
+    "Description": {
+        "Description": "Damages the user for 3 hp per round. If hit by a foe with no held items, it will transfer onto them."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "31d9fd09-22b2-403f-8933-ff3cc10aa391"
+        }
+    },
+    "Name": {
+        "Name": "Terrain Extender"
+    },
+    "Description": {
+        "Description": "Terrain moves now lasts for an additional 3 rounds."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "9a4db859-61ce-43e7-b01a-460704154543"
+        }
+    },
+    "Name": {
+        "Name": "Throat Spray"
+    },
+    "Description": {
+        "Description": "Increases Special by 1 when the user uses a Sound based move for the first time."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "dad65701-7edb-46dd-aafb-34f32b89e633"
+        }
+    },
+    "Name": {
+        "Name": "Utility Umbrella"
+    },
+    "Description": {
+        "Description": "The user is immune to the effects of weather."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "1ce1c83b-f93c-44a1-bec8-abec06bcf923"
+        }
+    },
+    "Name": {
+        "Name": "Weakness Policy"
+    },
+    "Description": {
+        "Description": "When hit by a move the Pokemon is weak to, increase Strength and Special by 2."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "a058932a-0269-4f1b-8c39-278951b103d2"
+        }
+    },
+    "Name": {
+        "Name": "White Herbs"
+    },
+    "Description": {
+        "Description": "The user may restore all lowered stats in battle as a bonus action. It is consumed upon use."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "e307bafa-0c4d-4926-9459-7fc34d49d4eb"
+        }
+    },
+    "Name": {
+        "Name": "Wise Glasses"
+    },
+    "Description": {
+        "Description": "Boosts the power of all Special moves by 1."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "1e39ee94-aed9-417c-943e-da64c0a356fd"
+        }
+    },
+    "Name": {
+        "Name": "Yellow Scarf"
+    },
+    "Description": {
+        "Description": "Increases Tough by 1 during contests."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "213e92b2-6442-402c-9fcf-9d2002984630"
+        }
+    },
+    "Name": {
+        "Name": "Zoom Lens"
+    },
+    "Description": {
+        "Description": "Increases accuracy by 2 if the user is lower than the target on the initiative order."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "b3b2e09d-7c69-4ce7-91b5-433271025a42"
+        }
+    },
+    "Name": {
+        "Name": "Buginium Z"
+    },
+    "Description": {
+        "Description": "It converts Z-Power into crystals that upgrade Bug-type moves to Bug-type Z-Moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "28627f86-caf8-4b4a-b3e4-8f33a76c36c5"
+        }
+    },
+    "Name": {
+        "Name": "Darkinium Z"
+    },
+    "Description": {
+        "Description": "It converts Z-Power into crystals that upgrade Dark-type moves to Dark-type Z-Moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "57d7aff7-3a9c-425e-9d1f-59d34c3c3f75"
+        }
+    },
+    "Name": {
+        "Name": "Dragonium Z"
+    },
+    "Description": {
+        "Description": "It converts Z-Power into crystals that upgrade Dragon-type moves to Dragon-type Z-Moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "9399bf54-951f-4944-9cba-5d25c47e2b1b"
+        }
+    },
+    "Name": {
+        "Name": "Electrium Z"
+    },
+    "Description": {
+        "Description": "It converts Z-Power into crystals that upgrade Electric-type moves to Electric-type Z-Moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "fa0c79b4-2301-4177-b3af-9238ec519324"
+        }
+    },
+    "Name": {
+        "Name": "Fairium Z"
+    },
+    "Description": {
+        "Description": "It converts Z-Power into crystals that upgrade Fairy-type moves to Fairy-type Z-Moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "ed8b4ee0-9804-422b-ae37-e7f0411c37cd"
+        }
+    },
+    "Name": {
+        "Name": "Fightinium Z"
+    },
+    "Description": {
+        "Description": "It converts Z-Power into crystals that upgrade Fighting-type moves to Fighting-type Z-Moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "65b6bc9f-91fc-42be-8c53-0edd38bcd3ea"
+        }
+    },
+    "Name": {
+        "Name": "Firium Z"
+    },
+    "Description": {
+        "Description": "It converts Z-Power into crystals that upgrade Fire-type moves to Fire-type Z-Moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "f46218cb-9166-4984-9b44-e9e81fc7a223"
+        }
+    },
+    "Name": {
+        "Name": "Flyinium Z"
+    },
+    "Description": {
+        "Description": "It converts Z-Power into crystals that upgrade Flying-type moves to Flying-type Z-Moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "b6d2a6f9-8331-4544-a65a-900206e8bc25"
+        }
+    },
+    "Name": {
+        "Name": "Ghostium Z"
+    },
+    "Description": {
+        "Description": "It converts Z-Power into crystals that upgrade Ghost-type moves to Ghost-type Z-Moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "d6cefc32-3bcf-477f-af71-fe0a1047e64b"
+        }
+    },
+    "Name": {
+        "Name": "Grassium Z"
+    },
+    "Description": {
+        "Description": "It converts Z-Power into crystals that upgrade Grass-type moves to Grass-type Z-Moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "a3f4e1f3-9aae-4582-986a-9550b2cb972f"
+        }
+    },
+    "Name": {
+        "Name": "Groundium Z"
+    },
+    "Description": {
+        "Description": "It converts Z-Power into crystals that upgrade Ground-type moves to Ground-type Z-Moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "71f0db6d-f251-4366-803f-1251d565d8d9"
+        }
+    },
+    "Name": {
+        "Name": "Icium Z"
+    },
+    "Description": {
+        "Description": "It converts Z-Power into crystals that upgrade Ice-type moves to Ice-type Z-Moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "b5d43541-b8af-4aab-95f3-14c1c42d9ed4"
+        }
+    },
+    "Name": {
+        "Name": "Normalium Z"
+    },
+    "Description": {
+        "Description": "It converts Z-Power into crystals that upgrade Normal-type moves to Normal-type Z-Moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "0eb18725-8acd-4978-bdfb-da65b6196670"
+        }
+    },
+    "Name": {
+        "Name": "Poisonium Z"
+    },
+    "Description": {
+        "Description": "It converts Z-Power into crystals that upgrade Poison-type moves to Poison-type Z-Moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "11d5c7cd-fbc4-498c-a1d5-0eb448752c41"
+        }
+    },
+    "Name": {
+        "Name": "Psychium Z"
+    },
+    "Description": {
+        "Description": "It converts Z-Power into crystals that upgrade Psychic-type moves to Psychic-type Z-Moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "431cfd5f-6dd9-4ef9-953f-3feaa52d9ea4"
+        }
+    },
+    "Name": {
+        "Name": "Rockium Z"
+    },
+    "Description": {
+        "Description": "It converts Z-Power into crystals that upgrade Rock-type moves to Rock-type Z-Moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "f00950f7-d6f8-4148-a96d-f1f12c8a4c9d"
+        }
+    },
+    "Name": {
+        "Name": "Steelium Z"
+    },
+    "Description": {
+        "Description": "It converts Z-Power into crystals that upgrade Steel-type moves to Steel-type Z-Moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "520048b3-011b-46df-bfe2-adf21b780b4e"
+        }
+    },
+    "Name": {
+        "Name": "Waterium Z"
+    },
+    "Description": {
+        "Description": "It converts Z-Power into crystals that upgrade Water-type moves to Water-type Z-Moves."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "5e8d11b2-9369-41c5-82cf-594357b45244"
+        }
+    },
+    "Name": {
+        "Name": "Pikanium Z"
+    },
+    "Description": {
+        "Description": "This is a crystallized form of Z-Power. It upgrades Pikachu's Volt Tackle to a Z-Move."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "107d3b74-4c16-444d-aec0-2150f3b5127a"
+        }
+    },
+    "Name": {
+        "Name": "Pikashunium Z"
+    },
+    "Description": {
+        "Description": "This is a crystallized form of Z-Power. It upgrades Pikachu's Thunderbolt to a Z-Move."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "dd94cfb5-c03e-4676-aaa4-b149f6530553"
+        }
+    },
+    "Name": {
+        "Name": "Aloraichium Z"
+    },
+    "Description": {
+        "Description": "This is a crystallized form of Z-Power. It upgrades Alolan Raichu's Thunderbolt to a Z-Move."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "504805ad-2d43-48c3-affb-633e3ce66c46"
+        }
+    },
+    "Name": {
+        "Name": "Eevium Z"
+    },
+    "Description": {
+        "Description": "This is a crystallized form of Z-Power. It upgrades Eevee's Last Resort to a Z-Move."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "3ce8d553-6804-42be-855b-6c803b06ee2a"
+        }
+    },
+    "Name": {
+        "Name": "Snorlium Z"
+    },
+    "Description": {
+        "Description": "This is a crystallized form of Z-Power. It upgrades Snorlax's Giga Impact to a Z-Move."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "0766a220-7e26-4792-b40d-26edddab6943"
+        }
+    },
+    "Name": {
+        "Name": "Mewnium Z"
+    },
+    "Description": {
+        "Description": "This is a crystallized form of Z-Power. It upgrades Mew's Psychic to a Z-Move."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "6a551e38-0c2d-4bf5-84ff-cf5bcdf92b9c"
+        }
+    },
+    "Name": {
+        "Name": "Decidium Z"
+    },
+    "Description": {
+        "Description": "This is a crystallized form of Z-Power. It upgrades Decidueye's Spirit Shackle to a Z-Move."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "64f9148d-fb98-4562-aeee-e90035edc5e4"
+        }
+    },
+    "Name": {
+        "Name": "Incinium Z"
+    },
+    "Description": {
+        "Description": "This is a crystallized form of Z-Power. It upgrades Incineroar's Darkest Lariat to a Z-Move."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "0b7496f1-4123-4214-8e61-0230651ab1db"
+        }
+    },
+    "Name": {
+        "Name": "Primarium Z"
+    },
+    "Description": {
+        "Description": "This is a crystallized form of Z-Power. It upgrades Primarina's Sparkling Aria to a Z-Move."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "6e73d04e-abc3-4cb4-926f-7aeccd206597"
+        }
+    },
+    "Name": {
+        "Name": "Lycanium Z"
+    },
+    "Description": {
+        "Description": "This is a crystallized form of Z-Power. It upgrades Lycanroc's Stone Edge to a Z-Move."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "8a65b626-b8cd-4743-86dc-17e1c2dde387"
+        }
+    },
+    "Name": {
+        "Name": "Mimikium Z"
+    },
+    "Description": {
+        "Description": "This is a crystallized form of Z-Power. It upgrades Mimikyu's Play Rough to a Z-Move."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "010c5b2c-fc49-4398-896d-5db4449da98a"
+        }
+    },
+    "Name": {
+        "Name": "Kommonium Z"
+    },
+    "Description": {
+        "Description": "This is a crystallized form of Z-Power. It upgrades Kommo-o's Clanging Scales to a Z-Move."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "9ee52e72-1a05-4c34-a8b1-88b94a74c86e"
+        }
+    },
+    "Name": {
+        "Name": "Tapunium Z"
+    },
+    "Description": {
+        "Description": "This is a crystallized form of Z-Power. It upgrades the tapu's Nature's Madness to a Z-Move."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "ed6fcd7c-59de-4327-9d2d-44c8ef6ec8df"
+        }
+    },
+    "Name": {
+        "Name": "Solganium Z"
+    },
+    "Description": {
+        "Description": "This is a crystallized form of Z-Power. It upgrades Solgaleo's Sunsteel Strike to a Z-Move."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "8138494a-3d7b-49a0-b98c-3140ada7af91"
+        }
+    },
+    "Name": {
+        "Name": "Lunalium Z"
+    },
+    "Description": {
+        "Description": "This is a crystallized form of Z-Power. It upgrades Lunala's Moongeist Beam to a Z-Move."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "858c0dcd-f812-4038-9781-d50c0d15fc18"
+        }
+    },
+    "Name": {
+        "Name": "Ultranecrozium Z"
+    },
+    "Description": {
+        "Description": "This is a crystallized form of Z-Power. It upgrades Necrozma's Photon Geyser to a Z-Move."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "a36c1ed6-2859-43cb-b1ea-7e1663c6dd5a"
+        }
+    },
+    "Name": {
+        "Name": "Marshadium Z"
+    },
+    "Description": {
+        "Description": "This is a crystallized form of Z-Power. It upgrades Marshadow's Spectral Thief to a Z-Move."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "d0b02edd-522e-4fd6-9233-9bd4525de7a9"
+        }
+    },
+    "Name": {
+        "Name": "Cheri Berry"
+    },
+    "Description": {
+        "Description": "Eating this Berry will cure Paralysis."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "c4b335ca-fe8b-431b-88d0-f888744c91f0"
+        }
+    },
+    "Name": {
+        "Name": "Chesto Berry"
+    },
+    "Description": {
+        "Description": "Eating this Berry will cure Sleep."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "3649c893-f9e9-435a-bed1-83b6d58820d7"
+        }
+    },
+    "Name": {
+        "Name": "Pecha Berry"
+    },
+    "Description": {
+        "Description": "Eating this Berry will cure Poison."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "c850af01-7816-47b4-b2aa-6ef8966c41f1"
+        }
+    },
+    "Name": {
+        "Name": "Rawst Berry"
+    },
+    "Description": {
+        "Description": "Eating this Berry will cure Burn 1 and Burn 2."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "4aa344cf-6509-47b7-a365-8a9a0918639d"
+        }
+    },
+    "Name": {
+        "Name": "Aspear Berry"
+    },
+    "Description": {
+        "Description": "Eating this Berry will cure Frozen."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "7d062d5f-d8f4-439d-ac94-8ad3f181c7df"
+        }
+    },
+    "Name": {
+        "Name": "Oran Berry"
+    },
+    "Description": {
+        "Description": "Eating this Berry will heal 1 HP."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "a55055b1-6c24-4e69-a1a5-f647f3595678"
+        }
+    },
+    "Name": {
+        "Name": "Persim Berry"
+    },
+    "Description": {
+        "Description": "Eating this Berry will cure Confusion."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "7ba95bf9-74a7-4d38-86ff-ec8b698707d7"
+        }
+    },
+    "Name": {
+        "Name": "Lum Berry"
+    },
+    "Description": {
+        "Description": "Eating this Berry will cure all Status ailments."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "65903515-9ce4-432a-a373-7cacd3cf516c"
+        }
+    },
+    "Name": {
+        "Name": "Sitrus Berry"
+    },
+    "Description": {
+        "Description": "Eating this Berry will heal 3 HP or 1 Lethal Damage."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "2b2f44ed-998d-47dc-9dbe-87e04791b52c"
+        }
+    },
+    "Name": {
+        "Name": "Occa Berry"
+    },
+    "Description": {
+        "Description": "Decreases damage from Super Effective Fire-type attacks by 3. Consumed on use."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "53e15b5a-a6ab-48a8-894c-4c7eadbdaa85"
+        }
+    },
+    "Name": {
+        "Name": "Passho Berry"
+    },
+    "Description": {
+        "Description": "Decreases damage from Super Effective Water-type attacks by 3. Consumed on use."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "eac765b3-42a0-404e-b5cb-41e9d54cddaf"
+        }
+    },
+    "Name": {
+        "Name": "Wacan Berry"
+    },
+    "Description": {
+        "Description": "Decreases damage from Super Effective Electric-type attacks by 3. Consumed on use."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "8c7acd04-3592-4461-9a7d-b64ff4753232"
+        }
+    },
+    "Name": {
+        "Name": "Rindo Berry"
+    },
+    "Description": {
+        "Description": "Decreases damage from Super Effective Grass-type attacks by 3. Consumed on use."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "d9333d93-5748-4de0-b572-17d362f9fde5"
+        }
+    },
+    "Name": {
+        "Name": "Yache Berry"
+    },
+    "Description": {
+        "Description": "Decreases damage from Super Effective Ice-type attacks by 3. Consumed on use."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "cd00989f-6599-4765-b9b0-312327210941"
+        }
+    },
+    "Name": {
+        "Name": "Chople Berry"
+    },
+    "Description": {
+        "Description": "Decreases damage from Super Effective Fighting-type attacks by 3. Consumed on use."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "f9abdcda-5724-423e-bbfd-ff4dd013a329"
+        }
+    },
+    "Name": {
+        "Name": "Kebia Berry"
+    },
+    "Description": {
+        "Description": "Decreases damage from Super Effective Poison-type attacks by 3. Consumed on use."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "2bd1a926-8dae-4dbf-8ca7-d944499645ba"
+        }
+    },
+    "Name": {
+        "Name": "Shuca Berry"
+    },
+    "Description": {
+        "Description": "Decreases damage from Super Effective Ground-type attacks by 3. Consumed on use."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "58d2419a-101b-46a1-960c-6f43f7efb8b4"
+        }
+    },
+    "Name": {
+        "Name": "Coba Berry"
+    },
+    "Description": {
+        "Description": "Decreases damage from Super Effective Flying-type attacks by 3. Consumed on use."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "7d223598-47b4-4e45-a2cb-8bd9ec01245e"
+        }
+    },
+    "Name": {
+        "Name": "Payapa Berry"
+    },
+    "Description": {
+        "Description": "Decreases damage from Super Effective Psychic-type attacks by 3. Consumed on use."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "b22bb67f-0cf0-4fc4-8964-a5ef641c2137"
+        }
+    },
+    "Name": {
+        "Name": "Tanga Berry"
+    },
+    "Description": {
+        "Description": "Decreases damage from Super Effective Bug-type attacks by 3. Consumed on use."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "2db81f8f-6518-4ce8-949e-2df91baa0600"
+        }
+    },
+    "Name": {
+        "Name": "Charti Berry"
+    },
+    "Description": {
+        "Description": "Decreases damage from Super Effective Rock-type attacks by 3. Consumed on use."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "84bdcce7-e897-44b8-8bd8-32d2f25f75db"
+        }
+    },
+    "Name": {
+        "Name": "Kasib Berry"
+    },
+    "Description": {
+        "Description": "Decreases damage from Super Effective Ghost-type attacks by 3. Consumed on use."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "a80a6f7e-cb09-4c76-80c4-2e4d8e61f94d"
+        }
+    },
+    "Name": {
+        "Name": "Haban Berry"
+    },
+    "Description": {
+        "Description": "Decreases damage from Super Effective Dragon-type attacks by 3. Consumed on use."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "315aa009-5a11-457e-b013-f97d42a38c3c"
+        }
+    },
+    "Name": {
+        "Name": "Colbur Berry"
+    },
+    "Description": {
+        "Description": "Decreases damage from Super Effective Dark-type attacks by 3. Consumed on use."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "cab9e600-c724-4847-88ee-1476476aeb19"
+        }
+    },
+    "Name": {
+        "Name": "Babiri Cherry"
+    },
+    "Description": {
+        "Description": "Decreases damage from Super Effective Steel-type attacks by 3. Consumed on use."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "aa42cbb1-cdb9-4204-9041-365f24793519"
+        }
+    },
+    "Name": {
+        "Name": "Roseli Berry"
+    },
+    "Description": {
+        "Description": "Decreases damage from Super Effective Fairy-type attacks by 3. Consumed on use."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "d74b244e-0e61-4c2d-b4f8-0b597bc97de7"
+        }
+    },
+    "Name": {
+        "Name": "Chilan Berry"
+    },
+    "Description": {
+        "Description": "Decreases damage from Normal-type attacks by 3. Consumed on use."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "7ced7664-2d17-48dd-9ff7-fb699650e461"
+        }
+    },
+    "Name": {
+        "Name": "Jaboca Berry"
+    },
+    "Description": {
+        "Description": "Whenever this Pok\u00e9mon is hit with a Physical Attack, Roll 2 Die of damage against the attacker. Consumed on use."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "eab1339b-27a5-4d71-81e5-25da5bd98e45"
+        }
+    },
+    "Name": {
+        "Name": "Rowap Berry"
+    },
+    "Description": {
+        "Description": "Whenever this Pok\u00e9mon is hit with a Special Attack, Roll 2 Die of damage against the attacker. Consumed on use."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "947891c8-fdac-472b-b466-5ca24562ab7f"
+        }
+    },
+    "Name": {
+        "Name": "Big Camping Tent"
+    },
+    "Description": {
+        "Description": "A spacious tent for your group to stay a cozy night. Sprayed with Wild Pokemon repellent substances."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "27fb8696-7394-4d89-864d-99e7734c654f"
+        }
+    },
+    "Name": {
+        "Name": "Small Camping Tent"
+    },
+    "Description": {
+        "Description": "A comfortable space for 1 person, or 2 if you don't mind squeezing."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "69cbd906-8582-401a-855a-3ef7dfbef912"
+        }
+    },
+    "Name": {
+        "Name": "Sleeping Bag"
+    },
+    "Description": {
+        "Description": "Not too comfortable. You'll be able to sleep warm and dry but after a few nights your back may hurt."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "47434b14-3be5-4107-994c-297c53ef3b7d"
+        }
+    },
+    "Name": {
+        "Name": "Camping Stove & Cookware"
+    },
+    "Description": {
+        "Description": "Forget about hunting and eating roots like a savage. With this luxury set you'll always have a warm meal."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "1a68ba8e-290b-46a4-8591-8a8f7fcd9773"
+        }
+    },
+    "Name": {
+        "Name": "Canned Meal"
+    },
+    "Description": {
+        "Description": "It's nothing fancy but there's no need to travel on an empty stomach. One can is enough for one day"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "684c4e92-ffac-468b-906b-9c4d9f0a8305"
+        }
+    },
+    "Name": {
+        "Name": "Regional Map"
+    },
+    "Description": {
+        "Description": "A map with the marked routes, cities and Pokemon Centers of the region you are in."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "96949fab-6856-474b-b2a0-0b617759bc72"
+        }
+    },
+    "Name": {
+        "Name": "Compass"
+    },
+    "Description": {
+        "Description": "A useful compass to point you in the right direction. Warning: Keep away from magnets."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "25fe56cc-0ff2-4fd1-9b54-3dc3927d69f0"
+        }
+    },
+    "Name": {
+        "Name": "Pokedex"
+    },
+    "Description": {
+        "Description": "A digital encyclopedia with basic information about regional Pokemon. You may add your own research."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "1e311596-4d8d-4990-8143-69835c1bdf60"
+        }
+    },
+    "Name": {
+        "Name": "Pokedex Upgrade"
+    },
+    "Description": {
+        "Description": "Upgrade your Pokedex with the information of the Pokemon on a new region."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "155a040d-abde-4c14-b0dc-ac5d93439daa"
+        }
+    },
+    "Name": {
+        "Name": "Mountain Bike"
+    },
+    "Description": {
+        "Description": "You will travel twice as fast with this awesome all-terrain bike. Now at an insane price!"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "21aa1a01-5c27-41a6-aa2b-88919370494b"
+        }
+    },
+    "Name": {
+        "Name": "Inflatable Boat"
+    },
+    "Description": {
+        "Description": "A small boat for a single person. Your pokemon may pull you through the water or you can use the rows"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "54687200-6fc7-4c39-ba7f-010dc49be75a"
+        }
+    },
+    "Name": {
+        "Name": "Fishing Rod"
+    },
+    "Description": {
+        "Description": "A fishing rod to catch pokemon living underwater. Somedays they just won't bite, though."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "066f3bcd-f3d7-4c96-a315-43d795388791"
+        }
+    },
+    "Name": {
+        "Name": "Saddle"
+    },
+    "Description": {
+        "Description": "Strap this on and you'll never worry about falling from your pokemon again."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "e479d4d4-3f11-4f06-882f-392e0ad2ceaa"
+        }
+    },
+    "Name": {
+        "Name": "Sled"
+    },
+    "Description": {
+        "Description": "Your pokemon can pull you around through snow, sand, or any smooth surface. It's super fun!"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "5670ceca-79f6-4686-8df9-c7b350b5a58f"
+        }
+    },
+    "Name": {
+        "Name": "Pokedolls"
+    },
+    "Description": {
+        "Description": "Life-size decoy used to escape wild pokemon. Some people like to collect them."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "fd52934b-c0f1-4b8e-849a-7fda75e439d3"
+        }
+    },
+    "Name": {
+        "Name": "Repel"
+    },
+    "Description": {
+        "Description": "Most pokemon won't come neaer to you for a whole day. The smell is now machine washable."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "a12722b1-1556-4db4-bb78-ba0d19b3ecab"
+        }
+    },
+    "Name": {
+        "Name": "Pepper Spray Can"
+    },
+    "Description": {
+        "Description": "Scares away small pokemon, but it may enrage the bigger ones. Good for 5 uses."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "0588327d-407d-4cec-ab45-3c2a9d9bddec"
+        }
+    },
+    "Name": {
+        "Name": "Potion"
+    },
+    "Description": {
+        "Description": "A pocket sized spray potion to relieve the pain and heal bruises"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "4bd954a9-5084-4496-a6d4-8c3735213cd6"
+        }
+    },
+    "Name": {
+        "Name": "Super Potion"
+    },
+    "Description": {
+        "Description": "A regular can of concentrated formula spray. This potion can close open wounds and even heal a cracked bone."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "de48f4df-154c-42e5-a639-00218c49e3fd"
+        }
+    },
+    "Name": {
+        "Name": "Hyper Potion"
+    },
+    "Description": {
+        "Description": "Best value pack. It can be rationed for smaller injuries on the team, or used all at once on a serious wound."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "8544f32b-575b-455e-98e5-72742f681337"
+        }
+    },
+    "Name": {
+        "Name": "Max Potion"
+    },
+    "Description": {
+        "Description": "A single-use capsule of formula. The pokemon won't be able to restore health further until the next day."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "d18a6df3-18cf-48df-9b06-149a29fe85c0"
+        }
+    },
+    "Name": {
+        "Name": "Full Restore"
+    },
+    "Description": {
+        "Description": "A single-use capsule of deluxe formula. The pokemon won't be able to restore health until the next day."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "fecd88ee-8675-4b1f-a899-c574c8fae3a0"
+        }
+    },
+    "Name": {
+        "Name": "Antidote"
+    },
+    "Description": {
+        "Description": "A shot that quickly reduces the fever and relieves the pain."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "c7302bbd-c3e5-4a7b-9512-e0b8ed401981"
+        }
+    },
+    "Name": {
+        "Name": "Awakening"
+    },
+    "Description": {
+        "Description": "Sprays a water-based solution to awake a drowsy pokemon."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "c82300a2-b8e2-4fdd-81a4-91a8baf4eacc"
+        }
+    },
+    "Name": {
+        "Name": "Burn Heal"
+    },
+    "Description": {
+        "Description": "A powder that douses the fire and aids in the healing of the burnt area."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "8a796fa7-0bc9-49ec-b5ce-00ee380c4946"
+        }
+    },
+    "Name": {
+        "Name": "Ice Heal"
+    },
+    "Description": {
+        "Description": "Recovers the normal termperature of the pokemon and heals frost bite."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "fa582e74-c018-4de7-b57f-4aba0b66a6d4"
+        }
+    },
+    "Name": {
+        "Name": "Paralyze Heal"
+    },
+    "Description": {
+        "Description": "This ointment relaxes the muscles and stops the cramping"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "62b46407-41da-4f3f-bb98-9b1c19c5c80f"
+        }
+    },
+    "Name": {
+        "Name": "Full Heal"
+    },
+    "Description": {
+        "Description": "A superior spray formula that can heal any status problem in a second."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "ae99e5ba-bc54-431e-b13e-b35d775902b5"
+        }
+    },
+    "Name": {
+        "Name": "Energy Root"
+    },
+    "Description": {
+        "Description": "A nasty tasting root with mystical properties that can be eaten whole or turned into up to 4 batches of powder if you know how to do it."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "fe18fe35-4c4c-49fa-8467-4056c955483a"
+        }
+    },
+    "Name": {
+        "Name": "Energy Powder"
+    },
+    "Description": {
+        "Description": "This powder leaves a horrid aftertaste, but at least it stops the pain"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "31124125-27dc-48bd-922c-4ac2e65c76f2"
+        }
+    },
+    "Name": {
+        "Name": "Heal Powder"
+    },
+    "Description": {
+        "Description": "A mix of the most foul looking herbs you can find can make this cure-all powder"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "dd548d84-449e-4fc9-8e52-acf04c59e8d1"
+        }
+    },
+    "Name": {
+        "Name": "Revival Herb"
+    },
+    "Description": {
+        "Description": "It may be its magical properties or just its awful flavor, but this herb will get you back into consciousness numbing all the pain away. ***Extremely rare to find.***"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "0f5f67d3-6eda-472d-9011-8002717dc7fb"
+        }
+    },
+    "Name": {
+        "Name": "Revive"
+    },
+    "Description": {
+        "Description": "A small energy shard that brings a fainted Human or pokemon back into conciousness and stabilizes their wounds."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "17317a09-f835-4791-b209-edc0f401a523"
+        }
+    },
+    "Name": {
+        "Name": "Max Revive"
+    },
+    "Description": {
+        "Description": "A bigger shard that is not available to the public"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "bdcb6e54-8bb7-4888-b67d-3ab5a95587f3"
+        }
+    },
+    "Name": {
+        "Name": "Berry Juice"
+    },
+    "Description": {
+        "Description": "This mixed drink of various berries is also quite refreshing. Some pokemon produce it naturally."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "55ba77ab-fe92-4698-99f2-f2140ccd5057"
+        }
+    },
+    "Name": {
+        "Name": "Fresh Water"
+    },
+    "Description": {
+        "Description": "Full of electrolytes and just the right amount of sodium, restores the vitality of those who are tired."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "bd1a8c5d-607c-411e-b4ad-ca2416d50b56"
+        }
+    },
+    "Name": {
+        "Name": "Sodapop"
+    },
+    "Description": {
+        "Description": "This sugary drink grives you a quick shot of energy after being quite tired."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "972a15c5-915a-40a9-a880-74603989085e"
+        }
+    },
+    "Name": {
+        "Name": "Lemonade"
+    },
+    "Description": {
+        "Description": "The citric boost and added vitamins make this a favorite after exercise."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "6328c427-c611-4bc0-89fc-0c2271832be6"
+        }
+    },
+    "Name": {
+        "Name": "Moomoo Milk"
+    },
+    "Description": {
+        "Description": "Found in organic farms, this milk is full of calcium and is right out of the Miltank"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "6260a5c6-dba4-4cd2-9089-91632a41fa22"
+        }
+    },
+    "Name": {
+        "Name": "Pokeball"
+    },
+    "Description": {
+        "Description": "A basic ball for catching pokemon and carrying heavy items."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "eccfedd9-e3b0-448e-80b6-5fddb593b9f3"
+        }
+    },
+    "Name": {
+        "Name": "Greatball"
+    },
+    "Description": {
+        "Description": "A sturdier barrier protects the seal allowing easier catch."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "b65f2146-7521-4f61-9d2a-b15fe0c02e0b"
+        }
+    },
+    "Name": {
+        "Name": "Ultraball"
+    },
+    "Description": {
+        "Description": "The best seal in the market to ensure the catch of stronger pokemon."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "2c871e38-9ce8-4921-aef3-886fe22458ce"
+        }
+    },
+    "Name": {
+        "Name": "Masterball"
+    },
+    "Description": {
+        "Description": "It is said to be in development by some companies in the world, and rumored to have a seal so strong it would never break."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "fa712a54-2e9a-45c1-af7a-b827e12023f6"
+        }
+    },
+    "Name": {
+        "Name": "Pokemon Dry Food Pack"
+    },
+    "Description": {
+        "Description": "A bag with dry kibble."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "9941d187-45fd-480c-8c31-c9cfb60f97cc"
+        }
+    },
+    "Name": {
+        "Name": "Gourmet Food Can"
+    },
+    "Description": {
+        "Description": "Made with Premium ingredients. All pokemon will love you if you feed them this on a regular basis."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "6a1b5417-d752-4380-b16b-a1db4dc5e187"
+        }
+    },
+    "Name": {
+        "Name": "High Performance Food Sack"
+    },
+    "Description": {
+        "Description": "A high-protein kibble made for athletics. *Add 1 dice to the next Training Roll of the pokemon.*"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "7274b720-8e30-42a9-aa23-9c6aac5dabb7"
+        }
+    },
+    "Name": {
+        "Name": "Protein"
+    },
+    "Description": {
+        "Description": "A tasty milkshake that aids in the growth of bigger and stronger muscles."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "292205d4-5401-4ae1-898d-89bf3cd8d832"
+        }
+    },
+    "Name": {
+        "Name": "Iron"
+    },
+    "Description": {
+        "Description": "An iron capsule that reduces feebleness and gives you a healthy glow."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "19d5942d-5022-49ce-a6fb-ae77ceea14bc"
+        }
+    },
+    "Name": {
+        "Name": "Calcium"
+    },
+    "Description": {
+        "Description": "Add this effervescent pill to their drink to help grow stronger bones."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "b22037a8-d824-4349-8df3-5511540bbda4"
+        }
+    },
+    "Name": {
+        "Name": "Zinc"
+    },
+    "Description": {
+        "Description": "Zinc capsules help with focus and brain development"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "48bb1715-3064-4036-9515-d41010556857"
+        }
+    },
+    "Name": {
+        "Name": "Carbos"
+    },
+    "Description": {
+        "Description": "A healthy syrup that fills you with energy!"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "83050e3f-c6a4-489f-bc62-a99045fb1af0"
+        }
+    },
+    "Name": {
+        "Name": "Pp Up"
+    },
+    "Description": {
+        "Description": "It is rumered they are just sugar pills. Who really knows?"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "4d93b435-3463-4316-9fbe-ca2569a21f2b"
+        }
+    },
+    "Name": {
+        "Name": "Hp Up"
+    },
+    "Description": {
+        "Description": "A compendium of vitamins and minerals to help your pokemono grow as big and healthy as it can be."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "d72dc2c5-0668-4c8c-a717-3c87d76792c1"
+        }
+    },
+    "Name": {
+        "Name": "Rare Candy"
+    },
+    "Description": {
+        "Description": "This strange candy is made of unknown ingredients. Its effects do not stack."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "11c4bf93-01c8-4f68-878b-dfd6ba2de5cf"
+        }
+    },
+    "Name": {
+        "Name": "Grooming Kit"
+    },
+    "Description": {
+        "Description": "No more matted hair, unruly leaves, dry scales, or rough rocks!"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "ddc2e375-ca27-4df8-8cd6-283e668990c5"
+        }
+    },
+    "Name": {
+        "Name": "Pokemon Costume"
+    },
+    "Description": {
+        "Description": "Fashionable clothes. Your companions will look amazing in these costumes and they will love it."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "ee502e7a-28c7-485f-8894-c8685eacbde7"
+        }
+    },
+    "Name": {
+        "Name": "Piece of Accessory"
+    },
+    "Description": {
+        "Description": "Ribbons, hats, collars, and everything you need to make them look super special."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "c08b1466-e20a-413c-a8bf-710f59688522"
+        }
+    },
+    "Name": {
+        "Name": "Fire Stone"
+    },
+    "Description": {
+        "Description": "This Stone has a flame inside, it's hot to the touch."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "4ab18f99-032e-4c5b-b095-d90aa90c07d0"
+        }
+    },
+    "Name": {
+        "Name": "Thunder Stone"
+    },
+    "Description": {
+        "Description": "It glows in the dark and can be used to power small electronics."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "2e599746-1467-48d7-9587-2031a2688ca3"
+        }
+    },
+    "Name": {
+        "Name": "Water Stone"
+    },
+    "Description": {
+        "Description": "Looks like blue glass and can be found at the bottom of the sea."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "9d16ef2f-305f-4c3f-82b6-1ef92d8e625b"
+        }
+    },
+    "Name": {
+        "Name": "Leaf Stone"
+    },
+    "Description": {
+        "Description": "It is said that the leaf encrusted to it comes from the tree of life itself"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "20dc4f19-4ef4-4bbb-b8e3-e96411d9e1ee"
+        }
+    },
+    "Name": {
+        "Name": "Moon Stone"
+    },
+    "Description": {
+        "Description": "It is a black stone that turns white and luminescent when the moon shines over it."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "0df0c0af-a2fe-42de-88bb-06351a89dad0"
+        }
+    },
+    "Name": {
+        "Name": "Sun Stone"
+    },
+    "Description": {
+        "Description": "A red stone that shines brightly when facing the sun in the morning."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "362a739a-6dde-4aed-ad08-2206bf2832d9"
+        }
+    },
+    "Name": {
+        "Name": "Shiny Stone"
+    },
+    "Description": {
+        "Description": "Its crystal-like surface aloows you to see a ball of light inside."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "d55804e3-3203-4ef4-a102-1298786581f7"
+        }
+    },
+    "Name": {
+        "Name": "Dusk Stone"
+    },
+    "Description": {
+        "Description": "This stone seems to suck the light around into a small dark hole."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "83a8e2cb-80e1-4949-9fbb-5fe5394f2413"
+        }
+    },
+    "Name": {
+        "Name": "Dawn Stone"
+    },
+    "Description": {
+        "Description": "This cerulean stone shines with blinding light for a minute during sunrise."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "4ae7551b-9ce3-4ecf-b8ac-10caba23f3d4"
+        }
+    },
+    "Name": {
+        "Name": "Venusaurite"
+    },
+    "Description": {
+        "Description": "Makes Venusaur Mega-evolve into Mega-Venusaur"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "f04f2a2d-98f0-4937-ab12-3b72f21ca114"
+        }
+    },
+    "Name": {
+        "Name": "Charizardite X"
+    },
+    "Description": {
+        "Description": "Makes Charizard Mega-Evolve into Mega-Charizard X"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "a9bc871b-fbaf-4e78-b5fc-ac4158948307"
+        }
+    },
+    "Name": {
+        "Name": "Charizardite Y"
+    },
+    "Description": {
+        "Description": "Makes Charizard Mega-Evolve into Mega-Charizard Y"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "e267d1c8-9041-4ad9-b317-25d4d009cc47"
+        }
+    },
+    "Name": {
+        "Name": "Blastoisinite"
+    },
+    "Description": {
+        "Description": "Makes Blastoise Mega-evolve into Mega-Blastoise"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "3ea32591-8e9b-475c-9851-ef36cb9d8676"
+        }
+    },
+    "Name": {
+        "Name": "Alakazite"
+    },
+    "Description": {
+        "Description": "Makes Alakazam Mega-evolve into Mega-Alakazam"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "db8511bd-a47a-4209-805d-b8b1eaa75783"
+        }
+    },
+    "Name": {
+        "Name": "Gengarite"
+    },
+    "Description": {
+        "Description": "Makes Gengar Mega-evolve into Mega-Gengar"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "e302101a-c623-4ade-a900-6c4baca2d7b0"
+        }
+    },
+    "Name": {
+        "Name": "Kangaskhanite"
+    },
+    "Description": {
+        "Description": "Makes Kangaskhan Mega-evolve into Mega-Kangaskhan"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "38b47ce3-a53c-4f65-b713-cffe0c3541e1"
+        }
+    },
+    "Name": {
+        "Name": "Pinsirite"
+    },
+    "Description": {
+        "Description": "Makes Pinsir Mega-evolve into Mega-Pinsir"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "e8093374-a1ab-4cb0-9fcc-322d600e66ff"
+        }
+    },
+    "Name": {
+        "Name": "Gyaradosite"
+    },
+    "Description": {
+        "Description": "Makes Gyarados Mega-evolve into Mega-Gyarados"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "d8e88778-9512-4b9f-888a-d752aa7a6c09"
+        }
+    },
+    "Name": {
+        "Name": "Aerodactylite"
+    },
+    "Description": {
+        "Description": "Makes Aerodactyl Mega-evolve into Mega-Aerodactyl"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "b9598a12-38a2-4586-a75c-54488fc9e998"
+        }
+    },
+    "Name": {
+        "Name": "Mewtwonite X"
+    },
+    "Description": {
+        "Description": "Makes Mewtwo Mega-Evolve into Mega-Mewtwo X"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "8191c052-c3e7-493f-8cd7-ef60edbd8135"
+        }
+    },
+    "Name": {
+        "Name": "Mewtwonite Y"
+    },
+    "Description": {
+        "Description": "Makes Mewtwo Mega-Evolve into Mega-Mewtwo Y"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "c642821d-ca4c-40c4-b6f2-ffc94a36698d"
+        }
+    },
+    "Name": {
+        "Name": "Ampharosite"
+    },
+    "Description": {
+        "Description": "Makes Ampharos Mega-evolve into Mega-Ampharos"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "a6dfa185-00e2-4a34-ba8c-98badfd3447e"
+        }
+    },
+    "Name": {
+        "Name": "Scizorite"
+    },
+    "Description": {
+        "Description": "Makes Scizor Mega-evolve into Mega-Scizor"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "963e78e6-bcb6-466c-9e44-1cd12c12ae42"
+        }
+    },
+    "Name": {
+        "Name": "Heracronite"
+    },
+    "Description": {
+        "Description": "Makes Heracross Mega-evolve into Mega-Heracross"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "6cd0289f-b075-4eee-8cec-b1dad9aac443"
+        }
+    },
+    "Name": {
+        "Name": "Houndoominite"
+    },
+    "Description": {
+        "Description": "Makes Houndoom Mega-evolve into Mega-Houndoom"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "45df47c6-4084-4614-a99e-9d86440836e5"
+        }
+    },
+    "Name": {
+        "Name": "Tyranitarite"
+    },
+    "Description": {
+        "Description": "Makes Tyranitar Mega-evolve into Mega-Tyranitar"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "91f1911e-2097-4fe8-8761-50757cc4ecf3"
+        }
+    },
+    "Name": {
+        "Name": "Blazikenite"
+    },
+    "Description": {
+        "Description": "Makes Blaziken Mega-evolve into Mega-Blaziken"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "6cadd854-3416-4cb6-ad9f-f40ae9823446"
+        }
+    },
+    "Name": {
+        "Name": "Gardevoirite"
+    },
+    "Description": {
+        "Description": "Makes Gardevoir Mega-evolve into Mega-Gardevoir"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "71645c86-e480-465a-ac5a-faed775cc6c1"
+        }
+    },
+    "Name": {
+        "Name": "Mawilite"
+    },
+    "Description": {
+        "Description": "Makes Mawile Mega-evolve into Mega-Mawile"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "f7c3f72d-4670-4fec-b704-ade97c873dc9"
+        }
+    },
+    "Name": {
+        "Name": "Aggronite"
+    },
+    "Description": {
+        "Description": "Makes Aggron Mega-evolve into Mega-Aggron"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "ab9ef13c-8b00-4f86-9823-b050fccb5b35"
+        }
+    },
+    "Name": {
+        "Name": "Medichamite"
+    },
+    "Description": {
+        "Description": "Makes Medicham Mega-evolve into Mega-Medicham"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "300c5b7f-403f-48aa-9c7b-e50f711a146b"
+        }
+    },
+    "Name": {
+        "Name": "Manectite"
+    },
+    "Description": {
+        "Description": "Makes Manectric Mega-evolve into Mega-Manectric"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "13e12f31-1f02-4385-86dd-b50001251cf9"
+        }
+    },
+    "Name": {
+        "Name": "Banettite"
+    },
+    "Description": {
+        "Description": "Makes Banette Mega-evolve into Mega-Banette"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "63c18653-d3b7-4daf-97d0-36a2f458ad4f"
+        }
+    },
+    "Name": {
+        "Name": "Absolite"
+    },
+    "Description": {
+        "Description": "Makes Absol Mega-evolve into Mega-Absol"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "290c1bfc-4699-4284-8185-37a316ac4c65"
+        }
+    },
+    "Name": {
+        "Name": "Latiasite"
+    },
+    "Description": {
+        "Description": "Makes Latias Mega-evolve into Mega-Latias"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "01bc8cb0-5f0f-4252-be62-ecd46afa5ff0"
+        }
+    },
+    "Name": {
+        "Name": "Latiosite"
+    },
+    "Description": {
+        "Description": "Makes Latios Mega-evolve into Mega-Latios"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "450073a8-ca0d-467f-8caf-c42c5813bd17"
+        }
+    },
+    "Name": {
+        "Name": "Garchompite"
+    },
+    "Description": {
+        "Description": "Makes Garchomp Mega-evolve into Mega-Garchomp"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "6539b03c-bc70-4478-863d-507350d27f9b"
+        }
+    },
+    "Name": {
+        "Name": "Lucarionite"
+    },
+    "Description": {
+        "Description": "Makes Lucario Mega-evolve into Mega-Lucario"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "d314a717-4126-4348-bb54-b784f2bfa6b8"
+        }
+    },
+    "Name": {
+        "Name": "Abomasite"
+    },
+    "Description": {
+        "Description": "Makes Abomasnow Mega-evolve into Mega-Abomasnow"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "a5806820-22a4-4a59-8e29-38c527e83ad3"
+        }
+    },
+    "Name": {
+        "Name": "Beedrillite"
+    },
+    "Description": {
+        "Description": "Makes Beedrill Mega-evolve into Mega-Beedrill"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "61c26bb2-8ffa-4bb8-b275-0b5ee57e38e4"
+        }
+    },
+    "Name": {
+        "Name": "Pidgeotite"
+    },
+    "Description": {
+        "Description": "Makes Pidgeot Mega-evolve into Mega-Pidgeot"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "6b9d78cf-c535-4eef-bd51-337f1fe1c31b"
+        }
+    },
+    "Name": {
+        "Name": "Slowbronite"
+    },
+    "Description": {
+        "Description": "Makes Slowbro Mega-evolve into Mega-Slowbro"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "56f1d753-8371-4be5-b480-27e520cf1b28"
+        }
+    },
+    "Name": {
+        "Name": "Steelixite"
+    },
+    "Description": {
+        "Description": "Makes Steelix Mega-evolve into Mega-Steelix"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "f9bc711c-83f3-4371-bbd9-cc72cf127943"
+        }
+    },
+    "Name": {
+        "Name": "Sceptilite"
+    },
+    "Description": {
+        "Description": "Makes Sceptile Mega-evolve into Mega-Sceptile"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "add685dd-7fff-4007-8f31-ca6f3dfe39ec"
+        }
+    },
+    "Name": {
+        "Name": "Swampertite"
+    },
+    "Description": {
+        "Description": "Makes Swampert Mega-evolve into Mega-Swampert"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "03d2598c-4355-489a-bbf1-5329e6c7bc7b"
+        }
+    },
+    "Name": {
+        "Name": "Sablenite"
+    },
+    "Description": {
+        "Description": "Makes Sableye Mega-evolve into Mega-Sableye"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "943b03ba-2615-4980-858e-6031b4ef4df1"
+        }
+    },
+    "Name": {
+        "Name": "Sharpedonite"
+    },
+    "Description": {
+        "Description": "Makes Sharpedo Mega-evolve into Mega-Sharpedo"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "37e72e8b-8684-4155-b04c-0124a581e0f6"
+        }
+    },
+    "Name": {
+        "Name": "Cameruptite"
+    },
+    "Description": {
+        "Description": "Makes Camerupt Mega-evolve into Mega-Camerupt"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "58b904ac-f068-4de7-8a0d-c02b2745f44e"
+        }
+    },
+    "Name": {
+        "Name": "Altarianite"
+    },
+    "Description": {
+        "Description": "Makes Altaria Mega-evolve into Mega-Altaria"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "9536216b-e7b8-4810-8e2a-34473f2eb1d2"
+        }
+    },
+    "Name": {
+        "Name": "Glalitite"
+    },
+    "Description": {
+        "Description": "Makes Glalie Mega-evolve into Mega-Glalie"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "174baa59-f214-4ea5-9dc5-ec076ed85eab"
+        }
+    },
+    "Name": {
+        "Name": "Salamencite"
+    },
+    "Description": {
+        "Description": "Makes Salamence Mega-evolve into Mega-Salamence"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "16db3621-a478-4b46-a1e3-69279c44bbae"
+        }
+    },
+    "Name": {
+        "Name": "Metagrossite"
+    },
+    "Description": {
+        "Description": "Makes Metagross Mega-evolve into Mega-Metagross"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "93d2ae00-6823-4a5e-b966-f7746afc58c0"
+        }
+    },
+    "Name": {
+        "Name": "Lopunnite"
+    },
+    "Description": {
+        "Description": "Makes Lopunny Mega-evolve into Mega-Lopunny"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "66144198-92c4-47a8-b75b-6394d63894e3"
+        }
+    },
+    "Name": {
+        "Name": "Galladite"
+    },
+    "Description": {
+        "Description": "Makes Gallade Mega-evolve into Mega-Gallade"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "3ce3de5e-1800-45a6-917a-5cff0c96fe36"
+        }
+    },
+    "Name": {
+        "Name": "Audinite"
+    },
+    "Description": {
+        "Description": "Makes Audino Mega-evolve into Mega-Audino"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "ebdf3c6a-6d75-44cf-a332-897ccbc98c74"
+        }
+    },
+    "Name": {
+        "Name": "Diancite"
+    },
+    "Description": {
+        "Description": "Makes Diancie Mega-evolve into Mega-Diancie"
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "d26028cd-ff65-4243-87b0-5b0f91773f85"
+        }
+    },
+    "Name": {
+        "Name": "Blast Seed"
+    },
+    "Description": {
+        "Description": "If you eat this seed you'll suddenly sneeze a blast of fire. Foes do not have time to react. Deal 1 damage to a foe."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "99a85ed6-9a94-405a-b654-3fb0cdfb2b74"
+        }
+    },
+    "Name": {
+        "Name": "Sleep Seed"
+    },
+    "Description": {
+        "Description": "Make a Dexterity + Fight + Canalize roll to shoot these seeds into your foe's mouth. Inflict the Sleep Condition."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "b0fc288e-0bc5-48b2-a543-b618f658824a"
+        }
+    },
+    "Name": {
+        "Name": "Stun Seed"
+    },
+    "Description": {
+        "Description": "Make  a  Dexterity  +  Fight  +  Canalize roll to shoot these seeds into your foe's mouth. Inflict the Paralysis Condition."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "480ec86c-6d7e-4a03-b7c1-2b08eda5c6e1"
+        }
+    },
+    "Name": {
+        "Name": "Encourage Seed"
+    },
+    "Description": {
+        "Description": "It doesn't taste any different than a plain seed, but you'll feel a surge of confidence after eating it. Gain High Critical in all moves for a scene."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "426e36ca-fa91-48ae-8603-7fd690109f43"
+        }
+    },
+    "Name": {
+        "Name": "Heal Seed"
+    },
+    "Description": {
+        "Description": "This seed's pure energy will cleanse any impurities away from your body, leaving you glowing with health. Heal all Status Conditions."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "6dae9b99-2147-483e-8485-c6deba301d77"
+        }
+    },
+    "Name": {
+        "Name": "Reviver Seed"
+    },
+    "Description": {
+        "Description": "Feed this seed to a Pokemon that just lost conciousness to get it back on its feet. These seeds are incredibly rare. Restore 1HP and return awareness."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "c19bf925-11e0-46cc-9745-5713933c2880"
+        }
+    },
+    "Name": {
+        "Name": "All-Hit Orb"
+    },
+    "Description": {
+        "Description": "As it explodes, the visibility around gets clear, no light, darkness or fog impedes your team to strike direcly. Gain Never-Miss in all moves for a scene."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "474e24b7-84ab-4910-b396-829c05b65bf2"
+        }
+    },
+    "Name": {
+        "Name": "Escape Orb"
+    },
+    "Description": {
+        "Description": "This orb allows you to escape back to the guild. (The Mission will fail if the objective was not completed). Escape back to Guild territory."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "e32c8660-d9c1-4712-b5f8-d4ed0c69759e"
+        }
+    },
+    "Name": {
+        "Name": "Health Orb"
+    },
+    "Description": {
+        "Description": "Those who stand inside the blast's ratio will become healthy again, try to keep it thay way. Heal all Status Conditions."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "d514b517-47af-4dc6-bb6b-71d2518c1ad8"
+        }
+    },
+    "Name": {
+        "Name": "Luminous Orb"
+    },
+    "Description": {
+        "Description": "As it explodes, the Orb will reveal the paths in the dungeon. Traps, treasures, hostile Pok'mon, etc. remain hidden. Reveal the dungeon."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "9590ecc6-8569-4301-85c9-1711a954f4a2"
+        }
+    },
+    "Name": {
+        "Name": "Weather Orb"
+    },
+    "Description": {
+        "Description": "This orb will call for Sunshine, Rain, a Sandstorm or Hail in the area. The effects will last for the Scene. Summon a Weather condition."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "5792a910-a0a8-45a1-acc6-e3379a24689e"
+        }
+    },
+    "Name": {
+        "Name": "Observer Orb"
+    },
+    "Description": {
+        "Description": "Those affected by the orb's blast will remain observing the lights it produced unable to move. Flinch all foes in range."
+    }
+}{
+    "MissingValues": {
+        "MissingValues": null
+    },
+    "DataId": {
+        "DbId": {
+            "DbId": null,
+            "nil": "true"
+        },
+        "Uuid": {
+            "Uuid": "327b0fb7-45f0-4aa2-a3b2-090e505e8160"
+        }
+    },
+    "Name": {
+        "Name": "All-Protect Orb"
+    },
+    "Description": {
+        "Description": "For the next three attacks each member of  the  team  receives, an energy field will protect you from damage. Cast Protect three times on each teammate."
+    }
+}
