@@ -15,11 +15,58 @@ class Type(models.Model):
 
 
 class Ability(models.Model):
-    pass
+
+    name = models.CharField(max_length=50, default="")
+
+    effect = models.TextField(max_length=1000, default="")
+
+    def __str__(self):
+        return self.name
 
 
 class Move(models.Model):
-    pass
+
+    name = models.CharField(max_length=50, default="")
+
+    description = models.TextField(max_length=1000, default="")
+
+    type = models.ForeignKey(Type, related_name="moves",
+                             on_delete=models.PROTECT, null=True, blank=True)
+
+    power = models.IntegerField(null=True, blank=True)
+
+    ranged = models.BooleanField(default=False)
+
+    primary_accuracy = models.CharField(max_length=30, null=True, blank=True)
+
+    secondary_accuracy = models.CharField(max_length=30, null=True, blank=True)
+
+    reduced_accuracy = models.IntegerField(default=0, null=True, blank=True)
+
+    damage_stat = models.CharField(max_length=30, null=True, blank=True)
+
+    damage_modifier = models.IntegerField(null=True, blank=True)
+
+    class CategoryChoices(models.TextChoices):
+        PHYSICAL = "PH", "Physical"
+        SPECIAL = "SP", "Special"
+        SUPPORT = "SU", "Support"
+
+    category = models.CharField(
+        max_length=2, choices=CategoryChoices.choices, null=True, blank=True)
+
+    class TargetChoices(models.TextChoices):
+        USER = "USER", "User"
+        ONE_ALLY = "ONE_ALLY", "One Ally"
+        ALL_ALLIES = "ALL_ALLIES", "User & All Allies in Range"
+        FOE = "FOE", "Foe"
+        RANDOM_FOE = "RANDOM_FOE", "Random Foe"
+        ALL_FOES = "ALL_FOES", "All Foes in Range"
+        AREA = "AREA", "Area"
+        BATTLEFIELD = "BATTLEFIELD", "Battlefield"
+
+    def __str__(self):
+        return self.name
 
 
 class PokemonSpecies(models.Model):
@@ -56,7 +103,8 @@ class PokemonSpecies(models.Model):
     max_special = models.PositiveIntegerField()
     max_insight = models.PositiveIntegerField()
 
-    moveset = models.ManyToManyField(Move, related_name="species", blank=True)
+    moveset = models.ManyToManyField(
+        Move, related_name="species", blank=True)
 
     @property
     def weight_lbs(self):

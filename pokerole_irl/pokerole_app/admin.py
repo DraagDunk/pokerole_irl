@@ -1,6 +1,16 @@
 from django.contrib import admin
 
-from .models import Pokedex, PokedexEntry, PokemonSpecies, Type
+from .models import Pokedex, PokedexEntry, PokemonSpecies, Type, Move, Ability
+
+
+@admin.register(Move)
+class MoveAdmin(admin.ModelAdmin):
+    list_display = ('__str__', 'type', 'category')
+
+
+@admin.register(Ability)
+class AbilityAdmin(admin.ModelAdmin):
+    list_display = ('__str__',)
 
 
 @admin.register(PokemonSpecies)
