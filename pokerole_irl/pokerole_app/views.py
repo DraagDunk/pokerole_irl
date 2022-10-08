@@ -1,10 +1,11 @@
 from urllib import request
-from django.shortcuts import render, redirect
-from django.contrib.auth.forms import UserCreationForm
+from django.shortcuts import render
+
 from django.contrib.auth import authenticate, login, get_user_model
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 
-from django.views.generic import TemplateView, ListView, CreateView
+from django.views.generic import TemplateView, ListView, CreateView, View
 
 from .models import PokemonSpecies
 
@@ -27,6 +28,8 @@ class RegisterView(CreateView):
     model = get_user_model()
     fields = ['username', 'password']  
 
-@login_required
-def profile(request):
-    return render(request, 'users/profile.html')
+class UserProfileView(LoginRequiredMixin, TemplateView):
+    login_url = '/'
+    redirect_field_name = 'suffer'
+
+    template_name = 'users/profile.html'
