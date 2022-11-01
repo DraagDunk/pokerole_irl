@@ -5,7 +5,7 @@ from .models import Pokedex, PokedexEntry, PokemonSpecies, Type, Move, Ability
 
 @admin.register(Move)
 class MoveAdmin(admin.ModelAdmin):
-    list_display = ('__str__', 'type', 'category')
+    list_display = ('__str__', 'move_type', 'category')
 
 
 @admin.register(Ability)

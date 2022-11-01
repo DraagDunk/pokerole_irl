@@ -26,12 +26,13 @@ class Ability(models.Model):
 
 class Move(models.Model):
 
-    name = models.CharField(max_length=50, default="")
+    name = models.CharField(max_length=50)
 
-    description = models.TextField(max_length=1000, default="")
+    description = models.TextField(
+        max_length=1000, default="", null=True, blank=True)
 
-    type = models.ForeignKey(Type, related_name="moves",
-                             on_delete=models.PROTECT, null=True, blank=True)
+    move_type = models.ForeignKey(Type, related_name="moves",
+                                  on_delete=models.PROTECT, null=True, blank=True)
 
     power = models.IntegerField(null=True, blank=True)
 
@@ -46,6 +47,8 @@ class Move(models.Model):
     damage_stat = models.CharField(max_length=30, null=True, blank=True)
 
     damage_modifier = models.IntegerField(null=True, blank=True)
+
+    additional_info = models.TextField(max_length=1000, null=True, blank=True)
 
     class CategoryChoices(models.TextChoices):
         PHYSICAL = "PH", "Physical"
@@ -73,13 +76,17 @@ class PokemonSpecies(models.Model):
 
     name = models.CharField(max_length=30)
     variant = models.CharField(max_length=30, null=True, blank=True)
-    types = models.ManyToManyField(Type, related_name="species", blank=True)
+    primary_type = models.ForeignKey(
+        Type, related_name="primary_species", blank=True, on_delete=models.PROTECT)
+    secondary_type = models.ForeignKey(
+        Type, related_name="secondary_species", null=True, blank=True, on_delete=models.SET_NULL)
     abilities = models.ManyToManyField(
         Ability, related_name="species", blank=True)
 
     height = models.FloatField(verbose_name="height (m)")
     weight = models.FloatField(verbose_name="weight (kg)")
 
+    category = models.CharField(max_length=50, default="")
     description = models.TextField()
 
     evolves_by = models.CharField(max_length=30, null=True, blank=True)
@@ -108,11 +115,11 @@ class PokemonSpecies(models.Model):
 
     @property
     def weight_lbs(self):
-        return 2.2*self.weight
+        return round(2.2*self.weight, 1)
 
     @property
     def height_ft(self):
-        return 3.28*self.height
+        return round(3.28*self.height, 1)
 
     def __str__(self):
         return f"{self.variant} {self.name}" if self.variant else f"{self.name}"
