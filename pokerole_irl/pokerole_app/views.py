@@ -1,11 +1,11 @@
-from urllib import request
-from django.shortcuts import render
-
-from django.contrib.auth import authenticate, login, get_user_model
-from django.contrib.auth.decorators import login_required
+from django.contrib import messages
+from django.contrib.auth import  get_user_model
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.shortcuts import redirect, render
 
-from django.views.generic import TemplateView, ListView, CreateView, View
+from django.views.generic import TemplateView, ListView, CreateView
+
+from .forms import UpdateProfileForm, UpdateUserForm
 
 from .models import PokemonSpecies
 
@@ -29,7 +29,28 @@ class RegisterView(CreateView):
     fields = ['username', 'password']  
 
 class UserProfileView(LoginRequiredMixin, TemplateView):
+    template_name = 'users/profile.html'
+    
     login_url = '/'
     redirect_field_name = 'suffer'
 
-    template_name = 'users/profile.html'
+    def post(self, request):
+        user_form = UpdateUserForm(request.POST, instance=request.user)
+        profile_form = UpdateProfileForm(request.POST, instance=request.user.profile)
+
+        if user_form.is_valid() and profile_form.is_valid():
+            user_form.save()
+            profile_form.save()
+            messages.success(request, 'Profile updated sucessfully')
+            return redirect(to='user-profile')
+    
+        return render(request, 'users/profile.html', {'user_form': user_form, 'profile_form': profile_form})
+
+
+    def get(self, request):
+        user_form = UpdateUserForm(instance=request.user)
+        profile_form = UpdateProfileForm(instance=request.user.profile)
+
+        return render(request, 'users/profile.html', {'user_form': user_form, 'profile_form': profile_form})
+
+
