@@ -26,7 +26,7 @@ class RegisterView(CreateView):
     success_url = '/'
 
     model = get_user_model()
-    fields = ['username', 'password']  
+    fields = ['username', 'password', 'email']  
 
 class UserProfileView(LoginRequiredMixin, TemplateView):
     template_name = 'users/profile.html'
