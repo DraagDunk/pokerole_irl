@@ -4,7 +4,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import redirect, render
 
 from django.views.generic import TemplateView, ListView, CreateView
-
+from django.contrib.auth.forms import UserCreationForm
 from .forms import UpdateProfileForm, UpdateUserForm
 
 from .models import PokemonSpecies
@@ -22,11 +22,10 @@ class AllSpeciesView(ListView):
     context_object_name = "species"
 
 class RegisterView(CreateView):
+    form_class = UserCreationForm
     template_name = 'registration/register.html'
-    success_url = '/'
-
+    success_url = '/login'
     model = get_user_model()
-    fields = ['username', 'password', 'email']  
 
 class UserProfileView(LoginRequiredMixin, TemplateView):
     template_name = 'users/profile.html'
@@ -52,5 +51,3 @@ class UserProfileView(LoginRequiredMixin, TemplateView):
         profile_form = UpdateProfileForm(instance=request.user.profile)
 
         return render(request, 'users/profile.html', {'user_form': user_form, 'profile_form': profile_form})
-
-
