@@ -22,12 +22,19 @@ class AllSpeciesView(ListView):
     context_object_name = "species"
 
 class RegisterView(CreateView):
+    def dispatch(self, request, *args, **kwargs):
+        if request.user.is_authenticated:
+            return redirect('/')
+        return super().dispatch(request, *args, **kwargs)
+    
     form_class = UserCreationForm
     template_name = 'registration/register.html'
     success_url = '/login'
     model = get_user_model()
 
+
 class UserProfileView(LoginRequiredMixin, TemplateView):
+    # Updates the user profile and info
     template_name = 'users/profile.html'
     
     login_url = '/'
