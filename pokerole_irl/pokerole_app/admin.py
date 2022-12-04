@@ -17,7 +17,7 @@ class AbilityAdmin(admin.ModelAdmin):
 class SpeciesAdmin(admin.ModelAdmin):
     list_display = ('__str__',)
 
-    filter_horizontal = ('evolutions',)
+    filter_horizontal = ('evolutions', 'moveset', 'abilities')
 
 
 @admin.register(Type)

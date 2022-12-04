@@ -10,8 +10,21 @@ class Type(models.Model):
     immunities = models.ManyToManyField(
         'self', related_name="no_effect", symmetrical=False, blank=True)
 
+    def get_weaknesses_and_resistances(self):
+        weak_res = {}
+        for weakness in self.weaknesses.all():
+            weak_res[weakness] = 2
+        for resistance in self.resistances.all():
+            weak_res[resistance] = 0.5
+        for immunity in self.immunities.all():
+            weak_res[immunity] = 0
+        return weak_res
+
     def __str__(self):
         return self.name
+
+    def __repr__(self):
+        return self.__str__()
 
 
 class Ability(models.Model):
@@ -37,6 +50,8 @@ class Move(models.Model):
     power = models.IntegerField(null=True, blank=True)
 
     ranged = models.BooleanField(default=False)
+
+    target = models.CharField(max_length=30, null=True, blank=True)
 
     primary_accuracy = models.CharField(max_length=30, null=True, blank=True)
 
@@ -77,7 +92,7 @@ class PokemonSpecies(models.Model):
     name = models.CharField(max_length=30)
     variant = models.CharField(max_length=30, null=True, blank=True)
     primary_type = models.ForeignKey(
-        Type, related_name="primary_species", blank=True, on_delete=models.PROTECT)
+        Type, related_name="primary_species", null=True, blank=True, on_delete=models.PROTECT)
     secondary_type = models.ForeignKey(
         Type, related_name="secondary_species", null=True, blank=True, on_delete=models.SET_NULL)
     abilities = models.ManyToManyField(
@@ -120,6 +135,38 @@ class PokemonSpecies(models.Model):
     @property
     def height_ft(self):
         return round(3.28*self.height, 1)
+
+    def get_weaknesses_and_resistances(self):
+        wr_primary = self.primary_type.get_weaknesses_and_resistances()
+
+        if self.secondary_type:
+            wr_secondary = self.secondary_type.get_weaknesses_and_resistances()
+
+            weak_res = wr_primary
+            for key, val in wr_secondary.items():
+                if key in weak_res.keys():
+                    weak_res[key] *= val
+                else:
+                    weak_res[key] = val
+            return weak_res
+        else:
+            return wr_primary
+
+    @property
+    def weaknesses(self):
+        weak_list = []
+        for key, val in self.get_weaknesses_and_resistances().items():
+            if val > 1:
+                weak_list.append(f"{key} x{val}")
+        return ", ".join(weak_list)
+
+    @property
+    def resistances(self):
+        res_list = []
+        for key, val in self.get_weaknesses_and_resistances().items():
+            if val < 1:
+                res_list.append(f"{key} x{val}")
+        return ", ".join(res_list)
 
     def __str__(self):
         return f"{self.variant} {self.name}" if self.variant else f"{self.name}"

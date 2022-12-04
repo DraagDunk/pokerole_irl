@@ -18,10 +18,12 @@ class AllSpeciesView(ListView):
     template_name = "allspecies.html"
     model = PokemonSpecies
     context_object_name = "species"
+    paginate_by = 20
+
 
 class RegisterView(CreateView):
     template_name = 'registration/register.html'
     success_url = '/'
 
     model = get_user_model()
-    fields = ['username', 'password']  
+    fields = ['username', 'password']

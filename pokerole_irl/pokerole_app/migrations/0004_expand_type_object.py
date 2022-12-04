@@ -5,32 +5,32 @@ from django.db import migrations, models
 
 def create_types(apps, schema_editor):
     Type = apps.get_model('pokerole_app', 'Type')
-    types = ('normal', 'bug', 'dark', 'dragon', 'electric', 'fairy', 'fight', 'fire', 'flying',
+    types = ('normal', 'bug', 'dark', 'dragon', 'electric', 'fairy', 'fighting', 'fire', 'flying',
              'ghost', 'grass', 'ground', 'ice', 'poison', 'psychic', 'rock', 'steel', 'water')
     for type in types:
-        Type(name=type.capitalize()).save()
+        Type.objects.update_or_create(name=type.capitalize())
 
 
 def add_weaknesses(apps, schema_editor):
     Type = apps.get_model('pokerole_app', 'Type')
     weaknesses = {
-        'normal': ('fight',),
+        'normal': ('fighting',),
         'bug': ('fire', 'flying', 'rock'),
-        'dark': ('bug', 'fairy', 'fight'),
+        'dark': ('bug', 'fairy', 'fighting'),
         'dragon': ('dragon', 'fairy', 'ice'),
         'electric': ('ground',),
         'fairy': ('poison', 'steel'),
-        'fight': ('fairy', 'flying', 'psychic'),
+        'fighting': ('fairy', 'flying', 'psychic'),
         'fire': ('ground', 'rock', 'water'),
         'flying': ('electric', 'ice', 'rock'),
         'ghost': ('dark', 'ghost'),
         'grass': ('bug', 'fire', 'flying', 'ice', 'poison'),
         'ground': ('grass', 'ice', 'water'),
-        'ice': ('fight', 'fire', 'rock', 'steel'),
+        'ice': ('fighting', 'fire', 'rock', 'steel'),
         'poison': ('ground', 'psychic'),
         'psychic': ('bug', 'dark', 'ghost'),
-        'rock': ('grass', 'ground', 'fight', 'steel', 'water'),
-        'steel': ('fight', 'fire', 'ground'),
+        'rock': ('grass', 'ground', 'fighting', 'steel', 'water'),
+        'steel': ('fighting', 'fire', 'ground'),
         'water': ('electric', 'grass')
     }
     for key in weaknesses:
@@ -43,20 +43,20 @@ def add_weaknesses(apps, schema_editor):
 def add_resistances(apps, schema_editor):
     Type = apps.get_model('pokerole_app', 'Type')
     resistances = {
-        'bug': ('fight', 'grass', 'ground'),
+        'bug': ('fighting', 'grass', 'ground'),
         'dark': ('dark', 'ghost'),
         'dragon': ('electric', 'fire', 'grass', 'water'),
         'electric': ('electric', 'flying', 'steel'),
-        'fairy': ('bug', 'dark', 'fight'),
-        'fight': ('bug', 'dark', 'rock'),
+        'fairy': ('bug', 'dark', 'fighting'),
+        'fighting': ('bug', 'dark', 'rock'),
         'fire': ('bug', 'fairy', 'fire', 'grass', 'ice', 'steel'),
-        'flying': ('bug', 'fight', 'grass'),
+        'flying': ('bug', 'fighting', 'grass'),
         'ghost': ('bug', 'poison'),
         'grass': ('electric', 'grass', 'ground', 'water'),
         'ground': ('poison', 'rock'),
         'ice': ('ice',),
-        'poison': ('bug', 'fairy', 'fight', 'grass', 'poison'),
-        'psychic': ('fight', 'psychic'),
+        'poison': ('bug', 'fairy', 'fighting', 'grass', 'poison'),
+        'psychic': ('fighting', 'psychic'),
         'rock': ('fire', 'flying', 'normal', 'poison'),
         'steel': ('bug', 'dragon', 'flying', 'fairy', 'grass', 'ice', 'normal', 'psychic', 'rock', 'steel'),
         'water': ('fire', 'ice', 'steel', 'water')
@@ -75,7 +75,7 @@ def add_immunities(apps, schema_editor):
         'dark': ('psychic',),
         'fairy': ('dragon',),
         'flying': ('ground',),
-        'ghost': ('fight', 'normal'),
+        'ghost': ('fighting', 'normal'),
         'ground': ('electric',),
         'steel': ('poison',)
     }
