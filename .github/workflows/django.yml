@@ -1,5 +1,8 @@
 name: Django CI
 
+env:
+  DEVELOPMENT_MODE: True
+
 on:
   push:
     branches: [ "main" ]
@@ -14,8 +17,6 @@ jobs:
       max-parallel: 4
       matrix:
         python-version: [3.9]
-
-    environment: CI environment
 
     steps:
     - uses: actions/checkout@v3
