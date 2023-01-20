@@ -30,4 +30,4 @@ jobs:
         pipenv install
     - name: Run Tests
       run: |
-        python pokerole_irl/manage.py test
+        pipenv run python pokerole_irl/manage.py test
