@@ -15,9 +15,6 @@ jobs:
       matrix:
         python-version: [3.9]
 
-    variables:
-      DEVELOPMENT_MODE: True
-
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python ${{ matrix.python-version }}
@@ -29,6 +26,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install pipenv
         pipenv install
+        pipenv --rm
     - name: Run Tests
       run: |
-        pipenv run python pokerole_irl/manage.py test
+        python pokerole_irl/manage.py test
