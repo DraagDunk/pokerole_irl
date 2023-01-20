@@ -1,0 +1,50 @@
+{
+    "Number": 153,
+    "DexID": "0153",
+    "Name": "Bayleef",
+    "Type1": "Grass",
+    "Type2": "",
+    "BaseHP": 4,
+    "Strength": 2,
+    "MaxStrength": 4,
+    "Dexterity": 2,
+    "MaxDexterity": 4,
+    "Vitality": 2,
+    "MaxVitality": 5,
+    "Special": 2,
+    "MaxSpecial": 4,
+    "Insight": 2,
+    "MaxInsight": 5,
+    "Ability1": "Overgrow",
+    "Ability2": "",
+    "HiddenAbility": "Leaf Guard",
+    "EventAbilities": "",
+    "RecommendedRank": "Amateur",
+    "GenderType": "",
+    "Legendary": false,
+    "GoodStarter": false,
+    "_id": "bayleef",
+    "DexCategory": "Leaf Pokemon",
+    "Height": {
+        "Meters": 1.2,
+        "Feet": 3.9
+    },
+    "Weight": {
+        "Kilograms": 15.8,
+        "Pounds": 34.8
+    },
+    "DexDescription": "A spicy fragrance emanates from around its neck that makes it feisty and impetuous. It sheds its leaves every couple of weeks after the aroma diminishes and its mood also becomes calmer.",
+    "Evolutions": [
+        {
+            "From": "Chikorita",
+            "Kind": "Level",
+            "Speed": "Medium"
+        },
+        {
+            "To": "Meganium",
+            "Kind": "Level",
+            "Speed": "Medium"
+        }
+    ],
+    "Image": "bayleef.png"
+}

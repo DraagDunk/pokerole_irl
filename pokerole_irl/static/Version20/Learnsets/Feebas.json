@@ -1,0 +1,30 @@
+{
+    "Name": "Feebas",
+    "_id": "feebas",
+    "Moves": [
+        {
+            "Learned": "Starter",
+            "Name": "Splash"
+        },
+        {
+            "Learned": "Amateur",
+            "Name": "Tackle"
+        },
+        {
+            "Learned": "Amateur",
+            "Name": "Flail"
+        },
+        {
+            "Learned": "Ace",
+            "Name": "Brine"
+        },
+        {
+            "Learned": "Pro",
+            "Name": "Mud Sport"
+        },
+        {
+            "Learned": "Pro",
+            "Name": "Dive"
+        }
+    ]
+}

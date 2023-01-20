@@ -33,55 +33,60 @@ class Ability(models.Model):
 
     effect = models.TextField(max_length=1000, default="")
 
+    description = models.TextField(max_length=1000, default="")
+
     def __str__(self):
         return self.name
+
+
+class DamageTypeChoices(models.TextChoices):
+    PHYSICAL = "Physical", "Physical"
+    SPECIAL = "Special", "Special"
+    SUPPORT = "Support", "Support"
+
+
+class TargetChoices(models.TextChoices):
+    USER = "User"
+    ONE_ALLY = "One Ally"
+    ALL_ALLIES = "User & All Allies in Range"
+    FOE = "Foe"
+    RANDOM_FOE = "Random Foe"
+    ALL_FOES = "All Foes in Range"
+    AREA = "Area"
+    BATTLEFIELD = "Battlefield"
 
 
 class Move(models.Model):
 
     name = models.CharField(max_length=50)
 
-    description = models.TextField(
-        max_length=1000, default="", null=True, blank=True)
-
     move_type = models.ForeignKey(Type, related_name="moves",
                                   on_delete=models.PROTECT, null=True, blank=True)
 
     power = models.IntegerField(null=True, blank=True)
 
-    ranged = models.BooleanField(default=False)
+    damage_stat = models.CharField(max_length=30, null=True, blank=True)
 
-    target = models.CharField(max_length=30, null=True, blank=True)
+    damage_modifier = models.CharField(max_length=30, null=True, blank=True)
 
     primary_accuracy = models.CharField(max_length=30, null=True, blank=True)
 
     secondary_accuracy = models.CharField(max_length=30, null=True, blank=True)
 
-    reduced_accuracy = models.IntegerField(default=0, null=True, blank=True)
+    description = models.TextField(
+        max_length=1000, default="", null=True, blank=True)
 
-    damage_stat = models.CharField(max_length=30, null=True, blank=True)
+    effect = models.TextField(max_length=1000, null=True, blank=True)
 
-    damage_modifier = models.IntegerField(null=True, blank=True)
+    attributes = models.JSONField(default=dict)
 
-    additional_info = models.TextField(max_length=1000, null=True, blank=True)
+    added_effects = models.JSONField(default=dict)
 
-    class CategoryChoices(models.TextChoices):
-        PHYSICAL = "PH", "Physical"
-        SPECIAL = "SP", "Special"
-        SUPPORT = "SU", "Support"
+    damage_type = models.CharField(
+        max_length=8, choices=DamageTypeChoices.choices, null=True, blank=True)
 
-    category = models.CharField(
-        max_length=2, choices=CategoryChoices.choices, null=True, blank=True)
-
-    class TargetChoices(models.TextChoices):
-        USER = "USER", "User"
-        ONE_ALLY = "ONE_ALLY", "One Ally"
-        ALL_ALLIES = "ALL_ALLIES", "User & All Allies in Range"
-        FOE = "FOE", "Foe"
-        RANDOM_FOE = "RANDOM_FOE", "Random Foe"
-        ALL_FOES = "ALL_FOES", "All Foes in Range"
-        AREA = "AREA", "Area"
-        BATTLEFIELD = "BATTLEFIELD", "Battlefield"
+    target = models.CharField(
+        max_length=30, choices=TargetChoices.choices, null=True, blank=True)
 
     def __str__(self):
         return self.name
@@ -89,14 +94,28 @@ class Move(models.Model):
 
 class PokemonSpecies(models.Model):
 
+    number = models.PositiveIntegerField()
+    dex_id = models.CharField(max_length=6)
     name = models.CharField(max_length=30)
-    variant = models.CharField(max_length=30, null=True, blank=True)
     primary_type = models.ForeignKey(
         Type, related_name="primary_species", null=True, blank=True, on_delete=models.PROTECT)
     secondary_type = models.ForeignKey(
         Type, related_name="secondary_species", null=True, blank=True, on_delete=models.SET_NULL)
+
     abilities = models.ManyToManyField(
-        Ability, related_name="species", blank=True)
+        Ability, related_name="species")
+    hidden_ability = models.ForeignKey(
+        Ability, related_name="hidden_species", blank=True, null=True, on_delete=models.SET_NULL)
+    event_ability = models.ForeignKey(
+        Ability, related_name="event_species", blank=True, null=True, on_delete=models.SET_NULL)
+
+    recommended_rank = models.CharField(max_length=30, default="")
+
+    gender_type = models.CharField(max_length=1, default="")
+
+    legendary = models.BooleanField(default=False)
+
+    good_starter = models.BooleanField(default=False)
 
     height = models.FloatField(verbose_name="height (m)")
     weight = models.FloatField(verbose_name="weight (kg)")
@@ -104,10 +123,8 @@ class PokemonSpecies(models.Model):
     category = models.CharField(max_length=50, default="")
     description = models.TextField()
 
-    evolves_by = models.CharField(max_length=30, null=True, blank=True)
-
     evolutions = models.ManyToManyField(
-        'self', related_name="preevolution", blank=True, symmetrical=False)
+        'self', related_name="preevolution", through="Evolution", through_fields=("from_species", "to_species"), blank=True, symmetrical=False)
 
     # Base stats
     base_strength = models.PositiveIntegerField()
@@ -125,8 +142,10 @@ class PokemonSpecies(models.Model):
     max_special = models.PositiveIntegerField()
     max_insight = models.PositiveIntegerField()
 
-    moveset = models.ManyToManyField(
-        Move, related_name="species", blank=True)
+    moves = models.ManyToManyField(
+        Move, related_name="species", blank=True, through="MoveSet")
+
+    image_name = models.CharField(max_length=50)
 
     @property
     def weight_lbs(self):
@@ -169,10 +188,24 @@ class PokemonSpecies(models.Model):
         return ", ".join(res_list)
 
     def __str__(self):
-        return f"{self.variant} {self.name}" if self.variant else f"{self.name}"
+        return self.name
 
     def __repr__(self):
-        return f"{self.variant} {self.name}" if self.variant else f"{self.name}"
+        return self.name
+
+
+class Evolution(models.Model):
+    from_species = models.ForeignKey(PokemonSpecies, on_delete=models.CASCADE)
+    to_species = models.ForeignKey(
+        PokemonSpecies, related_name='evolved_from', on_delete=models.CASCADE)
+    kind = models.CharField(max_length=30, default="")
+    speed = models.CharField(max_length=30, default="")
+
+
+class MoveSet(models.Model):
+    species = models.ForeignKey(PokemonSpecies, on_delete=models.CASCADE)
+    move = models.ForeignKey(Move, on_delete=models.CASCADE)
+    learned = models.CharField(max_length=30)
 
 
 class Pokedex(models.Model):
@@ -196,3 +229,29 @@ class PokedexEntry(models.Model):
 
     def __str__(self):
         return f"{self.pokedex} #{self.number}: {self.species}"
+
+
+class Nature(models.Model):
+    name = models.CharField(max_length=30)
+    confidence = models.PositiveIntegerField()
+    keywords = models.CharField(max_length=50, default="")
+    description = models.TextField(max_length=1000, default="")
+
+    def __str__(self):
+        return self.name
+
+
+class Item(models.Model):
+    name = models.CharField(max_length=30)
+    description = models.TextField(max_length=1000, default="")
+    type_bonus = models.ForeignKey(
+        Type, blank=True, null=True, on_delete=models.SET_NULL)
+    value = models.CharField(max_length=50, default="")
+    species = models.ForeignKey(
+        PokemonSpecies, blank=True, null=True, on_delete=models.CASCADE)
+    heal_amount = models.CharField(max_length=30, default="")
+    suggested_price = models.CharField(max_length=30, default="")
+    PMD_price = models.PositiveIntegerField(blank=True, null=True)
+
+    def __str__(self):
+        return self.name

@@ -1,0 +1,50 @@
+{
+    "Number": 310,
+    "DexID": "0310",
+    "Name": "Manectric",
+    "Type1": "Electric",
+    "Type2": "",
+    "BaseHP": 4,
+    "Strength": 2,
+    "MaxStrength": 5,
+    "Dexterity": 3,
+    "MaxDexterity": 6,
+    "Vitality": 2,
+    "MaxVitality": 4,
+    "Special": 3,
+    "MaxSpecial": 6,
+    "Insight": 2,
+    "MaxInsight": 4,
+    "Ability1": "Static",
+    "Ability2": "Lightning Rod",
+    "HiddenAbility": "Minus",
+    "EventAbilities": "",
+    "RecommendedRank": "Amateur",
+    "GenderType": "",
+    "Legendary": false,
+    "GoodStarter": false,
+    "_id": "manectric",
+    "DexCategory": "Discharge Pokemon",
+    "Height": {
+        "Meters": 1.5,
+        "Feet": 4.9
+    },
+    "Weight": {
+        "Kilograms": 40.2,
+        "Pounds": 88.6
+    },
+    "DexDescription": "Their manes are constantly releasing dangerous sparks that often end up in forest fires. When they get in battle, thunderclouds show up with them. They are extremely rare to see in the wild.",
+    "Evolutions": [
+        {
+            "From": "Electrike",
+            "Kind": "Level",
+            "Speed": "Medium"
+        },
+        {
+            "To": "Manectric (Mega Form)",
+            "Kind": "Mega",
+            "Item": "Manectite"
+        }
+    ],
+    "Image": "manectric.png"
+}

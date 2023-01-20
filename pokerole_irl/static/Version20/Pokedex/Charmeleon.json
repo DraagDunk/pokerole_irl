@@ -1,0 +1,50 @@
+{
+    "Number": 5,
+    "DexID": "0005",
+    "Name": "Charmeleon",
+    "Type1": "Fire",
+    "Type2": "",
+    "BaseHP": 4,
+    "Strength": 2,
+    "MaxStrength": 4,
+    "Dexterity": 2,
+    "MaxDexterity": 5,
+    "Vitality": 2,
+    "MaxVitality": 4,
+    "Special": 2,
+    "MaxSpecial": 5,
+    "Insight": 2,
+    "MaxInsight": 4,
+    "Ability1": "Blaze",
+    "Ability2": "",
+    "HiddenAbility": "Solar Power",
+    "EventAbilities": "",
+    "RecommendedRank": "Amateur",
+    "GenderType": "",
+    "Legendary": false,
+    "GoodStarter": false,
+    "_id": "charmeleon",
+    "DexCategory": "Flame Pokemon",
+    "Height": {
+        "Meters": 1.1,
+        "Feet": 3.6
+    },
+    "Weight": {
+        "Kilograms": 19.0,
+        "Pounds": 41.9
+    },
+    "DexDescription": "It turns aggressive after evolving, it is very hot-headed by nature, so it constantly starts fights. When it\u2019s excited, the flame at the tip of its tail flares with a bluish white color.",
+    "Evolutions": [
+        {
+            "From": "Charmander",
+            "Kind": "Level",
+            "Speed": "Medium"
+        },
+        {
+            "To": "Charizard",
+            "Kind": "Level",
+            "Speed": "Medium"
+        }
+    ],
+    "Image": "charmeleon.png"
+}

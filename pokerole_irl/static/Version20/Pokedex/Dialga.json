@@ -1,0 +1,39 @@
+{
+    "Number": 483,
+    "DexID": "0483",
+    "Name": "Dialga",
+    "Type1": "Steel",
+    "Type2": "Dragon",
+    "BaseHP": 7,
+    "Strength": 7,
+    "MaxStrength": 7,
+    "Dexterity": 5,
+    "MaxDexterity": 5,
+    "Vitality": 7,
+    "MaxVitality": 7,
+    "Special": 8,
+    "MaxSpecial": 8,
+    "Insight": 6,
+    "MaxInsight": 6,
+    "Ability1": "Pressure",
+    "Ability2": "",
+    "HiddenAbility": "Telepathy",
+    "EventAbilities": "",
+    "RecommendedRank": "Master",
+    "GenderType": "N",
+    "Legendary": true,
+    "GoodStarter": false,
+    "_id": "dialga",
+    "DexCategory": "No Data",
+    "Height": {
+        "Meters": 5.4,
+        "Feet": 17.7
+    },
+    "Weight": {
+        "Kilograms": 683.0,
+        "Pounds": 1505.8
+    },
+    "DexDescription": "In some religions there is a being called \u201cThe God of Time\u201d whose first roar brought future, present and past.",
+    "Evolutions": [],
+    "Image": "dialga.png"
+}

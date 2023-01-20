@@ -1,0 +1,22 @@
+{
+    "Name": "Wobbuffet",
+    "_id": "wobbuffet",
+    "Moves": [
+        {
+            "Learned": "Beginner",
+            "Name": "Counter"
+        },
+        {
+            "Learned": "Amateur",
+            "Name": "Safeguard"
+        },
+        {
+            "Learned": "Amateur",
+            "Name": "Mirror Coat"
+        },
+        {
+            "Learned": "Pro",
+            "Name": "Destiny Bond"
+        }
+    ]
+}

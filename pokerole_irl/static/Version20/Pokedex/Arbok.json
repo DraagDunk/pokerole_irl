@@ -1,0 +1,45 @@
+{
+    "Number": 24,
+    "DexID": "0024",
+    "Name": "Arbok",
+    "Type1": "Poison",
+    "Type2": "",
+    "BaseHP": 5,
+    "Strength": 3,
+    "MaxStrength": 6,
+    "Dexterity": 2,
+    "MaxDexterity": 5,
+    "Vitality": 2,
+    "MaxVitality": 5,
+    "Special": 2,
+    "MaxSpecial": 4,
+    "Insight": 2,
+    "MaxInsight": 5,
+    "Ability1": "Intimidate",
+    "Ability2": "Shed Skin",
+    "HiddenAbility": "Unnerve",
+    "EventAbilities": "",
+    "RecommendedRank": "Amateur",
+    "GenderType": "",
+    "Legendary": false,
+    "GoodStarter": false,
+    "_id": "arbok",
+    "DexCategory": "Cobra Pokemon",
+    "Height": {
+        "Meters": 3.5,
+        "Feet": 11.5
+    },
+    "Weight": {
+        "Kilograms": 65.0,
+        "Pounds": 143.3
+    },
+    "DexDescription": "This Pokemon has an incredibly strong constricting power. Once it wraps its body around its foe, escaping is almost impossible. The pattern on its body glows in the dark like a terrifying face.",
+    "Evolutions": [
+        {
+            "From": "Ekans",
+            "Kind": "Level",
+            "Speed": "Medium"
+        }
+    ],
+    "Image": "arbok.png"
+}

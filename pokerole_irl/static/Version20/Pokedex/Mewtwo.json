@@ -1,0 +1,50 @@
+{
+    "Number": 150,
+    "DexID": "0150",
+    "Name": "Mewtwo",
+    "Type1": "Psychic",
+    "Type2": "",
+    "BaseHP": 5,
+    "Strength": 6,
+    "MaxStrength": 6,
+    "Dexterity": 7,
+    "MaxDexterity": 7,
+    "Vitality": 5,
+    "MaxVitality": 5,
+    "Special": 8,
+    "MaxSpecial": 8,
+    "Insight": 5,
+    "MaxInsight": 5,
+    "Ability1": "Pressure",
+    "Ability2": "",
+    "HiddenAbility": "Unnerve",
+    "EventAbilities": "",
+    "RecommendedRank": "Master",
+    "GenderType": "N",
+    "Legendary": true,
+    "GoodStarter": false,
+    "_id": "mewtwo",
+    "DexCategory": "No Data",
+    "Height": {
+        "Meters": 2.0,
+        "Feet": 6.6
+    },
+    "Weight": {
+        "Kilograms": 122.0,
+        "Pounds": 269.0
+    },
+    "DexDescription": "An article in a science magazine talked about how much cloning research was progressing, but... could it be?",
+    "Evolutions": [
+        {
+            "To": "Mewtwo (Mega Y Form)",
+            "Kind": "Mega",
+            "Item": "Mewtwonite Y"
+        },
+        {
+            "To": "Mewtwo (Mega X Form)",
+            "Kind": "Mega",
+            "Item": "Mewtwonite X"
+        }
+    ],
+    "Image": "mewtwo.png"
+}

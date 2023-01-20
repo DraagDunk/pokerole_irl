@@ -1,0 +1,45 @@
+{
+    "Number": 419,
+    "DexID": "0419",
+    "Name": "Floatzel",
+    "Type1": "Water",
+    "Type2": "",
+    "BaseHP": 4,
+    "Strength": 3,
+    "MaxStrength": 6,
+    "Dexterity": 3,
+    "MaxDexterity": 6,
+    "Vitality": 2,
+    "MaxVitality": 4,
+    "Special": 2,
+    "MaxSpecial": 5,
+    "Insight": 2,
+    "MaxInsight": 4,
+    "Ability1": "Swift Swim",
+    "Ability2": "",
+    "HiddenAbility": "Water Veil",
+    "EventAbilities": "",
+    "RecommendedRank": "Amateur",
+    "GenderType": "",
+    "Legendary": false,
+    "GoodStarter": false,
+    "_id": "floatzel",
+    "DexCategory": "Sea Weasel Pokemon",
+    "Height": {
+        "Meters": 1.1,
+        "Feet": 3.6
+    },
+    "Weight": {
+        "Kilograms": 33.5,
+        "Pounds": 73.9
+    },
+    "DexDescription": "It floats using its well-developed sack. They roam close to fishing spots to steal an easy meal. People allow them to hang around their boats because they help whenever a person falls into the water.",
+    "Evolutions": [
+        {
+            "From": "Buizel",
+            "Kind": "Level",
+            "Speed": "Medium"
+        }
+    ],
+    "Image": "floatzel.png"
+}

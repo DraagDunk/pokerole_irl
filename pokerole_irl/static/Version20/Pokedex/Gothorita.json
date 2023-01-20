@@ -1,0 +1,50 @@
+{
+    "Number": 575,
+    "DexID": "0575",
+    "Name": "Gothorita",
+    "Type1": "Psychic",
+    "Type2": "",
+    "BaseHP": 4,
+    "Strength": 2,
+    "MaxStrength": 4,
+    "Dexterity": 2,
+    "MaxDexterity": 4,
+    "Vitality": 2,
+    "MaxVitality": 5,
+    "Special": 2,
+    "MaxSpecial": 5,
+    "Insight": 2,
+    "MaxInsight": 5,
+    "Ability1": "Frisk",
+    "Ability2": "Competitive",
+    "HiddenAbility": "Shadow Tag",
+    "EventAbilities": "",
+    "RecommendedRank": "Amateur",
+    "GenderType": "",
+    "Legendary": false,
+    "GoodStarter": false,
+    "_id": "gothorita",
+    "DexCategory": "Manipulate Pokemon",
+    "Height": {
+        "Meters": 0.7,
+        "Feet": 2.3
+    },
+    "Weight": {
+        "Kilograms": 18.0,
+        "Pounds": 39.7
+    },
+    "DexDescription": "Starlight is the source of their power. At night, they mark star positions by using floating stones. According to many old tales, it creates friends for itself by controlling sleeping children on starry nights.",
+    "Evolutions": [
+        {
+            "From": "Gothita",
+            "Kind": "Level",
+            "Speed": "Medium"
+        },
+        {
+            "To": "Gothitelle",
+            "Kind": "Level",
+            "Speed": "Medium"
+        }
+    ],
+    "Image": "gothorita.png"
+}

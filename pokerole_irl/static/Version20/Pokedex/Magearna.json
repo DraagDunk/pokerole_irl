@@ -1,0 +1,39 @@
+{
+    "Number": 801,
+    "DexID": "0801",
+    "Name": "Magearna",
+    "Type1": "Steel",
+    "Type2": "Fairy",
+    "BaseHP": 4,
+    "Strength": 6,
+    "MaxStrength": 6,
+    "Dexterity": 4,
+    "MaxDexterity": 4,
+    "Vitality": 6,
+    "MaxVitality": 6,
+    "Special": 7,
+    "MaxSpecial": 7,
+    "Insight": 6,
+    "MaxInsight": 6,
+    "Ability1": "Soul Heart",
+    "Ability2": "",
+    "HiddenAbility": "",
+    "EventAbilities": "",
+    "RecommendedRank": "Pro",
+    "GenderType": "N",
+    "Legendary": true,
+    "GoodStarter": false,
+    "_id": "magearna",
+    "DexCategory": "No Data",
+    "Height": {
+        "Meters": 1.0,
+        "Feet": 3.3
+    },
+    "Weight": {
+        "Kilograms": 80.5,
+        "Pounds": 177.5
+    },
+    "DexDescription": "500 years ago a famous scientist left a manuscript with details on how to create a mechanic Pokemon. His investigation led to the creation of the modern Pokeball.",
+    "Evolutions": [],
+    "Image": "magearna.png"
+}

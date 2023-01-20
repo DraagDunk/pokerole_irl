@@ -1,0 +1,44 @@
+{
+    "Number": 720,
+    "DexID": "0720",
+    "Name": "Hoopa",
+    "Type1": "Psychic",
+    "Type2": "Ghost",
+    "BaseHP": 4,
+    "Strength": 6,
+    "MaxStrength": 6,
+    "Dexterity": 5,
+    "MaxDexterity": 5,
+    "Vitality": 4,
+    "MaxVitality": 4,
+    "Special": 8,
+    "MaxSpecial": 8,
+    "Insight": 7,
+    "MaxInsight": 7,
+    "Ability1": "Magician",
+    "Ability2": "",
+    "HiddenAbility": "",
+    "EventAbilities": "",
+    "RecommendedRank": "Pro",
+    "GenderType": "N",
+    "Legendary": true,
+    "GoodStarter": false,
+    "_id": "hoopa",
+    "DexCategory": "No Data",
+    "Height": {
+        "Meters": 0.5,
+        "Feet": 1.6
+    },
+    "Weight": {
+        "Kilograms": 9.0,
+        "Pounds": 19.8
+    },
+    "DexDescription": "There is a story of an old demon whose power had to be contained by a spell. The spell was a partial success as the demon could still roam free, but its power and evil was greatly diminished.",
+    "Evolutions": [
+        {
+            "To": "Hoopa (Unbound Form)",
+            "Kind": "Form"
+        }
+    ],
+    "Image": "hoopa.png"
+}

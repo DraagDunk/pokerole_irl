@@ -1,0 +1,45 @@
+{
+    "Number": 687,
+    "DexID": "0687",
+    "Name": "Malamar",
+    "Type1": "Dark",
+    "Type2": "Psychic",
+    "BaseHP": 4,
+    "Strength": 2,
+    "MaxStrength": 5,
+    "Dexterity": 2,
+    "MaxDexterity": 5,
+    "Vitality": 2,
+    "MaxVitality": 5,
+    "Special": 2,
+    "MaxSpecial": 4,
+    "Insight": 2,
+    "MaxInsight": 5,
+    "Ability1": "Contrary",
+    "Ability2": "Suction Cups",
+    "HiddenAbility": "Infiltrator",
+    "EventAbilities": "",
+    "RecommendedRank": "Amateur",
+    "GenderType": "",
+    "Legendary": false,
+    "GoodStarter": false,
+    "_id": "malamar",
+    "DexCategory": "Overturning Pokemon",
+    "Height": {
+        "Meters": 1.5,
+        "Feet": 4.9
+    },
+    "Weight": {
+        "Kilograms": 47.0,
+        "Pounds": 103.6
+    },
+    "DexDescription": "It lures prey close with hypnotic motions, then wraps its tentacles around it before finishing it off to eat it. This Pokemon are difficult to handle as they use their psychic abilities to do evil.",
+    "Evolutions": [
+        {
+            "From": "Inkay",
+            "Kind": "Level",
+            "Speed": "Medium"
+        }
+    ],
+    "Image": "malamar.png"
+}

@@ -1,0 +1,22 @@
+{
+    "Name": "Blipbug",
+    "_id": "blipbug",
+    "Moves": [
+        {
+            "Learned": "Starter",
+            "Name": "Struggle Bug"
+        },
+        {
+            "Learned": "Pro",
+            "Name": "Sticky Web"
+        },
+        {
+            "Learned": "Pro",
+            "Name": "Supersonic"
+        },
+        {
+            "Learned": "Pro",
+            "Name": "Infestation"
+        }
+    ]
+}

@@ -1,0 +1,45 @@
+{
+    "Number": 620,
+    "DexID": "0620",
+    "Name": "Mienshao",
+    "Type1": "Fighting",
+    "Type2": "",
+    "BaseHP": 4,
+    "Strength": 3,
+    "MaxStrength": 7,
+    "Dexterity": 3,
+    "MaxDexterity": 6,
+    "Vitality": 2,
+    "MaxVitality": 4,
+    "Special": 3,
+    "MaxSpecial": 6,
+    "Insight": 2,
+    "MaxInsight": 4,
+    "Ability1": "Inner Focus",
+    "Ability2": "Regenerator",
+    "HiddenAbility": "Reckless",
+    "EventAbilities": "",
+    "RecommendedRank": "Amateur",
+    "GenderType": "",
+    "Legendary": false,
+    "GoodStarter": false,
+    "_id": "mienshao",
+    "DexCategory": "Martial Arts Pokemon",
+    "Height": {
+        "Meters": 1.4,
+        "Feet": 4.6
+    },
+    "Weight": {
+        "Kilograms": 35.5,
+        "Pounds": 78.3
+    },
+    "DexDescription": "By the time they evolve they already have many years of experience in fighting. They use the long fur on their arms as a whip to strike their opponents and will not stop until the foe is defeated.",
+    "Evolutions": [
+        {
+            "From": "Mienfoo",
+            "Kind": "Level",
+            "Speed": "Medium"
+        }
+    ],
+    "Image": "mienshao.png"
+}

@@ -1,0 +1,45 @@
+{
+    "Number": 852,
+    "DexID": "0852",
+    "Name": "Clobbopus",
+    "Type1": "Fighting",
+    "Type2": "",
+    "BaseHP": 3,
+    "Strength": 2,
+    "MaxStrength": 4,
+    "Dexterity": 1,
+    "MaxDexterity": 3,
+    "Vitality": 2,
+    "MaxVitality": 4,
+    "Special": 2,
+    "MaxSpecial": 4,
+    "Insight": 2,
+    "MaxInsight": 4,
+    "Ability1": "Limber",
+    "Ability2": "",
+    "HiddenAbility": "Technician",
+    "EventAbilities": "",
+    "RecommendedRank": "Beginner",
+    "GenderType": "",
+    "Legendary": false,
+    "GoodStarter": true,
+    "_id": "clobbopus",
+    "DexCategory": "Tantrum Pokemon",
+    "Height": {
+        "Meters": 0.6,
+        "Feet": 2.0
+    },
+    "Weight": {
+        "Kilograms": 4.0,
+        "Pounds": 8.8
+    },
+    "DexDescription": "It\u2019s very curious and child-like, but it investigates things by try to punch them with its tentacles, despite this, the tentacles tear off easily, but don\u2019t be alarmed for they\u2019ll regrow in a few days.",
+    "Evolutions": [
+        {
+            "To": "Grapploct",
+            "Kind": "Level",
+            "Speed": "Medium"
+        }
+    ],
+    "Image": "clobbopus.png"
+}

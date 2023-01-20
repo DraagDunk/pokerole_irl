@@ -1,0 +1,45 @@
+{
+    "Number": 591,
+    "DexID": "0591",
+    "Name": "Amoonguss",
+    "Type1": "Grass",
+    "Type2": "Poison",
+    "BaseHP": 4,
+    "Strength": 2,
+    "MaxStrength": 5,
+    "Dexterity": 1,
+    "MaxDexterity": 3,
+    "Vitality": 2,
+    "MaxVitality": 5,
+    "Special": 2,
+    "MaxSpecial": 5,
+    "Insight": 2,
+    "MaxInsight": 5,
+    "Ability1": "Effect Spore",
+    "Ability2": "",
+    "HiddenAbility": "Regenerator",
+    "EventAbilities": "",
+    "RecommendedRank": "Amateur",
+    "GenderType": "",
+    "Legendary": false,
+    "GoodStarter": false,
+    "_id": "amoonguss",
+    "DexCategory": "Mushroom Pokemon",
+    "Height": {
+        "Meters": 0.6,
+        "Feet": 2.0
+    },
+    "Weight": {
+        "Kilograms": 10.5,
+        "Pounds": 23.1
+    },
+    "DexDescription": "In ancient times the tip of their caps had two eye-like patterns and it made a swaying motion to lure prey to itself, but as they became Pokeball-looking few Pokemon fall for it. It is still very venomous, though.",
+    "Evolutions": [
+        {
+            "From": "Foongus",
+            "Kind": "Level",
+            "Speed": "Medium"
+        }
+    ],
+    "Image": "amoonguss.png"
+}

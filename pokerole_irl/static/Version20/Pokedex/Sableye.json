@@ -1,0 +1,45 @@
+{
+    "Number": 302,
+    "DexID": "0302",
+    "Name": "Sableye",
+    "Type1": "Dark",
+    "Type2": "Ghost",
+    "BaseHP": 4,
+    "Strength": 2,
+    "MaxStrength": 5,
+    "Dexterity": 2,
+    "MaxDexterity": 4,
+    "Vitality": 2,
+    "MaxVitality": 5,
+    "Special": 2,
+    "MaxSpecial": 4,
+    "Insight": 2,
+    "MaxInsight": 4,
+    "Ability1": "Keen Eye",
+    "Ability2": "Stall",
+    "HiddenAbility": "Prankster",
+    "EventAbilities": "",
+    "RecommendedRank": "Amateur",
+    "GenderType": "",
+    "Legendary": false,
+    "GoodStarter": false,
+    "_id": "sableye",
+    "DexCategory": "Darkness Pokemon",
+    "Height": {
+        "Meters": 0.5,
+        "Feet": 1.6
+    },
+    "Weight": {
+        "Kilograms": 11.0,
+        "Pounds": 24.3
+    },
+    "DexDescription": "Feared for stealing the souls of men with their sinister eyes glowing in the dark. They lurk deep inside caves, eating rocks, gemstones and crystals. Luckily, Sableyes are rarely seen. They love jewels and treasure.",
+    "Evolutions": [
+        {
+            "To": "Sableye (Mega Form)",
+            "Kind": "Mega",
+            "Item": "Sablenite"
+        }
+    ],
+    "Image": "sableye.png"
+}

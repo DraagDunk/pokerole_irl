@@ -1,0 +1,10 @@
+{
+    "Name": "Unown",
+    "_id": "unown",
+    "Moves": [
+        {
+            "Learned": "Starter",
+            "Name": "Hidden Power"
+        }
+    ]
+}

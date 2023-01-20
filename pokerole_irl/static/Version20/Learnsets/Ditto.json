@@ -1,0 +1,10 @@
+{
+    "Name": "Ditto",
+    "_id": "ditto",
+    "Moves": [
+        {
+            "Learned": "Starter",
+            "Name": "Transform"
+        }
+    ]
+}

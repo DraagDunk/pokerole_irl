@@ -1,0 +1,50 @@
+{
+    "Number": 271,
+    "DexID": "0271",
+    "Name": "Lombre",
+    "Type1": "Water",
+    "Type2": "Grass",
+    "BaseHP": 4,
+    "Strength": 2,
+    "MaxStrength": 4,
+    "Dexterity": 2,
+    "MaxDexterity": 4,
+    "Vitality": 2,
+    "MaxVitality": 4,
+    "Special": 2,
+    "MaxSpecial": 4,
+    "Insight": 2,
+    "MaxInsight": 5,
+    "Ability1": "Swift Swim",
+    "Ability2": "Rain Dish",
+    "HiddenAbility": "Own Tempo",
+    "EventAbilities": "",
+    "RecommendedRank": "Beginner",
+    "GenderType": "",
+    "Legendary": false,
+    "GoodStarter": false,
+    "_id": "lombre",
+    "DexCategory": "Jolly Pokemon",
+    "Height": {
+        "Meters": 1.2,
+        "Feet": 3.9
+    },
+    "Weight": {
+        "Kilograms": 32.5,
+        "Pounds": 71.7
+    },
+    "DexDescription": "This nocturnal Pokemon has a mischievous and impish personality. While playing pranks on people, Lombres are commonly mistaken for human children. It enjoys to startle unaware swimmers.",
+    "Evolutions": [
+        {
+            "From": "Lotad",
+            "Kind": "Level",
+            "Speed": "Medium"
+        },
+        {
+            "To": "Ludicolo",
+            "Kind": "Stone",
+            "Item": "Water Stone"
+        }
+    ],
+    "Image": "lombre.png"
+}

@@ -1,0 +1,45 @@
+{
+    "Number": 473,
+    "DexID": "0473",
+    "Name": "Mamoswine",
+    "Type1": "Ice",
+    "Type2": "Ground",
+    "BaseHP": 6,
+    "Strength": 3,
+    "MaxStrength": 7,
+    "Dexterity": 2,
+    "MaxDexterity": 5,
+    "Vitality": 2,
+    "MaxVitality": 5,
+    "Special": 2,
+    "MaxSpecial": 5,
+    "Insight": 2,
+    "MaxInsight": 4,
+    "Ability1": "Oblivious",
+    "Ability2": "Snow Cloak",
+    "HiddenAbility": "Thick Fat",
+    "EventAbilities": "",
+    "RecommendedRank": "Ace",
+    "GenderType": "",
+    "Legendary": false,
+    "GoodStarter": false,
+    "_id": "mamoswine",
+    "DexCategory": "Twin Tusk Pokemon",
+    "Height": {
+        "Meters": 2.5,
+        "Feet": 8.2
+    },
+    "Weight": {
+        "Kilograms": 291.0,
+        "Pounds": 641.5
+    },
+    "DexDescription": "It was everywhere during the ice age but its population declined afterwards. This Pokemon uses strong tusks to remove the soil and snow and dig up roots and plants to eat. It has a bad temper.",
+    "Evolutions": [
+        {
+            "From": "Piloswine",
+            "Kind": "Level",
+            "Speed": "Slow"
+        }
+    ],
+    "Image": "mamoswine.png"
+}

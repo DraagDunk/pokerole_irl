@@ -1,0 +1,50 @@
+{
+    "Number": 221,
+    "DexID": "0221",
+    "Name": "Piloswine",
+    "Type1": "Ice",
+    "Type2": "Ground",
+    "BaseHP": 4,
+    "Strength": 3,
+    "MaxStrength": 6,
+    "Dexterity": 2,
+    "MaxDexterity": 4,
+    "Vitality": 2,
+    "MaxVitality": 5,
+    "Special": 2,
+    "MaxSpecial": 4,
+    "Insight": 2,
+    "MaxInsight": 4,
+    "Ability1": "Oblivious",
+    "Ability2": "Snow Cloak",
+    "HiddenAbility": "Thick Fat",
+    "EventAbilities": "",
+    "RecommendedRank": "Amateur",
+    "GenderType": "",
+    "Legendary": false,
+    "GoodStarter": false,
+    "_id": "piloswine",
+    "DexCategory": "Swine Pokemon",
+    "Height": {
+        "Meters": 1.1,
+        "Feet": 3.6
+    },
+    "Weight": {
+        "Kilograms": 55.8,
+        "Pounds": 123.0
+    },
+    "DexDescription": "Their long hair obscure their sight, but they\u2019re sensitive to sound and smells. Piloswine's rugged hooves prevent it from slipping on icy terrains. Amazingly, their tusks are made of solid ice.",
+    "Evolutions": [
+        {
+            "From": "Swinub",
+            "Kind": "Level",
+            "Speed": "Medium"
+        },
+        {
+            "To": "Mamoswine",
+            "Kind": "Level",
+            "Speed": "Slow"
+        }
+    ],
+    "Image": "piloswine.png"
+}

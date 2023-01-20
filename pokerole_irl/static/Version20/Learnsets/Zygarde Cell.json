@@ -1,0 +1,10 @@
+{
+    "Name": "Zygarde Cell",
+    "_id": "zygarde-cell",
+    "Moves": [
+        {
+            "Learned": "Starter",
+            "Name": "Endure"
+        }
+    ]
+}

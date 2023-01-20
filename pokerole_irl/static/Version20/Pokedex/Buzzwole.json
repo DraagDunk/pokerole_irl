@@ -1,0 +1,39 @@
+{
+    "Number": 794,
+    "DexID": "0794",
+    "Name": "Buzzwole",
+    "Type1": "Bug",
+    "Type2": "Fighting",
+    "BaseHP": 5,
+    "Strength": 7,
+    "MaxStrength": 7,
+    "Dexterity": 5,
+    "MaxDexterity": 5,
+    "Vitality": 7,
+    "MaxVitality": 7,
+    "Special": 4,
+    "MaxSpecial": 4,
+    "Insight": 4,
+    "MaxInsight": 4,
+    "Ability1": "Beast Boost",
+    "Ability2": "",
+    "HiddenAbility": "",
+    "EventAbilities": "",
+    "RecommendedRank": "Pro",
+    "GenderType": "N",
+    "Legendary": true,
+    "GoodStarter": false,
+    "_id": "buzzwole",
+    "DexCategory": "Aether Foundation Log #071",
+    "Height": {
+        "Meters": 2.4,
+        "Feet": 7.9
+    },
+    "Weight": {
+        "Kilograms": 333.6,
+        "Pounds": 735.5
+    },
+    "DexDescription": "What we thought were harmless displays of strength were just the first warning signs. Today UB-02 destroyed the truck where it was being transported, it escaped and hasn\u2019t been located.",
+    "Evolutions": [],
+    "Image": "buzzwole.png"
+}

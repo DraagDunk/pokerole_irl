@@ -1,0 +1,34 @@
+{
+    "Name": "Combee",
+    "_id": "combee",
+    "Moves": [
+        {
+            "Learned": "Starter",
+            "Name": "Sweet Scent"
+        },
+        {
+            "Learned": "Starter",
+            "Name": "Gust"
+        },
+        {
+            "Learned": "Amateur",
+            "Name": "Bug Bite"
+        },
+        {
+            "Learned": "Amateur",
+            "Name": "Bug Buzz"
+        },
+        {
+            "Learned": "Pro",
+            "Name": "Tailwind"
+        },
+        {
+            "Learned": "Pro",
+            "Name": "Swift"
+        },
+        {
+            "Learned": "Pro",
+            "Name": "Endeavor"
+        }
+    ]
+}

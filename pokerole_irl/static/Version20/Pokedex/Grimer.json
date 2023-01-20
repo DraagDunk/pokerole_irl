@@ -1,0 +1,45 @@
+{
+    "Number": 88,
+    "DexID": "0088",
+    "Name": "Grimer",
+    "Type1": "Poison",
+    "Type2": "",
+    "BaseHP": 3,
+    "Strength": 2,
+    "MaxStrength": 5,
+    "Dexterity": 1,
+    "MaxDexterity": 3,
+    "Vitality": 2,
+    "MaxVitality": 4,
+    "Special": 1,
+    "MaxSpecial": 3,
+    "Insight": 2,
+    "MaxInsight": 4,
+    "Ability1": "Stench",
+    "Ability2": "Sticky Hold",
+    "HiddenAbility": "Poison Touch",
+    "EventAbilities": "",
+    "RecommendedRank": "Beginner",
+    "GenderType": "",
+    "Legendary": false,
+    "GoodStarter": true,
+    "_id": "grimer",
+    "DexCategory": "Sludge Pokemon",
+    "Height": {
+        "Meters": 0.9,
+        "Feet": 3.0
+    },
+    "Weight": {
+        "Kilograms": 30.0,
+        "Pounds": 66.1
+    },
+    "DexDescription": "It was born from polluted sludge in the sea. Grimer's favorite food is anything filthy like waste water pumped out from factories. Grime and sludge stick to their body making them grow larger over time.",
+    "Evolutions": [
+        {
+            "To": "Muk",
+            "Kind": "Level",
+            "Speed": "Slow"
+        }
+    ],
+    "Image": "grimer.png"
+}

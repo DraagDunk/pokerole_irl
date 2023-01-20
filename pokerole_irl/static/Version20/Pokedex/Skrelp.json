@@ -1,0 +1,45 @@
+{
+    "Number": 690,
+    "DexID": "0690",
+    "Name": "Skrelp",
+    "Type1": "Poison",
+    "Type2": "Water",
+    "BaseHP": 3,
+    "Strength": 2,
+    "MaxStrength": 4,
+    "Dexterity": 1,
+    "MaxDexterity": 3,
+    "Vitality": 2,
+    "MaxVitality": 4,
+    "Special": 2,
+    "MaxSpecial": 4,
+    "Insight": 2,
+    "MaxInsight": 4,
+    "Ability1": "Poison Point",
+    "Ability2": "Poison Touch",
+    "HiddenAbility": "Adaptability",
+    "EventAbilities": "",
+    "RecommendedRank": "Beginner",
+    "GenderType": "",
+    "Legendary": false,
+    "GoodStarter": true,
+    "_id": "skrelp",
+    "DexCategory": "Mock Kelp Pokemon",
+    "Height": {
+        "Meters": 0.5,
+        "Feet": 1.6
+    },
+    "Weight": {
+        "Kilograms": 7.3,
+        "Pounds": 16.1
+    },
+    "DexDescription": "Camouflaged as rotten kelp they spray liquid poison on a prey that approaches unaware. It needs to store a lot of energy to be able to evolve so it takes them a long time. Touching one will give you a fever.",
+    "Evolutions": [
+        {
+            "To": "Dragalge",
+            "Kind": "Level",
+            "Speed": "Slow"
+        }
+    ],
+    "Image": "skrelp.png"
+}

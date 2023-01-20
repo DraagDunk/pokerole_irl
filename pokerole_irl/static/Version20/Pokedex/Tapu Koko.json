@@ -1,0 +1,39 @@
+{
+    "Number": 785,
+    "DexID": "0785",
+    "Name": "Tapu Koko",
+    "Type1": "Electric",
+    "Type2": "Fairy",
+    "BaseHP": 4,
+    "Strength": 6,
+    "MaxStrength": 6,
+    "Dexterity": 7,
+    "MaxDexterity": 7,
+    "Vitality": 5,
+    "MaxVitality": 5,
+    "Special": 6,
+    "MaxSpecial": 6,
+    "Insight": 5,
+    "MaxInsight": 5,
+    "Ability1": "Electric Surge",
+    "Ability2": "",
+    "HiddenAbility": "Telepathy",
+    "EventAbilities": "",
+    "RecommendedRank": "Pro",
+    "GenderType": "N",
+    "Legendary": true,
+    "GoodStarter": false,
+    "_id": "tapu-koko",
+    "DexCategory": "No Data",
+    "Height": {
+        "Meters": 1.8,
+        "Feet": 5.9
+    },
+    "Weight": {
+        "Kilograms": 20.5,
+        "Pounds": 45.2
+    },
+    "DexDescription": "People on Melemele island talk about a guardian spirit who punishes the evil doers with lightning strikes. If it appears in front of you who knows what its intentions may be.",
+    "Evolutions": [],
+    "Image": "tapu-koko.png"
+}

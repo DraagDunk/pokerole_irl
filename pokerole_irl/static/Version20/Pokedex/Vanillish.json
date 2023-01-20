@@ -1,0 +1,50 @@
+{
+    "Number": 583,
+    "DexID": "0583",
+    "Name": "Vanillish",
+    "Type1": "Ice",
+    "Type2": "",
+    "BaseHP": 4,
+    "Strength": 2,
+    "MaxStrength": 4,
+    "Dexterity": 1,
+    "MaxDexterity": 3,
+    "Vitality": 2,
+    "MaxVitality": 4,
+    "Special": 2,
+    "MaxSpecial": 5,
+    "Insight": 2,
+    "MaxInsight": 5,
+    "Ability1": "Ice Body",
+    "Ability2": "Snow Cloak",
+    "HiddenAbility": "Weak Armor",
+    "EventAbilities": "",
+    "RecommendedRank": "Amateur",
+    "GenderType": "",
+    "Legendary": false,
+    "GoodStarter": false,
+    "_id": "vanillish",
+    "DexCategory": "Icy Snow Pokemon",
+    "Height": {
+        "Meters": 1.1,
+        "Feet": 3.6
+    },
+    "Weight": {
+        "Kilograms": 41.0,
+        "Pounds": 90.4
+    },
+    "DexDescription": "Snowy mountains are this Pokemon\u2019s habitat. It conceals itself from enemy eyes by creating many small ice bundles and hiding around them. It may attach itself to the ceiling of ice caves to hide around the ice.",
+    "Evolutions": [
+        {
+            "From": "Vanillite",
+            "Kind": "Level",
+            "Speed": "Medium"
+        },
+        {
+            "To": "Vanilluxe",
+            "Kind": "Level",
+            "Speed": "Medium"
+        }
+    ],
+    "Image": "vanillish.png"
+}

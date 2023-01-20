@@ -1,0 +1,51 @@
+{
+    "Number": 448,
+    "DexID": "0448",
+    "Name": "Lucario",
+    "Type1": "Fighting",
+    "Type2": "Steel",
+    "BaseHP": 4,
+    "Strength": 3,
+    "MaxStrength": 6,
+    "Dexterity": 2,
+    "MaxDexterity": 5,
+    "Vitality": 2,
+    "MaxVitality": 5,
+    "Special": 3,
+    "MaxSpecial": 6,
+    "Insight": 2,
+    "MaxInsight": 5,
+    "Ability1": "Steadfast",
+    "Ability2": "Inner Focus",
+    "HiddenAbility": "Justified",
+    "EventAbilities": "",
+    "RecommendedRank": "Ace",
+    "GenderType": "",
+    "Legendary": false,
+    "GoodStarter": false,
+    "_id": "lucario",
+    "DexCategory": "Aura Pokemon",
+    "Height": {
+        "Meters": 1.2,
+        "Feet": 3.9
+    },
+    "Weight": {
+        "Kilograms": 54.0,
+        "Pounds": 119.0
+    },
+    "DexDescription": "This Pokemon is completely loyal to its trainer. It has the ability to not only see the auras but also to transform them into energy. It is also capable of understanding human speech.",
+    "Evolutions": [
+        {
+            "From": "Riolu",
+            "Kind": "Stat",
+            "Stat": "Loyalty",
+            "Value": 5
+        },
+        {
+            "To": "Lucario (Mega Form)",
+            "Kind": "Mega",
+            "Item": "Lucarionite"
+        }
+    ],
+    "Image": "lucario.png"
+}
