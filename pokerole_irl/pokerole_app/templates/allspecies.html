@@ -14,6 +14,8 @@
     <table class="species-table">
         <thead>
             <tr>
+                <th>#</th>
+                <th>Image</th>
                 <th>Name</th>
                 <th>Types</th>
                 <th>Abilities</th>
@@ -32,6 +34,8 @@
         <tbody>
             {% for pokemon in species %}
                 <tr>
+                    <td>{{ pokemon.number }}</td>
+                    <td><img src="https://raw.githubusercontent.com/Willowlark/Pokerole-Data/master/images/BoxSprites/{{ pokemon.image_name }}"/></td>
                     <td title="{{ pokemon.description }}">{{ pokemon }}</td>
                     <td title="Weaknesses: {{ pokemon.weaknesses }}; Resistances: {{ pokemon.resistances }}"><ul>
                             <li>{{ pokemon.primary_type }}</li>
@@ -58,7 +62,7 @@
                     <td>{{ pokemon.base_special }}/{{ pokemon.max_special }}</td>
                     <td>{{ pokemon.base_insight }}/{{ pokemon.max_insight }}</td>
                     <td><ul>
-                    {% for move in pokemon.moveset.all %}
+                    {% for move in pokemon.moves.all %}
                         <li title="{{ move.description }}">{{ move }}</li>
                     {% endfor %}
                     </ul></td>

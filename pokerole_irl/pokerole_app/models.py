@@ -193,6 +193,12 @@ class PokemonSpecies(models.Model):
     def __repr__(self):
         return self.name
 
+    def book_image(self):
+        return f"https://raw.githubusercontent.com/Willowlark/Pokerole-Data/master/images/BookSprites/{self.image_name}"
+
+    def box_image(self):
+        return f"https://raw.githubusercontent.com/Willowlark/Pokerole-Data/master/images/BoxSprites/{self.image_name}"
+
 
 class Evolution(models.Model):
     from_species = models.ForeignKey(PokemonSpecies, on_delete=models.CASCADE)
