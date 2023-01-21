@@ -1,0 +1,45 @@
+{
+    "Number": 682,
+    "DexID": "0682",
+    "Name": "Spritzee",
+    "Type1": "Fairy",
+    "Type2": "",
+    "BaseHP": 3,
+    "Strength": 2,
+    "MaxStrength": 4,
+    "Dexterity": 1,
+    "MaxDexterity": 3,
+    "Vitality": 2,
+    "MaxVitality": 4,
+    "Special": 2,
+    "MaxSpecial": 4,
+    "Insight": 2,
+    "MaxInsight": 4,
+    "Ability1": "Healer",
+    "Ability2": "",
+    "HiddenAbility": "Aroma Veil",
+    "EventAbilities": "",
+    "RecommendedRank": "Beginner",
+    "GenderType": "",
+    "Legendary": false,
+    "GoodStarter": true,
+    "_id": "spritzee",
+    "DexCategory": "Perfume Pokemon",
+    "Height": {
+        "Meters": 0.2,
+        "Feet": 0.7
+    },
+    "Weight": {
+        "Kilograms": 0.5,
+        "Pounds": 1.1
+    },
+    "DexDescription": "In the past, rather than using a perfume, royal ladies had a Spritzee that would waft a fragrance they liked. They are popular today for this same reason. They are said to attract the opposite gender to you.",
+    "Evolutions": [
+        {
+            "To": "Aromatisse",
+            "Kind": "Trade",
+            "Item": "Sachet"
+        }
+    ],
+    "Image": "spritzee.png"
+}

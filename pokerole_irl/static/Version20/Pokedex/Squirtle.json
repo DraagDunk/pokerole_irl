@@ -1,0 +1,45 @@
+{
+    "Number": 7,
+    "DexID": "0007",
+    "Name": "Squirtle",
+    "Type1": "Water",
+    "Type2": "",
+    "BaseHP": 3,
+    "Strength": 2,
+    "MaxStrength": 4,
+    "Dexterity": 1,
+    "MaxDexterity": 3,
+    "Vitality": 2,
+    "MaxVitality": 4,
+    "Special": 2,
+    "MaxSpecial": 4,
+    "Insight": 2,
+    "MaxInsight": 4,
+    "Ability1": "Torrent",
+    "Ability2": "",
+    "HiddenAbility": "Rain Dish",
+    "EventAbilities": "",
+    "RecommendedRank": "Beginner",
+    "GenderType": "",
+    "Legendary": false,
+    "GoodStarter": true,
+    "_id": "squirtle",
+    "DexCategory": "Tiny turtle Pokemon",
+    "Height": {
+        "Meters": 0.5,
+        "Feet": 1.6
+    },
+    "Weight": {
+        "Kilograms": 9.0,
+        "Pounds": 19.8
+    },
+    "DexDescription": "It is scarce in the wild. The shell is not just for protection - it also helps to minimize resistance in water enabling Squirtle to swim at high speeds. It\u2019s usually a calm and easy going Pokemon.",
+    "Evolutions": [
+        {
+            "To": "Wartortle",
+            "Kind": "Level",
+            "Speed": "Medium"
+        }
+    ],
+    "Image": "squirtle.png"
+}

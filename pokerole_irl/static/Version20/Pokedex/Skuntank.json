@@ -1,0 +1,45 @@
+{
+    "Number": 435,
+    "DexID": "0435",
+    "Name": "Skuntank",
+    "Type1": "Poison",
+    "Type2": "Dark",
+    "BaseHP": 5,
+    "Strength": 2,
+    "MaxStrength": 5,
+    "Dexterity": 2,
+    "MaxDexterity": 5,
+    "Vitality": 2,
+    "MaxVitality": 4,
+    "Special": 2,
+    "MaxSpecial": 5,
+    "Insight": 2,
+    "MaxInsight": 4,
+    "Ability1": "Stench",
+    "Ability2": "Aftermath",
+    "HiddenAbility": "Keen Eye",
+    "EventAbilities": "",
+    "RecommendedRank": "Amateur",
+    "GenderType": "",
+    "Legendary": false,
+    "GoodStarter": false,
+    "_id": "skuntank",
+    "DexCategory": "Skunk Pokemon",
+    "Height": {
+        "Meters": 1.0,
+        "Feet": 3.3
+    },
+    "Weight": {
+        "Kilograms": 38.0,
+        "Pounds": 83.8
+    },
+    "DexDescription": "It sprays a reeking fluid from its tail. The fluid smells worse the longer it is allowed to fester. It is vulnerable to attacks that come from above due to its exuberant tail. When it\u2019s relaxed it doesn\u2019t smell bad.",
+    "Evolutions": [
+        {
+            "From": "Stunky",
+            "Kind": "Level",
+            "Speed": "Medium"
+        }
+    ],
+    "Image": "skuntank.png"
+}

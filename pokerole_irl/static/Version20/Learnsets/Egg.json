@@ -1,0 +1,10 @@
+{
+    "Name": "Egg",
+    "_id": "egg",
+    "Moves": [
+        {
+            "Learned": "Starter",
+            "Name": "Rest"
+        }
+    ]
+}

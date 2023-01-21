@@ -1,0 +1,18 @@
+{
+    "Name": "Metapod",
+    "_id": "metapod",
+    "Moves": [
+        {
+            "Learned": "Starter",
+            "Name": "Harden"
+        },
+        {
+            "Learned": "Amateur",
+            "Name": "Iron Defense"
+        },
+        {
+            "Learned": "Amateur",
+            "Name": "Electroweb"
+        }
+    ]
+}

@@ -1,0 +1,45 @@
+{
+    "Number": 696,
+    "DexID": "0696",
+    "Name": "Tyrunt",
+    "Type1": "Rock",
+    "Type2": "Dragon",
+    "BaseHP": 3,
+    "Strength": 2,
+    "MaxStrength": 5,
+    "Dexterity": 2,
+    "MaxDexterity": 4,
+    "Vitality": 2,
+    "MaxVitality": 5,
+    "Special": 2,
+    "MaxSpecial": 4,
+    "Insight": 2,
+    "MaxInsight": 4,
+    "Ability1": "Strong Jaw",
+    "Ability2": "",
+    "HiddenAbility": "Sturdy",
+    "EventAbilities": "",
+    "RecommendedRank": "Amateur",
+    "GenderType": "",
+    "Legendary": false,
+    "GoodStarter": false,
+    "_id": "tyrunt",
+    "DexCategory": "Royal Heir Pokemon",
+    "Height": {
+        "Meters": 0.8,
+        "Feet": 2.6
+    },
+    "Weight": {
+        "Kilograms": 26.0,
+        "Pounds": 57.3
+    },
+    "DexDescription": "This Pokemon was restored from a fossil. If something happens that it doesn\u2019t like, it throws a tantrum and runs wild. Many of the researchers that brought it back were attacked by its powerful jaws.",
+    "Evolutions": [
+        {
+            "To": "Tyrantrum",
+            "Kind": "Level",
+            "Speed": "Slow"
+        }
+    ],
+    "Image": "tyrunt.png"
+}

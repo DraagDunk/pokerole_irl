@@ -1,0 +1,18 @@
+{
+    "Name": "Cosmoem",
+    "_id": "cosmoem",
+    "Moves": [
+        {
+            "Learned": "Starter",
+            "Name": "Splash"
+        },
+        {
+            "Learned": "Starter",
+            "Name": "Teleport"
+        },
+        {
+            "Learned": "Amateur",
+            "Name": "Cosmic Power"
+        }
+    ]
+}

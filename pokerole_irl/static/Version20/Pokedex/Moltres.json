@@ -1,0 +1,39 @@
+{
+    "Number": 146,
+    "DexID": "0146",
+    "Name": "Moltres",
+    "Type1": "Fire",
+    "Type2": "Flying",
+    "BaseHP": 4,
+    "Strength": 6,
+    "MaxStrength": 6,
+    "Dexterity": 5,
+    "MaxDexterity": 5,
+    "Vitality": 5,
+    "MaxVitality": 5,
+    "Special": 7,
+    "MaxSpecial": 7,
+    "Insight": 5,
+    "MaxInsight": 5,
+    "Ability1": "Pressure",
+    "Ability2": "",
+    "HiddenAbility": "Flame Body",
+    "EventAbilities": "",
+    "RecommendedRank": "Master",
+    "GenderType": "N",
+    "Legendary": true,
+    "GoodStarter": false,
+    "_id": "moltres",
+    "DexCategory": "No Data",
+    "Height": {
+        "Meters": 2.0,
+        "Feet": 6.6
+    },
+    "Weight": {
+        "Kilograms": 60.0,
+        "Pounds": 132.3
+    },
+    "DexDescription": "The legend speaks of a bird who came flying from the south. Its fiery body melted the snow and brought the spring along. A children\u2018s book depicts a similar Pokemon living inside of a volcano.",
+    "Evolutions": [],
+    "Image": "moltres.png"
+}

@@ -1,0 +1,22 @@
+{
+    "Name": "Caterpie",
+    "_id": "caterpie",
+    "Moves": [
+        {
+            "Learned": "Starter",
+            "Name": "Tackle"
+        },
+        {
+            "Learned": "Starter",
+            "Name": "String Shot"
+        },
+        {
+            "Learned": "Beginner",
+            "Name": "Bug Bite"
+        },
+        {
+            "Learned": "Amateur",
+            "Name": "Electroweb"
+        }
+    ]
+}

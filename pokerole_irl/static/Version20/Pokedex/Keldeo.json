@@ -1,0 +1,44 @@
+{
+    "Number": 647,
+    "DexID": "0647",
+    "Name": "Keldeo",
+    "Type1": "Water",
+    "Type2": "Fighting",
+    "BaseHP": 4,
+    "Strength": 5,
+    "MaxStrength": 5,
+    "Dexterity": 6,
+    "MaxDexterity": 6,
+    "Vitality": 5,
+    "MaxVitality": 5,
+    "Special": 7,
+    "MaxSpecial": 7,
+    "Insight": 5,
+    "MaxInsight": 5,
+    "Ability1": "Justified",
+    "Ability2": "",
+    "HiddenAbility": "",
+    "EventAbilities": "",
+    "RecommendedRank": "Master",
+    "GenderType": "N",
+    "Legendary": true,
+    "GoodStarter": false,
+    "_id": "keldeo",
+    "DexCategory": "No Data",
+    "Height": {
+        "Meters": 1.4,
+        "Feet": 4.6
+    },
+    "Weight": {
+        "Kilograms": 48.5,
+        "Pounds": 106.9
+    },
+    "DexDescription": "Age-old fairy tales of Unova tell the story of four Pokemon that brought the land to a golden age. The young of the group was brave and naive. It could gallop on the water surface leaving a rainbow behind.",
+    "Evolutions": [
+        {
+            "To": "Keldeo (Resolute Form)",
+            "Kind": "Form"
+        }
+    ],
+    "Image": "keldeo.png"
+}

@@ -1,0 +1,45 @@
+{
+    "Number": 656,
+    "DexID": "0656",
+    "Name": "Froakie",
+    "Type1": "Water",
+    "Type2": "",
+    "BaseHP": 3,
+    "Strength": 2,
+    "MaxStrength": 4,
+    "Dexterity": 2,
+    "MaxDexterity": 5,
+    "Vitality": 1,
+    "MaxVitality": 3,
+    "Special": 2,
+    "MaxSpecial": 4,
+    "Insight": 1,
+    "MaxInsight": 3,
+    "Ability1": "Torrent",
+    "Ability2": "",
+    "HiddenAbility": "Protean",
+    "EventAbilities": "",
+    "RecommendedRank": "Beginner",
+    "GenderType": "",
+    "Legendary": false,
+    "GoodStarter": true,
+    "_id": "froakie",
+    "DexCategory": "Bubble Frog Pokemon",
+    "Height": {
+        "Meters": 0.3,
+        "Feet": 1.0
+    },
+    "Weight": {
+        "Kilograms": 7.0,
+        "Pounds": 15.4
+    },
+    "DexDescription": "It protects its skin by covering its body in bubble foam. Beneath its happy-go-lucky air, it keeps a watchful eye on its surroundings. It needs good discipline or it will be bad mannered with others.",
+    "Evolutions": [
+        {
+            "To": "Frogadier",
+            "Kind": "Level",
+            "Speed": "Medium"
+        }
+    ],
+    "Image": "froakie.png"
+}

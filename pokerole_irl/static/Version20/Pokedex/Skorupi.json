@@ -1,0 +1,45 @@
+{
+    "Number": 451,
+    "DexID": "0451",
+    "Name": "Skorupi",
+    "Type1": "Poison",
+    "Type2": "Bug",
+    "BaseHP": 3,
+    "Strength": 2,
+    "MaxStrength": 4,
+    "Dexterity": 2,
+    "MaxDexterity": 4,
+    "Vitality": 2,
+    "MaxVitality": 5,
+    "Special": 1,
+    "MaxSpecial": 3,
+    "Insight": 2,
+    "MaxInsight": 4,
+    "Ability1": "Battle Armor",
+    "Ability2": "Sniper",
+    "HiddenAbility": "Keen Eye",
+    "EventAbilities": "",
+    "RecommendedRank": "Beginner",
+    "GenderType": "",
+    "Legendary": false,
+    "GoodStarter": true,
+    "_id": "skorupi",
+    "DexCategory": "Scorpion Pokemon",
+    "Height": {
+        "Meters": 0.8,
+        "Feet": 2.6
+    },
+    "Weight": {
+        "Kilograms": 12.0,
+        "Pounds": 26.5
+    },
+    "DexDescription": "It lives in deserts and arid regions. It buries itself under the sand, waiting for an unsuspecting prey to come nearby. It will then sting the prey and cling to it tenaciously until the poison takes effect.",
+    "Evolutions": [
+        {
+            "To": "Drapion",
+            "Kind": "Level",
+            "Speed": "Medium"
+        }
+    ],
+    "Image": "skorupi.png"
+}

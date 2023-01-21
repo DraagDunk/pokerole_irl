@@ -1,0 +1,45 @@
+{
+    "Number": 713,
+    "DexID": "0713",
+    "Name": "Avalugg",
+    "Type1": "Ice",
+    "Type2": "",
+    "BaseHP": 4,
+    "Strength": 3,
+    "MaxStrength": 6,
+    "Dexterity": 1,
+    "MaxDexterity": 3,
+    "Vitality": 4,
+    "MaxVitality": 9,
+    "Special": 1,
+    "MaxSpecial": 3,
+    "Insight": 1,
+    "MaxInsight": 3,
+    "Ability1": "Own Tempo",
+    "Ability2": "Ice Body",
+    "HiddenAbility": "Sturdy",
+    "EventAbilities": "",
+    "RecommendedRank": "Ace",
+    "GenderType": "",
+    "Legendary": false,
+    "GoodStarter": false,
+    "_id": "avalugg",
+    "DexCategory": "Iceberg Pokemon",
+    "Height": {
+        "Meters": 2.0,
+        "Feet": 6.6
+    },
+    "Weight": {
+        "Kilograms": 505.0,
+        "Pounds": 1113.3
+    },
+    "DexDescription": "They carry their Bergmite offspring on their backs. Its Ice body is hard as steel and its cumbersome frame crushes anything that stands in its way. They are capable of swimming but they move very slowly.",
+    "Evolutions": [
+        {
+            "From": "Bergmite",
+            "Kind": "Level",
+            "Speed": "Slow"
+        }
+    ],
+    "Image": "avalugg.png"
+}

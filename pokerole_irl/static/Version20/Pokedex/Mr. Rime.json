@@ -1,0 +1,45 @@
+{
+    "Number": 866,
+    "DexID": "0866",
+    "Name": "Mr. Rime",
+    "Type1": "Ice",
+    "Type2": "Psychic",
+    "BaseHP": 5,
+    "Strength": 2,
+    "MaxStrength": 5,
+    "Dexterity": 2,
+    "MaxDexterity": 5,
+    "Vitality": 2,
+    "MaxVitality": 5,
+    "Special": 3,
+    "MaxSpecial": 6,
+    "Insight": 3,
+    "MaxInsight": 6,
+    "Ability1": "Tangled Feet",
+    "Ability2": "Screen Cleaner",
+    "HiddenAbility": "Ice Body",
+    "EventAbilities": "",
+    "RecommendedRank": "Amateur",
+    "GenderType": "",
+    "Legendary": false,
+    "GoodStarter": false,
+    "_id": "mr-rime",
+    "DexCategory": "Comedian Pokemon",
+    "Height": {
+        "Meters": 1.5,
+        "Feet": 4.9
+    },
+    "Weight": {
+        "Kilograms": 58.2,
+        "Pounds": 128.3
+    },
+    "DexDescription": "It\u2019s highly skilled at tap-dancing. It waves its cane of ice in time, its amusing movements make it very popular and they love to entertain children. It releases all of its psychic power from the pattern on its belly.",
+    "Evolutions": [
+        {
+            "From": "Mr. Mime (Galarian Form)",
+            "Kind": "Level",
+            "Speed": "Medium"
+        }
+    ],
+    "Image": "mr-rime.png"
+}

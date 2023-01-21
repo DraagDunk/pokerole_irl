@@ -1,0 +1,46 @@
+{
+    "Number": 169,
+    "DexID": "0169",
+    "Name": "Crobat",
+    "Type1": "Poison",
+    "Type2": "Flying",
+    "BaseHP": 5,
+    "Strength": 2,
+    "MaxStrength": 5,
+    "Dexterity": 3,
+    "MaxDexterity": 7,
+    "Vitality": 2,
+    "MaxVitality": 5,
+    "Special": 2,
+    "MaxSpecial": 5,
+    "Insight": 2,
+    "MaxInsight": 5,
+    "Ability1": "Inner Focus",
+    "Ability2": "",
+    "HiddenAbility": "Infiltrator",
+    "EventAbilities": "",
+    "RecommendedRank": "Ace",
+    "GenderType": "",
+    "Legendary": false,
+    "GoodStarter": false,
+    "_id": "crobat",
+    "DexCategory": "Bat Pokemon",
+    "Height": {
+        "Meters": 1.8,
+        "Feet": 5.9
+    },
+    "Weight": {
+        "Kilograms": 75.0,
+        "Pounds": 165.3
+    },
+    "DexDescription": "Very rare in the wild. People have called it a vampire. It sneaks up on its intended prey using wings that barely make a sound. Crobat is a surprisingly loyal Pokemon.",
+    "Evolutions": [
+        {
+            "From": "Golbat",
+            "Kind": "Stat",
+            "Stat": "Happiness",
+            "Value": 4
+        }
+    ],
+    "Image": "crobat.png"
+}

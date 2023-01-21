@@ -1,0 +1,30 @@
+{
+    "Name": "Kricketot",
+    "_id": "kricketot",
+    "Moves": [
+        {
+            "Learned": "Starter",
+            "Name": "Growl"
+        },
+        {
+            "Learned": "Starter",
+            "Name": "Bide"
+        },
+        {
+            "Learned": "Beginner",
+            "Name": "Struggle Bug"
+        },
+        {
+            "Learned": "Amateur",
+            "Name": "Bug Bite"
+        },
+        {
+            "Learned": "Pro",
+            "Name": "Uproar"
+        },
+        {
+            "Learned": "Pro",
+            "Name": "String Shot"
+        }
+    ]
+}

@@ -1,0 +1,45 @@
+{
+    "Number": 743,
+    "DexID": "0743",
+    "Name": "Ribombee",
+    "Type1": "Bug",
+    "Type2": "Fairy",
+    "BaseHP": 4,
+    "Strength": 2,
+    "MaxStrength": 4,
+    "Dexterity": 3,
+    "MaxDexterity": 7,
+    "Vitality": 2,
+    "MaxVitality": 4,
+    "Special": 3,
+    "MaxSpecial": 6,
+    "Insight": 2,
+    "MaxInsight": 5,
+    "Ability1": "Honey Gather",
+    "Ability2": "Shield Dust",
+    "HiddenAbility": "Sweet Veil",
+    "EventAbilities": "",
+    "RecommendedRank": "Beginner",
+    "GenderType": "",
+    "Legendary": false,
+    "GoodStarter": false,
+    "_id": "ribombee",
+    "DexCategory": "Bee Fly Pokemon",
+    "Height": {
+        "Meters": 0.2,
+        "Feet": 0.7
+    },
+    "Weight": {
+        "Kilograms": 0.5,
+        "Pounds": 1.1
+    },
+    "DexDescription": "The pollen puff of a happy Ribombee are very nutritious and valuable supplements in Alola. It dislikes rain, for it wets its hair and makes it unable to fly, so if you see a Ribombee you know the weather will be nice.",
+    "Evolutions": [
+        {
+            "From": "Cutiefly",
+            "Kind": "Level",
+            "Speed": "Medium"
+        }
+    ],
+    "Image": "ribombee.png"
+}

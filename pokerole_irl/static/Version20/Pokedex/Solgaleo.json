@@ -1,0 +1,45 @@
+{
+    "Number": 791,
+    "DexID": "0791",
+    "Name": "Solgaleo",
+    "Type1": "Psychic",
+    "Type2": "Steel",
+    "BaseHP": 7,
+    "Strength": 7,
+    "MaxStrength": 7,
+    "Dexterity": 6,
+    "MaxDexterity": 6,
+    "Vitality": 6,
+    "MaxVitality": 6,
+    "Special": 5,
+    "MaxSpecial": 5,
+    "Insight": 5,
+    "MaxInsight": 5,
+    "Ability1": "Full Metal Body",
+    "Ability2": "",
+    "HiddenAbility": "",
+    "EventAbilities": "",
+    "RecommendedRank": "Master",
+    "GenderType": "N",
+    "Legendary": true,
+    "GoodStarter": false,
+    "_id": "solgaleo",
+    "DexCategory": "No Data",
+    "Height": {
+        "Meters": 3.4,
+        "Feet": 11.2
+    },
+    "Weight": {
+        "Kilograms": 230.0,
+        "Pounds": 507.1
+    },
+    "DexDescription": "There are legends about a being that radiated with the sun, on its forehead a third eye that connected to another dimension.",
+    "Evolutions": [
+        {
+            "From": "Cosmoem",
+            "Kind": "Level",
+            "Game": "Sword"
+        }
+    ],
+    "Image": "solgaleo.png"
+}

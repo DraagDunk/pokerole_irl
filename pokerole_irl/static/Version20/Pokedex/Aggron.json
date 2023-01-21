@@ -1,0 +1,50 @@
+{
+    "Number": 306,
+    "DexID": "0306",
+    "Name": "Aggron",
+    "Type1": "Steel",
+    "Type2": "Rock",
+    "BaseHP": 5,
+    "Strength": 3,
+    "MaxStrength": 6,
+    "Dexterity": 2,
+    "MaxDexterity": 4,
+    "Vitality": 4,
+    "MaxVitality": 9,
+    "Special": 2,
+    "MaxSpecial": 4,
+    "Insight": 2,
+    "MaxInsight": 4,
+    "Ability1": "Sturdy",
+    "Ability2": "Rock Head",
+    "HiddenAbility": "Heavy Metal",
+    "EventAbilities": "",
+    "RecommendedRank": "Pro",
+    "GenderType": "",
+    "Legendary": false,
+    "GoodStarter": false,
+    "_id": "aggron",
+    "DexCategory": "Iron Armor Pokemon",
+    "Height": {
+        "Meters": 2.1,
+        "Feet": 6.9
+    },
+    "Weight": {
+        "Kilograms": 360.0,
+        "Pounds": 793.7
+    },
+    "DexDescription": "Aggron claims ownership of entire mountains, mercilessly beating up anything that crosses their path. Aggrons are violent and patrol their territory at all times, but also plant trees, stop fires and protect nature.",
+    "Evolutions": [
+        {
+            "From": "Lairon",
+            "Kind": "Level",
+            "Speed": "Slow"
+        },
+        {
+            "To": "Aggron (Mega Form)",
+            "Kind": "Mega",
+            "Item": "Aggronite"
+        }
+    ],
+    "Image": "aggron.png"
+}

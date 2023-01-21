@@ -1,0 +1,14 @@
+{
+    "Name": "Cosmog",
+    "_id": "cosmog",
+    "Moves": [
+        {
+            "Learned": "Starter",
+            "Name": "Splash"
+        },
+        {
+            "Learned": "Starter",
+            "Name": "Teleport"
+        }
+    ]
+}
