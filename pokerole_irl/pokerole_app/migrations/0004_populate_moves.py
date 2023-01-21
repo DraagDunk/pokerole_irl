@@ -2,16 +2,17 @@ from django.db import migrations
 import os
 import json
 
+from django.conf import settings
+
 
 def create_moves(apps, _):
     Move = apps.get_model("pokerole_app", "Move")
     Type = apps.get_model("pokerole_app", "Type")
 
-    BASE_DIR = os.path.join(os.path.basename(
-        os.getcwd()), 'static/Version20/Moves')
+    DIR = os.path.join(settings.BASE_DIR, 'static/Version20/Moves')
 
-    for filename in os.listdir(BASE_DIR):
-        move = json.load(open(os.path.join(BASE_DIR, filename)))
+    for filename in os.listdir(DIR):
+        move = json.load(open(os.path.join(DIR, filename)))
         Move.objects.update_or_create(name=move.get("Name", None), defaults={
             "move_type": Type.objects.filter(name=move.get("Type", None)).first() if move.get("Type", None) else None,
             "damage_type": move.get("DmgType", ""),

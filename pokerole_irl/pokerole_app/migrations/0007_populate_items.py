@@ -2,17 +2,18 @@ from django.db import migrations
 import os
 import json
 
+from django.conf import settings
+
 
 def create_items(apps, _):
     Item = apps.get_model("pokerole_app", "Item")
     Type = apps.get_model("pokerole_app", "Type")
     PokemonSpecies = apps.get_model("pokerole_app", "PokemonSpecies")
 
-    BASE_DIR = os.path.join(os.path.basename(
-        os.getcwd()), 'static/Version20/Items')
+    DIR = os.path.join(settings.BASE_DIR, 'static/Version20/Items')
 
-    for filename in os.listdir(BASE_DIR):
-        item = json.load(open(os.path.join(BASE_DIR, filename)))
+    for filename in os.listdir(DIR):
+        item = json.load(open(os.path.join(DIR, filename)))
         Item.objects.update_or_create(name=item.get("Name", None), defaults={
             "description": item.get("Description", ""),
             "type_bonus": Type.objects.filter(name=item.get("TypeBonus", None)).first() if item.get("TypeBonus", None) else None,

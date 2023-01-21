@@ -2,17 +2,18 @@ from django.db import migrations
 import os
 import json
 
+from django.conf import settings
+
 
 def create_species(apps, _):
     Species = apps.get_model("pokerole_app", "PokemonSpecies")
     Type = apps.get_model("pokerole_app", "Type")
     Ability = apps.get_model("pokerole_app", "Ability")
 
-    BASE_DIR = os.path.join(os.path.basename(
-        os.getcwd()), 'static/Version20/Pokedex')
+    DIR = os.path.join(settings.BASE_DIR, 'static/Version20/Pokedex')
 
-    for filename in os.listdir(BASE_DIR):
-        species = json.load(open(os.path.join(BASE_DIR, filename)))
+    for filename in os.listdir(DIR):
+        species = json.load(open(os.path.join(DIR, filename)))
         sp_model, _ = Species.objects.update_or_create(name=species.get("Name", None), defaults={
             "number": species.get("Number"),
             "dex_id": species.get("DexID"),
