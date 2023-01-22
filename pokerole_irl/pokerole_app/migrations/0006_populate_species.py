@@ -47,8 +47,9 @@ def create_species(apps, _):
 
         sp_model.abilities.add(Ability.objects.filter(
             name=species.get("Ability1")).first())
-        sp_model.abilities.add(Ability.objects.filter(
-            name=species.get("Ability2")).first())
+        if species.get("Ability2"):
+            sp_model.abilities.add(Ability.objects.filter(
+                name=species.get("Ability2")).first())
 
 
 def create_evolutions(apps, _):
