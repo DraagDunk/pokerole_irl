@@ -1,4 +1,4 @@
-from django.db import migrations
+from django.db import migrations, models
 import os
 import json
 
@@ -62,6 +62,11 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
+        migrations.AlterField(
+            model_name='pokemonspecies',
+            name='dex_id',
+            field=models.CharField(max_length=20),
+        ),
         migrations.RunPython(
             create_species, reverse_code=migrations.RunPython.noop),
     ]
