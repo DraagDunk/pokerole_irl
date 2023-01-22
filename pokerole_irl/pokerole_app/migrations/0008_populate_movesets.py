@@ -15,7 +15,8 @@ def create_movesets(apps, _):
 
     for filename in os.listdir(DIR):
         learnset = json.load(open(os.path.join(DIR, filename)))
-        species = PokemonSpecies.objects.get(name=learnset.get("Name"))
+        species = PokemonSpecies.objects.filter(
+            name=learnset.get("Name")).first()
         for move in learnset.get("Moves", []):
             try:
                 move_model = Move.objects.get(name=move.get("Name"))
