@@ -13,7 +13,7 @@ def create_evolutions(apps, _):
 
     for filename in os.listdir(DIR):
         species = json.load(open(os.path.join(DIR, filename)))
-        sp_model = Species.objects.get(name=species.get("Name"))
+        sp_model = Species.objects.filter(name=species.get("Name")).first()
         for evo in species.get("Evolutions", []):
             if from_sp := evo.get("From", None):
                 try:
