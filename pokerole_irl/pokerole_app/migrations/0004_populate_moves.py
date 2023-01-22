@@ -13,20 +13,24 @@ def create_moves(apps, _):
 
     for filename in os.listdir(DIR):
         move = json.load(open(os.path.join(DIR, filename)))
-        Move.objects.update_or_create(name=move.get("Name", None), defaults={
-            "move_type": Type.objects.filter(name=move.get("Type", None)).first() if move.get("Type", None) else None,
-            "damage_type": move.get("DmgType", ""),
-            "power": move.get("Power", None),
-            "damage_stat": move.get("Damage1", ""),
-            "damage_modifier": move.get("Damage2", ""),
-            "primary_accuracy": move.get("Accuracy1", ""),
-            "secondary_accuracy": move.get("Accuracy2", ""),
-            "target": move.get("Target", ""),
-            "effect": move.get("Effect", ""),
-            "description": move.get("Description", ""),
-            "attributes": json.dumps(move.get("Attributes", {})),
-            "added_effects": json.dumps(move.get("AddedEffects", {}))
-        })
+        try:
+            Move.objects.update_or_create(name=move.get("Name", None), defaults={
+                "move_type": Type.objects.filter(name=move.get("Type", None)).first() if move.get("Type", None) else None,
+                "damage_type": move.get("DmgType", ""),
+                "power": move.get("Power", None),
+                "damage_stat": move.get("Damage1", ""),
+                "damage_modifier": move.get("Damage2", ""),
+                "primary_accuracy": move.get("Accuracy1", ""),
+                "secondary_accuracy": move.get("Accuracy2", ""),
+                "target": move.get("Target", ""),
+                "effect": move.get("Effect", ""),
+                "description": move.get("Description", ""),
+                "attributes": json.dumps(move.get("Attributes", {})),
+                "added_effects": json.dumps(move.get("AddedEffects", {}))
+            })
+        except Exception as e:
+            print(
+                f"While populating {move.get('Name')}, encountered error: {e}")
 
 
 class Migration(migrations.Migration):
