@@ -3,16 +3,18 @@ import os
 import json
 
 
+from django.conf import settings
+
+
 def create_movesets(apps, _):
     MoveSet = apps.get_model("pokerole_app", "MoveSet")
     Move = apps.get_model("pokerole_app", "Move")
     PokemonSpecies = apps.get_model("pokerole_app", "PokemonSpecies")
 
-    BASE_DIR = os.path.join(os.path.basename(
-        os.getcwd()), 'static/Version20/Learnsets')
+    DIR = os.path.join(settings.BASE_DIR, 'static/Version20/Learnsets')
 
-    for filename in os.listdir(BASE_DIR):
-        learnset = json.load(open(os.path.join(BASE_DIR, filename)))
+    for filename in os.listdir(DIR):
+        learnset = json.load(open(os.path.join(DIR, filename)))
         species = PokemonSpecies.objects.get(name=learnset.get("Name"))
         for move in learnset.get("Moves", []):
             try:

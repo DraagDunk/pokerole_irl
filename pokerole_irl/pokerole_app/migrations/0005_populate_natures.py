@@ -2,15 +2,16 @@ from django.db import migrations
 import os
 import json
 
+from django.conf import settings
+
 
 def create_natures(apps, _):
     Nature = apps.get_model("pokerole_app", "Nature")
 
-    BASE_DIR = os.path.join(os.path.basename(
-        os.getcwd()), 'static/Version20/Natures')
+    DIR = os.path.join(settings.BASE_DIR, 'static/Version20/Natures')
 
-    for filename in os.listdir(BASE_DIR):
-        nature = json.load(open(os.path.join(BASE_DIR, filename)))
+    for filename in os.listdir(DIR):
+        nature = json.load(open(os.path.join(DIR, filename)))
         Nature.objects.update_or_create(name=nature.get("Name", None), defaults={
             "confidence": nature.get("Confidence", 0),
             "keywords": nature.get("Keywords", ""),

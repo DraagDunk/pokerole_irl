@@ -1,6 +1,4 @@
 from django.db import migrations
-import os
-import json
 
 
 def create_pokedexes(apps, _):
