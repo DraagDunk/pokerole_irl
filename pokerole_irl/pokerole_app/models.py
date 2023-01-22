@@ -95,7 +95,7 @@ class Move(models.Model):
 class PokemonSpecies(models.Model):
 
     number = models.PositiveIntegerField()
-    dex_id = models.CharField(max_length=6)
+    dex_id = models.CharField(max_length=20)
     name = models.CharField(max_length=30)
     primary_type = models.ForeignKey(
         Type, related_name="primary_species", null=True, blank=True, on_delete=models.PROTECT)

@@ -1,4 +1,4 @@
-from django.db import migrations
+from django.db import migrations, models
 import os
 import json
 
@@ -60,11 +60,10 @@ def create_evolutions(apps, _):
     Species = apps.get_model("pokerole_app", "PokemonSpecies")
     Evolution = apps.get_model("pokerole_app", "Evolution")
 
-    BASE_DIR = os.path.join(os.path.basename(
-        os.getcwd()), 'static/Version20/Pokedex')
+    DIR = os.path.join(settings.BASE_DIR, 'static/Version20/Pokedex')
 
-    for filename in os.listdir(BASE_DIR):
-        species = json.load(open(os.path.join(BASE_DIR, filename)))
+    for filename in os.listdir(DIR):
+        species = json.load(open(os.path.join(DIR, filename)))
         sp_model = Species.objects.get(name=species.get("Name"))
         for evo in species.get("Evolutions", []):
             if from_sp := evo.get("From", None):
@@ -84,6 +83,11 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
+        migrations.AlterField(
+            model_name='pokemonspecies',
+            name='dex_id',
+            field=models.CharField(max_length=20),
+        ),
         migrations.RunPython(
             create_species, reverse_code=migrations.RunPython.noop),
         migrations.RunPython(
