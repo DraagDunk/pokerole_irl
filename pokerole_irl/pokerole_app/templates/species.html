@@ -1,16 +1,144 @@
 {% load static %}
+{% load utilities %}
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="{% static 'styles.css' %}" rel="stylesheet">
+    <link href="{% static 'species-detail.css' %}" rel="stylesheet">
     <title>Pokerole_irl</title>
 </head>
 
 <body>
-    <h1>{{ pokemon.name }}</h1>
-    <img src="{{ pokemon.book_image }}"/>
-    <p>{{ pokemon.category }}</p>
-    <p>{{ pokemon.description }}</p>
+    <div class="species-detail">
+        <h1>#{{ pokemon.number }}: {{ pokemon.name }}</h1>
+        <div class="species-category">{{ pokemon.category }}</div>
+        <div class="details-container">
+            <img class="species-image" src="{{ pokemon.book_image }}"/>
+            <div class="species-description">
+                "{{ pokemon.description }}"
+                <div class="species-height-weight">
+                    <span>
+                        <div class="header">Height</div>
+                        <div>{{ pokemon.height_m }}/{{ pokemon.height_ft }}</div>
+                    </span>
+                    <span>
+                        <div class="header">Weight</div>
+                        <div>{{ pokemon.weight_kg }}/{{ pokemon.weight_lbs }}</div>
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="info-body">
+            <div class="column">
+                <table class="info-table">
+                    <tbody>
+                        <tr>
+                            <td>Type:</td>
+                            <td>{{ pokemon.types }}</td>
+                        </tr>
+                        <tr>
+                            <td>Ability:</td>
+                            <td><ul class="comma-list">
+                                {% for ability in pokemon.abilities.all %}
+                                <li title="{{ ability.effect }}">{{ ability.name }}</li>
+                                {% endfor %}
+                            </ul></td>
+                        </tr>
+                        <tr>
+                            <td>Hidden:</td>
+                            <td>{{ pokemon.hidden_ability }}</td>
+                        </tr>
+                        <tr>
+                            <td>Rec. rank:</td>
+                            <td>{{ pokemon.recommended_rank }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="stat-table">
+                    <tbody>
+                        <tr>
+                            <td>Base HP</td>
+                            <td><div class="hp-val">{{ pokemon.base_hp }}</div></td>
+                        </tr>
+                        <tr>
+                            <td>Strength</td>
+                            <td>{% stat_graphic pokemon.base_strength pokemon.max_strength %}</td>
+                        </tr>
+                        <tr>
+                            <td>Dexterity</td>
+                            <td>{% stat_graphic pokemon.base_dexterity pokemon.max_dexterity %}</td>
+                        </tr>
+                        <tr>
+                            <td>Vitality</td>
+                            <td>{% stat_graphic pokemon.base_vitality pokemon.max_vitality %}</td>
+                        </tr>
+                        <tr>
+                            <td>Special</td>
+                            <td>{% stat_graphic pokemon.base_special pokemon.max_special %}</td>
+                        </tr>
+                        <tr>
+                            <td>Insight</td>
+                            <td>{% stat_graphic pokemon.base_insight pokemon.max_insight %}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                {% if evolutions.exists %}
+                <h2>Evolutions</h2>
+                <ul class="evolutions">
+                    {% for evolution in evolutions.all %}
+                    <li>
+                        <img src="{{ evolution.to_species.box_image }}"/>
+                        <div>
+                            <div>
+                                <a href="{% url "species" evolution.to_species.pk %}">{{ evolution.to_species.name }}</a>
+                            </div>
+                            <div class="evolution-details">
+                                <span>{{ evolution.kind }}</span><span>{{ evolution.speed }}</span>
+                            </div>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+                {% if preevolution.exists %}
+                <h2>Pre-evolution</h2>
+                <ul class="evolutions">
+                    {% for preevolution in preevolution.all %}
+                    <li>
+                        <img src="{{ preevolution.from_species.box_image }}"/>
+                        <div>
+                            <div>
+                                <a href="{% url "species" preevolution.from_species.pk %}">{{ preevolution.from_species.name }}</a>
+                            </div>
+                            <div class="evolution-details">
+                                <span>{{ preevolution.kind }}</span><span>{{ preevolution.speed }}</span>
+                            </div>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </div>
+            <div class="column">
+                <table class="move-table">
+                    <tbody>
+                        <tr>
+                            <th>Move</th>
+                            <th>Rank</th>
+                        </tr>
+                        {% for move in moveset %}
+                        <tr>
+                            <td>{{ move.move.name }}</td>
+                            <td>{{ move.learned }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <a class="back-link" href="{% url "all_species" %}"><< Back to species</a>
+    </div>
 </body>

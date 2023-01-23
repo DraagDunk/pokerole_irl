@@ -5,7 +5,8 @@ from django.contrib.auth import authenticate, login, get_user_model
 
 from django.views.generic import TemplateView, ListView, CreateView, DetailView
 
-from .models import PokemonSpecies, Pokedex
+from .models import PokemonSpecies, Pokedex, Evolution, MoveSet
+
 
 class MainPageView(TemplateView):
     template_name = "index.html"
@@ -26,6 +27,16 @@ class SpeciesDetailView(DetailView):
     template_name = "species.html"
     model = PokemonSpecies
     context_object_name = "pokemon"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["evolutions"] = Evolution.objects.filter(
+            from_species=context["pokemon"])
+        context["preevolution"] = Evolution.objects.filter(
+            to_species=context["pokemon"])
+        context["moveset"] = MoveSet.objects.filter(
+            species=context["pokemon"])
+        return context
 
 
 class RegisterView(CreateView):
