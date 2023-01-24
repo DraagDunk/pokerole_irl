@@ -7,6 +7,7 @@ body {
     padding: 2rem;
     background-color: rgba(100, 100, 100, 0.1);
     border-radius: 2rem;
+    height: fit-content;
 }
 
 .species-detail h2 {
@@ -24,6 +25,12 @@ body {
     padding: 10px;
 }
 
+.species-description .other-info {
+    font-style: italic;
+    margin-left: 1rem;
+    font-size: small;
+}
+
 .species-height-weight {
     display: flex;
     margin-top: 2rem;
@@ -36,8 +43,8 @@ body {
 }
 
 .details-container img {
-    width: 200px;
-    height: 200px;
+    max-height: 200px;
+    max-width: 50%;
     border: 2px solid var(--color-edges);
     background-color: var(--color-secondary);
     padding: 10px;
@@ -96,14 +103,33 @@ body {
     margin-right: 0.5rem;
 }
 
-.move-table td:first-child {
-    padding-right: 2rem;
+.move-table {
+    border: 2px solid var(--color-edges);
+    border-spacing: 0px;
+    border-radius: 10px;
 }
 
-.back-link {
-    position: absolute;
-    bottom: 2rem;
+.move-table td {
+    width: 100%;
+    padding: 0 1rem;
 }
+
+.move-table td:not(:first-of-type) {
+    width: 50%;
+}
+
+.move-table tr:nth-of-type(2n) {
+    background-color: var(--color-secondary);
+}
+
+
+.links {
+    height: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
 
 @media (min-width: 500px) {
     .species-detail {

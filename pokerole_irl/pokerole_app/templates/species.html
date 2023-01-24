@@ -18,6 +18,12 @@
             <img class="species-image" src="{{ pokemon.book_image }}"/>
             <div class="species-description">
                 "{{ pokemon.description }}"
+                {% if pokemon.good_starter %}
+                    <p class="other-info">Good starter</p>
+                {% endif %}
+                {% if pokemon.legendary %}
+                    <p class="other-info">Legendary</p>
+                {% endif %}
                 <div class="species-height-weight">
                     <span>
                         <div class="header">Height</div>
@@ -49,7 +55,7 @@
                         </tr>
                         <tr>
                             <td>Hidden:</td>
-                            <td>{{ pokemon.hidden_ability }}</td>
+                            <td title="{{ pokemon.hidden_ability.effect }}">{{ pokemon.hidden_ability }}</td>
                         </tr>
                         <tr>
                             <td>Rec. rank:</td>
@@ -64,24 +70,34 @@
                             <td><div class="hp-val">{{ pokemon.base_hp }}</div></td>
                         </tr>
                         <tr>
-                            <td>Strength</td>
-                            <td>{% stat_graphic pokemon.base_strength pokemon.max_strength %}</td>
+                            <td colspan="2">Strength</td>
                         </tr>
                         <tr>
-                            <td>Dexterity</td>
-                            <td>{% stat_graphic pokemon.base_dexterity pokemon.max_dexterity %}</td>
+                            <td colspan="2">{% stat_graphic pokemon.base_strength pokemon.max_strength %}</td>
                         </tr>
                         <tr>
-                            <td>Vitality</td>
-                            <td>{% stat_graphic pokemon.base_vitality pokemon.max_vitality %}</td>
+                            <td colspan="2">Dexterity</td>
                         </tr>
                         <tr>
-                            <td>Special</td>
-                            <td>{% stat_graphic pokemon.base_special pokemon.max_special %}</td>
+                            <td colspan="2">{% stat_graphic pokemon.base_dexterity pokemon.max_dexterity %}</td>
                         </tr>
                         <tr>
-                            <td>Insight</td>
-                            <td>{% stat_graphic pokemon.base_insight pokemon.max_insight %}</td>
+                            <td colspan="2">Vitality</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">{% stat_graphic pokemon.base_vitality pokemon.max_vitality %}</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Special</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">{% stat_graphic pokemon.base_special pokemon.max_special %}</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Insight</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">{% stat_graphic pokemon.base_insight pokemon.max_insight %}</td>
                         </tr>
                     </tbody>
                 </table>
@@ -131,14 +147,17 @@
                         </tr>
                         {% for move in moveset %}
                         <tr>
-                            <td>{{ move.move.name }}</td>
+                            <td title="{{ move.move.effect }}">{{ move.move.name }}</td>
                             <td>{{ move.learned }}</td>
                         </tr>
                         {% endfor %}
                     </tbody>
                 </table>
+                <div class="links">
+                    <a class="back-link" href="javascript:history.back()"><< Back</a>
+                    <a class="back-link" href="{% url "all_species" %}"><< Back to species</a>
+                </div>
             </div>
         </div>
-        <a class="back-link" href="{% url "all_species" %}"><< Back to species</a>
     </div>
 </body>
