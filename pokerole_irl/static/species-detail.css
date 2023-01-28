@@ -1,0 +1,138 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.species-detail {
+    padding: 2rem;
+    background-color: rgba(100, 100, 100, 0.1);
+    border-radius: 2rem;
+    height: fit-content;
+}
+
+.species-detail h2 {
+    font-size: larger;
+    margin: 0.5rem 0;
+}
+
+.details-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.species-description {
+    padding: 10px;
+}
+
+.species-description .other-info {
+    font-style: italic;
+    margin-left: 1rem;
+    font-size: small;
+}
+
+.species-height-weight {
+    display: flex;
+    margin-top: 2rem;
+    justify-content: space-around;
+}
+
+.species-height-weight .header {
+    text-align: center;
+    font-weight: bold;
+}
+
+.details-container img {
+    max-height: 200px;
+    max-width: 50%;
+    border: 2px solid var(--color-edges);
+    background-color: var(--color-secondary);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.species-category {
+    font-style: italic;
+}
+
+.info-body {
+    display: flex;
+}
+
+.info-body .column {
+    width: 50%;
+}
+
+.stat-table {
+    font-variant: small-caps;
+    margin-top: 1rem;
+}
+
+.stat-table .hp-val {
+    padding: 0.5rem;
+    background-color: var(--color-secondary);
+    text-align: center;
+    width: 2rem;
+    border-radius: 0.5rem;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.evolutions {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.evolutions li {
+    display: flex;
+    align-items: flex-end;
+    height: fit-content;
+    margin-top: -1rem;
+}
+
+.evolutions img {
+    height: 100%;
+}
+
+.evolutions .evolution-details {
+    font-style: italic;
+}
+
+.evolutions .evolution-details span:not(:last-child) {
+    margin-right: 0.5rem;
+}
+
+.move-table {
+    border: 2px solid var(--color-edges);
+    border-spacing: 0px;
+    border-radius: 10px;
+}
+
+.move-table td {
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.move-table td:not(:first-of-type) {
+    width: 50%;
+}
+
+.move-table tr:nth-of-type(2n) {
+    background-color: var(--color-secondary);
+}
+
+
+.links {
+    height: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+@media (min-width: 500px) {
+    .species-detail {
+        width: 500px;
+    }
+}

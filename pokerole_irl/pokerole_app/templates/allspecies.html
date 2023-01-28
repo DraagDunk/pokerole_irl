@@ -36,7 +36,7 @@
                 <tr>
                     <td>{{ pokemon.number }}</td>
                     <td><img src="https://raw.githubusercontent.com/Willowlark/Pokerole-Data/master/images/BoxSprites/{{ pokemon.image_name }}"/></td>
-                    <td title="{{ pokemon.description }}">{{ pokemon }}</td>
+                    <td title="{{ pokemon.description }}"><a href="{% url "species" pokemon.pk %}">{{ pokemon }}</a></td>
                     <td title="Weaknesses: {{ pokemon.weaknesses }}; Resistances: {{ pokemon.resistances }}"><ul>
                             <li>{{ pokemon.primary_type }}</li>
                             {% if pokemon.secondary_type %}

@@ -148,12 +148,21 @@ class PokemonSpecies(models.Model):
     image_name = models.CharField(max_length=50)
 
     @property
+    def weight_kg(self):
+        return f"{self.weight} kg"
+
+    @property
     def weight_lbs(self):
-        return round(2.2*self.weight, 1)
+        return f"{round(2.2*self.weight, 1)} lbs"
+
+    @property
+    def height_m(self):
+        return f"{self.height} m"
 
     @property
     def height_ft(self):
-        return round(3.28*self.height, 1)
+        feet = round(3.28*self.height, 1)
+        return f"{int(feet//1)}\'{int((feet%1)*12)}\""
 
     def get_weaknesses_and_resistances(self):
         wr_primary = self.primary_type.get_weaknesses_and_resistances()
@@ -170,6 +179,13 @@ class PokemonSpecies(models.Model):
             return weak_res
         else:
             return wr_primary
+
+    @property
+    def types(self):
+        typ = str(self.primary_type)
+        if self.secondary_type:
+            typ += f", {self.secondary_type}"
+        return typ
 
     @property
     def weaknesses(self):
