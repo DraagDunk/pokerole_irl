@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+
+{% block title %}Profile Page{% endblock title %}
+
+{% block content %}
+
+{% if user_form.errors %}
+
+    <div> There were following errors, you stupid donkey: </div>
+    <div class="alert alert-danger">
+        {{ user_form.errors }}
+        {{ profile_form.errors }}
+    </div>
+
+
+{% endif %}
+
+
+<div>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div>
+            <div>
+                <div>
+                    <label>Username:</label>
+                        {{ user_form.username }}
+                </div>
+                <div>
+                    <label>Email:</label>
+                        {{ user_form.email }}
+                </div>
+                <div>
+                    <a href="{% url 'password_change' %}">Change Password</a>
+                    <hr>
+                </div>
+                <label>Bio:</label> {{ profile_form.bio }}
+            </div>
+        </div>
+        <br><br>
+        <button type="submit">Save Changes</button>
+        <button type="reset">Reset</button>
+    </form>
+</div>
+
+{% endblock content %}
+
+</html>
