@@ -1,6 +1,6 @@
 from django.urls import path
 
-from .views import SpeciesListView, SpeciesDetailView, MainPageView, RegisterView, PokedexListView, PokedexDetailView
+from .views import SpeciesListView, SpeciesDetailView, MainPageView, RegisterView, PokedexListView, PokedexDetailView, UserProfileView
 
 urlpatterns = [
     path('', MainPageView.as_view(), name="index"),
