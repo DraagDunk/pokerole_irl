@@ -48,3 +48,10 @@ body {
 .comma-list li:not(:last-child)::after {
     content: ", "
 }
+
+.widget {
+    padding: 2rem;
+    background-color: rgba(100, 100, 100, 0.1);
+    border-radius: 2rem;
+    height: fit-content;
+}
