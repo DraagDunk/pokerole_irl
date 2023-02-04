@@ -1,17 +1,22 @@
 from django.contrib import messages
-from django.contrib.auth import  get_user_model
+from django.contrib.auth import get_user_model
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import redirect, render
 
 from django.views.generic import TemplateView, ListView, CreateView, DetailView
-from django.contrib.auth.forms import UserCreationForm
-from .forms import UpdateProfileForm, UpdateUserForm
+from .forms import UpdateProfileForm, UpdateUserForm, CreateUserForm
 
 from .models import PokemonSpecies, Pokedex, Evolution, MoveSet
 
 
 class MainPageView(TemplateView):
     template_name = "index.html"
+
+    def dispatch(self, request, *args, **kwargs):
+        if request.user.is_authenticated:
+            return super().dispatch(request, *args, **kwargs)
+        else:
+            return redirect('/login')
 
 
 class SpeciesListView(ListView):
@@ -46,12 +51,11 @@ class RegisterView(CreateView):
         if request.user.is_authenticated:
             return redirect('/')
         return super().dispatch(request, *args, **kwargs)
-    
-    form_class = UserCreationForm
+
+    form_class = CreateUserForm
     template_name = 'registration/register.html'
     success_url = '/login'
     model = get_user_model()
-    fields = ['username', 'password']
 
 
 class PokedexListView(ListView):
@@ -75,22 +79,22 @@ class PokedexDetailView(DetailView):
 class UserProfileView(LoginRequiredMixin, TemplateView):
     # Updates the user profile and info
     template_name = 'users/profile.html'
-    
+
     login_url = '/'
     redirect_field_name = 'suffer'
 
     def post(self, request):
         user_form = UpdateUserForm(request.POST, instance=request.user)
-        profile_form = UpdateProfileForm(request.POST, instance=request.user.profile)
+        profile_form = UpdateProfileForm(
+            request.POST, instance=request.user.profile)
 
         if user_form.is_valid() and profile_form.is_valid():
             user_form.save()
             profile_form.save()
             messages.success(request, 'Profile updated sucessfully')
             return redirect(to='user-profile')
-    
-        return render(request, 'users/profile.html', {'user_form': user_form, 'profile_form': profile_form})
 
+        return render(request, 'users/profile.html', {'user_form': user_form, 'profile_form': profile_form})
 
     def get(self, request):
         user_form = UpdateUserForm(instance=request.user)
