@@ -55,3 +55,9 @@ body {
     border-radius: 2rem;
     height: fit-content;
 }
+
+button {
+    background-color: var(--color-secondary);
+    border-color: var(--color-edges);
+    color: var(--color-text);
+}
