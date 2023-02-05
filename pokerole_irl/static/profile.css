@@ -1,0 +1,57 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.widget {
+    text-align: center;
+}
+
+h1,
+h2 {
+    font-variant: small-caps;
+}
+
+.general {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+table {
+    width: fit-content;
+    text-align: left;
+}
+
+td {
+    padding: 0.2rem 1rem;
+}
+
+td input {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    border-bottom: 2px solid var(--color-edges);
+    color: var(--color-text)
+}
+
+.field input:focus-visible {
+    outline: none;
+}
+
+textarea {
+    resize: none;
+    background-color: rgba(0, 0, 0, 0);
+    border-color: var(--color-edges);
+    color: var(--color-text);
+    font-family: monospace;
+    padding: 1rem;
+}
+
+.buttons {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+}

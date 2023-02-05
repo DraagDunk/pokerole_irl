@@ -33,7 +33,7 @@ class UpdateUserForm(forms.ModelForm):
 
 
 class UpdateProfileForm(forms.ModelForm):
-    bio = forms.CharField(widget=forms.Textarea(
+    bio = forms.CharField(required=False, widget=forms.Textarea(
         attrs={'class': 'form-control', 'rows': 5}))
 
     class Meta:

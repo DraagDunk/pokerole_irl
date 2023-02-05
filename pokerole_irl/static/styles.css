@@ -62,3 +62,9 @@ button {
     border-color: var(--color-edges);
     color: var(--color-text);
 }
+
+.field_error {
+    color: var(--color-error);
+    font-size: small;
+    max-width: 15rem;
+}
