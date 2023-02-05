@@ -8,7 +8,7 @@
 
 <body>
     <div class="register widget">
-        <form method="post" action="{% url 'register' %}">
+        <form class="login_form" method="post" action="{% url 'register' %}">
             {% csrf_token %}
 
             <div class="field">

@@ -4,12 +4,18 @@
     --color-edges: #A49393;
     --color-secondary: #E8B4B8;
     --color-error: #701111;
+    --button-border-radius: 1rem;
 }
 
 
 body {
     background-color: var(--color-bg);
     color: var(--color-text);
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
 }
 
 .species-table,
@@ -52,19 +58,40 @@ body {
 
 .widget {
     padding: 2rem;
-    background-color: rgba(100, 100, 100, 0.1);
-    border-radius: 2rem;
     height: fit-content;
+    background-color: rgba(100, 100, 100, 0.1);
+    width: 100%;
 }
 
 button {
-    background-color: var(--color-secondary);
-    border-color: var(--color-edges);
+    background-color: var(--color-edges);
+    border: none;
+    border-radius: var(--button-border-radius);
     color: var(--color-text);
+    cursor: pointer;
+    transition: background-color 200ms ease-in-out;
+    padding: 0.7rem;
+}
+
+button:hover {
+    background-color: var(--color-secondary);
 }
 
 .field_error {
     color: var(--color-error);
     font-size: small;
     max-width: 15rem;
+}
+
+@media (min-width: 500px) {
+    .widget {
+        border-radius: 2rem;
+        width: fit-content;
+    }
+
+    .big.widget {
+        margin: 1rem;
+        width: 100%;
+        max-width: 800px;
+    }
 }

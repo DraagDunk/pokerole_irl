@@ -4,10 +4,16 @@
 {% include "partials/header.html" %}
 
 <body>
-    <h1>Pokérole_irl</h1>
-    {% if user.is_authenticated %}
-    <h2>Your name is: {{ user.username }}</h2>
-    {% else %}
-    <h2>You are not logged in!</h2>
-    {% endif %}
+    <div class="big widget">
+        <h1>Pokérole_irl</h1>
+        <p>Welcome to pokerole_irl!</p>
+        <p>For now, this page is still being tested.</p>
+        <p>You can access the current pages from here:</p>
+        <u>
+            <li><a href="{% url "login" %}">Log In</a></li>
+            <li><a href="{% url "user-profile" %}">Profile page</a></li>
+            <li><a href="{% url "all_species" %}">Pokémon species</a></li>
+            <li><a href="{% url "pokedex_list" %}">Pokédex list</a></li>
+        </u>
+    </div>
 </body>
