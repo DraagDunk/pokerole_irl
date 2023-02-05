@@ -14,32 +14,8 @@ body {
     display: flex;
     justify-content: center;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     margin: 0;
-}
-
-.species-table,
-.species-table th,
-.species-table td {
-    border: 1px solid var(--color-edges);
-}
-
-.species-table {
-    border-collapse: separate;
-}
-
-.species-table ul {
-    display: inline;
-    list-style: none;
-    padding: 0px;
-}
-
-.species-table ul li {
-    display: inline;
-}
-
-.species-table ul li:not(:last-child)::after {
-    content: ", ";
 }
 
 .comma-list {
@@ -93,5 +69,10 @@ button:hover {
         margin: 1rem;
         width: 100%;
         max-width: 800px;
+    }
+
+    .full.widget {
+        margin: 1rem;
+        width: 100%;
     }
 }

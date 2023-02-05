@@ -6,7 +6,7 @@ from django.shortcuts import redirect, render
 from django.views.generic import TemplateView, ListView, CreateView, DetailView
 from .forms import UpdateProfileForm, UpdateUserForm, CreateUserForm
 
-from .models import PokemonSpecies, Pokedex, Evolution, MoveSet
+from .models import PokemonSpecies, Pokedex, Evolution, MoveSet, PokedexEntry
 
 
 class MainPageView(TemplateView):
@@ -65,15 +65,22 @@ class PokedexListView(ListView):
     paginate_by = 10
 
 
-class PokedexDetailView(DetailView):
+class PokedexEntryListView(ListView):
     template_name = "pokedex.html"
-    model = Pokedex
-    context_object_name = "pokedex"
+    model = PokedexEntry
+    context_object_name = "entries"
+    paginate_by = 20
 
     def get_queryset(self):
         queryset = super().get_queryset()
-        print(queryset)
-        return queryset.prefetch_related("pokedexentry_set")
+        queryset = queryset.filter(
+            pokedex__pk=self.kwargs.get("pk")).order_by("number")
+        return queryset.prefetch_related("species")
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["pokedex"] = Pokedex.objects.get(pk=self.kwargs.get("pk"))
+        return context
 
 
 class UserProfileView(LoginRequiredMixin, TemplateView):

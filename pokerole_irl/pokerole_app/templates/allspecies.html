@@ -2,84 +2,84 @@
 
 {% include "partials/header.html" %}
 
+<head>
+    <link href="{% static 'pokedex.css' %}" rel="stylesheet">
+</head>
+
 <body>
-    <h1>All Pokémon species</h1>
+    <div class="species full widget">
+        <h1>All Pokémon</h1>
 
-    <table class="species-table">
-        <thead>
-            <tr>
-                <th>#</th>
-                <th>Image</th>
-                <th>Name</th>
-                <th>Types</th>
-                <th>Abilities</th>
-                <th>Height</th>
-                <th>Weight</th>
-                <th>Evolutions</th>
-                <th>Base HP</th>
-                <th>Strength</th>
-                <th>Dexterity</th>
-                <th>Vitality</th>
-                <th>Special</th>
-                <th>Insight</th>
-                <th>Moveset</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for pokemon in species %}
+        <table class="species-table">
+            <thead>
                 <tr>
-                    <td>{{ pokemon.number }}</td>
-                    <td><img src="https://raw.githubusercontent.com/Willowlark/Pokerole-Data/master/images/BoxSprites/{{ pokemon.image_name }}"/></td>
-                    <td title="{{ pokemon.description }}"><a href="{% url "species" pokemon.pk %}">{{ pokemon }}</a></td>
-                    <td title="Weaknesses: {{ pokemon.weaknesses }}; Resistances: {{ pokemon.resistances }}"><ul>
-                            <li>{{ pokemon.primary_type }}</li>
-                            {% if pokemon.secondary_type %}
-                            <li>{{ pokemon.secondary_type }}</li>
-                            {% endif %}
-                    </ul></td>
-                    <td><ul>
-                        {% for ability in pokemon.abilities.all %}
-                            <li title="{{ ability.effect }}">{{ ability }}</li>
-                        {% endfor %}
-                    </td></ul>
-                    <td>{{ pokemon.height }}m/{{ pokemon.height_ft }}ft</td>
-                    <td>{{ pokemon.weight }}kg/{{ pokemon.weight_lbs }}lbs</td>
-                    <td><ul>
-                        {% for evo in pokemon.evolutions.all %}
-                            <li>{{ evo }}</li>
-                        {% endfor %}
-                    </td></ul>
-                    <td>{{ pokemon.base_hp }}</td>
-                    <td>{{ pokemon.base_strength }}/{{ pokemon.max_strength }}</td>
-                    <td>{{ pokemon.base_dexterity }}/{{ pokemon.max_dexterity }}</td>
-                    <td>{{ pokemon.base_vitality }}/{{ pokemon.max_vitality }}</td>
-                    <td>{{ pokemon.base_special }}/{{ pokemon.max_special }}</td>
-                    <td>{{ pokemon.base_insight }}/{{ pokemon.max_insight }}</td>
-                    <td><ul>
-                    {% for move in pokemon.moves.all %}
-                        <li title="{{ move.description }}">{{ move }}</li>
-                    {% endfor %}
-                    </ul></td>
+                    <th class="prio-1">#</th>
+                    <th class="prio-1">Image</th>
+                    <th class="prio-1">Name</th>
+                    <th class="prio-2">Types</th>
+                    <th class="prio-3">Abilities</th>
+                    <th class="prio-4">Height</th>
+                    <th class="prio-4">Weight</th>
+                    <th class="prio-3">Evolutions</th>
+                    <th class="prio-4">Base HP</th>
+                    <th class="prio-4">Strength</th>
+                    <th class="prio-4">Dexterity</th>
+                    <th class="prio-4">Vitality</th>
+                    <th class="prio-4">Special</th>
+                    <th class="prio-4">Insight</th>
                 </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                {% for pokemon in species %}
+                    <tr>
+                        <td class="prio-1">{{ pokemon.number }}</td>
+                        <td class="prio-1"><img src="https://raw.githubusercontent.com/Willowlark/Pokerole-Data/master/images/BoxSprites/{{ pokemon.image_name }}"/></td>
+                        <td class="prio-1" title="{{ pokemon.description }}"><a href="{% url "species" pokemon.pk %}">{{ pokemon }}</a></td>
+                        <td class="prio-2" title="Weaknesses: {{ pokemon.weaknesses }}; Resistances: {{ pokemon.resistances }}"><ul class="comma-list">
+                                <li>{{ pokemon.primary_type }}</li>
+                                {% if pokemon.secondary_type %}
+                                <li>{{ pokemon.secondary_type }}</li>
+                                {% endif %}
+                        </ul></td>
+                        <td class="prio-3"><ul class="comma-list">
+                            {% for ability in pokemon.abilities.all %}
+                                <li title="{{ ability.effect }}">{{ ability }}</li>
+                            {% endfor %}
+                        </td></ul>
+                        <td class="prio-4">{{ pokemon.height_m }}/{{ pokemon.height_ft }}</td>
+                        <td class="prio-4">{{ pokemon.weight_kg }}/{{ pokemon.weight_lbs }}</td>
+                        <td class="prio-3"><ul class="comma-list">
+                            {% for evo in pokemon.evolutions.all %}
+                                <li>{{ evo }}</li>
+                            {% endfor %}
+                        </td></ul>
+                        <td class="prio-4">{{ pokemon.base_hp }}</td>
+                        <td class="prio-4">{{ pokemon.base_strength }}/{{ pokemon.max_strength }}</td>
+                        <td class="prio-4">{{ pokemon.base_dexterity }}/{{ pokemon.max_dexterity }}</td>
+                        <td class="prio-4">{{ pokemon.base_vitality }}/{{ pokemon.max_vitality }}</td>
+                        <td class="prio-4">{{ pokemon.base_special }}/{{ pokemon.max_special }}</td>
+                        <td class="prio-4">{{ pokemon.base_insight }}/{{ pokemon.max_insight }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
 
-    <div class="pagination">
-        <span class="step-links">
-            {% if page_obj.has_previous %}
-                <a href="?page=1">&laquo; first</a>
-                <a href="?page={{ page_obj.previous_page_number }}">previous</a>
-            {% endif %}
-    
-            <span class="current">
-                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+        <div class="pagination">
+            <span class="step-links">
+                {% if page_obj.has_previous %}
+                    <a href="?page=1">&laquo; First</a>
+                    <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
+                {% endif %}
+        
+                <span class="current">
+                    Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                </span>
+        
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}">Next</a>
+                    <a href="?page={{ page_obj.paginator.num_pages }}">Last &raquo;</a>
+                {% endif %}
             </span>
-    
-            {% if page_obj.has_next %}
-                <a href="?page={{ page_obj.next_page_number }}">next</a>
-                <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
-            {% endif %}
-        </span>
+        </div>
     </div>
 </body>

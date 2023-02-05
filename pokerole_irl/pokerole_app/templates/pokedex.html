@@ -2,27 +2,87 @@
 
 {% include "partials/header.html" %}
 
-<body>
-    <h1>{{ pokedex }}</h1>
+<head>
+    <link href="{% static 'pokedex.css' %}" rel="stylesheet">
+</head>
 
-    <table class="species-table">
-        <thead>
-            <tr>
-                <th>#</th>
-                <th>Image</th>
-                <th>Name</th>
-                <th>Category</th>
+<body>
+    <div class="pokedex full widget">
+        <h1>{{ pokedex.name }}</h1>
+
+        <table class="species-table">
+            <thead>
+                <tr>
+                    <th class="prio-1">#</th>
+                    <th class="prio-1">Image</th>
+                    <th class="prio-1">Name</th>
+                    <th class="prio-1">Category</th>
+                    <th class="prio-2">Types</th>
+                    <th class="prio-3">Abilities</th>
+                    <th class="prio-4">Height</th>
+                    <th class="prio-4">Weight</th>
+                    <th class="prio-3">Evolutions</th>
+                    <th class="prio-4">Base HP</th>
+                    <th class="prio-4">Strength</th>
+                    <th class="prio-4">Dexterity</th>
+                    <th class="prio-4">Vitality</th>
+                    <th class="prio-4">Special</th>
+                    <th class="prio-4">Insight</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for entry in entries %}
+                <tr>
+                    <td class="prio-1">{{ entry.number }}</td>
+                    <td class="prio-1"><img src="{{ entry.species.box_image }}"/></td>
+                    <td class="prio-1"><a href="{% url "species" entry.species.pk %}">{{ entry.species.name }}</a></td>
+                    <td class="prio-1">{{ entry.species.category }}</td>
+                    <td class="prio-2" title="Weaknesses: {{ entry.species.weaknesses }}; Resistances: {{ entry.species.resistances }}"><ul class="comma-list">
+                        <li>{{ entry.species.primary_type }}</li>
+                        {% if entry.species.secondary_type %}
+                        <li>{{ entry.species.secondary_type }}</li>
+                        {% endif %}
+                </ul></td>
+                <td class="prio-3"><ul class="comma-list">
+                    {% for ability in entry.species.abilities.all %}
+                        <li title="{{ ability.effect }}">{{ ability }}</li>
+                    {% endfor %}
+                </td></ul>
+                <td class="prio-4">{{ entry.species.height_m }}/{{ entry.species.height_ft }}</td>
+                <td class="prio-4">{{ entry.species.weight_kg }}/{{ entry.species.weight_lbs }}</td>
+                <td class="prio-3"><ul class="comma-list">
+                    {% for evo in entry.species.evolutions.all %}
+                        <li>{{ evo }}</li>
+                    {% endfor %}
+                </td></ul>
+                <td class="prio-4">{{ entry.species.base_hp }}</td>
+                <td class="prio-4">{{ entry.species.base_strength }}/{{ entry.species.max_strength }}</td>
+                <td class="prio-4">{{ entry.species.base_dexterity }}/{{ entry.species.max_dexterity }}</td>
+                <td class="prio-4">{{ entry.species.base_vitality }}/{{ entry.species.max_vitality }}</td>
+                <td class="prio-4">{{ entry.species.base_special }}/{{ entry.species.max_special }}</td>
+                <td class="prio-4">{{ entry.species.base_insight }}/{{ entry.species.max_insight }}</td>
             </tr>
-        </thead>
-        <tbody>
-            {% for entry in pokedex.pokedexentry_set.all %}
-            <tr>
-                <td>{{ entry.number }}</td>
-                <td><img src="{{ entry.species.box_image }}"/></td>
-                <td><a href="{% url "species" entry.species.pk %}">{{ entry.species.name }}</a></td>
-                <td>{{ entry.species.category }}</td>
-            </tr>
-            {% endfor%}
-        </tbody>
-    </table>
+                </tr>
+                {% endfor%}
+            </tbody>
+        </table>
+
+        <div class="pagination">
+            <span class="step-links">
+                {% if page_obj.has_previous %}
+                    <a href="?page=1">&laquo; First</a>
+                    <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
+                {% endif %}
+        
+                <span class="current">
+                    Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                </span>
+        
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}">Next</a>
+                    <a href="?page={{ page_obj.paginator.num_pages }}">Last &raquo;</a>
+                {% endif %}
+            </span>
+        </div>
+    </div>
 </body>

@@ -1,0 +1,46 @@
+h1 {
+    text-align: center;
+}
+
+.species-table {
+    border-collapse: collapse;
+    width: 100%;
+    padding: 1rem;
+}
+
+.species-table tbody tr:nth-of-type(2n-1) {
+    background-color: var(--color-secondary);
+}
+
+.species-table td {
+    text-align: center;
+    padding: 0 0.3rem;
+}
+
+.widget {
+    padding: 0;
+}
+
+.step-links {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem 0;
+}
+
+@media (max-width: 1600px) {
+    .prio-4 {
+        display: none;
+    }
+}
+
+@media (max-width: 950px) {
+    .prio-3 {
+        display: none;
+    }
+}
+
+@media (max-width: 450px) {
+    .prio-2 {
+        display: none;
+    }
+}
