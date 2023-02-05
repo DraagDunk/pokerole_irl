@@ -7,6 +7,7 @@ from .models import Profile
 
 
 class CreateUserForm(UserCreationForm):
+    email = forms.EmailField(required=True)
 
     class Meta:
         model = User

@@ -40,3 +40,9 @@ body {
     font-size: larger;
     font-variant: small-caps;
 }
+
+.field_error {
+    color: var(--color-error);
+    font-size: small;
+    max-width: 15rem;
+}
