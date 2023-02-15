@@ -1,21 +1,19 @@
 
 {% load static %}
 
-
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="{% static 'styles.css' %}" rel="stylesheet">
-    <title>Pokerole_irl</title>
-</head>
+{% include "partials/header.html" %}
 
 <body>
-    <h1>Pokérole_irl</h1>
-    {% if user.is_authenticated %}
-    <h2>Your name is: {{ user.username }}</h2>
-    {% else %}
-    <h2>You are not logged in!</h2>
-    {% endif %}
+    <div class="big widget">
+        <h1>Pokérole_irl</h1>
+        <p>Welcome to pokerole_irl!</p>
+        <p>For now, this page is still being tested.</p>
+        <p>You can access the current pages from here:</p>
+        <u>
+            <li><a href="{% url "login" %}">Log In</a></li>
+            <li><a href="{% url "user-profile" %}">Profile page</a></li>
+            <li><a href="{% url "all_species" %}">Pokémon species</a></li>
+            <li><a href="{% url "pokedex_list" %}">Pokédex list</a></li>
+        </u>
+    </div>
 </body>

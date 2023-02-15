@@ -3,13 +3,6 @@ body {
     justify-content: center;
 }
 
-.species-detail {
-    padding: 2rem;
-    background-color: rgba(100, 100, 100, 0.1);
-    border-radius: 2rem;
-    height: fit-content;
-}
-
 .species-detail h2 {
     font-size: larger;
     margin: 0.5rem 0;

@@ -1,32 +1,38 @@
 
 {% load static %}
-<!DOCTYPE html>
+
+{% include "partials/header.html" %}
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <link href="{% static 'login.css' %}" rel="stylesheet">
 </head>
 
 <body>
-    {% if form.errors %}
-    <p> Something went wrong!</p>
-    {% endif %}
+    <div class="login widget">
+        {% if form.errors %}
+        <p> Something went wrong!</p>
+        {% endif %}
 
-    {% if next %}
-    <p>Can't access that page.</p>
-    {% endif %}
+        {% if next %}
+        <p>Can't access that page.</p>
+        {% endif %}
 
-    <form method="post" action="{%url 'login' %}">
-        {% csrf_token %}
+        <form method="post" action="{%url 'login' %}" class="login_form">
+            {% csrf_token %}
 
-        <p>Username: {{ form.username }}</p>
-        <p>Password: {{ form.password }}</p>
-    
-         <p><input type="submit" = value="login"></p>
-         <input type="hidden" name="next" value="{{ next }}">
-    </form>
+            <div class="field">
+                <label for="id_username">Username</label>
+                {{ form.username }}
+            </div>
+
+            <div class="field">
+                <label for="id_password">Password</label>
+                {{ form.password }}
+            </div>
+        
+            <button class="login_button" type="submit" value="login">Log In</button>
+        </form>
+    </div>
 </body>
 
 <div class="BOX"></div>
