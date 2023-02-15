@@ -1,6 +1,8 @@
 from django.urls import path
 
-from .views import SpeciesListView, SpeciesDetailView, MainPageView, RegisterView, PokedexListView, PokedexEntryListView, UserProfileView
+from .views.species_views import SpeciesListView, SpeciesDetailView
+from .views.base_views import MainPageView
+from .views.pokedex_views import PokedexListView, PokedexEntryListView
 
 urlpatterns = [
     path('', MainPageView.as_view(), name="index"),
@@ -8,6 +10,4 @@ urlpatterns = [
     path('species/<int:pk>', SpeciesDetailView.as_view(), name="species"),
     path('pokedexes/', PokedexListView.as_view(), name="pokedex_list"),
     path('pokedexes/<int:pk>', PokedexEntryListView.as_view(), name="pokedex"),
-    path('register', RegisterView.as_view(), name='register'),
-    path('accounts/profile/', UserProfileView.as_view(), name='user-profile')
 ]
