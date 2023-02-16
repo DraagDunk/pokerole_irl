@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'pokerole_app',
-    'health_check'
+    'user_app'
 ]
 
 MIDDLEWARE = [

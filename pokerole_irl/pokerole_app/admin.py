@@ -1,6 +1,10 @@
 from django.contrib import admin
 
-from .models import Pokedex, PokedexEntry, PokemonSpecies, Type, Move, Ability, Nature, Item, Evolution, MoveSet, Profile
+from .models.ability_models import Ability
+from .models.base_models import Type, Nature, Item
+from .models.move_models import Move
+from .models.pokedex_models import Pokedex, PokedexEntry
+from .models.species_models import PokemonSpecies, Evolution, MoveSet
 
 
 @admin.register(Move)
@@ -77,5 +81,3 @@ class EvolutionAdmin(admin.ModelAdmin):
 @admin.register(MoveSet)
 class MoveSetAdmin(admin.ModelAdmin):
     list_display = ('move', 'species', 'learned')
-    
-admin.site.register(Profile)
