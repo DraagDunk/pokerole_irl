@@ -1,12 +1,20 @@
-from django.views.generic import ListView
+from django.views.generic import ListView, CreateView
 
 from ..models.pokedex_models import Pokedex, PokedexEntry
+
 
 class PokedexListView(ListView):
     template_name = "pokedex_list.html"
     model = Pokedex
     context_object_name = "pokedexes"
     paginate_by = 10
+
+
+class PokedexCreateView(CreateView):
+    template_name = "pokedex_add.html"
+    model = Pokedex
+
+    fields = ('name',)
 
 
 class PokedexEntryListView(ListView):
