@@ -10,6 +10,12 @@
     <div class="pokedex full widget">
         <h1>{{ pokedex.name }}</h1>
 
+        {% if request.user.is_superuser or is_owner %}
+            <div class="add_button">
+                <a class="button" href="{% url 'pokedex_entry_add' pokedex.pk %}">Add entry</a>
+            </div>
+        {% endif %}
+
         <table class="species-table">
             <thead>
                 <tr>
@@ -42,26 +48,25 @@
                         {% if entry.species.secondary_type %}
                         <li>{{ entry.species.secondary_type }}</li>
                         {% endif %}
-                </ul></td>
-                <td class="prio-3"><ul class="comma-list">
-                    {% for ability in entry.species.abilities.all %}
-                        <li title="{{ ability.effect }}">{{ ability }}</li>
-                    {% endfor %}
-                </td></ul>
-                <td class="prio-4">{{ entry.species.height_m }}/{{ entry.species.height_ft }}</td>
-                <td class="prio-4">{{ entry.species.weight_kg }}/{{ entry.species.weight_lbs }}</td>
-                <td class="prio-3"><ul class="comma-list">
-                    {% for evo in entry.species.evolutions.all %}
-                        <li>{{ evo }}</li>
-                    {% endfor %}
-                </td></ul>
-                <td class="prio-4">{{ entry.species.base_hp }}</td>
-                <td class="prio-4">{{ entry.species.base_strength }}/{{ entry.species.max_strength }}</td>
-                <td class="prio-4">{{ entry.species.base_dexterity }}/{{ entry.species.max_dexterity }}</td>
-                <td class="prio-4">{{ entry.species.base_vitality }}/{{ entry.species.max_vitality }}</td>
-                <td class="prio-4">{{ entry.species.base_special }}/{{ entry.species.max_special }}</td>
-                <td class="prio-4">{{ entry.species.base_insight }}/{{ entry.species.max_insight }}</td>
-            </tr>
+                    </ul></td>
+                    <td class="prio-3"><ul class="comma-list">
+                        {% for ability in entry.species.abilities.all %}
+                            <li title="{{ ability.effect }}">{{ ability }}</li>
+                        {% endfor %}
+                    </td></ul>
+                    <td class="prio-4">{{ entry.species.height_m }}/{{ entry.species.height_ft }}</td>
+                    <td class="prio-4">{{ entry.species.weight_kg }}/{{ entry.species.weight_lbs }}</td>
+                    <td class="prio-3"><ul class="comma-list">
+                        {% for evo in entry.species.evolutions.all %}
+                            <li>{{ evo }}</li>
+                        {% endfor %}
+                    </td></ul>
+                    <td class="prio-4">{{ entry.species.base_hp }}</td>
+                    <td class="prio-4">{{ entry.species.base_strength }}/{{ entry.species.max_strength }}</td>
+                    <td class="prio-4">{{ entry.species.base_dexterity }}/{{ entry.species.max_dexterity }}</td>
+                    <td class="prio-4">{{ entry.species.base_vitality }}/{{ entry.species.max_vitality }}</td>
+                    <td class="prio-4">{{ entry.species.base_special }}/{{ entry.species.max_special }}</td>
+                    <td class="prio-4">{{ entry.species.base_insight }}/{{ entry.species.max_insight }}</td>
                 </tr>
                 {% endfor%}
             </tbody>

@@ -116,6 +116,10 @@ class PokemonSpecies(models.Model):
                 res_list.append(f"{key} x{val}")
         return ", ".join(res_list)
 
+    @property
+    def is_mega(self):
+        return self.name.endswith("Form)") and "(Mega" in self.name
+
     def __str__(self):
         return self.name
 

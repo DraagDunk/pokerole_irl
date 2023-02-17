@@ -5,3 +5,16 @@ body {
 h1 {
     text-align: center;
 }
+
+.small.field {
+    max-width: 5rem;
+}
+
+.small.field input {
+    max-width: inherit;
+}
+
+.form_row {
+    display: flex;
+    flex-direction: row;
+}

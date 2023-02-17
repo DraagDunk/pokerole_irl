@@ -1,3 +1,7 @@
+body {
+    height: fit-content;
+}
+
 h1 {
     text-align: center;
 }
@@ -17,14 +21,21 @@ h1 {
     padding: 0 0.3rem;
 }
 
-.widget {
+.pokedex.widget {
     padding: 0;
+    margin-bottom: 5rem;
 }
 
 .step-links {
     display: flex;
     justify-content: space-around;
     margin: 1rem 0;
+}
+
+.add_button {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
 }
 
 @media (max-width: 1600px) {

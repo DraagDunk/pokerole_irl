@@ -45,7 +45,8 @@ body {
     align-items: center;
 }
 
-button {
+button,
+a.button {
     background-color: var(--color-edges);
     border: none;
     border-radius: var(--button-border-radius);
@@ -55,8 +56,13 @@ button {
     padding: 0.7rem;
 }
 
-button:hover {
+button:hover,
+a.button:hover {
     background-color: var(--color-secondary);
+}
+
+a.button {
+    text-decoration: none;
 }
 
 .submit_button {
@@ -72,16 +78,19 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: fit-content;
 }
 
-.field input {
+.field input,
+.field select {
     background-color: rgba(0, 0, 0, 0);
     border: none;
     border-bottom: 2px solid var(--color-edges);
     font-size: larger;
     height: 2rem;
+    box-sizing: border-box;
     text-align: center;
-    color: var(--color-text)
+    color: var(--color-text);
 }
 
 .field input:focus-visible {
