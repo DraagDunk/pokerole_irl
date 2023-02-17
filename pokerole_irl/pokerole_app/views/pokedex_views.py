@@ -1,6 +1,7 @@
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.urls import reverse, reverse_lazy
 from django.core.exceptions import PermissionDenied
+from django.db.models import Q
 
 from ..models.pokedex_models import Pokedex, PokedexEntry
 from ..models.species_models import PokemonSpecies, Evolution, MoveSet
@@ -12,12 +13,25 @@ class PokedexListView(ListView):
     context_object_name = "pokedexes"
     paginate_by = 10
 
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        if self.request.user.is_superuser:
+            pass
+        else:
+            queryset = queryset.filter(
+                Q(owner=self.request.user) | Q(owner__isnull=True)).order_by("name").order_by("owner")
+        return queryset
+
 
 class PokedexCreateView(CreateView):
     template_name = "pokedex_add.html"
     model = Pokedex
 
-    fields = ('name',)
+    fields = ('name', 'owner')
+
+    def form_valid(self, form):
+        form.owner = self.request.user
+        return super().form_valid(form)
 
 
 class PokedexUpdateView(UpdateView):
