@@ -43,8 +43,15 @@
                 </div>
             </div>
 
-            <label for="id_include_family">Include evolutions</label>
-            <input type="checkbox" name="include_family" value="on" id="id_include_family" checked>
+            <div class="field">
+                <label for="id_rarity">Rarity</label>
+                {{ form.rarity }}
+            </div>
+
+            <div class="field">
+                <label for="id_include_family">Include evolutions</label>
+                <input type="checkbox" name="include_family" value="on" id="id_include_family" checked>
+            </div>
 
             <input type="hidden" name="pokedex" value="{{ pokedex.pk }}" required id="id_pokedex">
 

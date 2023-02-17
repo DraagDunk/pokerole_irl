@@ -1,4 +1,4 @@
-from django.views.generic import ListView, CreateView
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from django.core.exceptions import PermissionDenied
 
@@ -18,6 +18,20 @@ class PokedexCreateView(CreateView):
     model = Pokedex
 
     fields = ('name',)
+
+
+class PokedexUpdateView(UpdateView):
+    template_name = "pokedex_edit.html"
+    model = Pokedex
+    context_object_name = "pokedex"
+
+    fields = ('name',)
+
+
+class PokedexDeleteView(DeleteView):
+    template_name = "confirm_delete_object.html"
+    model = Pokedex
+    success_url = reverse_lazy('pokedex_list')
 
 
 class PokedexEntryListView(ListView):
@@ -43,7 +57,7 @@ class PokedexEntryCreateView(CreateView):
     template_name = "pokedex_entry_add.html"
     model = PokedexEntry
 
-    fields = ('species', 'number', 'pokedex')
+    fields = ('species', 'number', 'pokedex', 'rarity')
 
     def form_valid(self, form):
         if self.request.POST.get("include_family", "off") == "on":

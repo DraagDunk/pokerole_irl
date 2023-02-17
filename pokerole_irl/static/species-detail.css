@@ -115,14 +115,13 @@ body {
     background-color: var(--color-secondary);
 }
 
-
 .links {
-    height: 2rem;
+    height: fit-content;
+    margin-top: 1rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-
 
 @media (min-width: 500px) {
     .species-detail {
