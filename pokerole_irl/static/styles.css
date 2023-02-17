@@ -18,6 +18,10 @@ body {
     margin: 0;
 }
 
+body.centered {
+    align-items: center;
+}
+
 .comma-list {
     list-style: none;
     margin: 0;
@@ -101,6 +105,19 @@ a.button {
     color: var(--color-error);
     font-size: small;
     max-width: 15rem;
+}
+
+.editor_menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: fixed;
+    width: 100%;
+    background-color: var(--color-bg);
+    border-top: 2px solid var(--color-edges);
+    height: fit-content;
+    padding: 1.5rem;
+    bottom: 0;
 }
 
 @media (min-width: 500px) {

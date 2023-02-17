@@ -7,14 +7,22 @@
 </head>
 
 <body>
+    {% if request.user.is_superuser or is_owner %}
+    <div class="editor_menu">
+        <div class="add_button">
+            <a class="button" href="{% url 'pokedex_entry_add' pokedex.pk %}">Add entry</a>
+        </div>
+        <div class="edit_button">
+            <a class="button" href="{% url 'pokedex_edit' pokedex.pk %}">Edit pokédex</a>
+        </div>
+        <div class="delete_button">
+            <a class="button" href="{% url 'pokedex_delete' pokedex.pk %}">Delete pokédex</a>
+        </div>
+    </div>
+    {% endif %}
+
     <div class="pokedex full widget">
         <h1>{{ pokedex.name }}</h1>
-
-        {% if request.user.is_superuser or is_owner %}
-            <div class="add_button">
-                <a class="button" href="{% url 'pokedex_entry_add' pokedex.pk %}">Add entry</a>
-            </div>
-        {% endif %}
 
         <table class="species-table">
             <thead>

@@ -15,7 +15,7 @@ class Pokedex(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse_lazy("pokedex", kwargs={"pk": self.pk})
+        return reverse_lazy("pokedex_entries", kwargs={"pk": self.pk})
 
 
 class PokedexEntry(models.Model):
@@ -33,4 +33,4 @@ class PokedexEntry(models.Model):
         return f"{self.pokedex} #{self.number}: {self.species}"
 
     def get_absolute_url(self):
-        return reverse_lazy("pokedex", kwargs={"pk": self.pokedex.pk})
+        return reverse_lazy("pokedex_entries", kwargs={"pk": self.pokedex.pk})

@@ -32,12 +32,6 @@ h1 {
     margin: 1rem 0;
 }
 
-.add_button {
-    position: fixed;
-    bottom: 2rem;
-    left: 2rem;
-}
-
 @media (max-width: 1600px) {
     .prio-4 {
         display: none;

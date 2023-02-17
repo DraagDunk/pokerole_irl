@@ -7,7 +7,7 @@
 
     <ul>
         {% for dex in pokedexes %}
-        <li><a href="{% url "pokedex" dex.pk %}">{{ dex }}</a></li>
+        <li><a href="{% url "pokedex_entries" dex.pk %}">{{ dex }}</a></li>
         {% endfor %}
     </ul>
 </body>

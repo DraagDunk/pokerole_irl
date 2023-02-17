@@ -2,7 +2,7 @@ from django.urls import path
 
 from .views.species_views import SpeciesListView, SpeciesDetailView
 from .views.base_views import MainPageView
-from .views.pokedex_views import PokedexListView, PokedexCreateView, PokedexEntryListView, PokedexEntryCreateView
+from .views.pokedex_views import PokedexListView, PokedexCreateView, PokedexUpdateView, PokedexDeleteView, PokedexEntryListView, PokedexEntryCreateView
 
 urlpatterns = [
     path('', MainPageView.as_view(), name="index"),
@@ -10,7 +10,12 @@ urlpatterns = [
     path('species/<int:pk>/', SpeciesDetailView.as_view(), name="species"),
     path('pokedexes/', PokedexListView.as_view(), name="pokedex_list"),
     path('pokedexes/add/', PokedexCreateView.as_view(), name="pokedex_add"),
-    path('pokedexes/<int:pk>/', PokedexEntryListView.as_view(), name="pokedex"),
-    path('pokedexes/<int:pk>/add/',
+    path('pokedexes/<int:pk>/edit/',
+         PokedexUpdateView.as_view(), name="pokedex_edit"),
+    path('pokedexes/<int:pk>/delete/',
+         PokedexDeleteView.as_view(), name="pokedex_delete"),
+    path('pokedexes/<int:pk>/entries/',
+         PokedexEntryListView.as_view(), name="pokedex_entries"),
+    path('pokedexes/<int:pk>/entries/add/',
          PokedexEntryCreateView.as_view(), name="pokedex_entry_add")
 ]

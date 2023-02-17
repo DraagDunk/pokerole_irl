@@ -9,8 +9,8 @@
 <body>
 
     <div class="widget">
-        <h1>New Pokédex</h1>
-        <form class="create_form form" method="post" action="{% url 'pokedex_add' %}">
+        <h1>Edit Pokédex</h1>
+        <form class="edit_form form" method="post" action="{% url 'pokedex_edit' pokedex.pk %}">
             {% csrf_token %}
 
             <div class="field">
@@ -25,7 +25,7 @@
                 </div>
             </div>
 
-            <button class="submit_button" type="submit" value="Create">Create</button>
+            <button class="submit_button" type="submit" value="Save">Save</button>
 
         </form>
 
