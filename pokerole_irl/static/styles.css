@@ -13,7 +13,7 @@ body {
     color: var(--color-text);
     display: flex;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     margin: 0;
 }
@@ -118,12 +118,15 @@ a.button {
     height: fit-content;
     padding: 1.5rem;
     bottom: 0;
+    max-width: 800px;
 }
 
 @media (min-width: 500px) {
     .widget {
         border-radius: 2rem;
         width: fit-content;
+        margin-top: 2rem;
+        margin-bottom: 5rem;
     }
 
     .big.widget {
@@ -135,5 +138,13 @@ a.button {
     .full.widget {
         margin: 1rem;
         width: 100%;
+    }
+
+    .editor_menu {
+        max-width: 500px;
+        border-top-left-radius: 2rem;
+        border-top-right-radius: 2rem;
+        border-left: 2px solid var(--color-edges);
+        border-right: 2px solid var(--color-edges);
     }
 }

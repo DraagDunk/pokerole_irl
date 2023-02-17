@@ -2,6 +2,7 @@ from django.views.generic import ListView, DetailView
 
 from ..models.species_models import PokemonSpecies, Evolution, MoveSet
 
+
 class SpeciesListView(ListView):
     template_name = "allspecies.html"
     model = PokemonSpecies

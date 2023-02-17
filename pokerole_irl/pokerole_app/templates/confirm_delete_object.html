@@ -13,7 +13,7 @@
         <form class="delete_form form" method="post">
             {% csrf_token %}
 
-            <p>Are you sure you want to delete "{{ object.name }}"? This action cannot be reversed.</p>
+            <p>Are you sure you want to delete "{{ name }}"? This action cannot be reversed.</p>
 
             <button class="submit_button" type="submit" value="Delete">Delete</button>
 
