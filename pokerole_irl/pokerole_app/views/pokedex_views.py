@@ -2,12 +2,13 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 from django.urls import reverse, reverse_lazy
 from django.core.exceptions import PermissionDenied
 from django.db.models import Q
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 from ..models.pokedex_models import Pokedex, PokedexEntry
 from ..models.species_models import PokemonSpecies, Evolution, MoveSet
 
 
-class PokedexListView(ListView):
+class PokedexListView(ListView, LoginRequiredMixin):
     template_name = "pokedex_list.html"
     model = Pokedex
     context_object_name = "pokedexes"
@@ -23,7 +24,7 @@ class PokedexListView(ListView):
         return queryset
 
 
-class PokedexCreateView(CreateView):
+class PokedexCreateView(CreateView, LoginRequiredMixin):
     template_name = "pokedex_add.html"
     model = Pokedex
 
@@ -34,15 +35,22 @@ class PokedexCreateView(CreateView):
         return super().form_valid(form)
 
 
-class PokedexUpdateView(UpdateView):
+class PokedexUpdateView(UpdateView, LoginRequiredMixin):
     template_name = "pokedex_edit.html"
     model = Pokedex
     context_object_name = "pokedex"
 
     fields = ('name',)
 
+    def dispatch(self, request, *args, **kwargs):
+        self.pokedex = Pokedex.objects.get(pk=self.kwargs.get("pk"))
+        if request.user.is_superuser or self.pokedex.owner == request.user:
+            return super().dispatch(request, *args, **kwargs)
+        else:
+            raise PermissionDenied("You are not the owner of this pokedex.")
 
-class PokedexDeleteView(DeleteView):
+
+class PokedexDeleteView(DeleteView, LoginRequiredMixin):
     template_name = "confirm_delete_object.html"
     model = Pokedex
     success_url = reverse_lazy('pokedex_list')
@@ -52,8 +60,15 @@ class PokedexDeleteView(DeleteView):
         context["name"] = self.object.name
         return context
 
+    def dispatch(self, request, *args, **kwargs):
+        self.pokedex = Pokedex.objects.get(pk=self.kwargs.get("pk"))
+        if request.user.is_superuser or self.pokedex.owner == request.user:
+            return super().dispatch(request, *args, **kwargs)
+        else:
+            raise PermissionDenied("You are not the owner of this pokedex.")
 
-class PokedexEntryListView(ListView):
+
+class PokedexEntryListView(ListView, LoginRequiredMixin):
     template_name = "pokedex.html"
     model = PokedexEntry
     context_object_name = "entries"
@@ -72,7 +87,7 @@ class PokedexEntryListView(ListView):
         return context
 
 
-class PokedexEntryDetailView(DetailView):
+class PokedexEntryDetailView(DetailView, LoginRequiredMixin):
     template_name = "species.html"
     model = PokedexEntry
     context_object_name = "entry"
@@ -95,7 +110,7 @@ class PokedexEntryDetailView(DetailView):
         return context
 
 
-class PokedexEntryCreateView(CreateView):
+class PokedexEntryCreateView(CreateView, LoginRequiredMixin):
     template_name = "pokedex_entry_add.html"
     model = PokedexEntry
 
@@ -130,7 +145,7 @@ class PokedexEntryCreateView(CreateView):
             raise PermissionDenied("You are not the owner of this pokedex.")
 
 
-class PokedexEntryUpdateView(UpdateView):
+class PokedexEntryUpdateView(UpdateView, LoginRequiredMixin):
     template_name = "pokedex_entry_edit.html"
     model = PokedexEntry
 
@@ -145,8 +160,15 @@ class PokedexEntryUpdateView(UpdateView):
             name__contains="(Mega")
         return context
 
+    def dispatch(self, request, *args, **kwargs):
+        self.pokedex = Pokedex.objects.get(pk=self.kwargs.get("dex_pk"))
+        if request.user.is_superuser or self.pokedex.owner == request.user:
+            return super().dispatch(request, *args, **kwargs)
+        else:
+            raise PermissionDenied("You are not the owner of this pokedex.")
 
-class PokedexEntryDeleteView(DeleteView):
+
+class PokedexEntryDeleteView(DeleteView, LoginRequiredMixin):
     template_name = "confirm_delete_object.html"
     model = PokedexEntry
 
@@ -166,6 +188,13 @@ class PokedexEntryDeleteView(DeleteView):
             entry.number = entry.number - 1
             entry.save()
         return response
+
+    def dispatch(self, request, *args, **kwargs):
+        self.pokedex = Pokedex.objects.get(pk=self.kwargs.get("dex_pk"))
+        if request.user.is_superuser or self.pokedex.owner == request.user:
+            return super().dispatch(request, *args, **kwargs)
+        else:
+            raise PermissionDenied("You are not the owner of this pokedex.")
 
 
 def add_evolutions(species, number, pokedex, i=1):
