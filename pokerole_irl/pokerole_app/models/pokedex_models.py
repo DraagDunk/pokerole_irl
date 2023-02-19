@@ -23,6 +23,7 @@ class PokedexEntry(models.Model):
         PokemonSpecies, on_delete=models.CASCADE, related_name="entries")
     pokedex = models.ForeignKey(Pokedex, on_delete=models.CASCADE)
     number = models.IntegerField()
+    description = models.TextField(default="")
 
     class Rarities(models.TextChoices):
         LEGENDARY = ("legendary", "Legendary")

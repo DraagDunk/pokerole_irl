@@ -97,6 +97,22 @@ body {
     margin-right: 0.5rem;
 }
 
+.info-table {
+    width: 100%;
+}
+
+.info-table tbody {
+    width: 100%;
+}
+
+.info-table tr {
+    width: 100%;
+}
+
+.info-table td:first-child {
+    width: 5rem;
+}
+
 .move-table {
     border: 2px solid var(--color-edges);
     border-spacing: 0px;

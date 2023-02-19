@@ -114,7 +114,7 @@ class PokedexEntryCreateView(CreateView, LoginRequiredMixin):
     template_name = "pokedex_entry_add.html"
     model = PokedexEntry
 
-    fields = ('species', 'number', 'pokedex', 'rarity')
+    fields = ('species', 'number', 'pokedex', 'rarity', 'description')
 
     def form_valid(self, form):
         bump_count = 1
@@ -151,7 +151,7 @@ class PokedexEntryUpdateView(UpdateView, LoginRequiredMixin):
 
     context_object_name = "entry"
 
-    fields = ("number", "rarity")
+    fields = ("number", "rarity", "description")
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

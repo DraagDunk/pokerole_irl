@@ -14,7 +14,11 @@
         <div class="details-container">
             <img class="species-image" src="{{ pokemon.book_image }}"/>
             <div class="species-description">
+                {% if entry.description %}
+                "{{ entry.description }}"
+                {% else %}
                 "{{ pokemon.description }}"
+                {% endif %}
                 {% if pokemon.good_starter %}
                     <p class="other-info">Good starter</p>
                 {% endif %}
@@ -50,10 +54,12 @@
                                 {% endfor %}
                             </ul></td>
                         </tr>
+                        {% if pokemon.hidden_ability %}
                         <tr>
                             <td>Hidden:</td>
                             <td title="{{ pokemon.hidden_ability.effect }}">{{ pokemon.hidden_ability }}</td>
                         </tr>
+                        {% endif %}
                         <tr>
                             <td>Rec. rank:</td>
                             <td>{{ pokemon.recommended_rank }}</td>
