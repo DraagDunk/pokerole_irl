@@ -1,0 +1,69 @@
+{% load static %}
+
+{% include "partials/header.html" %}
+
+<head>
+    <link href="{% static 'form.css' %}" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="widget">
+        <h1>New entry</h1>
+        <form class="create_form form" method="post" action="{% url 'pokedex_entry_add' pokedex.pk %}">
+            {% csrf_token %}
+
+            <div class="form_row">
+                <div class="small field">
+                    <label for="id_number">Number</label>
+                    <input type="number" name="number" value="{{ next_number }}" required id="id_number">
+                    <div>
+                    {% for error in form.number.errors %}
+                        <div class="field_error">
+                            {{ error }}
+                        </div>
+                    {% endfor %}
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="id_species">Species</label>
+                    <select name="species" required id="id_species">
+                        {% for species in base_species %}
+                            <option value="{{ species.pk }}">{{ species.name }}</option>
+                        {% endfor %}
+                    </select>
+                    <div>
+                    {% for error in form.species.errors %}
+                        <div class="field_error">
+                            {{ error }}
+                        </div>
+                    {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label for="id_description">Description</label>
+                {{ form.description }}
+            </div>
+
+            <div class="field">
+                <label for="id_rarity">Rarity</label>
+                {{ form.rarity }}
+            </div>
+
+            <div class="field">
+                <label for="id_include_family">Include evolutions</label>
+                <input type="checkbox" name="include_family" value="on" id="id_include_family" checked>
+            </div>
+
+            <input type="hidden" name="pokedex" value="{{ pokedex.pk }}" required id="id_pokedex">
+
+            <button class="submit_button" type="submit" value="Create">Create</button>
+
+        </form>
+
+    </div>
+
+</body>

@@ -9,12 +9,16 @@
 
 <body>
     <div class="species-detail widget">
-        <h1>#{{ pokemon.number }}: {{ pokemon.name }}</h1>
+        <h1>#{% if entry %}{{entry.number}}{% else %}{{ pokemon.number }}{% endif %}: {{ pokemon.name }}</h1>
         <div class="species-category">{{ pokemon.category }}</div>
         <div class="details-container">
             <img class="species-image" src="{{ pokemon.book_image }}"/>
             <div class="species-description">
+                {% if entry.description %}
+                "{{ entry.description }}"
+                {% else %}
                 "{{ pokemon.description }}"
+                {% endif %}
                 {% if pokemon.good_starter %}
                     <p class="other-info">Good starter</p>
                 {% endif %}
@@ -50,14 +54,22 @@
                                 {% endfor %}
                             </ul></td>
                         </tr>
+                        {% if pokemon.hidden_ability %}
                         <tr>
                             <td>Hidden:</td>
                             <td title="{{ pokemon.hidden_ability.effect }}">{{ pokemon.hidden_ability }}</td>
                         </tr>
+                        {% endif %}
                         <tr>
                             <td>Rec. rank:</td>
                             <td>{{ pokemon.recommended_rank }}</td>
                         </tr>
+                        {% if entry and entry.rarity %}
+                        <tr>
+                            <td>Rarity:</td>
+                            <td>{{ entry.get_rarity_display }}</td>
+                        </tr>
+                        {% endif %}
                     </tbody>
                 </table>
                 <table class="stat-table">
@@ -106,7 +118,9 @@
                         <img src="{{ evolution.to_species.box_image }}"/>
                         <div>
                             <div>
-                                <a href="{% url "species" evolution.to_species.pk %}">{{ evolution.to_species.name }}</a>
+                                {% comment %} <a href="{% url "species" evolution.to_species.pk %}"> {% endcomment %}
+                                    {{ evolution.to_species.name }}
+                                {% comment %} </a> {% endcomment %}
                             </div>
                             <div class="evolution-details">
                                 <span>{{ evolution.kind }}</span><span>{{ evolution.speed }}</span>
@@ -124,7 +138,9 @@
                         <img src="{{ preevolution.from_species.box_image }}"/>
                         <div>
                             <div>
-                                <a href="{% url "species" preevolution.from_species.pk %}">{{ preevolution.from_species.name }}</a>
+                                {% comment %} <a href="{% url "species" preevolution.from_species.pk %}"> {% endcomment %}
+                                    {{ preevolution.from_species.name }}
+                                {% comment %} </a> {% endcomment %}
                             </div>
                             <div class="evolution-details">
                                 <span>{{ preevolution.kind }}</span><span>{{ preevolution.speed }}</span>
@@ -151,10 +167,29 @@
                     </tbody>
                 </table>
                 <div class="links">
-                    <a class="back-link" href="javascript:history.back()"><< Back</a>
-                    <a class="back-link" href="{% url "all_species" %}"><< Back to species</a>
+                    <a class="back-link button" href="javascript:history.back()">Back</a>
+                    {% if pokedex %}
+                    <a class="back-link button" href="{% url "pokedex_entries" pokedex.pk %}">Back to {{ pokedex.name }}</a>
+                    {% else %}
+                    <a class="back-link button" href="{% url "all_species" %}">Back to species</a>
+                    {% endif %}
                 </div>
             </div>
         </div>
     </div>
+
+    {% if request.user.is_superuser or is_owner and entry %}
+    <div class="editor_menu">
+        <div class="add_button">
+            <a class="button" href="{% url 'pokedex_entry_add' pokedex.pk %}">Add entry</a>
+        </div>
+        <div class="edit_button">
+            <a class="button" href="{% url 'pokedex_entry_edit' pokedex.pk entry.pk %}">Edit entry</a>
+        </div>
+        <div class="delete_button">
+            <a class="button" href="{% url 'pokedex_entry_delete' pokedex.pk entry.pk %}">Delete entry</a>
+        </div>
+    </div>
+    {% endif %}
+
 </body>

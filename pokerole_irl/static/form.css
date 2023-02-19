@@ -1,0 +1,30 @@
+body {
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+.small.field {
+    max-width: 5rem;
+}
+
+.small.field input {
+    max-width: inherit;
+}
+
+.form_row {
+    display: flex;
+    flex-direction: row;
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+    height: 10rem;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid var(--color-edges);
+    color: var(--color-text);
+    font-size: large;
+}

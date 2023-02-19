@@ -1,3 +1,7 @@
+body {
+    height: fit-content;
+}
+
 h1 {
     text-align: center;
 }
@@ -17,8 +21,9 @@ h1 {
     padding: 0 0.3rem;
 }
 
-.widget {
+.pokedex.widget {
     padding: 0;
+    margin-bottom: 5rem;
 }
 
 .step-links {

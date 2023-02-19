@@ -13,9 +13,13 @@ body {
     color: var(--color-text);
     display: flex;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     margin: 0;
+}
+
+body.centered {
+    align-items: center;
 }
 
 .comma-list {
@@ -39,7 +43,14 @@ body {
     width: 100%;
 }
 
-button {
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button,
+a.button {
     background-color: var(--color-edges);
     border: none;
     border-radius: var(--button-border-radius);
@@ -49,8 +60,45 @@ button {
     padding: 0.7rem;
 }
 
-button:hover {
+button:hover,
+a.button:hover {
     background-color: var(--color-secondary);
+}
+
+a.button {
+    text-decoration: none;
+}
+
+.submit_button {
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+    width: 15rem;
+    font-size: larger;
+    font-variant: small-caps;
+}
+
+.field {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+}
+
+.field input,
+.field select {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    border-bottom: 2px solid var(--color-edges);
+    font-size: larger;
+    height: 2rem;
+    box-sizing: border-box;
+    text-align: center;
+    color: var(--color-text);
+}
+
+.field input:focus-visible {
+    outline: none;
 }
 
 .field_error {
@@ -59,10 +107,26 @@ button:hover {
     max-width: 15rem;
 }
 
+.editor_menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: fixed;
+    width: 100%;
+    background-color: var(--color-bg);
+    border-top: 2px solid var(--color-edges);
+    height: fit-content;
+    padding: 1.5rem;
+    bottom: 0;
+    max-width: 800px;
+}
+
 @media (min-width: 500px) {
     .widget {
         border-radius: 2rem;
         width: fit-content;
+        margin-top: 2rem;
+        margin-bottom: 5rem;
     }
 
     .big.widget {
@@ -74,5 +138,13 @@ button:hover {
     .full.widget {
         margin: 1rem;
         width: 100%;
+    }
+
+    .editor_menu {
+        max-width: 500px;
+        border-top-left-radius: 2rem;
+        border-top-right-radius: 2rem;
+        border-left: 2px solid var(--color-edges);
+        border-right: 2px solid var(--color-edges);
     }
 }

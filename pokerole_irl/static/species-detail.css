@@ -69,6 +69,7 @@ body {
     border-radius: 0.5rem;
     font-size: larger;
     font-weight: bold;
+    margin-left: 1rem;
 }
 
 .evolutions {
@@ -96,6 +97,22 @@ body {
     margin-right: 0.5rem;
 }
 
+.info-table {
+    width: 100%;
+}
+
+.info-table tbody {
+    width: 100%;
+}
+
+.info-table tr {
+    width: 100%;
+}
+
+.info-table td:first-child {
+    width: 5rem;
+}
+
 .move-table {
     border: 2px solid var(--color-edges);
     border-spacing: 0px;
@@ -115,14 +132,13 @@ body {
     background-color: var(--color-secondary);
 }
 
-
 .links {
-    height: 2rem;
+    height: fit-content;
+    margin-top: 1rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-
 
 @media (min-width: 500px) {
     .species-detail {

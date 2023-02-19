@@ -1,29 +1,19 @@
 # pokerole_irl
 A web application for making your life easier while playing PokeRole.
 
-## TODO:
+## Functionality
 
-* Invite other collaborators.
+### Pokedex
 
-* Choose software for keeping track of tasks. (eg. Trello)
+* List all pokémon species.
 
-* Plan structure of application.
+* Show information about each pokémon species.
 
-* Mockup frontend of application.
-
-* Figure out hosting and domains.
-
-* Plan further action.
+* List all pokedexes available to the user.
 
 ## Planned functionality
 
 ### Pokédex
-
-* List all pokémon.
-
-* Show information about each pokémon species.
-
-* Change between dexes (kanto, johto etc.).
 
 * Searching and sorting.
 
@@ -32,8 +22,6 @@ A web application for making your life easier while playing PokeRole.
 * Custom pokédexes for _your_ setting.
 
 ### Trainercard
-
-* User authentication.
 
 * Each user can have any number of trainers.
 
