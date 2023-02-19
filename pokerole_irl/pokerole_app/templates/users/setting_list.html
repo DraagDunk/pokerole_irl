@@ -4,11 +4,11 @@
 
 {% block content %}
   <h1>List of your settings</h1>
-  {% if setting_list %}
+  {% if settings %}
   <ul>
-    {% for setting in book_list %}
+    {% for setting in settings %}
       <li>
-        <a>{ setting.name}}</a>
+        <a>{{ setting.name }}</a>
       </li>
     {% endfor %}
   </ul>

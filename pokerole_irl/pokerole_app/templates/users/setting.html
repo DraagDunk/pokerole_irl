@@ -1,0 +1,15 @@
+{% load static %}
+
+{% include "partials/header.html" %}
+
+<h1>{{ setting.name }}</h1>
+
+<p>{{ setting.description }}</p>
+
+<ul>
+    {% for member in setting.members.all %}
+      <li>
+        <a>{{ member }}</a>
+      </li>
+    {% endfor %}
+</ul>

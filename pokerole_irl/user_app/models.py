@@ -14,8 +14,8 @@ class Profile(models.Model):
 
 
 class Setting(models.Model):
-    creator = models.OneToOneField(User, on_delete=models.CASCADE)
-    members = models.ManyToManyField(User, related_name='+')
+    owner = models.ForeignKey(User, on_delete=models.CASCADE)
+    members = models.ManyToManyField(User, related_name='+', blank=True)
     name = models.CharField(max_length=30)
     description = models.TextField(max_length=1000, default="")
 
@@ -24,7 +24,7 @@ class Setting(models.Model):
         return self.name
 
 class Character(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    owner = models.ForeignKey(User, on_delete=models.CASCADE)
     setting = models.ForeignKey(Setting, on_delete=models.CASCADE)
     name = models.CharField(max_length=30)
     description = models.TextField(max_length=1000, default="")

@@ -1,0 +1,34 @@
+{% load static %}
+
+{% include "partials/header.html" %}
+
+<head>
+    <link href="{% static 'form.css' %}" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="widget">
+        <h1>New Setting</h1>
+        <form class="create_form form" method="post" action="{% url 'setting-create' %}">
+            {% csrf_token %}
+            
+
+	        {{ form.as_p }}
+
+            {% for field in form %}
+	        	{% if field.errors %}
+	        		<small class="error">{{ field.errors|striptags  }}</small> 
+	        	{% endif %}
+		    {% endfor %}
+
+            <input type="hidden" name="owner" value="{{ request.user.pk }}" id="id_owner">
+
+            <button class="submit_button" type="submit" value="Create">Create</button>
+
+        </form>
+
+    </div>
+
+</body>
+

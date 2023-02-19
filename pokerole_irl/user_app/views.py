@@ -2,9 +2,10 @@ from django.contrib import messages
 from django.contrib.auth import get_user_model
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import redirect, render
-from django.views.generic import CreateView, TemplateView
+from django.views.generic import CreateView, TemplateView, ListView, DetailView
 
 from .forms import UpdateProfileForm, UpdateUserForm, CreateUserForm
+from .models import Setting
 
 class UserProfileView(LoginRequiredMixin, TemplateView):
     # Updates the user profile and info
@@ -43,3 +44,33 @@ class RegisterView(CreateView):
     template_name = 'registration/register.html'
     success_url = '/login'
     model = get_user_model()
+
+class SettingListView(LoginRequiredMixin, ListView):
+    template_name = "users/setting_list.html"
+    model = Setting
+    context_object_name = "settings"
+    paginate_by = 20
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        return queryset.filter(members=self.request.user)
+
+class SettingView(LoginRequiredMixin, DetailView):
+    template_name = "users/setting.html"
+    model = Setting
+    context_object_name = "setting"
+
+class SettingCreateView(LoginRequiredMixin, CreateView):
+    template_name = "users/setting_create.html"
+    success_url = "/accounts/setting_list/"
+    model = Setting
+    
+    fields = ("name", "description", "members")
+
+    def form_valid(self, form):
+        form.instance.owner = self.request.user
+        messages.success(self.request, "Your setting was created!")
+        return redirect(self.success_url)
+
+
+        
