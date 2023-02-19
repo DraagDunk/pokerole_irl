@@ -13,3 +13,5 @@
 - Added "description"-field to PokedexEntry.
 
   - This field will override the species' description field in the detail view.
+
+- The pokedex overview is prettier.
