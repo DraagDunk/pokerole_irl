@@ -1,0 +1,18 @@
+{% load static %}
+
+{% include "partials/header.html" %}
+
+{% block content %}
+  <h1>List of your settings</h1>
+  {% if setting_list %}
+  <ul>
+    {% for setting in book_list %}
+      <li>
+        <a>{ setting.name}}</a>
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>You do not have access to any settings</p>
+  {% endif %}
+{% endblock %}
