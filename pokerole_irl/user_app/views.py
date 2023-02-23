@@ -69,8 +69,6 @@ class SettingCreateView(LoginRequiredMixin, CreateView):
 
     def form_valid(self, form):
         form.instance.owner = self.request.user
-        messages.success(self.request, "Your setting was created!")
-        return redirect(self.success_url)
-
+        return super(SettingCreateView, self).form_valid(form)
 
         

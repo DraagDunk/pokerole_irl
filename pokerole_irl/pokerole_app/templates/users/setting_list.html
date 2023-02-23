@@ -2,18 +2,24 @@
 
 {% include "partials/header.html" %}
 <body>
-  {% block content %}
-    <h1>List of your settings</h1>
-    {% if settings %}
-    <ul>
-      {% for set in settings %}
-        <li>
-          <a href="{%url "setting" set.pk %}">{{ set.name }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-    {% else %}
-      <p>You do not have access to any settings</p>
-    {% endif %}
-  {% endblock %}
+  <div>
+    {% block content %}
+      <h1>List of your settings</h1>
+      {% if settings %}
+      <ul>
+        {% for set in settings %}
+          <li>
+            <a href="{%url "setting" set.pk %}">{{ set.name }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+      {% else %}
+        <p>You do not have access to any settings</p>
+      {% endif %}
+    {% endblock %}
+
+    <p>
+      <a href="{%url "setting-create"%}">Create new setting</a>
+    </p>
+  </div>
 </body>
