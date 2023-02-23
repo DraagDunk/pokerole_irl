@@ -2,14 +2,46 @@
 
 {% include "partials/header.html" %}
 
-<h1>{{ setting.name }}</h1>
+<head>
+  <link href="{% static 'species-detail.css' %}" rel="stylesheet">
+</head>
 
-<p>{{ setting.description }}</p>
-
-<ul>
-    {% for member in setting.members.all %}
-      <li>
-        <a>{{ member }}</a>
-      </li>
-    {% endfor %}
-</ul>
+<body>
+  <div class="species-detail widget">
+      <h1>{{ setting.name }}</h1>
+      <div class="species-description">
+        <div class="species-height-weight">
+          <span>
+              <div class="header">Description</div>
+              <div>{{ setting.description }}</div>
+          </span>
+        </div>
+        <div class="species-height-weight">
+          <span>
+              <div class="header">Owner</div>
+              <div>{{ setting.owner }}</div>
+          </span>
+        </div>
+      </div>
+      
+      <div class="info-body">
+          <div class="column">
+              <table class="move-table">
+                  <tbody>
+                      <tr>
+                          <th>Members</th>
+                      </tr>
+                      {% for member in setting.members.all %}
+                      <tr>
+                          <td title="utf">{{ member }}</td>
+                      </tr>
+                      {% endfor %}
+                  </tbody>
+              </table>
+              <div class="links">
+                  <a class="back-link" href="javascript:history.back()"><< Back</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</body>
