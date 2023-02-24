@@ -48,13 +48,18 @@
                     <tr>
                         <th>Characters</th>
                     </tr>
-                    {% for character in character_list %}
+                    {% for char in character_list %}
                     <tr>
-                        <td title="utf">{{ character }}</td>
+                        <td title="utf"> 
+                          <a href="{%url "character" char.pk %}">{{ char }}</a>
+                        </td>
                     </tr>
                     {% endfor %}
                 </tbody>
             </table>
+            <div class="links">
+              <a href="{%url "character-create" %}"> Create New Character </a>
+            </div>
             <div class="links">
                 <a class="back-link" href="javascript:history.back()"><< Back</a>
             </div>

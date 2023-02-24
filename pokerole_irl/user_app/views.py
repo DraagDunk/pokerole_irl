@@ -96,4 +96,4 @@ class CharacterCreateView(LoginRequiredMixin, CreateView):
         prod = form.save(commit=False)
         prod.owner = self.request.user
         prod.save()
-        return redirect("character".format(id=prod.id))
+        return redirect("character", pk=prod.id)
