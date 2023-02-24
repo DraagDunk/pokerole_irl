@@ -5,7 +5,7 @@ from django.shortcuts import redirect, render
 from django.views.generic import CreateView, TemplateView, ListView, DetailView
 
 from .forms import UpdateProfileForm, UpdateUserForm, CreateUserForm
-from .models import Setting
+from .models import Setting, Character
 
 class UserProfileView(LoginRequiredMixin, TemplateView):
     # Updates the user profile and info
@@ -62,13 +62,30 @@ class SettingView(LoginRequiredMixin, DetailView):
 
 class SettingCreateView(LoginRequiredMixin, CreateView):
     template_name = "users/setting_create.html"
-    success_url = "/accounts/setting_list/"
     model = Setting
-    
     fields = ("name", "description", "members")
 
     def form_valid(self, form):
-        form.instance.owner = self.request.user
-        return super(SettingCreateView, self).form_valid(form)
+        prod = form.save(commit=False)
+        prod.owner = self.request.user
+        prod.save()
+        form.save_m2m()
+        return redirect("/accounts/setting/{id}".format(id=prod.id))
 
-        
+class CharacterView(LoginRequiredMixin, DetailView):
+    template_name = "users/character.html"
+    model = Character
+    context_object_name = "character"
+
+class CharacterCreateView(LoginRequiredMixin, CreateView):
+    template_name = "users/character_create.html"
+    success_url = "/accounts/setting_list/"
+    model = Character
+    
+    fields = ("name", "description", "setting")
+    
+    def form_valid(self, form):
+        prod = form.save(commit=False)
+        prod.owner = self.request.user
+        prod.save()
+        return redirect("/accounts/character/{id}".format(id=prod.id))
