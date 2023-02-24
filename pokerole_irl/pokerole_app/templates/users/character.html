@@ -1,0 +1,21 @@
+{% load static %}
+
+{% include "partials/header.html" %}
+
+<head>
+  <link href="{% static 'species-detail.css' %}" rel="stylesheet">
+</head>
+
+<body>
+  <div class="species-detail widget">
+      <h1>{{ character.name }}</h1>
+      <div class="species-description">
+        <div class="species-height-weight">
+          <span>
+              <div class="header">Description</div>
+              <div>{{ character.description }}</div>
+          </span>
+        </div>
+      </div>
+  </div>
+</body>
