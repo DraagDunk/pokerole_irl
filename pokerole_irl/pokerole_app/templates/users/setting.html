@@ -38,10 +38,27 @@
                       {% endfor %}
                   </tbody>
               </table>
-              <div class="links">
-                  <a class="back-link" href="javascript:history.back()"><< Back</a>
-              </div>
           </div>
       </div>
+
+      <div class="info-body">
+        <div class="column">
+            <table class="move-table">
+                <tbody>
+                    <tr>
+                        <th>Characters</th>
+                    </tr>
+                    {% for character in character_list %}
+                    <tr>
+                        <td title="utf">{{ character }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <div class="links">
+                <a class="back-link" href="javascript:history.back()"><< Back</a>
+            </div>
+        </div>
+    </div>
   </div>
 </body>

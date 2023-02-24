@@ -60,6 +60,15 @@ class SettingView(LoginRequiredMixin, DetailView):
     model = Setting
     context_object_name = "setting"
 
+    def get_context_data(self, **kwargs):
+        # Call the base implementation first to get a context
+        context = super(SettingView, self).get_context_data(**kwargs)
+        # Add in a QuerySet of all charactes in the setting
+        context['character_list'] = Character.objects.filter(setting=self.object.id)
+        return context
+
+
+
 class SettingCreateView(LoginRequiredMixin, CreateView):
     template_name = "users/setting_create.html"
     model = Setting
@@ -70,7 +79,7 @@ class SettingCreateView(LoginRequiredMixin, CreateView):
         prod.owner = self.request.user
         prod.save()
         form.save_m2m()
-        return redirect("/accounts/setting/{id}".format(id=prod.id))
+        return redirect("setting", pk=prod.id)
 
 class CharacterView(LoginRequiredMixin, DetailView):
     template_name = "users/character.html"
@@ -79,7 +88,6 @@ class CharacterView(LoginRequiredMixin, DetailView):
 
 class CharacterCreateView(LoginRequiredMixin, CreateView):
     template_name = "users/character_create.html"
-    success_url = "/accounts/setting_list/"
     model = Character
     
     fields = ("name", "description", "setting")
@@ -88,4 +96,4 @@ class CharacterCreateView(LoginRequiredMixin, CreateView):
         prod = form.save(commit=False)
         prod.owner = self.request.user
         prod.save()
-        return redirect("/accounts/character/{id}".format(id=prod.id))
+        return redirect("character".format(id=prod.id))
