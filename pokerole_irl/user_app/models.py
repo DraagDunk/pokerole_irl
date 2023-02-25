@@ -25,7 +25,7 @@ class Setting(models.Model):
 
 class Character(models.Model):
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
-    setting = models.ForeignKey(Setting, on_delete=models.CASCADE)
+    setting = models.ForeignKey(Setting, null=True, on_delete=models.SET_NULL)
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     description = models.TextField(default="")
