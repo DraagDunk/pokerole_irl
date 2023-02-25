@@ -51,7 +51,7 @@
                     {% for char in character_list %}
                     <tr>
                         <td title="utf"> 
-                          <a href="{%url "character" char.pk %}">{{ char }}</a>
+                          <a href="{%url "character" char.pk %}">{{ char.first_name }} {{ char.last_name }}</a>
                         </td>
                     </tr>
                     {% endfor %}

@@ -14,10 +14,10 @@ class Profile(models.Model):
 
 
 class Setting(models.Model):
-    owner = models.ForeignKey(User, on_delete=models.CASCADE)
+    owner = models.ForeignKey(User, null=True, on_delete=models.SET_NULL)
     members = models.ManyToManyField(User, related_name='+', blank=True)
-    name = models.CharField(max_length=30)
-    description = models.TextField(max_length=1000, default="")
+    name = models.CharField(max_length=100)
+    description = models.TextField(default="")
 
 
     def __str__(self):
@@ -26,8 +26,9 @@ class Setting(models.Model):
 class Character(models.Model):
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     setting = models.ForeignKey(Setting, on_delete=models.CASCADE)
-    name = models.CharField(max_length=30)
-    description = models.TextField(max_length=1000, default="")
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
+    description = models.TextField(default="")
 
 
     def __str__(self):

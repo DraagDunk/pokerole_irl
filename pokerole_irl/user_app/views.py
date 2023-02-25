@@ -90,7 +90,7 @@ class CharacterCreateView(LoginRequiredMixin, CreateView):
     template_name = "users/character_create.html"
     model = Character
     
-    fields = ("name", "description", "setting")
+    fields = ("first_name", "last_name", "description", "setting")
     
     def form_valid(self, form):
         prod = form.save(commit=False)
