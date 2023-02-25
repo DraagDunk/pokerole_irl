@@ -1,0 +1,60 @@
+{% load static %}
+
+{% include "partials/header.html" %}
+
+<head>
+    <link href="{% static 'pokedex.css' %}" rel="stylesheet">
+</head>
+
+<body>
+    <div class="moves full widget">
+        <h1>All moves</h1>
+
+        <table class="move-table">
+            <thead>
+                <tr>
+                    <th class="prio-1">Name</th>
+                    <th class="prio-1">Type</th>
+                    <th class="prio-1">Damage type</th>
+                    <th class="prio-3">Accuracy</th>
+                    <th class="prio-3">Damage</th>
+                    <th class="prio-3">Target</th>
+                    <th class="prio-3">Effect</th>
+                    <th class="prio-4">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for move in moves %}
+                <tr>
+                    <td class="prio-1"><a href="{% url "move" move.pk %}">{{ move.name }}</td>
+                    <td class="prio-1"><span class="{{ move.move_type|lower }} type">{{ move.move_type }}</span></td>
+                    <td class="prio-1">{{ move.damage_type }}</td>
+                    <td class="prio-3">{{ move.primary_accuracy }} + {{ move.secondary_accuracy }}</td>
+                    <td class="prio-3">{{ move.damage_stat }}{% if move.damage_modifier %} + {{ move.damage_modifier }}{% endif %}{% if move.power %} + {{ move.power }}{% endif %}</td>
+                    <td class="prio-3">{{ move.target }}</td>
+                    <td class="prio-3">{{ move.effect }}</td>
+                    <td class="prio-4">{{ move.description }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <div class="pagination">
+            <span class="step-links">
+                {% if page_obj.has_previous %}
+                    <a href="?page=1">&laquo; First</a>
+                    <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
+                {% endif %}
+        
+                <span class="current">
+                    Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                </span>
+        
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}">Next</a>
+                    <a href="?page={{ page_obj.paginator.num_pages }}">Last &raquo;</a>
+                {% endif %}
+            </span>
+        </div>
+    </div>
+</body>

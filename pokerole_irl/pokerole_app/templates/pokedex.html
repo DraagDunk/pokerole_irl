@@ -38,12 +38,7 @@
                     <td class="prio-1"><img src="{{ entry.species.box_image }}"/></td>
                     <td class="prio-1"><a href="{% url "pokedex_entry" pokedex.pk entry.pk %}">{{ entry.species.name }}</a></td>
                     <td class="prio-1">{{ entry.species.category }}</td>
-                    <td class="prio-2" title="Weaknesses: {{ entry.species.weaknesses }}; Resistances: {{ entry.species.resistances }}"><ul class="comma-list">
-                        <li>{{ entry.species.primary_type }}</li>
-                        {% if entry.species.secondary_type %}
-                        <li>{{ entry.species.secondary_type }}</li>
-                        {% endif %}
-                    </ul></td>
+                    <td class="prio-2" title="Weaknesses: {{ entry.species.weaknesses }}; Resistances: {{ entry.species.resistances }}"><span class="{{ entry.species.primary_type|lower }} type">{{ entry.species.primary_type|upper }}</span>{% if entry.species.secondary_type %}<span class="{{ entry.species.secondary_type|lower }} type">{{ entry.species.secondary_type|upper }}</span>{% endif %}</td>
                     <td class="prio-3"><ul class="comma-list">
                         {% for ability in entry.species.abilities.all %}
                             <li title="{{ ability.effect }}">{{ ability }}</li>
