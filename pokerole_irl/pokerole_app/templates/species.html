@@ -178,7 +178,7 @@
         </div>
     </div>
 
-    {% if request.user.is_superuser or is_owner and entry %}
+    {% if entry and request.user.is_superuser or is_owner %}
     <div class="editor_menu">
         <div class="add_button">
             <a class="button" href="{% url 'pokedex_entry_add' pokedex.pk %}">Add entry</a>

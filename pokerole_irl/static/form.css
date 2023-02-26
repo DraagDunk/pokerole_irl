@@ -2,10 +2,6 @@ body {
     align-items: center;
 }
 
-h1 {
-    text-align: center;
-}
-
 .small.field {
     max-width: 5rem;
 }
