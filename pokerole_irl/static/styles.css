@@ -44,6 +44,10 @@ body.centered {
     margin-bottom: 5rem;
 }
 
+.widget h1 {
+    text-align: center;
+}
+
 .form {
     display: flex;
     flex-direction: column;
@@ -68,6 +72,16 @@ a.button:hover {
 
 a.button {
     text-decoration: none;
+}
+
+a:not(.button) {
+    text-decoration: none;
+    color: var(--color-text);
+    transition: color 200ms linear;
+}
+
+a:not(.button):hover {
+    color: var(--color-edges);
 }
 
 .submit_button {
