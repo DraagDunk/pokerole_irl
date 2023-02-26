@@ -1,5 +1,11 @@
 # Changelog
 
+## 26/2-2023
+
+- New list- and detailviews moves.
+
+- New styling for type icons.
+
 ## 21/2-2023
 
 - Header navigation with burger menu for mobile users.

@@ -58,3 +58,12 @@ class Move(models.Model):
 
     def get_absolute_url(self):
         return reverse_lazy("move", kwargs={"pk": self.pk})
+
+    @property
+    def effectiveness(self):
+        eff_list = []
+
+        for key, val in self.move_type.get_effectiveness().items():
+            eff_list.append(f"{key} x{val}")
+
+        return ", ".join(eff_list)
