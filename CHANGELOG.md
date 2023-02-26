@@ -1,5 +1,9 @@
 # Changelog
 
+## 26/2-2023
+
+- Adjusted the size of the header buttons.
+
 ## 21/2-2023
 
 - Header navigation with burger menu for mobile users.
