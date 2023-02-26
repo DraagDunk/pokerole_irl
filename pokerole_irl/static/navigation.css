@@ -1,5 +1,4 @@
 body {
-    padding-top: 5rem;
     min-height: calc(100vh - 5rem);
 }
 
@@ -23,9 +22,11 @@ header .header_menu {
 }
 
 .header_menu .burger {
-    margin: 0.2rem 0;
-    margin-left: 82%;
+    margin: 0.2rem;
     padding: 0.2rem;
+    float: right;
+    margin-left: auto;
+    width: fit-content;
 }
 
 .header_menu .burger span {
@@ -38,13 +39,6 @@ header .header_menu {
     text-align: center;
     font-size: larger;
     font-weight: bold;
-}
-
-.header_menu nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 1rem;
 }
 
 .overlay.visible {
@@ -60,31 +54,52 @@ header .header_menu {
     display: none;
 }
 
+nav a {
+    margin: 1rem 0;
+    width: 6rem;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    max-width: 800px;
+}
+
+.menu .button {
+    width: 100%;
+    margin: 0.2rem;
+}
+
+.closed.menu {
+    display: none;
+}
+
 @media (min-width: 500px) {
-    header nav {
+    .menu {
         flex-direction: row;
+    }
+
+    .burger {
+        display: none;
+    }
+
+    .header_menu nav.closed {
+        display: flex;
+    }
+
+    .overlay.visible {
+        display: none;
+    }
+
+    .header_menu {
+        padding: 1rem;
         border-left: 2px solid var(--color-edges);
         border-right: 2px solid var(--color-edges);
         border-bottom-right-radius: 2rem;
         border-bottom-left-radius: 2rem;
         max-width: 500px;
-    }
-
-    nav a {
-        display: block;
-        margin: 1rem 0;
-        width: 6rem;
-    }
-
-    nav .burger {
-        display: none;
-    }
-
-    .closed {
-        display: block;
-    }
-
-    .overlay {
-        display: none;
     }
 }

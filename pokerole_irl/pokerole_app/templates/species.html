@@ -178,18 +178,6 @@
         </div>
     </div>
 
-    {% if entry and request.user.is_superuser or is_owner %}
-    <div class="editor_menu">
-        <div class="add_button">
-            <a class="button" href="{% url 'pokedex_entry_add' pokedex.pk %}">Add entry</a>
-        </div>
-        <div class="edit_button">
-            <a class="button" href="{% url 'pokedex_entry_edit' pokedex.pk entry.pk %}">Edit entry</a>
-        </div>
-        <div class="delete_button">
-            <a class="button" href="{% url 'pokedex_entry_delete' pokedex.pk entry.pk %}">Delete entry</a>
-        </div>
-    </div>
-    {% endif %}
+    {% include "partials/options.html" %}
 
 </body>

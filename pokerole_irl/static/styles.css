@@ -42,6 +42,7 @@ body.centered {
     background-color: rgba(100, 100, 100, 0.1);
     width: 100%;
     margin-bottom: 5rem;
+    margin-top: 4rem;
 }
 
 .widget h1 {
@@ -141,53 +142,36 @@ a:not(.button):hover {
     justify-content: space-around;
 }
 
-.options_menu .buttons button {
+.options_menu .buttons button,
+.options_menu .buttons .button {
+    display: block;
     width: 50%;
     margin: 0 0.2rem;
 }
 
-.menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: fit-content;
-    padding: 0 1rem;
-    max-width: 800px;
-}
-
-.menu .button {
-    width: 100%;
-    margin: 0.2rem;
-}
-
-.menu.closed {
-    display: none;
-}
-
 @media (min-width: 500px) {
-    .widget {
-        border-radius: 2rem;
-        width: fit-content;
-        margin-top: 2rem;
-    }
 
     .big.widget {
-        margin: 1rem;
         width: 100%;
         max-width: 800px;
     }
 
     .full.widget {
-        margin: 1rem;
         width: 100%;
     }
 
-    .menu {
-        max-width: 500px;
-        border-top-left-radius: 2rem;
-        border-top-right-radius: 2rem;
+    .widget {
+        border-radius: 2rem;
+        width: fit-content;
+        margin: 6rem 1rem;
+    }
+
+    .options_menu {
+        padding: 0.5rem;
         border-left: 2px solid var(--color-edges);
         border-right: 2px solid var(--color-edges);
+        border-top-right-radius: 2rem;
+        border-top-left-radius: 2rem;
+        max-width: 500px;
     }
 }
