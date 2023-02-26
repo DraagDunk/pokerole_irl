@@ -63,6 +63,7 @@ a.button {
     cursor: pointer;
     transition: background-color 200ms ease-in-out;
     padding: 0.7rem;
+    text-align: center;
 }
 
 button:hover,
@@ -122,18 +123,46 @@ a:not(.button):hover {
     max-width: 15rem;
 }
 
-.editor_menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+.options_menu {
     position: fixed;
     width: 100%;
     background-color: var(--color-bg);
     border-top: 2px solid var(--color-edges);
     height: fit-content;
-    padding: 1.5rem;
     bottom: 0;
     max-width: 800px;
+}
+
+.options_menu .buttons {
+    height: 100%;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.options_menu .buttons button {
+    width: 50%;
+    margin: 0 0.2rem;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: fit-content;
+    padding: 0 1rem;
+    max-width: 800px;
+}
+
+.menu .button {
+    width: 100%;
+    margin: 0.2rem;
+}
+
+.menu.closed {
+    display: none;
 }
 
 @media (min-width: 500px) {
@@ -154,7 +183,7 @@ a:not(.button):hover {
         width: 100%;
     }
 
-    .editor_menu {
+    .menu {
         max-width: 500px;
         border-top-left-radius: 2rem;
         border-top-right-radius: 2rem;

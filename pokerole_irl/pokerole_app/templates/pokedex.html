@@ -4,6 +4,7 @@
 
 <head>
     <link href="{% static 'widget-table.css' %}" rel="stylesheet">
+    <link href="{% static 'filter.css' %}" rel="stylesheet">
 </head>
 
 <body>
@@ -17,8 +18,8 @@
                     <th class="prio-1">#</th>
                     <th class="prio-1">Image</th>
                     <th class="prio-1">Name</th>
-                    <th class="prio-1">Category</th>
-                    <th class="prio-2">Types</th>
+                    <th class="prio-2">Category</th>
+                    <th class="prio-1">Types</th>
                     <th class="prio-3">Abilities</th>
                     <th class="prio-4">Height</th>
                     <th class="prio-4">Weight</th>
@@ -37,8 +38,8 @@
                     <td class="prio-1">{{ entry.number }}</td>
                     <td class="prio-1"><img src="{{ entry.species.box_image }}"/></td>
                     <td class="prio-1"><a href="{% url "pokedex_entry" pokedex.pk entry.pk %}">{{ entry.species.name }}</a></td>
-                    <td class="prio-1">{{ entry.species.category }}</td>
-                    <td class="prio-2" title="Weaknesses: {{ entry.species.weaknesses }}; Resistances: {{ entry.species.resistances }}"><ul class="comma-list">
+                    <td class="prio-2">{{ entry.species.category }}</td>
+                    <td class="prio-1" title="Weaknesses: {{ entry.species.weaknesses }}; Resistances: {{ entry.species.resistances }}"><ul class="comma-list">
                         <li>{{ entry.species.primary_type }}</li>
                         {% if entry.species.secondary_type %}
                         <li>{{ entry.species.secondary_type }}</li>
@@ -86,18 +87,8 @@
         </div>
     </div>
 
-    {% if request.user.is_superuser or is_owner %}
-    <div class="editor_menu">
-        <div class="add_button">
-            <a class="button" href="{% url 'pokedex_entry_add' pokedex.pk %}">Add entry</a>
-        </div>
-        <div class="edit_button">
-            <a class="button" href="{% url 'pokedex_edit' pokedex.pk %}">Edit pokédex</a>
-        </div>
-        <div class="delete_button">
-            <a class="button" href="{% url 'pokedex_delete' pokedex.pk %}">Delete pokédex</a>
-        </div>
-    </div>
-    {% endif %}
+    
+
+    {% include "partials/options.html" %}
     
 </body>

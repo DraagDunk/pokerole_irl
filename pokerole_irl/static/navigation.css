@@ -11,30 +11,28 @@ header {
     justify-content: space-around;
 }
 
-header nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 1rem;
+header .header_menu {
+    position: fixed;
     width: 100%;
-    max-width: 800px;
-    border-bottom: 2px solid var(--color-edges);
     background-color: var(--color-bg);
+    border-bottom: 2px solid var(--color-edges);
+    height: fit-content;
+    top: 0;
+    max-width: 800px;
     z-index: 3;
 }
 
-nav .burger {
+.header_menu .burger {
     margin: 0.2rem 0;
-    margin-left: 90%;
+    margin-left: 82%;
     padding: 0.2rem;
 }
 
-nav .burger span {
+.header_menu .burger span {
     margin: 0.5rem;
 }
 
-nav a {
+.header_menu a {
     margin: 0.2rem 0;
     width: 100%;
     text-align: center;
@@ -42,11 +40,14 @@ nav a {
     font-weight: bold;
 }
 
-.closed a {
-    display: none;
+.header_menu nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
 }
 
-.overlay {
+.overlay.visible {
     display: block;
     position: fixed;
     width: 100%;
@@ -55,7 +56,7 @@ nav a {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.closed+.overlay {
+.overlay {
     display: none;
 }
 
@@ -79,11 +80,11 @@ nav a {
         display: none;
     }
 
-    .closed a {
+    .closed {
         display: block;
     }
 
     .overlay {
-        display: none
+        display: none;
     }
 }

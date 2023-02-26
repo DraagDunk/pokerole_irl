@@ -6,6 +6,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 from ..models.pokedex_models import Pokedex, PokedexEntry
 from ..models.species_models import PokemonSpecies, Evolution, MoveSet
+from ..models.base_models import Type
 
 
 class PokedexListView(ListView, LoginRequiredMixin):
@@ -78,12 +79,19 @@ class PokedexEntryListView(ListView, LoginRequiredMixin):
         queryset = super().get_queryset()
         queryset = queryset.filter(
             pokedex__pk=self.kwargs.get("dex_pk")).order_by("number")
+        if search := self.request.GET.get("search"):
+            queryset = queryset.filter(species__name__icontains=search)
+        if type_query := self.request.GET.getlist("types"):
+            queryset = queryset.filter(Q(species__primary_type__in=type_query) | Q(
+                species__secondary_type__in=type_query))
         return queryset.prefetch_related("species")
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["pokedex"] = Pokedex.objects.get(pk=self.kwargs.get("dex_pk"))
         context["is_owner"] = self.request.user == context["pokedex"].owner
+        context["search_field"] = self.request.GET.get("search", "")
+        context["types"] = Type.objects.all()
         return context
 
 
