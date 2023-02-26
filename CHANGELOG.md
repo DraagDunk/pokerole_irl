@@ -1,5 +1,9 @@
 # Changelog
 
+## 21/2-2023
+
+- Header navigation with burger menu for mobile users.
+
 ## 19/2-2023
 
 - New create-, update-, and deleteviews for Pokedex objects.
@@ -15,3 +19,5 @@
   - This field will override the species' description field in the detail view.
 
 - The pokedex overview is prettier.
+
+- Prettier mobile UI.
