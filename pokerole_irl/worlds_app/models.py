@@ -3,8 +3,7 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class Setting(models.Model):
-    owner = models.ForeignKey(User, null=True, on_delete=models.SET_NULL)
-    members = models.ManyToManyField(User, related_name='+', blank=True)
+    members = models.ManyToManyField(User, through='WorldMember')
     name = models.CharField(max_length=100)
     description = models.TextField(default="")
 
@@ -21,4 +20,15 @@ class Character(models.Model):
 
 
     def __str__(self):
-        return self.name
+        return f"{self.first_name}"
+    
+class WorldMember(models.Model):
+    user = models.ForeignKey(User, null=True, on_delete=models.SET_NULL)
+    setting = models.ForeignKey(Setting, on_delete=models.CASCADE)
+    ROLES = models.TextChoices(
+        "ROLE", "Owner Member")
+    role = models.CharField(
+        max_length=30, choices=ROLES.choices, default="Member")
+    
+    def __str__(self):
+        return f"{self.user}"

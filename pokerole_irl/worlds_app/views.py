@@ -1,7 +1,7 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import redirect
 from django.views.generic import CreateView, ListView, DetailView
-from .models import Setting, Character
+from .models import Setting, Character, WorldMember
 
 # Create your views here.
 
@@ -32,13 +32,15 @@ class SettingView(LoginRequiredMixin, DetailView):
 class SettingCreateView(LoginRequiredMixin, CreateView):
     template_name = "users/setting_create.html"
     model = Setting
-    fields = ("name", "description", "members")
+    fields = ("__all__")
 
     def form_valid(self, form):
         prod = form.save(commit=False)
-        prod.owner = self.request.user
         prod.save()
         form.save_m2m()
+        membership = WorldMember.objects.get(user=self.request.user, setting=prod.id)
+        membership.role = "Owner"
+        membership.save()
         return redirect("setting", pk=prod.id)
 
 class CharacterView(LoginRequiredMixin, DetailView):
