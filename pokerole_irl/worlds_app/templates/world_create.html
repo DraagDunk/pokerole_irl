@@ -9,8 +9,8 @@
 <body>
 
     <div class="widget">
-        <h1>New character</h1>
-        <form class="create_form form" method="post" action="{% url 'character-create' %}">
+        <h1>New Setting</h1>
+        <form class="create_form form" method="post" action="{% url 'world-create' %}">
             {% csrf_token %}
             
 
@@ -21,6 +21,7 @@
 	        		<small class="error">{{ field.errors|striptags  }}</small> 
 	        	{% endif %}
 		    {% endfor %}
+
 
             <button class="submit_button" type="submit" value="Create">Create</button>
 

@@ -1,9 +1,9 @@
 from django.contrib import admin
-from .models import Setting, Character, WorldMember
+from .models import World, Character, WorldMember
 
 # Register your models here.
-@admin.register(Setting)
-class SettingAdmin(admin.ModelAdmin):
+@admin.register(World)
+class WorldAdmin(admin.ModelAdmin):
     list_display = ('name',)
 
     class EntryInline(admin.TabularInline):
@@ -18,4 +18,4 @@ class CharacterAdmin(admin.ModelAdmin):
 
 @admin.register(WorldMember)
 class WorldMemberAdmin(admin.ModelAdmin):
-    list_display = ('user', 'setting', 'role')
+    list_display = ('user', 'world', 'role')
