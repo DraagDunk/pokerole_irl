@@ -1,5 +1,9 @@
 # Changelog
 
+## 9/3-2023
+
+- Descriptions are no longer mandatory when creating PokedexEntries.
+
 ## 26/2-2023
 
 - Adjusted the size of the header buttons.
