@@ -1,0 +1,43 @@
+{% load static %}
+
+{% include "partials/header.html" %}
+
+<head>
+    <link href="{% static 'types.css' %}" rel="stylesheet">
+</head>
+
+<body>
+    <div class="move widget">
+        <h1>{{ move.name }}</h1>
+
+        <div><i>{{ move.description }}</i></div>
+
+        <table class="move-table">
+            <tbody>
+                <tr>
+                    <td>Type:</td>
+                    <td><span title="{{ move.effectiveness }}" class="{{ move.move_type|lower }} type">{{ move.move_type|upper }}</span></td>
+                </tr>
+                <tr>
+                    <td>Category:</td>
+                    <td>{{ move.damage_type }}</td>
+                </tr>
+                <tr>
+                    <td>Accuracy:</td>
+                    <td>{{ move.primary_accuracy }}{% if move.secondary_accuracy %} + {{ move.secondary_accuracy }}{% endif %}</td>
+                </tr>
+                {% if move.damage_stat %}
+                <tr>
+                    <td>Damage pool:</td>
+                    <td>{{ move.damage_stat }} + {{ move.power }}{% if move.damage_modifier %} + {{ damage_modifier }}{% endif %}</td>
+                </tr>
+                {% endif %}
+                <tr>
+                    <td>Effect:</td>
+                    <td>{{ move.effect }}</td>
+                </tr>
+            </tbody>
+        </table>
+    <div>
+
+</body>

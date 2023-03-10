@@ -44,7 +44,7 @@
                     <tbody>
                         <tr>
                             <td>Type:</td>
-                            <td>{{ pokemon.types }}</td>
+                            <td><span class="{{ pokemon.primary_type|lower }} type">{{ pokemon.primary_type|upper }}</span>{% if pokemon.secondary_type %}<span class="{{ pokemon.secondary_type|lower }} type">{{ pokemon.secondary_type|upper }}</span>{% endif %}</td>
                         </tr>
                         <tr>
                             <td>Ability:</td>
@@ -160,7 +160,7 @@
                         </tr>
                         {% for move in moveset %}
                         <tr>
-                            <td title="{{ move.move.effect }}">{{ move.move.name }}</td>
+                            <td title="{{ move.move.effect }}"><a href="{{ move.move.get_absolute_url }}">{{ move.move.name }}</a></td>
                             <td>{{ move.learned }}</td>
                         </tr>
                         {% endfor %}
