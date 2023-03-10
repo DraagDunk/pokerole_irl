@@ -31,7 +31,8 @@ class PokedexCreateView(CreateView, LoginRequiredMixin):
     fields = ('name', 'owner')
 
     def form_valid(self, form):
-        form.owner = self.request.user
+        self.object = form.save(commit=False)
+        self.object.owner = self.request.user
         return super().form_valid(form)
 
 

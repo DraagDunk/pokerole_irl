@@ -1,5 +1,9 @@
 # Changelog
 
+## 10/3-2023
+
+- The owner of a new pokedex is no longer passed to the form via a hidden field, but is automatically input in the view.
+
 ## 26/2-2023
 
 - Adjusted the size of the header buttons.
