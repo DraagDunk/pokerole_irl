@@ -1,5 +1,9 @@
 # Changelog
 
+## 10/03-2023
+
+- Added the world and character model and basic views and templates for viewing and creation (no update views).
+
 ## 26/2-2023
 
 - Adjusted the size of the header buttons.
