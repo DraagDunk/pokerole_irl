@@ -4,6 +4,7 @@ from .views.species_views import SpeciesListView, SpeciesDetailView
 from .views.base_views import MainPageView
 from .views.pokedex_views import (PokedexListView, PokedexCreateView, PokedexUpdateView, PokedexDeleteView,
                                   PokedexEntryListView, PokedexEntryDetailView, PokedexEntryCreateView, PokedexEntryUpdateView, PokedexEntryDeleteView)
+from .views.move_views import MoveListView, MoveDetailView
 
 urlpatterns = [
     path('', MainPageView.as_view(), name="index"),
@@ -24,5 +25,7 @@ urlpatterns = [
     path('pokedexes/<int:dex_pk>/entries/<int:pk>/edit/',
          PokedexEntryUpdateView.as_view(), name="pokedex_entry_edit"),
     path('pokedexes/<int:dex_pk>/entries/<int:pk>/delete/',
-         PokedexEntryDeleteView.as_view(), name="pokedex_entry_delete")
+         PokedexEntryDeleteView.as_view(), name="pokedex_entry_delete"),
+    path('moves/', MoveListView.as_view(), name="moves"),
+    path('moves/<int:pk>/', MoveDetailView.as_view(), name="move"),
 ]

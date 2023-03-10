@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Type(models.Model):
     name = models.CharField(max_length=30)
     resistances = models.ManyToManyField(
@@ -18,6 +19,16 @@ class Type(models.Model):
         for immunity in self.immunities.all():
             weak_res[immunity] = 0
         return weak_res
+
+    def get_effectiveness(self):
+        mods = {}
+        for se in self.super_effective.all():
+            mods[se] = 2
+        for nve in self.not_effective.all():
+            mods[nve] = 0.5
+        for ne in self.no_effect.all():
+            mods[ne] = 0
+        return mods
 
     def __str__(self):
         return self.name
