@@ -6,6 +6,8 @@
 
 - New styling for type icons.
 
+- Adjusted the size of the header buttons.
+
 ## 21/2-2023
 
 - Header navigation with burger menu for mobile users.
