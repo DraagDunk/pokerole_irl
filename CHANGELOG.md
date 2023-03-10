@@ -1,6 +1,8 @@
 # Changelog
 
-## 10/3-2023
+## 10/03-2023
+
+- Added the world and character model and basic views and templates for viewing and creation (no update views).
 
 - The owner of a new pokedex is no longer passed to the form via a hidden field, but is automatically input in the view.
 
