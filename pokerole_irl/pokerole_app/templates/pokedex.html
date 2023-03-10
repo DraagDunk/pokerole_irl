@@ -3,12 +3,13 @@
 {% include "partials/header.html" %}
 
 <head>
-    <link href="{% static 'pokedex.css' %}" rel="stylesheet">
+    <link href="{% static 'widget-table.css' %}" rel="stylesheet">
 </head>
 
 <body>
+
     <div class="pokedex full widget">
-        <h1>{{ pokedex.name }}</h1>
+        <h1 title="Owned by {{ pokedex.owner }}">{{ pokedex.name }}</h1>
 
         <table class="species-table">
             <thead>
@@ -35,33 +36,32 @@
                 <tr>
                     <td class="prio-1">{{ entry.number }}</td>
                     <td class="prio-1"><img src="{{ entry.species.box_image }}"/></td>
-                    <td class="prio-1"><a href="{% url "species" entry.species.pk %}">{{ entry.species.name }}</a></td>
+                    <td class="prio-1"><a href="{% url "pokedex_entry" pokedex.pk entry.pk %}">{{ entry.species.name }}</a></td>
                     <td class="prio-1">{{ entry.species.category }}</td>
                     <td class="prio-2" title="Weaknesses: {{ entry.species.weaknesses }}; Resistances: {{ entry.species.resistances }}"><ul class="comma-list">
                         <li>{{ entry.species.primary_type }}</li>
                         {% if entry.species.secondary_type %}
                         <li>{{ entry.species.secondary_type }}</li>
                         {% endif %}
-                </ul></td>
-                <td class="prio-3"><ul class="comma-list">
-                    {% for ability in entry.species.abilities.all %}
-                        <li title="{{ ability.effect }}">{{ ability }}</li>
-                    {% endfor %}
-                </td></ul>
-                <td class="prio-4">{{ entry.species.height_m }}/{{ entry.species.height_ft }}</td>
-                <td class="prio-4">{{ entry.species.weight_kg }}/{{ entry.species.weight_lbs }}</td>
-                <td class="prio-3"><ul class="comma-list">
-                    {% for evo in entry.species.evolutions.all %}
-                        <li>{{ evo }}</li>
-                    {% endfor %}
-                </td></ul>
-                <td class="prio-4">{{ entry.species.base_hp }}</td>
-                <td class="prio-4">{{ entry.species.base_strength }}/{{ entry.species.max_strength }}</td>
-                <td class="prio-4">{{ entry.species.base_dexterity }}/{{ entry.species.max_dexterity }}</td>
-                <td class="prio-4">{{ entry.species.base_vitality }}/{{ entry.species.max_vitality }}</td>
-                <td class="prio-4">{{ entry.species.base_special }}/{{ entry.species.max_special }}</td>
-                <td class="prio-4">{{ entry.species.base_insight }}/{{ entry.species.max_insight }}</td>
-            </tr>
+                    </ul></td>
+                    <td class="prio-3"><ul class="comma-list">
+                        {% for ability in entry.species.abilities.all %}
+                            <li title="{{ ability.effect }}">{{ ability }}</li>
+                        {% endfor %}
+                    </td></ul>
+                    <td class="prio-4">{{ entry.species.height_m }}/{{ entry.species.height_ft }}</td>
+                    <td class="prio-4">{{ entry.species.weight_kg }}/{{ entry.species.weight_lbs }}</td>
+                    <td class="prio-3"><ul class="comma-list">
+                        {% for evo in entry.species.evolutions.all %}
+                            <li>{{ evo }}</li>
+                        {% endfor %}
+                    </td></ul>
+                    <td class="prio-4">{{ entry.species.base_hp }}</td>
+                    <td class="prio-4">{{ entry.species.base_strength }}/{{ entry.species.max_strength }}</td>
+                    <td class="prio-4">{{ entry.species.base_dexterity }}/{{ entry.species.max_dexterity }}</td>
+                    <td class="prio-4">{{ entry.species.base_vitality }}/{{ entry.species.max_vitality }}</td>
+                    <td class="prio-4">{{ entry.species.base_special }}/{{ entry.species.max_special }}</td>
+                    <td class="prio-4">{{ entry.species.base_insight }}/{{ entry.species.max_insight }}</td>
                 </tr>
                 {% endfor%}
             </tbody>
@@ -85,4 +85,19 @@
             </span>
         </div>
     </div>
+
+    {% if request.user.is_superuser or is_owner %}
+    <div class="editor_menu">
+        <div class="add_button">
+            <a class="button" href="{% url 'pokedex_entry_add' pokedex.pk %}">Add entry</a>
+        </div>
+        <div class="edit_button">
+            <a class="button" href="{% url 'pokedex_edit' pokedex.pk %}">Edit pokédex</a>
+        </div>
+        <div class="delete_button">
+            <a class="button" href="{% url 'pokedex_delete' pokedex.pk %}">Delete pokédex</a>
+        </div>
+    </div>
+    {% endif %}
+    
 </body>

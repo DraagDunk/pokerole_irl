@@ -1,38 +1,3 @@
 body {
     align-items: center;
 }
-
-.login_form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.field {
-    margin: 1rem 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.field input {
-    background-color: rgba(0, 0, 0, 0);
-    border: none;
-    border-bottom: 2px solid var(--color-edges);
-    font-size: larger;
-    height: 2rem;
-    text-align: center;
-    color: var(--color-text)
-}
-
-.field input:focus-visible {
-    outline: none;
-}
-
-.login_button {
-    padding: 0.5rem 1rem;
-    margin: 1rem 0;
-    width: 15rem;
-    font-size: larger;
-    font-variant: small-caps;
-}

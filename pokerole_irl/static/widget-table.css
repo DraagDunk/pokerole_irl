@@ -1,30 +1,35 @@
-h1 {
-    text-align: center;
+body {
+    height: fit-content;
 }
 
-.species-table {
+table {
     border-collapse: collapse;
     width: 100%;
     padding: 1rem;
 }
 
-.species-table tbody tr:nth-of-type(2n-1) {
+table tbody tr:nth-of-type(2n-1) {
     background-color: var(--color-secondary);
 }
 
-.species-table td {
+table td {
     text-align: center;
     padding: 0 0.3rem;
 }
 
-.widget {
+.pokedex.widget {
     padding: 0;
+    margin-bottom: 5rem;
 }
 
 .step-links {
     display: flex;
     justify-content: space-around;
     margin: 1rem 0;
+}
+
+.pokedex-table td {
+    padding: 1rem 0;
 }
 
 @media (max-width: 1600px) {

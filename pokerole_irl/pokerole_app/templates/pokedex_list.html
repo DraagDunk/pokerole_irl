@@ -2,12 +2,55 @@
 
 {% include "partials/header.html" %}
 
-<body>
-    <h1>All pokedexes</h1>
+<head>
+    <link href="{% static 'widget-table.css' %}" rel="stylesheet">
+</head>
 
-    <ul>
-        {% for dex in pokedexes %}
-        <li><a href="{% url "pokedex" dex.pk %}">{{ dex }}</a></li>
-        {% endfor %}
-    </ul>
+<body>
+    
+    <div class="pokedex big widget">
+        <h1>All pokedexes</h1>
+
+        <table class="pokedex-table">
+            <thead>
+                <tr>
+                    <th class="prio-1">Name</th>
+                    <th class="prio-2">Owner</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for pokedex in pokedexes %}
+                <tr>
+                    <td class="prio-1"><a href="{{ pokedex.get_absolute_url }}">{{ pokedex.name }}</a></td>
+                    <td class="prio-2">{{ pokedex.owner }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <div class="pagination">
+            <span class="step-links">
+                {% if page_obj.has_previous %}
+                    <a href="?page=1">&laquo; First</a>
+                    <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
+                {% endif %}
+        
+                <span class="current">
+                    Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                </span>
+        
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}">Next</a>
+                    <a href="?page={{ page_obj.paginator.num_pages }}">Last &raquo;</a>
+                {% endif %}
+            </span>
+        </div>
+
+    </div>
+
+    <div class="editor_menu">
+        <div class="add_button">
+            <a class="button" href="{% url 'pokedex_add' %}">Add pokédex</a>
+        </div>
+    </div>
 </body>

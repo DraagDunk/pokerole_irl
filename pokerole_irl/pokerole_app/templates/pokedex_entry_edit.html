@@ -1,0 +1,64 @@
+{% load static %}
+
+{% include "partials/header.html" %}
+
+<head>
+    <link href="{% static 'form.css' %}" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="widget">
+        <h1>New entry</h1>
+        <form class="edit_form form" method="post" action="{% url 'pokedex_entry_edit' pokedex.pk entry.pk %}">
+            {% csrf_token %}
+
+            <div class="form_row">
+                <div class="small field">
+                    <label for="id_number">Number</label>
+                    <input type="number" name="number" value="{{ entry.number }}" required id="id_number">
+                    <div>
+                    {% for error in form.number.errors %}
+                        <div class="field_error">
+                            {{ error }}
+                        </div>
+                    {% endfor %}
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="id_species">Species</label>
+                    <select name="species" required id="id_species">
+                        {% for species in base_species %}
+                            <option value="{{ species.pk }}" {% if species.pk == entry.species.pk %}selected{% endif %}>{{ species.name }}</option>
+                        {% endfor %}
+                    </select>
+                    <div>
+                    {% for error in form.species.errors %}
+                        <div class="field_error">
+                            {{ error }}
+                        </div>
+                    {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label for="id_description">Description</label>
+                {{ form.description }}
+            </div>
+
+            <div class="field">
+                <label for="id_rarity">Rarity</label>
+                {{ form.rarity }}
+            </div>
+
+            <input type="hidden" name="pokedex" value="{{ pokedex.pk }}" required id="id_pokedex">
+
+            <button class="submit_button" type="submit" value="Save">Save</button>
+
+        </form>
+
+    </div>
+
+</body>
