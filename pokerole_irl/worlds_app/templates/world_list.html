@@ -1,0 +1,25 @@
+{% load static %}
+
+{% include "partials/header.html" %}
+<body>
+  <div>
+    {% block content %}
+      <h1>List of your worlds</h1>
+      {% if worlds %}
+      <ul>
+        {% for set in worlds %}
+          <li>
+            <a href="{%url "world" set.pk %}">{{ set.name }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+      {% else %}
+        <p>You do not have access to any worlds</p>
+      {% endif %}
+    {% endblock %}
+
+    <p>
+      <a href="{%url "world-create"%}">Create new world</a>
+    </p>
+  </div>
+</body>

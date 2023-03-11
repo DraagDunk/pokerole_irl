@@ -1,0 +1,141 @@
+:root {
+    --bug-color: #A8B820;
+    --dark-color: #705848;
+    --dragon-color: #7038F8;
+    --electric-color: #F8D030;
+    --fairy-color: #EE99AC;
+    --fighting-color: #C03028;
+    --fire-color: #F08030;
+    --flying-color: #A890F0;
+    --ghost-color: #705898;
+    --grass-color: #78C850;
+    --ground-color: #E0C068;
+    --ice-color: #98D8D8;
+    --normal-color: #A8A878;
+    --poison-color: #A040A0;
+    --psychic-color: #F85888;
+    --rock-color: #B8A038;
+    --steel-color: #B8B8D0;
+    --water-color: #6890F0;
+
+    --bug-edge: #6D7815;
+    --dark-edge: #49392F;
+    --dragon-edge: #4924A1;
+    --electric-edge: #A1871F;
+    --fairy-edge: #9B6470;
+    --fighting-edge: #7D1F1A;
+    --fire-edge: #9C531F;
+    --flying-edge: #6D5E9C;
+    --ghost-edge: #493963;
+    --grass-edge: #4E8234;
+    --ground-edge: #927D44;
+    --ice-edge: #638D8D;
+    --normal-edge: #6D6D4E;
+    --poison-edge: #682A68;
+    --psychic-edge: #A13959;
+    --rock-edge: #786824;
+    --steel-edge: #787887;
+    --water-edge: #445E9C;
+
+}
+
+.type {
+    padding: 4px 8px;
+    font-family: monospace;
+    color: white;
+    border-radius: 6px;
+    border: 1px solid black;
+    cursor: default;
+    user-select: none;
+    margin: 0 2px;
+}
+
+.bug.type {
+    background-color: var(--bug-color);
+    border-color: var(--bug-edge);
+}
+
+.dark.type {
+    background-color: var(--dark-color);
+    border-color: var(--dark-edge);
+}
+
+.dragon.type {
+    background-color: var(--dragon-color);
+    border-color: var(--dragon-edge);
+}
+
+.electric.type {
+    background-color: var(--electric-color);
+    border-color: var(--electric-edge);
+}
+
+.fairy.type {
+    background-color: var(--fairy-color);
+    border-color: var(--fairy-edge);
+}
+
+.fighting.type {
+    background-color: var(--fighting-color);
+    border-color: var(--fighting-edge);
+}
+
+.fire.type {
+    background-color: var(--fire-color);
+    border-color: var(--fire-edge);
+}
+
+.flying.type {
+    background-color: var(--flying-color);
+    border-color: var(--flying-edge);
+}
+
+.ghost.type {
+    background-color: var(--ghost-color);
+    border-color: var(--ghost-edge);
+}
+
+.grass.type {
+    background-color: var(--grass-color);
+    border-color: var(--grass-edge);
+}
+
+.ground.type {
+    background-color: var(--ground-color);
+    border-color: var(--ground-edge);
+}
+
+.ice.type {
+    background-color: var(--ice-color);
+    border-color: var(--ice-edge);
+}
+
+.normal.type {
+    background-color: var(--normal-color);
+    border-color: var(--normal-edge);
+}
+
+.poison.type {
+    background-color: var(--poison-color);
+    border-color: var(--poison-edge);
+}
+
+.psychic.type {
+    background-color: var(--psychic-color);
+    border-color: var(--psychic-edge);
+}
+
+.rock.type {
+    background-color: var(--rock-color);
+    border-color: var(--rock-edge);
+}
+
+.steel.type {
+    background-color: var(--steel-color);
+    border-color: var(--steel-edge);
+}
+
+.water.type {
+    background-color: var(--water-color);
+    border-color: var(--water-edge);
+}

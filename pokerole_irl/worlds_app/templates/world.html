@@ -1,0 +1,69 @@
+{% load static %}
+
+{% include "partials/header.html" %}
+
+<head>
+  <link href="{% static 'species-detail.css' %}" rel="stylesheet">
+</head>
+
+<body>
+  <div class="species-detail widget">
+      <h1>{{ world.name }}</h1>
+      <div class="species-description">
+        <div class="species-height-weight">
+          <span>
+              <div class="header">Description</div>
+              <div>{{ world.description }}</div>
+          </span>
+        </div>
+        <div class="species-height-weight">
+          <span>
+              <div class="header">Owner</div>
+              <div>{{ world.owner }}</div>
+          </span>
+        </div>
+      </div>
+      
+      <div class="info-body">
+          <div class="column">
+              <table class="move-table">
+                  <tbody>
+                      <tr>
+                          <th>Members</th>
+                      </tr>
+                      {% for member in world.members.all %}
+                      <tr>
+                          <td title="utf">{{ member }}</td>
+                      </tr>
+                      {% endfor %}
+                  </tbody>
+              </table>
+          </div>
+      </div>
+
+      <div class="info-body">
+        <div class="column">
+            <table class="move-table">
+                <tbody>
+                    <tr>
+                        <th>Characters</th>
+                    </tr>
+                    {% for char in character_list %}
+                    <tr>
+                        <td title="utf"> 
+                          <a href="{%url "character" world.pk char.pk %}">{{ char.first_name }} {{ char.last_name }}</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <div class="links">
+              <a href="{%url "character-create" world.pk%}"> Create New Character </a>
+            </div>
+            <div class="links">
+                <a class="back-link" href="{%url "world-list" %}"><< Back</a>
+            </div>
+        </div>
+    </div>
+  </div>
+</body>

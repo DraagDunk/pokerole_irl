@@ -47,7 +47,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'pokerole_app',
-    'user_app'
+    'user_app',
+    'worlds_app'
 ]
 
 MIDDLEWARE = [

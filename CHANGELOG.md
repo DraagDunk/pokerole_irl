@@ -1,6 +1,21 @@
 # Changelog
 
+## 10/03-2023
+
+- Added the world and character model and basic views and templates for viewing and creation (no update views).
+
+- The owner of a new pokedex is no longer passed to the form via a hidden field, but is automatically input in the view.
+
+## 9/3-2023
+
+- Descriptions are no longer mandatory when creating PokedexEntries.
+
+
 ## 26/2-2023
+
+- New list- and detailviews moves.
+
+- New styling for type icons.
 
 - Adjusted the size of the header buttons.
 
