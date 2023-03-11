@@ -50,14 +50,14 @@
                             <td>Ability:</td>
                             <td><ul class="comma-list">
                                 {% for ability in pokemon.abilities.all %}
-                                <li title="{{ ability.effect }}">{{ ability.name }}</li>
+                                <li title="{{ ability.effect }}"><a href="{% url "ability" ability.pk %}">{{ ability.name }}</a></li>
                                 {% endfor %}
                             </ul></td>
                         </tr>
                         {% if pokemon.hidden_ability %}
                         <tr>
                             <td>Hidden:</td>
-                            <td title="{{ pokemon.hidden_ability.effect }}">{{ pokemon.hidden_ability }}</td>
+                            <td title="{{ pokemon.hidden_ability.effect }}"><a href="{% url "ability" pokemon.hidden_ability.pk %}">{{ pokemon.hidden_ability }}</a></td>
                         </tr>
                         {% endif %}
                         <tr>
