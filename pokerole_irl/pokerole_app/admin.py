@@ -54,13 +54,7 @@ class PokedexEntryAdmin(admin.ModelAdmin):
 
 @admin.register(Pokedex)
 class PokedexAdmin(admin.ModelAdmin):
-    list_display = ('__str__',)
-
-    class EntryInline(admin.TabularInline):
-        model = PokedexEntry
-        extra = 0
-
-    inlines = [EntryInline]
+    list_display = ('__str__', 'owner')
 
 
 @admin.register(Nature)
