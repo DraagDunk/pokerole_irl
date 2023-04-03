@@ -1,7 +1,7 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import redirect
 from django.urls import reverse_lazy
-from django.views.generic import CreateView, ListView, DetailView
+from django.views.generic import CreateView, ListView, DetailView, UpdateView
 from django.core.exceptions import PermissionDenied
 from .models import World, Character, WorldMember
 
@@ -46,6 +46,20 @@ class WorldCreateView(LoginRequiredMixin, CreateView):
         membership.role = "Owner"
         membership.save()
         return response
+
+class WorldUpdateView(LoginRequiredMixin, UpdateView):
+    template_name = "world_update.html"
+    model = World
+    fields = ("__all__")
+    context_object_name = "world"
+
+    def dispatch(self, request, *args, **kwargs):
+        self.world = World.objects.get(pk=self.kwargs.get("pk"))
+        if request.user.is_superuser or self.world.user == request.user:
+            return super().dispatch(request, *args, **kwargs)
+        else:
+            raise PermissionDenied("You are not the owner of this world.")
+
 
 class CharacterView(LoginRequiredMixin, DetailView):
     template_name = "character.html"
