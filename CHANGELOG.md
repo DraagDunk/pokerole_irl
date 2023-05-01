@@ -19,6 +19,8 @@
 
 - Adjusted the size of the header buttons.
 
+- Filter options on pokedex, navigation buttons at the bottom.
+
 ## 21/2-2023
 
 - Header navigation with burger menu for mobile users.

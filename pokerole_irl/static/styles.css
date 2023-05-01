@@ -42,6 +42,7 @@ body.centered {
     background-color: rgba(100, 100, 100, 0.1);
     width: 100%;
     margin-bottom: 5rem;
+    margin-top: 4rem;
 }
 
 .widget h1 {
@@ -63,6 +64,7 @@ a.button {
     cursor: pointer;
     transition: background-color 200ms ease-in-out;
     padding: 0.7rem;
+    text-align: center;
 }
 
 button:hover,
@@ -122,43 +124,54 @@ a:not(.button):hover {
     max-width: 15rem;
 }
 
-.editor_menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+.options_menu {
     position: fixed;
     width: 100%;
     background-color: var(--color-bg);
     border-top: 2px solid var(--color-edges);
     height: fit-content;
-    padding: 1.5rem;
     bottom: 0;
     max-width: 800px;
 }
 
+.options_menu .buttons {
+    height: 100%;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.options_menu .buttons button,
+.options_menu .buttons .button {
+    display: block;
+    width: 50%;
+    margin: 0 0.2rem;
+}
+
 @media (min-width: 500px) {
-    .widget {
-        border-radius: 2rem;
-        width: fit-content;
-        margin-top: 2rem;
-    }
 
     .big.widget {
-        margin: 1rem;
         width: 100%;
         max-width: 800px;
     }
 
     .full.widget {
-        margin: 1rem;
         width: 100%;
     }
 
-    .editor_menu {
-        max-width: 500px;
-        border-top-left-radius: 2rem;
-        border-top-right-radius: 2rem;
+    .widget {
+        border-radius: 2rem;
+        width: fit-content;
+        margin: 6rem 1rem;
+    }
+
+    .options_menu {
+        padding: 0.5rem;
         border-left: 2px solid var(--color-edges);
         border-right: 2px solid var(--color-edges);
+        border-top-right-radius: 2rem;
+        border-top-left-radius: 2rem;
+        max-width: 500px;
     }
 }
