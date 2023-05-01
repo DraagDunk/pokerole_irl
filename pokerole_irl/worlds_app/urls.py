@@ -8,5 +8,6 @@ urlpatterns = [
     path('<int:pk>/', WorldView.as_view(), name='world'),
     path('<int:pk>/update', WorldUpdateView.as_view(), name='world-update'),
     path('<int:world_pk>/character/add/', CharacterCreateView.as_view(), name='character-create'),
-    path('<int:world_pk>/character/<int:pk>/', CharacterView.as_view(), name='character')
+    path('<int:world_pk>/character/<int:pk>/', CharacterView.as_view(), name='character'),
+    path('<int:world_pk>/character/<int:pk>/update', CharacterUpdateView.as_view(), name='character-update')
 ]

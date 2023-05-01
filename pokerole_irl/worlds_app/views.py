@@ -30,7 +30,6 @@ class WorldView(LoginRequiredMixin, DetailView):
         return context
 
 
-
 class WorldCreateView(LoginRequiredMixin, CreateView):
     template_name = "world_create.html"
     model = World
@@ -52,7 +51,6 @@ class WorldUpdateView(LoginRequiredMixin, UpdateView):
     model = World
     fields = ("__all__")
     context_object_name = "world"
-    #success_url = reverse_lazy('world')
 
     def dispatch(self, request, *args, **kwargs):
         self.world = World.objects.get(pk=self.kwargs.get("pk"))
@@ -88,3 +86,19 @@ class CharacterCreateView(LoginRequiredMixin, CreateView):
         self.object.owner = self.request.user
         self.object.world = self.world
         return super().form_valid(form)
+
+class CharacterUpdateView(LoginRequiredMixin, UpdateView):
+    template_name = "character_update.html"
+    model = Character
+    fields = ("__all__")
+    context_object_name = "character"
+
+    def dispatch(self, request, *args, **kwargs):
+        self.world = World.objects.get(pk=self.kwargs.get("world_pk"))
+        if request.user.is_superuser or self.owner == request.user:
+            return super().dispatch(request, *args, **kwargs)
+        else:
+            raise PermissionDenied("You are not the owner of this world.")
+        
+    def get_success_url(self) -> str:
+        return reverse_lazy('character', kwargs={"world_pk":self.object.world.pk, "pk":self.object.pk})
