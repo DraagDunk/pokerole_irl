@@ -4,6 +4,10 @@
 
 - Pokédex model in the admin page no longer crashes at it attempts to load all entries.
 
+## 11/3-2023
+
+- List- and detailview for abilities with templates.
+
 ## 10/03-2023
 
 - Added the world and character model and basic views and templates for viewing and creation (no update views).
@@ -13,7 +17,6 @@
 ## 9/3-2023
 
 - Descriptions are no longer mandatory when creating PokedexEntries.
-
 
 ## 26/2-2023
 

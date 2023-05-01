@@ -1,0 +1,50 @@
+{% load static %}
+
+{% include "partials/header.html" %}
+
+<head>
+    <link href="{% static 'pokedex.css' %}" rel="stylesheet">
+</head>
+
+<body>
+    <div class="abilities full widget">
+        <h1>All moves</h1>
+
+        <table class="ability-table">
+            <thead>
+                <tr>
+                    <th class="prio-1">Name</th>
+                    <th class="prio-2">Effect</th>
+                    <th class="prio-4">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for ability in abilities %}
+                <tr>
+                    <td class="prio-1"><a href="{% url "ability" ability.pk %}">{{ ability.name }}</td>
+                    <td class="prio-2">{{ ability.effect }}</td>
+                    <td class="prio-4">{{ ability.description }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <div class="pagination">
+            <span class="step-links">
+                {% if page_obj.has_previous %}
+                    <a href="?page=1">&laquo; First</a>
+                    <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
+                {% endif %}
+        
+                <span class="current">
+                    Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                </span>
+        
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}">Next</a>
+                    <a href="?page={{ page_obj.paginator.num_pages }}">Last &raquo;</a>
+                {% endif %}
+            </span>
+        </div>
+    </div>
+</body>
