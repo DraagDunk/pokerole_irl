@@ -1,5 +1,9 @@
 # Changelog
 
+## 12/3-2023
+
+- Pokédex model in the admin page no longer crashes at it attempts to load all entries.
+
 ## 11/3-2023
 
 - List- and detailview for abilities with templates.
@@ -21,6 +25,8 @@
 - New styling for type icons.
 
 - Adjusted the size of the header buttons.
+
+- Filter options on pokedex, navigation buttons at the bottom.
 
 ## 21/2-2023
 

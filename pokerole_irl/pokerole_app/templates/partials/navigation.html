@@ -5,18 +5,20 @@
 </head>
 
 <header>
-    <nav class="closed menu">
-        <button type="button" class="burger"><span class="material-symbols-outlined">menu</span></button>
-        <a class="button" href="{% url "index" %}">Home</a>
-        <a class="button" href="{% url "pokedex_list" %}">Pokédex</a>
-        <a class="button" href="{% url "all_species" %}">All Species</a>
-        {% if request.user.is_authenticated %}
-        <a class="button" href="{% url "user-profile" %}">Profile</a>
-        {% else %}
-        <a class="button" href="{% url "login" %}">Log In</a>
-        {% endif %}
-    </nav>
+    <div class="header_menu">
+        <button type="button" class="burger menu_button" controls-menu="main_menu"><span class="material-symbols-outlined">menu</span></button>
+        <nav class="closed main_menu menu">
+            <a class="button" href="{% url "index" %}">Home</a>
+            <a class="button" href="{% url "pokedex_list" %}">Pokédex</a>
+            <a class="button" href="{% url "all_species" %}">All Species</a>
+            {% if request.user.is_authenticated %}
+            <a class="button" href="{% url "user-profile" %}">Profile</a>
+            {% else %}
+            <a class="button" href="{% url "login" %}">Log In</a>
+            {% endif %}
+        </nav>
+    </div>
     <div class="overlay"/>
 </header>
 
-<script src="{% static "js/burger_menu.js" %}"></script>
+<script src="{% static "js/menu.js" %}"></script>
