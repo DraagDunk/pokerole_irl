@@ -58,6 +58,9 @@ class WorldUpdateView(LoginRequiredMixin, UpdateView):
             return super().dispatch(request, *args, **kwargs)
         else:
             raise PermissionDenied("You are not the owner of this world.")
+    
+    def get_success_url(self) -> str:
+        return reverse_lazy('world', kwargs={"pk":self.object.pk})
         
 class CharacterView(LoginRequiredMixin, DetailView):
     template_name = "character.html"

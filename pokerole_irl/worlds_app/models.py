@@ -12,8 +12,6 @@ class World(models.Model):
     def __str__(self):
         return self.name
     
-    def get_absolute_url(self):
-        return reverse_lazy("world", kwargs={"pk": self.pk})
 
 class Character(models.Model):
     owner = models.ForeignKey(User, on_delete=models.CASCADE)

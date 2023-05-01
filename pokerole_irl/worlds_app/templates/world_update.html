@@ -10,7 +10,7 @@
 
     <div class="widget">
         <h1>Edit World</h1>
-        <form class="edit_form form" method="post" action="{% url 'world-update' world.pk %}">
+        <form class="edit_form form" method="post">
             {% csrf_token %}
 
             <div class="field">
