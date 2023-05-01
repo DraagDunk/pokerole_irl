@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.urls import reverse_lazy
 
 # Create your models here.
 class World(models.Model):
@@ -10,6 +11,9 @@ class World(models.Model):
 
     def __str__(self):
         return self.name
+    
+    def get_absolute_url(self):
+        return reverse_lazy("world", kwargs={"pk": self.pk})
 
 class Character(models.Model):
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -21,6 +25,9 @@ class Character(models.Model):
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
+    
+    def get_absolute_url(self):
+        return reverse_lazy("character", kwargs={"world_pk": self.world.pk})
     
 class WorldMember(models.Model):
     user = models.ForeignKey(User, null=True, on_delete=models.SET_NULL)
