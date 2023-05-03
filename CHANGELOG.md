@@ -1,5 +1,9 @@
 # Changelog
 
+## 3/5-2023
+
+- Installed Django debug toolbar
+
 ## 12/3-2023
 
 - Pokédex model in the admin page no longer crashes at it attempts to load all entries.
