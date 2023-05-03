@@ -1,5 +1,9 @@
 # Changelog
 
+## 3/5-2023
+
+- Fixed table row height in pokédex while waiting for images to load.
+
 ## 12/3-2023
 
 - Pokédex model in the admin page no longer crashes at it attempts to load all entries.
