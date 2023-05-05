@@ -10,7 +10,7 @@
 
     <div class="widget">
         <h1>New entry</h1>
-        <form class="edit_form form" method="post" action="{% url 'pokedex_entry_edit' pokedex.pk entry.pk %}">
+        <form class="edit_form form" method="post" action="{% url 'pokedex_entry_edit' pokedex.slug entry.pk %}">
             {% csrf_token %}
 
             <div class="form_row">

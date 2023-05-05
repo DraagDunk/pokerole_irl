@@ -169,7 +169,7 @@
                 <div class="links">
                     <a class="back-link button" href="javascript:history.back()">Back</a>
                     {% if pokedex %}
-                    <a class="back-link button" href="{% url "pokedex_entries" pokedex.pk %}">Back to {{ pokedex.name }}</a>
+                    <a class="back-link button" href="{% url "pokedex_entries" pokedex.slug %}">Back to {{ pokedex.name }}</a>
                     {% else %}
                     <a class="back-link button" href="{% url "all_species" %}">Back to species</a>
                     {% endif %}

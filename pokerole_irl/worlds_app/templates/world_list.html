@@ -9,7 +9,7 @@
       <ul>
         {% for set in worlds %}
           <li>
-            <a href="{%url "world" set.pk %}">{{ set.name }}</a>
+            <a href="{%url "world" set.slug %}">{{ set.name }}</a>
           </li>
         {% endfor %}
       </ul>

@@ -79,7 +79,7 @@ class PokedexEntryListView(ListView, LoginRequiredMixin):
     def get_queryset(self):
         queryset = super().get_queryset()
         queryset = queryset.filter(
-            pokedex__pk=self.kwargs.get("dex_pk")).order_by("number")
+            pokedex__slug=self.kwargs.get("dex_slug")).order_by("number")
         if search := self.request.GET.get("search"):
             queryset = queryset.filter(species__name__icontains=search)
         if type_query := self.request.GET.getlist("types"):
@@ -89,7 +89,8 @@ class PokedexEntryListView(ListView, LoginRequiredMixin):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["pokedex"] = Pokedex.objects.get(pk=self.kwargs.get("dex_pk"))
+        context["pokedex"] = Pokedex.objects.get(
+            slug=self.kwargs.get("dex_slug"))
         context["is_owner"] = self.request.user == context["pokedex"].owner
         context["search_field"] = self.request.GET.get("search", "")
         context["types"] = Type.objects.all()
@@ -103,7 +104,7 @@ class PokedexEntryDetailView(DetailView, LoginRequiredMixin):
 
     def get_queryset(self):
         queryset = super().get_queryset()
-        return queryset.filter(pokedex__pk=self.kwargs.get("dex_pk"))
+        return queryset.filter(pokedex__slug=self.kwargs.get("dex_slug"))
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -114,7 +115,8 @@ class PokedexEntryDetailView(DetailView, LoginRequiredMixin):
             to_species=context["pokemon"])
         context["moveset"] = MoveSet.objects.filter(
             species=context["pokemon"])
-        context["pokedex"] = Pokedex.objects.get(pk=self.kwargs.get("dex_pk"))
+        context["pokedex"] = Pokedex.objects.get(
+            slug=self.kwargs.get("dex_slug"))
         context["is_owner"] = self.request.user == context["pokedex"].owner
         return context
 
@@ -147,7 +149,7 @@ class PokedexEntryCreateView(CreateView, LoginRequiredMixin):
         return context
 
     def dispatch(self, request, *args, **kwargs):
-        self.pokedex = Pokedex.objects.get(pk=self.kwargs.get("dex_pk"))
+        self.pokedex = Pokedex.objects.get(slug=self.kwargs.get("dex_slug"))
         if request.user.is_superuser or self.pokedex.owner == request.user:
             return super().dispatch(request, *args, **kwargs)
         else:
@@ -164,13 +166,14 @@ class PokedexEntryUpdateView(UpdateView, LoginRequiredMixin):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["pokedex"] = Pokedex.objects.get(pk=self.kwargs.get("dex_pk"))
+        context["pokedex"] = Pokedex.objects.get(
+            slug=self.kwargs.get("dex_slug"))
         context["base_species"] = PokemonSpecies.objects.exclude(
             name__contains="(Mega")
         return context
 
     def dispatch(self, request, *args, **kwargs):
-        self.pokedex = Pokedex.objects.get(pk=self.kwargs.get("dex_pk"))
+        self.pokedex = Pokedex.objects.get(slug=self.kwargs.get("dex_slug"))
         if request.user.is_superuser or self.pokedex.owner == request.user:
             return super().dispatch(request, *args, **kwargs)
         else:
@@ -187,19 +190,19 @@ class PokedexEntryDeleteView(DeleteView, LoginRequiredMixin):
         return context
 
     def get_success_url(self):
-        return reverse("pokedex_entries", kwargs={"dex_pk": self.kwargs.get("dex_pk")})
+        return reverse("pokedex_entries", kwargs={"dex_slug": self.kwargs.get("dex_slug")})
 
     def delete(self, request, *args, **kwargs):
         response = super().delete(request, *args, **kwargs)
         entries = PokedexEntry.objects.filter(
-            pokedex__pk=self.kwargs.get("dex_pk"), number__gt=self.object.number)
+            pokedex__slug=self.kwargs.get("dex_slug"), number__gt=self.object.number)
         for entry in entries.iterator():
             entry.number = entry.number - 1
             entry.save()
         return response
 
     def dispatch(self, request, *args, **kwargs):
-        self.pokedex = Pokedex.objects.get(pk=self.kwargs.get("dex_pk"))
+        self.pokedex = Pokedex.objects.get(slug=self.kwargs.get("dex_slug"))
         if request.user.is_superuser or self.pokedex.owner == request.user:
             return super().dispatch(request, *args, **kwargs)
         else:

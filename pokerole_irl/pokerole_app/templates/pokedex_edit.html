@@ -10,7 +10,7 @@
 
     <div class="widget">
         <h1>Edit Pokédex</h1>
-        <form class="edit_form form" method="post" action="{% url 'pokedex_edit' pokedex.pk %}">
+        <form class="edit_form form" method="post" action="{% url 'pokedex_edit' pokedex.slug %}">
             {% csrf_token %}
 
             <div class="field">

@@ -7,9 +7,9 @@
 <div class="options_menu">
     {% if "/entries" in request.path and not entry and request.user.is_superuser or is_owner %}
     <div class="editor_menu menu closed">
-        <a class="button" href="{% url 'pokedex_entry_add' pokedex.pk %}">Add entry</a>
-        <a class="button" href="{% url 'pokedex_edit' pokedex.pk %}">Edit pokédex</a>
-        <a class="button" href="{% url 'pokedex_delete' pokedex.pk %}">Delete pokédex</a>
+        <a class="button" href="{% url 'pokedex_entry_add' pokedex.slug %}">Add entry</a>
+        <a class="button" href="{% url 'pokedex_edit' pokedex.slug %}">Edit pokédex</a>
+        <a class="button" href="{% url 'pokedex_delete' pokedex.slug %}">Delete pokédex</a>
     </div>
     {% endif %}
     {% if types %}
@@ -29,9 +29,9 @@
     {% endif %}
     {% if entry and request.user.is_superuser or is_owner %}
     <div class="editor_menu menu closed">
-            <a class="button" href="{% url 'pokedex_entry_add' pokedex.pk %}">Add entry</a>
-            <a class="button" href="{% url 'pokedex_entry_edit' pokedex.pk entry.pk %}">Edit entry</a>
-            <a class="button" href="{% url 'pokedex_entry_delete' pokedex.pk entry.pk %}">Delete entry</a>
+            <a class="button" href="{% url 'pokedex_entry_add' pokedex.slug %}">Add entry</a>
+            <a class="button" href="{% url 'pokedex_entry_edit' pokedex.slug entry.pk %}">Edit entry</a>
+            <a class="button" href="{% url 'pokedex_entry_delete' pokedex.slug entry.pk %}">Delete entry</a>
     </div>
     {% endif %}
 
