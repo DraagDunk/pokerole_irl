@@ -1,5 +1,9 @@
 # Changelog
 
+## 5/5-2023
+
+- Added slugs to the Character, World, Profile and Pokedex models.
+
 ## 12/3-2023
 
 - Pokédex model in the admin page no longer crashes at it attempts to load all entries.
