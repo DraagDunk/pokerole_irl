@@ -1,10 +1,20 @@
+from typing import Any
+from django import http
 from django.contrib import messages
 from django.contrib.auth import get_user_model
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.conf import settings
+from django.db.models.query import QuerySet
 from django.shortcuts import redirect, render
-from django.views.generic import CreateView, TemplateView
+from django.views.generic import CreateView, TemplateView, ListView
+from friendship.models import Friend, Follow, Block
 
 from .forms import UpdateProfileForm, UpdateUserForm, CreateUserForm
+
+
+def get_friendship_context_object_name():
+    return getattr(settings, "FRIENDSHIP_CONTEXT_OBJECT_NAME", "user")
+
 
 class UserProfileView(LoginRequiredMixin, TemplateView):
     # Updates the user profile and info
@@ -24,13 +34,15 @@ class UserProfileView(LoginRequiredMixin, TemplateView):
             messages.success(request, 'Profile updated sucessfully')
             return redirect(to='user-profile')
 
-        return render(request, 'users/profile.html', {'user_form': user_form, 'profile_form': profile_form})
+        return render(request, 'users/profile.html', 
+                      {'user_form': user_form, 'profile_form': profile_form})
 
     def get(self, request):
         user_form = UpdateUserForm(instance=request.user)
         profile_form = UpdateProfileForm(instance=request.user.profile)
 
-        return render(request, 'users/profile.html', {'user_form': user_form, 'profile_form': profile_form})
+        return render(request, 'users/profile.html',
+                      {'user_form': user_form, 'profile_form': profile_form})
 
 
 class RegisterView(CreateView):
@@ -43,3 +55,15 @@ class RegisterView(CreateView):
     template_name = 'registration/register.html'
     success_url = '/login'
     model = get_user_model()
+
+
+class FriendListView(LoginRequiredMixin, TemplateView):
+    template_name = 'friend_list.html'
+
+    def get(self, request):
+        friends = Friend.objects.friends(request.user)
+        return render(request, self.template_name, {
+            get_friendship_context_object_name(): request.user,
+            "friendship_context_object_name": get_friendship_context_object_name(),
+            "friends": friends,
+        })
