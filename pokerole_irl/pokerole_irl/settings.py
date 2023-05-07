@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'pokerole_app',
     'user_app',
     'worlds_app'
+    'friendship'
 ]
 
 MIDDLEWARE = [
