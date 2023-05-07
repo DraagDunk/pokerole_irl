@@ -1,7 +1,7 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import redirect
 from django.urls import reverse_lazy
-from django.views.generic import CreateView, ListView, DetailView
+from django.views.generic import CreateView, ListView, DetailView, UpdateView
 from django.core.exceptions import PermissionDenied
 from .models import World, Character, WorldMember
 
@@ -30,7 +30,6 @@ class WorldView(LoginRequiredMixin, DetailView):
         return context
 
 
-
 class WorldCreateView(LoginRequiredMixin, CreateView):
     template_name = "world_create.html"
     model = World
@@ -47,6 +46,22 @@ class WorldCreateView(LoginRequiredMixin, CreateView):
         membership.save()
         return response
 
+class WorldUpdateView(LoginRequiredMixin, UpdateView):
+    template_name = "world_update.html"
+    model = World
+    fields = ("__all__")
+    context_object_name = "world"
+
+    def dispatch(self, request, *args, **kwargs):
+        self.world = World.objects.get(pk=self.kwargs.get("pk"))
+        if request.user.is_superuser or self.world.user == request.user:
+            return super().dispatch(request, *args, **kwargs)
+        else:
+            raise PermissionDenied("You are not the owner of this world.")
+    
+    def get_success_url(self) -> str:
+        return reverse_lazy('world', kwargs={"pk":self.object.pk})
+        
 class CharacterView(LoginRequiredMixin, DetailView):
     template_name = "character.html"
     model = Character
@@ -74,3 +89,19 @@ class CharacterCreateView(LoginRequiredMixin, CreateView):
         self.object.owner = self.request.user
         self.object.world = self.world
         return super().form_valid(form)
+
+class CharacterUpdateView(LoginRequiredMixin, UpdateView):
+    template_name = "character_update.html"
+    model = Character
+    fields = ("__all__")
+    context_object_name = "character"
+
+    def dispatch(self, request, *args, **kwargs):
+        self.world = World.objects.get(pk=self.kwargs.get("world_pk"))
+        if request.user.is_superuser or self.owner == request.user:
+            return super().dispatch(request, *args, **kwargs)
+        else:
+            raise PermissionDenied("You are not the owner of this world.")
+        
+    def get_success_url(self) -> str:
+        return reverse_lazy('character', kwargs={"world_pk":self.object.world.pk, "pk":self.object.pk})

@@ -1,0 +1,33 @@
+{% load static %}
+
+{% include "partials/header.html" %}
+
+<head>
+    <link href="{% static 'form.css' %}" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="widget">
+        <h1>Edit World</h1>
+        <form class="edit_form form" method="post">
+            {% csrf_token %}
+
+            <div class="field">
+                {{ form.as_p }}
+                <div>
+                {% for error in form.name.errors %}
+                    <div class="field_error">
+                        {{ error }}
+                    </div>
+                {% endfor %}
+                </div>
+            </div>
+
+            <button class="submit_button" type="submit" value="Save">Save</button>
+
+        </form>
+
+    </div>
+
+</body>
