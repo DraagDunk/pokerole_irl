@@ -2,6 +2,8 @@
 
 ## 3/5-2023
 
+- Installed Django debug toolbar
+
 - Fixed an issue where pokedexes with owners could not be accessed.
 
 ## 12/3-2023
