@@ -1,0 +1,15 @@
+{% load static %}
+
+<head>
+    <link href="{% static 'filter.css' %}" rel="stylesheet">
+</head>
+
+<div class="options_menu">
+    <div class="buttons">
+        <a class="button" title="Add pokédex" href="{% url 'pokedex_add' %}">
+            <span class="material-symbols-outlined">
+                add
+            </span>
+        </a>
+    </div>
+</div>
