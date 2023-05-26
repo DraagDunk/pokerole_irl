@@ -4,6 +4,14 @@
 
 - Added slugs to the Character, World, Profile and Pokedex models.
 
+## 3/5-2023
+
+- Fixed table row height in pokédex while waiting for images to load.
+
+- Installed Django debug toolbar
+
+- Fixed an issue where pokedexes with owners could not be accessed.
+
 ## 12/3-2023
 
 - Pokédex model in the admin page no longer crashes at it attempts to load all entries.

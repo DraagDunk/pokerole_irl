@@ -8,6 +8,10 @@ table {
     padding: 1rem;
 }
 
+table tbody tr {
+    height: 60px;
+}
+
 table tbody tr:nth-of-type(2n-1) {
     background-color: var(--color-secondary);
 }

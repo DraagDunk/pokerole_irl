@@ -18,7 +18,7 @@
                     <th class="prio-1">Image</th>
                     <th class="prio-1">Name</th>
                     <th class="prio-2">Category</th>
-                    <th class="prio-1">Types</th>
+                    <th class="prio-2">Types</th>
                     <th class="prio-3">Abilities</th>
                     <th class="prio-4">Height</th>
                     <th class="prio-4">Weight</th>
@@ -37,7 +37,7 @@
                     <td class="prio-1">{{ entry.number }}</td>
                     <td class="prio-1"><img src="{{ entry.species.box_image }}"/></td>
                     <td class="prio-1"><a href="{% url "pokedex_entry" pokedex.slug entry.pk %}">{{ entry.species.name }}</a></td>
-                    <td class="prio-1">{{ entry.species.category }}</td>
+                    <td class="prio-2">{{ entry.species.category }}</td>
                     <td class="prio-2" title="Weaknesses: {{ entry.species.weaknesses }}; Resistances: {{ entry.species.resistances }}"><span class="{{ entry.species.primary_type|lower }} type">{{ entry.species.primary_type|upper }}</span>{% if entry.species.secondary_type %}<span class="{{ entry.species.secondary_type|lower }} type">{{ entry.species.secondary_type|upper }}</span>{% endif %}</td>
                     <td class="prio-3"><ul class="comma-list">
                         {% for ability in entry.species.abilities.all %}
@@ -83,6 +83,6 @@
 
     
 
-    {% include "partials/options.html" %}
+    {% include "partials/pokedex_options.html" %}
     
 </body>
