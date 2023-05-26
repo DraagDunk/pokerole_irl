@@ -2,6 +2,8 @@
 
 ## 3/5-2023
 
+- Fixed table row height in pokédex while waiting for images to load.
+
 - Installed Django debug toolbar
 
 - Fixed an issue where pokedexes with owners could not be accessed.
