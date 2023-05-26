@@ -1,5 +1,9 @@
 # Changelog
 
+## 5/5-2023
+
+- Added slugs to the Character, World, Profile and Pokedex models.
+
 ## 3/5-2023
 
 - Fixed table row height in pokédex while waiting for images to load.

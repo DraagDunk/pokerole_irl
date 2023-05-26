@@ -7,6 +7,7 @@ from .models import World, Character, WorldMember
 
 # Create your views here.
 
+
 class WorldListView(LoginRequiredMixin, ListView):
     template_name = "world_list.html"
     model = World
@@ -17,6 +18,7 @@ class WorldListView(LoginRequiredMixin, ListView):
         queryset = super().get_queryset()
         return queryset.filter(members=self.request.user)
 
+
 class WorldView(LoginRequiredMixin, DetailView):
     template_name = "world.html"
     model = World
@@ -26,9 +28,9 @@ class WorldView(LoginRequiredMixin, DetailView):
         # Call the base implementation first to get a context
         context = super(WorldView, self).get_context_data(**kwargs)
         # Add in a QuerySet of all charactes in the world
-        context['character_list'] = Character.objects.filter(world=self.object.id)
+        context['character_list'] = Character.objects.filter(
+            world=self.object.id)
         return context
-
 
 
 class WorldCreateView(LoginRequiredMixin, CreateView):
@@ -37,20 +39,23 @@ class WorldCreateView(LoginRequiredMixin, CreateView):
     fields = ("__all__")
 
     def get_success_url(self) -> str:
-        return reverse_lazy('world', kwargs={"pk":self.object.pk})
+        return reverse_lazy('world', kwargs={"slug": self.object.slug})
 
     def form_valid(self, form):
         # set the querying user as the Owner
         response = super().form_valid(form)
-        membership, _ = WorldMember.objects.get_or_create(user=self.request.user, world=self.object)
+        membership, _ = WorldMember.objects.get_or_create(
+            user=self.request.user, world=self.object)
         membership.role = "Owner"
         membership.save()
         return response
+
 
 class CharacterView(LoginRequiredMixin, DetailView):
     template_name = "character.html"
     model = Character
     context_object_name = "character"
+
 
 class CharacterCreateView(LoginRequiredMixin, CreateView):
     template_name = "character_create.html"
@@ -59,7 +64,7 @@ class CharacterCreateView(LoginRequiredMixin, CreateView):
     fields = ("first_name", "last_name", "description")
 
     def dispatch(self, request, *args, **kwargs):
-        self.world = World.objects.get(pk=self.kwargs.get("world_pk"))
+        self.world = World.objects.get(slug=self.kwargs.get("world_slug"))
 
         if request.user.is_superuser or self.request.user in self.world.members.all():
             return super().dispatch(request, *args, **kwargs)
@@ -67,7 +72,7 @@ class CharacterCreateView(LoginRequiredMixin, CreateView):
             raise PermissionDenied("You do not have access to this world")
 
     def get_success_url(self) -> str:
-        return reverse_lazy('character', kwargs={"world_pk":self.object.world.pk, "pk":self.object.pk})
+        return reverse_lazy('character', kwargs={"world_slug": self.object.world.slug, "slug": self.object.slug})
 
     def form_valid(self, form):
         self.object = form.save(commit=False)

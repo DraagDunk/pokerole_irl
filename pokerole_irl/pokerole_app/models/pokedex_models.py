@@ -1,6 +1,8 @@
 from django.db import models
+from django.db.models.constraints import UniqueConstraint
 from django.urls import reverse_lazy
 from django.contrib.auth import get_user_model
+from django.template.defaultfilters import slugify
 
 from .species_models import PokemonSpecies
 
@@ -10,12 +12,19 @@ class Pokedex(models.Model):
     species = models.ManyToManyField(PokemonSpecies, through='PokedexEntry')
     owner = models.ForeignKey(
         get_user_model(), null=True, blank=True, on_delete=models.SET_NULL)
+    slug = models.SlugField(blank=True)
 
     def __str__(self):
         return self.name
 
     def get_absolute_url(self):
-        return reverse_lazy("pokedex_entries", kwargs={"dex_pk": self.pk})
+        return reverse_lazy("pokedex_entries", kwargs={"dex_slug": self.slug})
+
+    def save(self, **kwargs):
+        self.slug = slugify(self.name)
+        super().save(**kwargs)
+
+    UniqueConstraint(fields=["name"], name="name_constraint")
 
 
 class PokedexEntry(models.Model):
@@ -38,4 +47,4 @@ class PokedexEntry(models.Model):
         return f"{self.pokedex} #{self.number}: {self.species}"
 
     def get_absolute_url(self):
-        return reverse_lazy("pokedex_entry", kwargs={"dex_pk": self.pokedex.pk, "pk": self.pk})
+        return reverse_lazy("pokedex_entry", kwargs={"dex_slug": self.pokedex.slug, "pk": self.pk})
