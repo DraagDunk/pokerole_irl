@@ -31,6 +31,6 @@ jobs:
         pipenv --rm
     - name: Run Tests
       run: |
-        python pokerole_irl/manage.py test
+        python pokerole_irl/manage.py test pokerole_app.tests
       env:
         DEVELOPMENT_MODE: "True"

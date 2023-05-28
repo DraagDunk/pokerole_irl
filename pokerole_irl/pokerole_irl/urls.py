@@ -21,7 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('pokerole_app.urls')),
     path('accounts/', include('user_app.urls')),
-    path('', include('django.contrib.auth.urls')),
     path('worlds/', include('worlds_app.urls')),
     path('__debug__/', include('debug_toolbar.urls')),
 ] + staticfiles_urlpatterns()
