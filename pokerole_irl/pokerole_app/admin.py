@@ -1,4 +1,8 @@
+from typing import Any, Optional
 from django.contrib import admin
+from django.db.models.fields.related import ManyToManyField
+from django.forms.models import ModelMultipleChoiceField
+from django.http.request import HttpRequest
 
 from .models.ability_models import Ability
 from .models.base_models import Type, Nature, Item
@@ -21,6 +25,17 @@ class AbilityAdmin(admin.ModelAdmin):
 @admin.register(Pokemon)
 class PokemonAdmin(admin.ModelAdmin):
     list_display = ('__str__', 'rank')
+
+    def get_object(self, request, object_id, from_field):
+        self.object = super().get_object(request, object_id, from_field)
+        return self.object
+
+    def formfield_for_manytomany(self, db_field, request, **kwargs):
+        if db_field.name == "moves":
+            moves = Move.objects.filter(
+                moveset__species=self.object.species, moveset__learned__lte=self.object.rank)
+            kwargs['queryset'] = moves
+        return super().formfield_for_manytomany(db_field, request, **kwargs)
 
 
 @admin.register(PokemonSpecies)

@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth import get_user_model
 
 from .species_models import PokemonSpecies
 from .base_models import Item, Nature, RankChoices
@@ -11,8 +12,11 @@ class Pokemon(models.Model):
     nickname = models.CharField(max_length=100, null=True, blank=True)
     trainer = models.ForeignKey(
         Character, blank=True, null=True, related_name='owned_pokemon', on_delete=models.SET_NULL)
+    owner = models.ForeignKey(
+        get_user_model(), blank=True, null=True, on_delete=models.CASCADE)
 
-    nature = models.ForeignKey(Nature, null=True, on_delete=models.SET_NULL)
+    pokemon_nature = models.ForeignKey(
+        Nature, null=True, on_delete=models.SET_NULL)
 
     happiness = models.PositiveIntegerField(default=1)
     loyalty = models.PositiveIntegerField(default=1)
@@ -65,6 +69,10 @@ class Pokemon(models.Model):
             return f"{self.trainer}'s {self.species} '{self.nickname or self.species}'"
         else:
             return f"Wild {self.species} '{self.nickname or self.species}'"
+
+    @property
+    def name(self):
+        return self.nickname or self.species.name
 
     @property
     def hp(self):

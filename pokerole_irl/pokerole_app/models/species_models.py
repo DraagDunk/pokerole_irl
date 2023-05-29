@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse_lazy
 
 from .base_models import Type, RankChoices
 from .ability_models import Ability
@@ -131,6 +132,9 @@ class PokemonSpecies(models.Model):
 
     def box_image(self):
         return f"https://raw.githubusercontent.com/Willowlark/Pokerole-Data/master/images/BoxSprites/{self.image_name}"
+
+    def get_absolute_url(self):
+        return reverse_lazy("species", kwargs={"pk": self.pk})
 
 
 class Evolution(models.Model):
