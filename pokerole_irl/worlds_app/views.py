@@ -1,5 +1,5 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.shortcuts import redirect
+from django.shortcuts import get_object_or_404
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, ListView, DetailView
 from django.core.exceptions import PermissionDenied
@@ -24,12 +24,16 @@ class WorldView(LoginRequiredMixin, DetailView):
     model = World
     context_object_name = "world"
 
+    def get_queryset(self):
+        qs = super().get_queryset()
+        return qs.filter(members=self.request.user)
+
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
         context = super(WorldView, self).get_context_data(**kwargs)
         # Add in a QuerySet of all charactes in the world
         context['character_list'] = Character.objects.filter(
-            world=self.object.id)
+            world=self.object)
         return context
 
 
@@ -56,6 +60,13 @@ class CharacterView(LoginRequiredMixin, DetailView):
     model = Character
     context_object_name = "character"
 
+    def get_queryset(self):
+        allowed_worlds = World.objects.filter(members=self.request.user)
+        world = get_object_or_404(
+            allowed_worlds, slug=self.kwargs.get('world_slug'))
+        qs = super().get_queryset()
+        return qs.filter(world=world)
+
 
 class CharacterCreateView(LoginRequiredMixin, CreateView):
     template_name = "character_create.html"
@@ -63,13 +74,13 @@ class CharacterCreateView(LoginRequiredMixin, CreateView):
 
     fields = ("first_name", "last_name", "description")
 
-    def dispatch(self, request, *args, **kwargs):
-        self.world = World.objects.get(slug=self.kwargs.get("world_slug"))
+    def get(self, request, *args, **kwargs):
+        self.check_world(request, **kwargs)
+        return super().get(request, *args, **kwargs)
 
-        if request.user.is_superuser or self.request.user in self.world.members.all():
-            return super().dispatch(request, *args, **kwargs)
-        else:
-            raise PermissionDenied("You do not have access to this world")
+    def post(self, request, *args, **kwargs):
+        self.check_world(request, **kwargs)
+        return super().post(request, *args, **kwargs)
 
     def get_success_url(self) -> str:
         return reverse_lazy('character', kwargs={"world_slug": self.object.world.slug, "slug": self.object.slug})
@@ -79,3 +90,8 @@ class CharacterCreateView(LoginRequiredMixin, CreateView):
         self.object.owner = self.request.user
         self.object.world = self.world
         return super().form_valid(form)
+
+    def check_world(self, request, **kwargs):
+        allowed_worlds = World.objects.filter(members=request.user)
+        self.world = get_object_or_404(
+            allowed_worlds, slug=kwargs.get("world_slug"))

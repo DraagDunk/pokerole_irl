@@ -32,5 +32,6 @@ jobs:
     - name: Run Tests
       run: |
         python pokerole_irl/manage.py test pokerole_app.tests
+        python pokerole_irl/manage.py test worlds_app
       env:
         DEVELOPMENT_MODE: "True"
