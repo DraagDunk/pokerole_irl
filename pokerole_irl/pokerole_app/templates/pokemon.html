@@ -270,12 +270,12 @@
                             </tr>
                             <tr>
                                 <td>Accuracy:</td>
-                                <td>{{ move.primary_accuracy }}{% if move.secondary_accuracy %} + {{ move.secondary_accuracy }}{% endif %}</td>
+                                <td>{% calc_accuracy move pokemon %} ({{ move.primary_accuracy }}{% if move.secondary_accuracy %} + {{ move.secondary_accuracy }}{% endif %})</td>
                             </tr>
                             {% if move.damage_stat %}
                             <tr>
                                 <td>Damage pool:</td>
-                                <td>{{ move.damage_stat }} + {{ move.power }}{% if move.damage_modifier %} + {{ damage_modifier }}{% endif %}</td>
+                                <td>{% calc_damage move pokemon %} ({{ move.damage_stat }} + {{ move.power }}{% if move.damage_modifier %} + {{ damage_modifier }}{% endif %})</td>
                             </tr>
                             {% endif %}
                             <tr>
