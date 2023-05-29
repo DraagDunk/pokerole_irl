@@ -1,13 +1,6 @@
 from django.views.generic import TemplateView
-from django.shortcuts import redirect
-from django.urls import reverse_lazy
+from django.contrib.auth.mixins import LoginRequiredMixin
 
-class MainPageView(TemplateView):
+
+class MainPageView(LoginRequiredMixin, TemplateView):
     template_name = "index.html"
-
-    def dispatch(self, request, *args, **kwargs):
-        if request.user.is_authenticated:
-            return super().dispatch(request, *args, **kwargs)
-        else:
-            return redirect(reverse_lazy('login'))
-        

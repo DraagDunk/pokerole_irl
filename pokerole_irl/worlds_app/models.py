@@ -10,6 +10,9 @@ class World(models.Model):
     description = models.TextField(default="")
     slug = models.SlugField(blank=True)
 
+    class Meta:
+        ordering = ["name"]
+
     def __str__(self):
         return self.name
 

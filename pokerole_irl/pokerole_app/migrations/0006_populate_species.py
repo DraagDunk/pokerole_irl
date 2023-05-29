@@ -68,6 +68,6 @@ class Migration(migrations.Migration):
             name='dex_id',
             field=models.CharField(max_length=20),
         ),
-        migrations.RunPython(
-            create_species, reverse_code=migrations.RunPython.noop),
+        # migrations.RunPython(
+        #     create_species, reverse_code=migrations.RunPython.noop),
     ]

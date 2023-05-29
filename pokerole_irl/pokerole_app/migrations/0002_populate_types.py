@@ -90,12 +90,12 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.RunPython(
-            create_types, reverse_code=migrations.RunPython.noop),
-        migrations.RunPython(
-            add_weaknesses, reverse_code=migrations.RunPython.noop),
-        migrations.RunPython(
-            add_resistances, reverse_code=migrations.RunPython.noop),
-        migrations.RunPython(
-            add_immunities, reverse_code=migrations.RunPython.noop)
+        # migrations.RunPython(
+        #     create_types, reverse_code=migrations.RunPython.noop),
+        # migrations.RunPython(
+        #     add_weaknesses, reverse_code=migrations.RunPython.noop),
+        # migrations.RunPython(
+        #     add_resistances, reverse_code=migrations.RunPython.noop),
+        # migrations.RunPython(
+        #     add_immunities, reverse_code=migrations.RunPython.noop)
     ]

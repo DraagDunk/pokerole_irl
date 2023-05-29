@@ -53,6 +53,9 @@ class Move(models.Model):
     target = models.CharField(
         max_length=30, choices=TargetChoices.choices, null=True, blank=True)
 
+    class Meta:
+        ordering = ["name"]
+
     def __str__(self):
         return self.name
 
@@ -63,7 +66,11 @@ class Move(models.Model):
     def effectiveness(self):
         eff_list = []
 
-        for key, val in self.move_type.get_effectiveness().items():
-            eff_list.append(f"{key} x{val}")
+        try:
+            for key, val in self.move_type.get_effectiveness().items():
+                eff_list.append(f"{key} x{val}")
 
-        return ", ".join(eff_list)
+            return ", ".join(eff_list)
+        except AttributeError as e:
+            print(f'No type given for the move {self.name}: {e}')
+            return "N/A"
