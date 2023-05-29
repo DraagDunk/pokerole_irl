@@ -1,6 +1,6 @@
 from django.db import models
 
-from .base_models import Type
+from .base_models import Type, RankChoices
 from .ability_models import Ability
 from .move_models import Move
 
@@ -144,4 +144,5 @@ class Evolution(models.Model):
 class MoveSet(models.Model):
     species = models.ForeignKey(PokemonSpecies, on_delete=models.CASCADE)
     move = models.ForeignKey(Move, on_delete=models.CASCADE)
-    learned = models.CharField(max_length=30)
+    learned = models.PositiveIntegerField(
+        default=0, choices=RankChoices.choices)

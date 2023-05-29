@@ -5,6 +5,7 @@ from .models.base_models import Type, Nature, Item
 from .models.move_models import Move
 from .models.pokedex_models import Pokedex, PokedexEntry
 from .models.species_models import PokemonSpecies, Evolution, MoveSet
+from .models.pokemon_models import Pokemon
 
 
 @admin.register(Move)
@@ -15,6 +16,11 @@ class MoveAdmin(admin.ModelAdmin):
 @admin.register(Ability)
 class AbilityAdmin(admin.ModelAdmin):
     list_display = ('__str__',)
+
+
+@admin.register(Pokemon)
+class PokemonAdmin(admin.ModelAdmin):
+    list_display = ('__str__', 'rank')
 
 
 @admin.register(PokemonSpecies)

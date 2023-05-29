@@ -161,7 +161,7 @@
                         {% for move in moveset %}
                         <tr>
                             <td title="{{ move.move.effect }}"><a href="{{ move.move.get_absolute_url }}">{{ move.move.name }}</a></td>
-                            <td>{{ move.learned }}</td>
+                            <td>{{ move.get_learned_display }}</td>
                         </tr>
                         {% endfor %}
                     </tbody>
