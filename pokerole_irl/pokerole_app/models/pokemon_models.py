@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth import get_user_model
+from django.urls import reverse_lazy
 
 from .species_models import PokemonSpecies
 from .base_models import Item, Nature, RankChoices
@@ -152,3 +153,6 @@ class Pokemon(models.Model):
 
     def constrain_stat(self, stat, base_stat, max_stat):
         return min([max([stat, base_stat]), max_stat])
+
+    def get_absolute_url(self):
+        return reverse_lazy("pokemon", kwargs={"pk": self.pk})

@@ -17,6 +17,15 @@
           </span>
         </div>
       </div>
+      <div class="owned_pokemon">
+        {% for pokemon in character.owned_pokemon.all %}
+          <div class="pokemon">
+            <img src="{{ pokemon.species.box_image }}"/>
+            <a href="{{ pokemon.get_absolute_url }}">{{ pokemon.name }}</a>
+          </div>
+        {% endfor %}
+        <a href="{% url "pokemon_add_for" world.slug character.slug %}">Add pokémon</a>
+      </div>
       <div class="links">
         <a href="{%url "world" character.world.slug %}"> Back To Setting </a>
       </div>

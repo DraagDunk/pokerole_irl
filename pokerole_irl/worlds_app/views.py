@@ -1,3 +1,4 @@
+from typing import Any, Dict
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import get_object_or_404
 from django.urls import reverse_lazy
@@ -62,10 +63,15 @@ class CharacterView(LoginRequiredMixin, DetailView):
 
     def get_queryset(self):
         allowed_worlds = World.objects.filter(members=self.request.user)
-        world = get_object_or_404(
+        self.world = get_object_or_404(
             allowed_worlds, slug=self.kwargs.get('world_slug'))
         qs = super().get_queryset()
-        return qs.filter(world=world)
+        return qs.filter(world=self.world)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['world'] = self.world
+        return context
 
 
 class CharacterCreateView(LoginRequiredMixin, CreateView):
