@@ -4,6 +4,8 @@
 
 - Added basic pokémon character functionality.
 
+- Added titles to Character model.
+
 ## 5/5-2023
 
 - Added slugs to the Character, World, Profile and Pokedex models.

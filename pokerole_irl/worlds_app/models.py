@@ -28,13 +28,14 @@ class Character(models.Model):
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     world = models.ForeignKey(
         World, blank=True, null=True, on_delete=models.SET_NULL)
+    title = models.CharField(max_length=100, blank=True, null=True)
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     description = models.TextField(default="")
     slug = models.SlugField(blank=True)
 
     def __str__(self):
-        return f"{self.first_name} {self.last_name}"
+        return f"{self.title} {self.first_name}" if self.title else f"{self.first_name} {self.last_name}"
 
     def save(self, **kwargs):
         self.slug = slugify(str(self))
