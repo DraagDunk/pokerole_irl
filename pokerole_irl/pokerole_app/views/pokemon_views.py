@@ -1,7 +1,10 @@
 from typing import Any, Dict
-from django.views.generic import DetailView, CreateView
+from django.forms.models import BaseModelForm
+from django.http import HttpResponse
+from django.views.generic import DetailView, CreateView, UpdateView
 from django.forms import ModelForm
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.urls import reverse
 
 from ..models.pokemon_models import Pokemon
 from worlds_app.models import Character
@@ -50,3 +53,16 @@ class PokemonCreateView(LoginRequiredMixin, CreateView):
         kwargs = super().get_form_kwargs()
         kwargs['user'] = self.request.user
         return kwargs
+
+
+class PokemonUpdateView(LoginRequiredMixin, UpdateView):
+    model = Pokemon
+    template_name = "pokemon_edit.html"
+    fields = ("nickname", "rank", "strength", "dexterity",
+              "vitality", "special", "insight")
+    context_object_name = "pokemon"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["species"] = self.object.species
+        return context

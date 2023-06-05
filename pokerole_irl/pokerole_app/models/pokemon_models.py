@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth import get_user_model
 from django.urls import reverse_lazy
+from django.template.defaultfilters import slugify
 
 from .species_models import PokemonSpecies
 from .base_models import Item, Nature, RankChoices
@@ -15,6 +16,7 @@ class Pokemon(models.Model):
         Character, blank=True, null=True, related_name='owned_pokemon', on_delete=models.SET_NULL)
     owner = models.ForeignKey(
         get_user_model(), blank=True, null=True, on_delete=models.CASCADE)
+    slug = models.SlugField()
 
     pokemon_nature = models.ForeignKey(
         Nature, null=True, on_delete=models.SET_NULL)
@@ -113,6 +115,9 @@ class Pokemon(models.Model):
 
     def save(self):
         species = self.species
+        self.slug = slugify(f"{species.name}_{self.nickname}")
+        print(self.slug)
+
         # Stats
         self.strength = self.constrain_stat(
             self.strength, species.base_strength, species.max_strength)
@@ -155,4 +160,4 @@ class Pokemon(models.Model):
         return min([max([stat, base_stat]), max_stat])
 
     def get_absolute_url(self):
-        return reverse_lazy("pokemon", kwargs={"pk": self.pk})
+        return reverse_lazy("pokemon", kwargs={"slug": self.slug})
