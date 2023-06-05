@@ -7,9 +7,9 @@
 {% if request.user.is_superuser or is_owner %}
 <div class="options_menu">
     <div class="editor_menu menu closed">
-        <a class="button" href="{% url 'pokedex_entry_add' pokedex.pk %}">Add entry</a>
-        <a class="button" href="{% url 'pokedex_entry_edit' pokedex.pk entry.pk %}">Edit entry</a>
-        <a class="button" href="{% url 'pokedex_entry_delete' pokedex.pk entry.pk %}">Delete entry</a>
+        <a class="button" href="{% url 'pokedex_entry_add' pokedex.slug %}">Add entry</a>
+        <a class="button" href="{% url 'pokedex_entry_edit' pokedex.slug entry.pk %}">Edit entry</a>
+        <a class="button" href="{% url 'pokedex_entry_delete' pokedex.slug entry.pk %}">Delete entry</a>
     </div>
     <div class="buttons">
         <button type="button" id="editor_menu_button" class="editor menu_button" controls-menu="editor_menu">
