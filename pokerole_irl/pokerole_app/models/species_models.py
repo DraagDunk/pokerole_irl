@@ -1,6 +1,7 @@
 from django.db import models
+from django.urls import reverse_lazy
 
-from .base_models import Type
+from .base_models import Type, RankChoices
 from .ability_models import Ability
 from .move_models import Move
 
@@ -132,6 +133,9 @@ class PokemonSpecies(models.Model):
     def box_image(self):
         return f"https://raw.githubusercontent.com/Willowlark/Pokerole-Data/master/images/BoxSprites/{self.image_name}"
 
+    def get_absolute_url(self):
+        return reverse_lazy("species", kwargs={"pk": self.pk})
+
 
 class Evolution(models.Model):
     from_species = models.ForeignKey(PokemonSpecies, on_delete=models.CASCADE)
@@ -144,4 +148,5 @@ class Evolution(models.Model):
 class MoveSet(models.Model):
     species = models.ForeignKey(PokemonSpecies, on_delete=models.CASCADE)
     move = models.ForeignKey(Move, on_delete=models.CASCADE)
-    learned = models.CharField(max_length=30)
+    learned = models.PositiveIntegerField(
+        default=0, choices=RankChoices.choices)

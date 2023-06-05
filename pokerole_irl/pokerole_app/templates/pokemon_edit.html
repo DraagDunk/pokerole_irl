@@ -1,0 +1,59 @@
+{% load static %}
+
+{% include "partials/header.html" %}
+
+<head>
+    <link href="{% static 'form.css' %}" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="widget">
+        <h1>Edit {{ pokemon.name }}</h1>
+        <form class="edit_form form" method="post" action="{% url 'pokemon_edit' pokemon.slug %}">
+            {% csrf_token %}
+
+            {{ form.errors }}
+
+            <div class="field">
+                <label for="id_nickname">Nickname</label>
+                {{ form.nickname }}
+            </div>
+
+            <div class="field">
+                <label for="id_rank">Rank</label>
+                {{ form.rank }}
+            </div>
+
+            <div class="field">
+                <label for="id_strength">Strength</label>
+                <input type="number" name="strength" min="{{ species.base_strength }}" max="{{ species.max_strength }}" required id="id_strength" value="{{ pokemon.strength }}">
+            </div>
+
+            <div class="field">
+                <label for="id_dexterity">Dexterity</label>
+                <input type="number" name="dexterity" min="{{ species.base_dexterity }}" max="{{ species.max_dexterity }}" required id="id_dexterity" value="{{ pokemon.dexterity }}">
+            </div>
+
+            <div class="field">
+                <label for="id_vitality">Vitality</label>
+                <input type="number" name="vitality" min="{{ species.base_vitality }}" max="{{ species.max_vitality }}" required id="id_vitality" value="{{ pokemon.vitality }}">
+            </div>
+
+            <div class="field">
+                <label for="id_special">Special</label>
+                <input type="number" name="special" min="{{ species.base_special }}" max="{{ species.max_special }}" required id="id_special" value="{{ pokemon.special }}">
+            </div>
+
+            <div class="field">
+                <label for="id_insight">Insight</label>
+                <input type="number" name="insight" min="{{ species.base_insight }}" max="{{ species.max_insight }}" required id="id_insight" value="{{ pokemon.insight }}">
+            </div>
+
+            <button class="submit_button" type="submit" value="Create">Save</button>
+
+        </form>
+
+    </div>
+
+</body>

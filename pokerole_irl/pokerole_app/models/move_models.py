@@ -74,3 +74,15 @@ class Move(models.Model):
         except AttributeError as e:
             print(f'No type given for the move {self.name}: {e}')
             return "N/A"
+
+    def calc_accuracy(self, pokemon):
+        primary = getattr(pokemon, self.primary_accuracy.lower())
+        secondary = getattr(pokemon, self.secondary_accuracy.lower())
+        return primary + secondary
+
+    def calc_damage(self, pokemon):
+        damage_stat = getattr(pokemon, self.damage_stat.lower())
+        modifier = getattr(pokemon, self.damage_modifier.lower()
+                           ) if self.damage_modifier else 0
+        power = self.power
+        return damage_stat + modifier + power

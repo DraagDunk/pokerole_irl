@@ -1,6 +1,16 @@
 from django.db import models
 
 
+class RankChoices(models.IntegerChoices):
+    STARTER = (0, "Starter")
+    BEGINNER = (1, "Beginner")
+    AMATEUR = (2, "Amateur")
+    ACE = (3, "Ace")
+    PRO = (4, "Pro")
+    MASTER = (5, "Master")
+    CHAMPION = (6, "Champion")
+
+
 class Type(models.Model):
     name = models.CharField(max_length=30)
     resistances = models.ManyToManyField(

@@ -1,6 +1,3 @@
-from typing import Any, Optional
-from django.db import models
-from django.http import HttpRequest, HttpResponse
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.urls import reverse, reverse_lazy
 from django.core.exceptions import PermissionDenied

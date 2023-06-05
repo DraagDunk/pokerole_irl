@@ -1,5 +1,9 @@
 # Changelog
 
+## 5/6-2023
+
+- Added basic pokémon character functionality.
+
 ## 5/5-2023
 
 - Added slugs to the Character, World, Profile and Pokedex models.

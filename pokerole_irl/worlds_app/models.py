@@ -2,6 +2,7 @@ from django.db import models
 from django.db.models.constraints import UniqueConstraint
 from django.contrib.auth.models import User
 from django.template.defaultfilters import slugify
+from django.urls import reverse_lazy
 
 
 class World(models.Model):
@@ -38,6 +39,9 @@ class Character(models.Model):
     def save(self, **kwargs):
         self.slug = slugify(str(self))
         super().save(**kwargs)
+
+    def get_absolute_url(self):
+        return reverse_lazy("character", kwargs={"world_slug": self.world.slug, "slug": self.slug})
 
     UniqueConstraint(fields=["world", "first_name",
                      "last_name"], name="name_world_constraint")
