@@ -15,6 +15,7 @@ def stat_graphic(base_stat, max_stat):
 def calc_accuracy(move, pokemon):
     return move.calc_accuracy(pokemon)
 
+
 @register.simple_tag
 def calc_damage(move, pokemon):
     return move.calc_damage(pokemon)

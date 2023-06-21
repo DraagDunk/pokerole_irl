@@ -1,5 +1,11 @@
 # Changelog
 
+## 20/6-2023
+
+- It is now possible to add moves to a pokémon from the UI.
+
+  - It is fugly, but it works.
+
 ## 5/6-2023
 
 - Added basic pokémon character functionality.

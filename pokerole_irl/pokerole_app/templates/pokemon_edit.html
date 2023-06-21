@@ -50,6 +50,11 @@
                 <input type="number" name="insight" min="{{ species.base_insight }}" max="{{ species.max_insight }}" required id="id_insight" value="{{ pokemon.insight }}">
             </div>
 
+            <div class="field">
+                <label for="id_moves">Moves</label>
+                {{ form.moves }}
+            </div>
+
             <button class="submit_button" type="submit" value="Create">Save</button>
 
         </form>
