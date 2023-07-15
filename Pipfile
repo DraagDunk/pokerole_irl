@@ -9,7 +9,6 @@ psycopg2 = ">=2.8"
 django-health-check = "*"
 dj-database-url = "*"
 gunicorn = "*"
-django-friendship = "*"
 
 [dev-packages]
 

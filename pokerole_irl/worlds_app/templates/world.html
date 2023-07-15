@@ -51,17 +51,17 @@
                     {% for char in character_list %}
                     <tr>
                         <td title="utf"> 
-                          <a href="{%url "character" world.pk char.pk %}">{{ char.first_name }} {{ char.last_name }}</a>
+                          <a href="{%url "character" world.world_slug char.character_slug %}">{{ char.first_name }} {{ char.last_name }}</a>
                         </td>
                     </tr>
                     {% endfor %}
                 </tbody>
             </table>
             <div class="links">
-              <a href="{%url "character-create" world.pk%}"> Create New Character </a>
+              <a href="{%url "character-create" world.world_slug%}"> Create New Character </a>
             </div>
             <div class="links">
-              <a href="{%url "world-update" world.pk%}"> Edit Setting</a>
+              <a href="{%url "world-update" world.world_slug%}"> Edit Setting</a>
             </div>
             <div class="links">
                 <a class="back-link" href="{%url "world-list" %}"><< Back</a>

@@ -7,6 +7,7 @@ from .models import World, Character, WorldMember
 
 # Create your views here.
 
+
 class WorldListView(LoginRequiredMixin, ListView):
     template_name = "world_list.html"
     model = World
@@ -17,10 +18,13 @@ class WorldListView(LoginRequiredMixin, ListView):
         queryset = super().get_queryset()
         return queryset.filter(members=self.request.user)
 
+
 class WorldView(LoginRequiredMixin, DetailView):
     template_name = "world.html"
     model = World
     context_object_name = "world"
+    slug_field = 'world_slug'
+    slug_url_kwarg = 'world_slug'
 
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
@@ -33,23 +37,25 @@ class WorldView(LoginRequiredMixin, DetailView):
 class WorldCreateView(LoginRequiredMixin, CreateView):
     template_name = "world_create.html"
     model = World
-    fields = ("__all__")
+    fields = ("name", "members", "description")
 
     def get_success_url(self) -> str:
-        return reverse_lazy('world', kwargs={"pk":self.object.pk})
+        return reverse_lazy('world', kwargs={"slug": self.object.world_slug})
 
     def form_valid(self, form):
         # set the querying user as the Owner
         response = super().form_valid(form)
-        membership, _ = WorldMember.objects.get_or_create(user=self.request.user, world=self.object)
+        membership, _ = WorldMember.objects.get_or_create(
+            user=self.request.user, world=self.object)
         membership.role = "Owner"
         membership.save()
         return response
 
+
 class WorldUpdateView(LoginRequiredMixin, UpdateView):
     template_name = "world_update.html"
     model = World
-    fields = ("__all__")
+    fields = ("name", "members", "description")
     context_object_name = "world"
 
     def dispatch(self, request, *args, **kwargs):
@@ -58,14 +64,16 @@ class WorldUpdateView(LoginRequiredMixin, UpdateView):
             return super().dispatch(request, *args, **kwargs)
         else:
             raise PermissionDenied("You are not the owner of this world.")
-    
+
     def get_success_url(self) -> str:
-        return reverse_lazy('world', kwargs={"pk":self.object.pk})
-        
+        return reverse_lazy('world', kwargs={"slug":self.object.slug})
+
+
 class CharacterView(LoginRequiredMixin, DetailView):
     template_name = "character.html"
     model = Character
     context_object_name = "character"
+
 
 class CharacterCreateView(LoginRequiredMixin, CreateView):
     template_name = "character_create.html"
@@ -89,6 +97,7 @@ class CharacterCreateView(LoginRequiredMixin, CreateView):
         self.object.owner = self.request.user
         self.object.world = self.world
         return super().form_valid(form)
+
 
 class CharacterUpdateView(LoginRequiredMixin, UpdateView):
     template_name = "character_update.html"
