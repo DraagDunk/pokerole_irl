@@ -18,10 +18,10 @@
         </div>
       </div>
       <div class="links">
-        <a href="{%url "character-update" world_pk=character.world.id pk=character.pk %}"> Edit Character </a>
+        <a href="{%url "character-update" world_slug=character.world.world_slug character_slug=character.character_slug %}"> Edit Character </a>
       </div>
       <div class="links">
-        <a href="{%url "world" pk=character.world.id %}"> Back To Setting </a>
+        <a href="{%url "world" world_slug=character.world.world_slug %}"> Back To Setting </a>
       </div>
   </div>
 

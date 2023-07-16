@@ -1,11 +1,9 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.shortcuts import redirect
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, ListView, DetailView, UpdateView
 from django.core.exceptions import PermissionDenied
 from .models import World, Character, WorldMember
 
-# Create your views here.
 
 
 class WorldListView(LoginRequiredMixin, ListView):
@@ -33,6 +31,13 @@ class WorldView(LoginRequiredMixin, DetailView):
         context['character_list'] = Character.objects.filter(world=self.object.id)
         return context
 
+    def get_object(self, queryset=None):
+        """ Retrieve the object, and check if user is the owner or a superuser """
+        obj = super().get_object(queryset)
+        if self.request.user not in obj.members.all() and not self.request.user.is_superuser:
+            raise PermissionDenied("You are not the owner of this world.")
+        return obj
+
 
 class WorldCreateView(LoginRequiredMixin, CreateView):
     template_name = "world_create.html"
@@ -40,7 +45,7 @@ class WorldCreateView(LoginRequiredMixin, CreateView):
     fields = ("name", "members", "description")
 
     def get_success_url(self) -> str:
-        return reverse_lazy('world', kwargs={"slug": self.object.world_slug})
+        return self.object.get_absolute_url()
 
     def form_valid(self, form):
         # set the querying user as the Owner
@@ -57,22 +62,37 @@ class WorldUpdateView(LoginRequiredMixin, UpdateView):
     model = World
     fields = ("name", "members", "description")
     context_object_name = "world"
+    slug_field = 'world_slug'
+    slug_url_kwarg = 'world_slug'
 
     def dispatch(self, request, *args, **kwargs):
-        self.world = World.objects.get(pk=self.kwargs.get("pk"))
-        if request.user.is_superuser or self.world.user == request.user:
-            return super().dispatch(request, *args, **kwargs)
-        else:
-            raise PermissionDenied("You are not the owner of this world.")
+        self.world = World.objects.get(world_slug=self.kwargs.get("world_slug"))
+        return super().dispatch(request, *args, **kwargs)
 
     def get_success_url(self) -> str:
-        return reverse_lazy('world', kwargs={"slug":self.object.slug})
+        return self.object.get_absolute_url()
+
+    def get_object(self, queryset=None):
+        """ Retrieve the object, and check if user is the owner or a superuser """
+        obj = super().get_object(queryset)
+        if self.request.user not in obj.members.all() and not self.request.user.is_superuser:
+            raise PermissionDenied("You are not the owner of this world.")
+        return obj
 
 
 class CharacterView(LoginRequiredMixin, DetailView):
     template_name = "character.html"
     model = Character
     context_object_name = "character"
+    slug_field = 'character_slug'
+    slug_url_kwarg = 'character_slug'
+
+    def get_object(self, queryset=None):
+        """ Retrieve the object, and check if user is the owner or a superuser """
+        obj = super().get_object(queryset)
+        if not obj.owner == self.request.user and not self.request.user.is_superuser:
+            raise PermissionDenied("You are not the owner of this character")
+        return obj
 
 
 class CharacterCreateView(LoginRequiredMixin, CreateView):
@@ -82,7 +102,8 @@ class CharacterCreateView(LoginRequiredMixin, CreateView):
     fields = ("first_name", "last_name", "description")
 
     def dispatch(self, request, *args, **kwargs):
-        self.world = World.objects.get(pk=self.kwargs.get("world_pk"))
+        self.world = World.objects.get(world_slug=self.kwargs.get(
+            "world_slug"))
 
         if request.user.is_superuser or self.request.user in self.world.members.all():
             return super().dispatch(request, *args, **kwargs)
@@ -90,7 +111,9 @@ class CharacterCreateView(LoginRequiredMixin, CreateView):
             raise PermissionDenied("You do not have access to this world")
 
     def get_success_url(self) -> str:
-        return reverse_lazy('character', kwargs={"world_pk":self.object.world.pk, "pk":self.object.pk})
+        return reverse_lazy('character', kwargs={
+            "world_slug": self.object.world.world_slug,
+            "character_slug": self.object.character_slug})
 
     def form_valid(self, form):
         self.object = form.save(commit=False)
@@ -102,15 +125,24 @@ class CharacterCreateView(LoginRequiredMixin, CreateView):
 class CharacterUpdateView(LoginRequiredMixin, UpdateView):
     template_name = "character_update.html"
     model = Character
-    fields = ("__all__")
+    fields = ("owner", "world", "first_name", "last_name", "description")
     context_object_name = "character"
-
+    slug_field = 'character_slug'
+    slug_url_kwarg = 'character_slug'
     def dispatch(self, request, *args, **kwargs):
-        self.world = World.objects.get(pk=self.kwargs.get("world_pk"))
-        if request.user.is_superuser or self.owner == request.user:
-            return super().dispatch(request, *args, **kwargs)
-        else:
-            raise PermissionDenied("You are not the owner of this world.")
-        
+        self.world = World.objects.get(world_slug=self.kwargs.get(
+            "world_slug"))
+        return super().dispatch(request, *args, **kwargs)
+
+
     def get_success_url(self) -> str:
-        return reverse_lazy('character', kwargs={"world_pk":self.object.world.pk, "pk":self.object.pk})
+        return reverse_lazy('character', kwargs={
+            "world_slug": self.object.world.world_slug,
+            "character_slug": self.object.character_slug})
+
+    def get_object(self, queryset=None):
+        """ Retrieve the object, and check if user is the owner or a superuser """
+        obj = super().get_object(queryset)
+        if not obj.owner == self.request.user and not self.request.user.is_superuser:
+            raise PermissionDenied("You are not the owner of this character")
+        return obj

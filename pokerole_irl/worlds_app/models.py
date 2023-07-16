@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils.text import slugify
+from django.urls import reverse
 
 
 # Create your models here.
@@ -12,11 +13,14 @@ class World(models.Model):
 
     def __str__(self):
         return self.name
-    
+
     def save(self, *args, **kwargs):
         if not self.world_slug:
-            self.world_slug = slugify(self.name)
+            self.world_slug = self.world_slug or slugify(self.name)
         return super().save(*args, **kwargs)
+
+    def get_absolute_url(self):
+        return reverse('world', kwargs={"world_slug": self.world_slug})
 
 
 class Character(models.Model):
@@ -32,7 +36,7 @@ class Character(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.character_slug:
-            self.character_slug = slugify(self.first_name)
+            self.character_slug = self.character_slug or slugify(self.first_name)
         return super().save(*args, **kwargs)
 
 
