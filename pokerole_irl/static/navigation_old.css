@@ -1,37 +1,32 @@
-:root {
-    --color-header-bg: #ef6f6c;
-    --color-header-active: #e9a9a8;
+body {
+    min-height: calc(100vh - 5rem);
 }
 
 header {
-    position: sticky;
+    position: fixed;
     top: 0;
+    width: 100%;
     display: flex;
     justify-content: space-around;
 }
 
 header .header_menu {
+    position: fixed;
     width: 100%;
-    background-color: var(--color-header-bg);
+    background-color: var(--color-bg);
+    border-bottom: 2px solid var(--color-edges);
     height: fit-content;
+    top: 0;
+    max-width: 800px;
     z-index: 3;
 }
 
 .header_menu .burger {
-    margin: 0;
+    margin: 0.2rem;
     padding: 0.2rem;
     float: right;
     margin-left: auto;
     width: fit-content;
-    cursor: pointer;
-    border: none;
-    background-color: transparent;
-    color: black;
-    transition: background-color .5s linear;
-}
-
-.header_menu .burger:hover {
-    background-color: var(--color-header-active);
 }
 
 .header_menu .burger span {
@@ -39,7 +34,7 @@ header .header_menu {
 }
 
 .header_menu a {
-    margin: 0;
+    margin: 0.2rem 0;
     width: 100%;
     text-align: center;
     font-size: larger;
@@ -59,25 +54,23 @@ header .header_menu {
     display: none;
 }
 
+nav a {
+    margin: 1rem 0;
+    width: 6rem;
+}
+
 .menu {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding-right: 1rem;
+    padding: 0 1rem;
     max-width: 800px;
 }
 
 .menu .button {
     width: 100%;
-    text-decoration: none;
-    color: black;
-    transition: background-color .5s linear;
-    padding: 1rem 0;
-}
-
-.menu .button:hover {
-    background-color: var(--color-header-active);
+    margin: 0.2rem;
 }
 
 .closed.menu {

@@ -1,0 +1,11 @@
+{% include "partials/header.html" %}
+
+{% include "partials/navigation.html" %}
+
+<body>
+    <div class="content">
+        {% block body %}
+            {% comment %} Content goes here. {% endcomment %}
+        {% endblock body %}
+    </div>
+</body>
