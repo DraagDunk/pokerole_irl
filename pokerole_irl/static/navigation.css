@@ -87,6 +87,7 @@ header .header_menu {
 @media (min-width: 500px) {
     .menu {
         flex-direction: row;
+        padding-right: 0;
     }
 
     .burger {
@@ -95,18 +96,10 @@ header .header_menu {
 
     .header_menu nav.closed {
         display: flex;
+        margin: auto;
     }
 
     .overlay.visible {
         display: none;
-    }
-
-    .header_menu {
-        padding: 1rem;
-        border-left: 2px solid var(--color-edges);
-        border-right: 2px solid var(--color-edges);
-        border-bottom-right-radius: 2rem;
-        border-bottom-left-radius: 2rem;
-        max-width: 500px;
     }
 }
