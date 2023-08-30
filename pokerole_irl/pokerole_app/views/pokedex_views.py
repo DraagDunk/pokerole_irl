@@ -1,3 +1,4 @@
+from typing import List
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.urls import reverse, reverse_lazy
 from django.core.exceptions import PermissionDenied
@@ -11,10 +12,15 @@ from ..models.base_models import Type
 
 
 class PokedexListView(LoginRequiredMixin, ListView):
-    template_name = "pokedex_list.html"
     model = Pokedex
     context_object_name = "pokedexes"
     paginate_by = 10
+
+    def get(self, request, *args, **kwargs):
+        self.hx_trigger = request.headers.get("Hx-Trigger-Name", None)
+        response = super().get(request, *args, **kwargs)
+
+        return response
 
     def get_queryset(self):
         queryset = super().get_queryset()
@@ -24,6 +30,12 @@ class PokedexListView(LoginRequiredMixin, ListView):
             queryset = queryset.filter(
                 Q(owner=self.request.user) | Q(owner__isnull=True)).order_by("name").order_by("owner")
         return queryset
+
+    def get_template_names(self):
+        if self.hx_trigger == "load-next-page":
+            return "partials/pokedex_list_elements.html"
+        else:
+            return "pokedex_list.html"
 
 
 class PokedexCreateView(LoginRequiredMixin, CreateView):

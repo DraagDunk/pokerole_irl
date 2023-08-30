@@ -1,24 +1,35 @@
 {% load static %}
-
 <head>
     <link href="{% static 'navigation.css' %}" rel="stylesheet">
 </head>
-
 <header>
-    <div class="header_menu">
-        <button type="button" class="burger menu_button" controls-menu="main_menu"><span class="material-symbols-outlined">menu</span></button>
+    <div class="header_menu" hx-push-url="true">
+        <button type="button" class="burger menu_button" controls-menu="main_menu">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
         <nav class="closed main_menu menu">
-            <a class="button" href="{% url "index" %}">Home</a>
-            <a class="button" href="{% url "pokedex_list" %}">Pokédex</a>
+            <a class="button"
+               href=""
+               hx-get="{% url "index" %}"
+               hx-swap="outerHTML"
+               hx-trigger="click"
+               hx-target=".content"
+               hx-select=".content">Home</a>
+            <a class="button"
+               href=""
+               hx-get="{% url "pokedex_list" %}"
+               hx-swap="outerHTML"
+               hx-trigger="click"
+               hx-target=".content"
+               hx-select=".content">Pokédex</a>
             <a class="button" href="{% url "all_species" %}">All Species</a>
             {% if request.user.is_authenticated %}
-            <a class="button" href="{% url "user-profile" %}">Profile</a>
+                <a class="button" href="{% url "user-profile" %}">Profile</a>
             {% else %}
-            <a class="button" href="{% url "login" %}">Log In</a>
+                <a class="button" href="{% url "login" %}">Log In</a>
             {% endif %}
         </nav>
     </div>
-    <div class="overlay"/>
+    <div class="overlay" />
 </header>
-
 <script src="{% static "js/menu.js" %}"></script>

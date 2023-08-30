@@ -1,3 +1,8 @@
+:root {
+    --color-header-bg: #ef6f6c;
+    --color-header-active: #e9a9a8;
+}
+
 body {
     margin: 0;
 }

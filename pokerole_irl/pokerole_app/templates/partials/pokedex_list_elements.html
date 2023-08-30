@@ -1,0 +1,14 @@
+{% for pokedex in pokedexes %}
+    {% if forloop.last and page_obj.has_next %}
+        <tr name="load-next-page"
+            hx-get="{% url "pokedex_list" %}?page={{ page_obj.next_page_number }}"
+            hx-trigger="intersect once"
+            hx-swap="afterend">
+        {% else %}
+            <tr>
+            {% endif %}
+            <td class="prio-1">
+                <a href="{{ pokedex.get_absolute_url }}">{{ pokedex.name }}</a>
+            </td>
+        </tr>
+    {% endfor %}
