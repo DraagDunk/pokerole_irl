@@ -3,6 +3,9 @@
     border-collapse: collapse;
 }
 
+.pokedex-table tbody tr {
+    height: 60px;
+}
 
 .pokedex-table tr a {
     display: block;
@@ -16,10 +19,14 @@
     padding: 0;
 }
 
-.pokedex-table tr:nth-of-type(2n) a {
+.pokedex-table tr {
+    cursor: pointer;
+}
+
+.pokedex-table tr:nth-of-type(2n) {
     background-color: var(--color-header-bg);
 }
 
-.pokedex-table tr a:hover {
+.pokedex-table tr:hover {
     background-color: var(--color-header-active);
 }

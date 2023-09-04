@@ -4,14 +4,25 @@ from ..models.species_models import PokemonSpecies, Evolution, MoveSet
 
 
 class SpeciesListView(ListView):
-    template_name = "allspecies.html"
     model = PokemonSpecies
     context_object_name = "species"
     paginate_by = 20
 
+    def get(self, request, *args, **kwargs):
+        self.hx_trigger = request.headers.get("Hx-Trigger-Name", None)
+        response = super().get(request, *args, **kwargs)
+
+        return response
+
     def get_queryset(self):
         queryset = super().get_queryset()
         return queryset.order_by("dex_id")
+
+    def get_template_names(self):
+        if self.hx_trigger == "load-next-page":
+            return "partials/allspecies_elements.html"
+        else:
+            return "allspecies.html"
 
 
 class SpeciesDetailView(DetailView):

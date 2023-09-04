@@ -1,0 +1,86 @@
+{% load static %}
+
+{% include "partials/header.html" %}
+
+<head>
+    <link href="{% static 'pokedex.css' %}" rel="stylesheet">
+    <link href="{% static 'widget-table.css' %}" rel="stylesheet">
+</head>
+
+<body>
+    <div class="pokedex full widget">
+        <h1>All Pokémon Species</h1>
+
+        <table class="species-table">
+            <thead>
+                <tr>
+                    <th class="prio-1">#</th>
+                    <th class="prio-1">Image</th>
+                    <th class="prio-1">Name</th>
+                    <th class="prio-2">Types</th>
+                    <th class="prio-3">Abilities</th>
+                    <th class="prio-4">Height</th>
+                    <th class="prio-4">Weight</th>
+                    <th class="prio-3">Evolutions</th>
+                    <th class="prio-4">Base HP</th>
+                    <th class="prio-4">Strength</th>
+                    <th class="prio-4">Dexterity</th>
+                    <th class="prio-4">Vitality</th>
+                    <th class="prio-4">Special</th>
+                    <th class="prio-4">Insight</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for pokemon in species %}
+                    <tr>
+                        <td class="prio-1">{{ pokemon.number }}</td>
+                        <td class="prio-1"><img src="https://raw.githubusercontent.com/Willowlark/Pokerole-Data/master/images/BoxSprites/{{ pokemon.image_name }}"/></td>
+                        <td class="prio-1" title="{{ pokemon.description }}"><a href="{% url "species" pokemon.pk %}">{{ pokemon }}</a></td>
+                        <td class="prio-2" title="Weaknesses: {{ pokemon.weaknesses }}; Resistances: {{ pokemon.resistances }}"><ul class="comma-list">
+                                <li>{{ pokemon.primary_type }}</li>
+                                {% if pokemon.secondary_type %}
+                                <li>{{ pokemon.secondary_type }}</li>
+                                {% endif %}
+                        </ul></td>
+                        <td class="prio-3"><ul class="comma-list">
+                            {% for ability in pokemon.abilities.all %}
+                                <li title="{{ ability.effect }}">{{ ability }}</li>
+                            {% endfor %}
+                        </td></ul>
+                        <td class="prio-4">{{ pokemon.height_m }}/{{ pokemon.height_ft }}</td>
+                        <td class="prio-4">{{ pokemon.weight_kg }}/{{ pokemon.weight_lbs }}</td>
+                        <td class="prio-3"><ul class="comma-list">
+                            {% for evo in pokemon.evolutions.all %}
+                                <li>{{ evo }}</li>
+                            {% endfor %}
+                        </td></ul>
+                        <td class="prio-4">{{ pokemon.base_hp }}</td>
+                        <td class="prio-4">{{ pokemon.base_strength }}/{{ pokemon.max_strength }}</td>
+                        <td class="prio-4">{{ pokemon.base_dexterity }}/{{ pokemon.max_dexterity }}</td>
+                        <td class="prio-4">{{ pokemon.base_vitality }}/{{ pokemon.max_vitality }}</td>
+                        <td class="prio-4">{{ pokemon.base_special }}/{{ pokemon.max_special }}</td>
+                        <td class="prio-4">{{ pokemon.base_insight }}/{{ pokemon.max_insight }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <div class="pagination">
+            <span class="step-links">
+                {% if page_obj.has_previous %}
+                    <a href="?page=1">&laquo; First</a>
+                    <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
+                {% endif %}
+        
+                <span class="current">
+                    Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                </span>
+        
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}">Next</a>
+                    <a href="?page={{ page_obj.paginator.num_pages }}">Last &raquo;</a>
+                {% endif %}
+            </span>
+        </div>
+    </div>
+</body>

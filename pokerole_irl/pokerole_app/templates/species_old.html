@@ -1,7 +1,10 @@
 {% extends "partials/base.html" %}
-{% load utilities %}
 {% load static %}
-{% block body %}
+{% load utilities %}
+<head>
+    <link href="{% static 'species-detail.css' %}" rel="stylesheet">
+</head>
+<body>
     <div class="species-detail widget">
         <h1>
             #
@@ -190,4 +193,7 @@
             </div>
         </div>
     </div>
-{% endblock body %}
+    {% if entry %}
+        {% include "partials/pokedex_entry_options.html" %}
+    {% endif %}
+</body>
