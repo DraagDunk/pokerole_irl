@@ -18,6 +18,14 @@
             </div>
             <button class="login_button" type="submit" value="login">Log In</button>
         </form>
+        <p class="register-message">
+            Don't have an account yet? <a href=""
+    hx-get="{% url "register" %}"
+    hx-swap="outerHTML"
+    hx-target=".content"
+    hx-select=".content"
+    hx-push-url="true">Register.</a>
+        </p>
     </div>
     <div class="BOX"></div>
 {% endblock body %}

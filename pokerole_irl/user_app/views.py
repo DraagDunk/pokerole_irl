@@ -2,9 +2,11 @@ from django.contrib import messages
 from django.contrib.auth import get_user_model
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import redirect, render
+from django.urls import reverse_lazy
 from django.views.generic import CreateView, TemplateView
 
 from .forms import UpdateProfileForm, UpdateUserForm, CreateUserForm
+
 
 class UserProfileView(LoginRequiredMixin, TemplateView):
     # Updates the user profile and info
@@ -34,12 +36,12 @@ class UserProfileView(LoginRequiredMixin, TemplateView):
 
 
 class RegisterView(CreateView):
+    form_class = CreateUserForm
+    template_name = 'registration/register.html'
+    success_url = reverse_lazy('login')
+    model = get_user_model()
+
     def dispatch(self, request, *args, **kwargs):
         if request.user.is_authenticated:
             return redirect('/')
         return super().dispatch(request, *args, **kwargs)
-
-    form_class = CreateUserForm
-    template_name = 'registration/register.html'
-    success_url = '/login'
-    model = get_user_model()
