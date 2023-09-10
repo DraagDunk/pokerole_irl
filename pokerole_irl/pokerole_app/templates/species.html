@@ -2,19 +2,21 @@
 {% load utilities %}
 {% load static %}
 {% block body %}
+    <head>
+        <link href="{% static 'widget-table.css' %}" rel="stylesheet">
+    </head>
     <div class="species-detail widget">
         <h1>
-            #
-            {% if entry %}
-                {{ entry.number }}
-            {% else %}
-                {{ pokemon.number }}
-            {% endif %}
-            : {{ pokemon.name }}
+            <!-- Turning djlint off to avoid unwanted whitespace-->
+            <!--djlint:off-->#{% if entry %}{{ entry.number }}{% else %}{{ pokemon.number }}{% endif %}: {{ pokemon.name }}<!--djlint:on-->
         </h1>
         <div class="species-category">{{ pokemon.category }}</div>
         <div class="details-container">
-            <img class="species-image" src="{{ pokemon.book_image }}" />
+            <img height=""
+                 width=""
+                 alt="Picture of {{ pokemon.name }}"
+                 class="species-image"
+                 src="{{ pokemon.book_image }}" />
             <div class="species-description">
                 {% if entry.description %}
                     "{{ entry.description }}"
@@ -53,9 +55,8 @@
                             <td>
                                 <ul class="comma-list">
                                     {% for ability in pokemon.abilities.all %}
-                                        <li title="{{ ability.effect }}">
-                                            <a href="{% url "ability" ability.pk %}">{{ ability.name }}</a>
-                                        </li>
+                                        <!-- Turning djlint off the avoid unwanted whitespace -->
+                                        <!--djlint:off--><li title="{{ ability.effect }}"><a href="{% url "ability" ability.pk %}">{{ ability.name }}</a></li><!--djlint:on-->
                                     {% endfor %}
                                 </ul>
                             </td>
@@ -125,7 +126,10 @@
                     <ul class="evolutions">
                         {% for evolution in evolutions.all %}
                             <li>
-                                <img src="{{ evolution.to_species.box_image }}" />
+                                <img height="56px"
+                                     width="68px"
+                                     alt="Sprite of {{ evolution.to_species.name }}"
+                                     src="{{ evolution.to_species.box_image }}" />
                                 <div>
                                     <div>
                                         {% comment %} <a href="{% url "species" evolution.to_species.pk %}"> {% endcomment %}
@@ -145,7 +149,10 @@
                     <ul class="evolutions">
                         {% for preevolution in preevolution.all %}
                             <li>
-                                <img src="{{ preevolution.from_species.box_image }}" />
+                                <img height="56px"
+                                     width="68px"
+                                     alt="Sprite of {{ preevolution.from_species.name }}"
+                                     src="{{ preevolution.from_species.box_image }}" />
                                 <div>
                                     <div>
                                         {% comment %} <a href="{% url "species" preevolution.from_species.pk %}"> {% endcomment %}
@@ -179,7 +186,7 @@
                     </tbody>
                 </table>
                 <div class="links">
-                    <a class="back-link button" href="javascript:history.back()">Back</a>
+                    <a class="back-link button" onclick="javascript:history.back()" href="">Back</a>
                     {% if pokedex %}
                         <a class="back-link button"
                            href="{% url "pokedex_entries" pokedex.slug %}">Back to {{ pokedex.name }}</a>

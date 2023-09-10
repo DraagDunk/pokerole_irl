@@ -30,3 +30,42 @@
 .pokedex-table tr:hover {
     background-color: var(--color-header-active);
 }
+
+.species-category {
+    font-style: italic;
+}
+
+.details-container img {
+    width: 100vw;
+    max-width: 400px;
+}
+
+.species-description {
+    margin-top: 1rem;
+}
+
+.species-height-weight {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem 0;
+}
+
+.species-height-weight span {
+    display: inline-block;
+}
+
+.species-height-weight span div {
+    text-align: center;
+}
+
+.species-height-weight .header {
+    font-weight: bold;
+}
+
+.info-table {
+    margin: 1rem 0;
+}
+
+.info-table td {
+    padding: 0.2rem 0;
+}
