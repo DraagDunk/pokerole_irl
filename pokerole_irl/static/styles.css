@@ -1,10 +1,13 @@
 :root {
     --color-header-bg: #ef6f6c;
     --color-header-active: #e9a9a8;
+    --button-corner-radius: 0.5rem;
 }
 
 body {
     margin: 0;
+    min-height: 100vh;
+    width: 100%;
 }
 
 .content {
@@ -23,4 +26,17 @@ ul.comma-list {
 
 .comma-list li:not(:last-child)::after {
     content: ", "
+}
+
+button {
+    background-color: var(--color-header-bg);
+    border: none;
+    padding: 0.5rem;
+    border-radius: var(--button-corner-radius);
+    transition: background-color 0.2s linear;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--color-header-active);
 }

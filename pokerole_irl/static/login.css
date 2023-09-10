@@ -1,3 +1,38 @@
-body {
+.content {
+    height: 80vh;
+    display: flex;
     align-items: center;
+    justify-content: center;
+}
+
+.login {
+    width: 90%;
+    font-size: larger;
+}
+
+.login form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login label {
+    display: block;
+    text-align: center;
+}
+
+.login .field {
+    margin: 0.5rem 0;
+}
+
+.login input {
+    text-align: center;
+    font-size: larger;
+}
+
+.login button {
+    width: 100%;
+    font-size: larger;
+    margin-top: 1rem;
 }

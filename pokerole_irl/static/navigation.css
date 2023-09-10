@@ -23,6 +23,7 @@ header .header_menu {
     background-color: transparent;
     color: black;
     transition: background-color .5s linear;
+    border-radius: 0px;
 }
 
 .header_menu .burger:hover {

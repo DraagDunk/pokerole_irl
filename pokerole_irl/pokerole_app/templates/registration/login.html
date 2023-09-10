@@ -1,40 +1,23 @@
-
+{% extends "partials/base.html" %}
 {% load static %}
-
-{% include "partials/header.html" %}
-
-<head>
-    <link href="{% static 'login.css' %}" rel="stylesheet">
-</head>
-
-<body>
+{% block body %}
+    <head>
+        <link href="{% static 'login.css' %}" rel="stylesheet">
+    </head>
     <div class="login widget">
-        {% if form.errors %}
-        <p> Something went wrong!</p>
-        {% endif %}
-
-        {% if next %}
-        <p>Can't access that page.</p>
-        {% endif %}
-
-        <form method="post" action="{%url 'login' %}" class="login_form">
+        {% if form.errors %}{{ form.errors }}{% endif %}
+        <form method="post" action="{% url 'login' %}" class="login_form">
             {% csrf_token %}
-
             <div class="field">
                 <label for="id_username">Username</label>
                 {{ form.username }}
             </div>
-
             <div class="field">
                 <label for="id_password">Password</label>
                 {{ form.password }}
             </div>
-        
             <button class="login_button" type="submit" value="login">Log In</button>
         </form>
     </div>
-</body>
-
-<div class="BOX"></div>
-
-</html>
+    <div class="BOX"></div>
+{% endblock body %}
