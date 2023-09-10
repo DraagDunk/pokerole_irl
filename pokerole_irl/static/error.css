@@ -1,0 +1,12 @@
+.content div {
+    text-align: center;
+}
+
+.status_code {
+    font-size: 120px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.exception {
+    margin-top: 1rem;
+}

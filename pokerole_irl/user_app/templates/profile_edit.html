@@ -1,0 +1,39 @@
+{% extends "partials/base.html" %}
+{% load static %}
+{% block body %}
+    <head>
+        <link href="{% static 'profile.css' %}" rel="stylesheet">
+    </head>
+    <div class="profile widget">
+        <h1>Profile</h1>
+        <form method="post">
+            {% csrf_token %}
+            <table class="info-table">
+                <tbody>
+                    <tr>
+                        <td>Username</td>
+                        <td>{{ user.username }}</td>
+                    </tr>
+                    <tr>
+                        <td>First name</td>
+                        <td>{{ user_form.first_name }}</td>
+                    </tr>
+                    <tr>
+                        <td>Last name</td>
+                        <td>{{ user_form.last_name }}</td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>{{ user_form.email }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2>Biography</h2>
+            <div class="bio">{{ form.bio }}</div>
+            <div class="buttons">
+                <button type="button" class="cancel" onclick="javascript:history.back()">Cancel</button>
+                <button type="submit">Save</button>
+            </div>
+        </form>
+    </div>
+{% endblock body %}

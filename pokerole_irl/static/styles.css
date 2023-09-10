@@ -37,6 +37,11 @@ button {
     cursor: pointer;
 }
 
+button.cancel:hover,
 button:hover {
     background-color: var(--color-header-active);
+}
+
+button.cancel {
+    background-color: grey;
 }
