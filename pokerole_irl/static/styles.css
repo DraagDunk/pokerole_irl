@@ -2,6 +2,8 @@
     --color-header-bg: #ef6f6c;
     --color-header-active: #e9a9a8;
     --button-corner-radius: 0.5rem;
+    --info-card-corner-radius: 2rem;
+    --info-card-shadow: 0 0 10px gray;
 }
 
 body {

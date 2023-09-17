@@ -2,9 +2,8 @@
 {% load utilities %}
 {% load static %}
 {% block body %}
-    <head>
-        <link href="{% static 'widget-table.css' %}" rel="stylesheet">
-    </head>
+    <link href="{% static 'widget-table.css' %}" rel="stylesheet">
+    <link href="{% static 'info-card.css' %}" rel="stylesheet">
     <div class="species-detail widget">
         <h1>
             <!-- Turning djlint off to avoid unwanted whitespace-->
@@ -56,7 +55,12 @@
                                 <ul class="comma-list">
                                     {% for ability in pokemon.abilities.all %}
                                         <!-- Turning djlint off the avoid unwanted whitespace -->
-                                        <!--djlint:off--><li title="{{ ability.effect }}"><a href="{% url "ability" ability.pk %}">{{ ability.name }}</a></li><!--djlint:on-->
+                                        <!--djlint:off--><li class="show-info-card"><a href="{% url "ability" ability.pk %}">{{ ability.name }}</a></li><!--djlint:on-->
+                                        <div class="ability info-card"
+                                             hx-get="{% url "ability" ability.pk %}"
+                                             hx-swap="innerHTML"
+                                             hx-trigger="revealed"
+                                             hx-target="this"></div>
                                     {% endfor %}
                                 </ul>
                             </td>
@@ -64,8 +68,14 @@
                         {% if pokemon.hidden_ability %}
                             <tr>
                                 <td>Hidden:</td>
-                                <td title="{{ pokemon.hidden_ability.effect }}">
-                                    <a href="{% url "ability" pokemon.hidden_ability.pk %}">{{ pokemon.hidden_ability }}</a>
+                                <td>
+                                    <a class="show-info-card"
+                                       href="{% url "ability" pokemon.hidden_ability.pk %}">{{ pokemon.hidden_ability }}</a>
+                                    <div class="ability info-card"
+                                         hx-get="{% url "ability" pokemon.hidden_ability.pk %}"
+                                         hx-swap="innerHTML"
+                                         hx-trigger="revealed"
+                                         hx-target="this"></div>
                                 </td>
                             </tr>
                         {% endif %}
@@ -177,8 +187,13 @@
                         </tr>
                         {% for move in moveset %}
                             <tr>
-                                <td title="{{ move.move.effect }}">
-                                    <a href="{{ move.move.get_absolute_url }}">{{ move.move.name }}</a>
+                                <td>
+                                    <a class="show-info-card" href="{{ move.move.get_absolute_url }}">{{ move.move.name }}</a>
+                                    <div class="info-card"
+                                         hx-get="{% url "move" move.move.pk %}"
+                                         hx-swap="innerHTML"
+                                         hx-trigger="revealed"
+                                         hx-target="this"></div>
                                 </td>
                                 <td>{{ move.get_learned_display }}</td>
                             </tr>
@@ -189,7 +204,7 @@
                     <a class="back-link button" onclick="javascript:history.back()" href="">Back</a>
                     {% if pokedex %}
                         <a class="back-link button"
-                           href="{% url "pokedex_entries" pokedex.slug %}">Back to {{ pokedex.name }}</a>
+                           href="{% url "pokedex_entries" pokedex.pk %}">Back to {{ pokedex.name }}</a>
                     {% else %}
                         <a class="back-link button" href="{% url "all_species" %}">Back to species</a>
                     {% endif %}

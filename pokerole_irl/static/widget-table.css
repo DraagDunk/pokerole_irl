@@ -1,13 +1,16 @@
-.pokedex-table {
+.pokedex-table,
+.species-table {
     width: 100%;
     border-collapse: collapse;
 }
 
-.pokedex-table tbody tr {
+.pokedex-table tbody tr,
+.species-table tbody tr {
     height: 60px;
 }
 
-.pokedex-table tr a {
+.pokedex-table tr a,
+.species-table tr a {
     display: block;
     text-align: center;
     text-decoration: none;
@@ -15,19 +18,23 @@
     padding: 1rem;
 }
 
-.pokedex-table td {
+.pokedex-table td,
+.species-table td {
     padding: 0;
 }
 
-.pokedex-table tr {
+.pokedex-table tr,
+.species-table tr {
     cursor: pointer;
 }
 
-.pokedex-table tr:nth-of-type(2n) {
+.pokedex-table tr:nth-of-type(2n),
+.species-table tr:nth-of-type(2n) {
     background-color: var(--color-header-bg);
 }
 
-.pokedex-table tr:hover {
+.pokedex-table tr:hover,
+.species-table tr:hover {
     background-color: var(--color-header-active);
 }
 
@@ -36,7 +43,7 @@
 }
 
 .details-container img {
-    width: 100vw;
+    width: 100%;
     max-width: 400px;
 }
 
