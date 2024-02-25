@@ -1,32 +1,15 @@
+{% extends "partials/base.html" %}
 {% load static %}
-
-{% include "partials/header.html" %}
-
-<head>
-    <link href="{% static 'form.css' %}" rel="stylesheet">
-</head>
-
-<body>
-
+{% block body %}
     <div class="widget">
         <h1>New character</h1>
         <form class="create_form form" method="post">
             {% csrf_token %}
-            
-
-	        {{ form.as_p }}
-
+            {{ form.as_p }}
             {% for field in form %}
-	        	{% if field.errors %}
-	        		<small class="error">{{ field.errors|striptags  }}</small> 
-	        	{% endif %}
-		    {% endfor %}
-
-            <button class="submit_button" type="submit" value="Create">Create</button>
-
+                {% if field.errors %}<small class="error">{{ field.errors|striptags }}</small>{% endif %}
+            {% endfor %}
+            <button class="submit_button button" type="submit" value="Create">Create</button>
         </form>
-
     </div>
-
-</body>
-
+{% endblock body %}

@@ -1,41 +1,45 @@
 {% load static %}
-
 <head>
     <link href="{% static 'filter.css' %}" rel="stylesheet">
 </head>
-
 {% if request.user.is_superuser or is_owner %}
-<div class="options_menu">
-    <div class="editor_menu menu closed">
-        <a class="button" href="{% url 'pokedex_entry_add' pokedex.slug %}">Add entry</a>
-        <a class="button" href="{% url 'pokedex_edit' pokedex.slug %}">Edit pokédex</a>
-        <a class="button" href="{% url 'pokedex_delete' pokedex.slug %}">Delete pokédex</a>
-    </div>
-    <div class="filter_menu menu closed">
-        <div class="filters">
-            <form method="get">
-                <input class="search" name="search" id="id_search" type="search" value="{{ search_field }}" placeholder="Search for a pokémon"/>
-                <select class="types" name="types" id="id_types" multiple value="{{ filtered_types }}">
-                    {% for type in types %}
-                    <option value="{{ type.pk }}">{{ type.name }}</option>
-                    {% endfor %}
-                </select>
-                <button type="submit">Filter</button>
-            </form>
+    <div class="options_menu">
+        <div class="editor_menu menu closed">
+            <a class="button" href="{% url 'pokedex_entry_add' pokedex.pk %}">Add entry</a>
+            <a class="button" href="{% url 'pokedex_edit' pokedex.pk %}">Edit pokédex</a>
+            <a class="button" href="{% url 'pokedex_delete' pokedex.pk %}">Delete pokédex</a>
+        </div>
+        <div class="filter_menu menu closed">
+            <div class="filters">
+                <form method="get" name="pokedex_filter_form" id="pokedex_filter_form">
+                    <input class="search"
+                           name="search"
+                           id="id_search"
+                           type="search"
+                           value="{{ search_field }}"
+                           placeholder="Search for a pokémon" />
+                    <select class="types" name="types" id="id_types" multiple autocomplete="off">
+                        {% for type in types %}
+                            <option value="{{ type.pk }}"
+                                    {% if type.pk in filtered_types %}selected{% endif %}>{{ type.name }}</option>
+                        {% endfor %}
+                    </select>
+                    <button type="submit" class="button">Filter</button>
+                </form>
+            </div>
+        </div>
+        <div class="buttons">
+            <button type="button"
+                    class="filter menu_button button"
+                    controls-menu="filter_menu">
+                <span class="material-symbols-outlined">filter_list</span>
+            </button>
+            <button type="button"
+                    id="editor_menu_button"
+                    class="editor menu_button button"
+                    controls-menu="editor_menu">
+                <span class="material-symbols-outlined">settings</span>
+            </button>
         </div>
     </div>
-
-    <div class="buttons">
-        <button type="button" class="filter menu_button" controls-menu="filter_menu">
-            <span class="material-symbols-outlined">
-                filter_list
-            </span>
-        </button>
-        <button type="button" id="editor_menu_button" class="editor menu_button" controls-menu="editor_menu">
-            <span class="material-symbols-outlined">
-                settings
-            </span>
-        </button>
-    </div>
-</div>
 {% endif %}

@@ -1,47 +1,33 @@
+{% extends "partials/base.html" %}
 {% load static %}
-
-{% include "partials/header.html" %}
-
-<head>
-    <link href="{% static 'form.css' %}" rel="stylesheet">
-</head>
-
-<body>
-
+{% block body %}
     <div class="widget">
         <h1>New pokémon</h1>
-        <form class="create_form form" method="post" action="{% url 'pokemon_add' %}">
+        <form class="create_form form"
+              method="post"
+              action="{% url 'pokemon_add' %}">
             {% csrf_token %}
-
             <div class="field">
                 <label for="id_nickname">Nickname</label>
                 {{ form.nickname }}
             </div>
-
             <div class="field">
                 <label for="id_species">Species</label>
                 {{ form.species }}
             </div>
-
             <div class="field">
                 <label for="id_pokemon_nature">Nature</label>
                 {{ form.pokemon_nature }}
             </div>
-
             <div class="field">
                 <label for="id_trainer">Trainer</label>
                 {{ form.trainer }}
             </div>
-
             <div class="field">
                 <label for="id_rank">Rank</label>
                 {{ form.rank }}
             </div>
-
-            <button class="submit_button" type="submit" value="Create">Create</button>
-
+            <button class="submit_button button" type="submit" value="Create">Create</button>
         </form>
-
     </div>
-
-</body>
+{% endblock body %}

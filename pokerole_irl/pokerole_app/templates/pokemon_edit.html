@@ -1,12 +1,7 @@
+{% extends "partials/base.html" %}
+
 {% load static %}
-
-{% include "partials/header.html" %}
-
-<head>
-    <link href="{% static 'form.css' %}" rel="stylesheet">
-</head>
-
-<body>
+{% block body %}
 
     <div class="widget">
         <h1>Edit {{ pokemon.name }}</h1>
@@ -55,10 +50,9 @@
                 {{ form.moves }}
             </div>
 
-            <button class="submit_button" type="submit" value="Create">Save</button>
+            <button class="submit_button button" type="submit" value="Create">Save</button>
 
         </form>
 
     </div>
-
-</body>
+{% endblock body %}

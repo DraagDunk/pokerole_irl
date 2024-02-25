@@ -1,3 +1,4 @@
+from typing import List
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.urls import reverse, reverse_lazy
 from django.core.exceptions import PermissionDenied
@@ -8,13 +9,15 @@ from django.shortcuts import get_object_or_404
 from ..models.pokedex_models import Pokedex, PokedexEntry
 from ..models.species_models import PokemonSpecies, Evolution, MoveSet
 from ..models.base_models import Type
+from .base_views import NextPageMixin
 
 
-class PokedexListView(LoginRequiredMixin, ListView):
-    template_name = "pokedex_list.html"
+class PokedexListView(LoginRequiredMixin, NextPageMixin, ListView):
     model = Pokedex
     context_object_name = "pokedexes"
     paginate_by = 10
+    template_name = "pokedex_list.html"
+    hx_template_name = "partials/pokedex_list_elements.html"
 
     def get_queryset(self):
         queryset = super().get_queryset()
@@ -71,8 +74,9 @@ class PokedexDeleteView(LoginRequiredMixin, DeleteView):
         return context
 
 
-class PokedexEntryListView(LoginRequiredMixin, ListView):
+class PokedexEntryListView(LoginRequiredMixin, NextPageMixin, ListView):
     template_name = "pokedex.html"
+    hx_template_name = "partials/pokedex_elements.html"
     model = PokedexEntry
     context_object_name = "entries"
     paginate_by = 20
@@ -80,21 +84,23 @@ class PokedexEntryListView(LoginRequiredMixin, ListView):
     def get_queryset(self):
         queryset = super().get_queryset()
         queryset = queryset.filter(
-            pokedex__slug=self.kwargs.get("dex_slug")).order_by("number")
+            pokedex_id=self.kwargs.get("dex_pk")).order_by("number").prefetch_related("species__primary_type", "species__secondary_type")
         if search := self.request.GET.get("search"):
             queryset = queryset.filter(species__name__icontains=search)
         if type_query := self.request.GET.getlist("types"):
             queryset = queryset.filter(Q(species__primary_type__in=type_query) | Q(
                 species__secondary_type__in=type_query))
-        return queryset.prefetch_related("species")
+        return queryset
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["pokedex"] = Pokedex.objects.get(
-            slug=self.kwargs.get("dex_slug"))
+            pk=self.kwargs.get("dex_pk"))
         context["is_owner"] = self.request.user == context["pokedex"].owner
         context["search_field"] = self.request.GET.get("search", "")
         context["types"] = Type.objects.all()
+        context["filtered_types"] = [
+            int(pk) for pk in self.request.GET.getlist("types")]
         return context
 
 
@@ -105,7 +111,7 @@ class PokedexEntryDetailView(LoginRequiredMixin, DetailView):
 
     def get_queryset(self):
         queryset = super().get_queryset()
-        return queryset.filter(pokedex__slug=self.kwargs.get("dex_slug"))
+        return queryset.filter(pokedex_id=self.kwargs.get("dex_pk"))
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -117,7 +123,7 @@ class PokedexEntryDetailView(LoginRequiredMixin, DetailView):
         context["moveset"] = MoveSet.objects.filter(
             species=context["pokemon"])
         context["pokedex"] = Pokedex.objects.get(
-            slug=self.kwargs.get("dex_slug"))
+            pk=self.kwargs.get("dex_pk"))
         context["is_owner"] = self.request.user == context["pokedex"].owner
         return context
 
@@ -159,7 +165,7 @@ class PokedexEntryCreateView(LoginRequiredMixin, CreateView):
 
     def check_dex(self, request, **kwargs):
         self.pokedex = get_object_or_404(
-            Pokedex, slug=kwargs.get('dex_slug'))
+            Pokedex, pk=kwargs.get('dex_pk'))
         if request.user.is_superuser or self.pokedex.owner == request.user:
             return
         else:
@@ -177,7 +183,7 @@ class PokedexEntryUpdateView(LoginRequiredMixin, UpdateView):
     def get_queryset(self):
         qs = super().get_queryset()
         self.pokedex = get_object_or_404(
-            Pokedex, slug=self.kwargs.get('dex_slug'))
+            Pokedex, pk=self.kwargs.get('dex_pk'))
         if self.request.user.is_superuser or self.pokedex.owner == self.request.user:
             return qs.filter(pokedex=self.pokedex)
         else:
@@ -198,7 +204,7 @@ class PokedexEntryDeleteView(LoginRequiredMixin, DeleteView):
     def get_queryset(self):
         qs = super().get_queryset()
         self.pokedex = get_object_or_404(
-            Pokedex, slug=self.kwargs.get('dex_slug'))
+            Pokedex, pk=self.kwargs.get('dex_pk'))
         if self.request.user.is_superuser or self.pokedex.owner == self.request.user:
             return qs.filter(pokedex=self.pokedex)
         else:
@@ -210,12 +216,12 @@ class PokedexEntryDeleteView(LoginRequiredMixin, DeleteView):
         return context
 
     def get_success_url(self):
-        return reverse("pokedex_entries", kwargs={"dex_slug": self.kwargs.get("dex_slug")})
+        return reverse("pokedex_entries", kwargs={"pk": self.kwargs.get("dex_pk")})
 
     def delete(self, request, *args, **kwargs):
         response = super().delete(request, *args, **kwargs)
         entries = PokedexEntry.objects.filter(
-            pokedex__slug=self.kwargs.get("dex_slug"), number__gt=self.object.number)
+            pokedex_id=self.kwargs.get("dex_pk"), number__gt=self.object.number)
         for entry in entries.iterator():
             entry.number = entry.number - 1
             entry.save()

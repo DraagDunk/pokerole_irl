@@ -1,54 +1,78 @@
-body {
-    height: fit-content;
-}
-
-table {
-    border-collapse: collapse;
+.pokedex-table,
+.species-table {
     width: 100%;
-    padding: 1rem;
+    border-collapse: collapse;
 }
 
-table tbody tr {
+.pokedex-table tbody tr,
+.species-table tbody tr {
     height: 60px;
 }
 
-table tbody tr:nth-of-type(2n-1) {
-    background-color: var(--color-secondary);
-}
-
-table td {
+.pokedex-table tr a,
+.species-table tr a {
+    display: block;
     text-align: center;
-    padding: 0 0.3rem;
+    text-decoration: none;
+    color: black;
+    padding: 1rem;
 }
 
-.pokedex.widget {
+.pokedex-table td,
+.species-table td {
     padding: 0;
 }
 
-.step-links {
+.pokedex-table tr,
+.species-table tr {
+    cursor: pointer;
+}
+
+.pokedex-table tr:nth-of-type(2n),
+.species-table tr:nth-of-type(2n) {
+    background-color: var(--color-header-bg);
+}
+
+.pokedex-table tr:hover,
+.species-table tr:hover {
+    background-color: var(--color-header-active);
+}
+
+.species-category {
+    font-style: italic;
+}
+
+.details-container img {
+    width: 100%;
+    max-width: 400px;
+}
+
+.species-description {
+    margin-top: 1rem;
+}
+
+.species-height-weight {
     display: flex;
     justify-content: space-around;
     margin: 1rem 0;
 }
 
-.pokedex-table td {
-    padding: 1rem 0;
+.species-height-weight span {
+    display: inline-block;
 }
 
-@media (max-width: 1600px) {
-    .prio-4 {
-        display: none;
-    }
+.species-height-weight span div {
+    text-align: center;
 }
 
-@media (max-width: 950px) {
-    .prio-3 {
-        display: none;
-    }
+.species-height-weight .header {
+    font-weight: bold;
 }
 
-@media (max-width: 450px) {
-    .prio-2 {
-        display: none;
-    }
+.info-table {
+    margin: 1rem 0;
+}
+
+.info-table td {
+    padding: 0.2rem 0;
 }

@@ -18,7 +18,7 @@ class Pokedex(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse_lazy("pokedex_entries", kwargs={"dex_slug": self.slug})
+        return reverse_lazy("pokedex_entries", kwargs={"dex_pk": self.pk})
 
     def save(self, **kwargs):
         self.slug = slugify(self.name)

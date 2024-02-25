@@ -227,7 +227,7 @@ class PokedexUpdateViewTests(TestCase):
         self.client.force_login(user)
         # Create own pokedex
         own_pokedex = Pokedex.objects.create(name='test_pokedex', owner=user)
-        path = reverse_lazy("pokedex_edit", args=[own_pokedex.slug])
+        path = reverse_lazy("pokedex_edit", args=[own_pokedex.pk])
 
         response = self.client.get(path)
 
@@ -244,7 +244,7 @@ class PokedexUpdateViewTests(TestCase):
         other_user = get_user_model().objects.create(username='other_user')
         other_pokedex = Pokedex.objects.create(
             name='test_pokedex', owner=other_user)
-        path = reverse_lazy("pokedex_edit", args=[other_pokedex.slug])
+        path = reverse_lazy("pokedex_edit", args=[other_pokedex.pk])
 
         response = self.client.get(path)
 
@@ -260,7 +260,7 @@ class PokedexUpdateViewTests(TestCase):
         # Create public pokedex
         public_pokedex = Pokedex.objects.create(
             name='test_pokedex', owner=None)
-        path = reverse_lazy("pokedex_edit", args=[public_pokedex.slug])
+        path = reverse_lazy("pokedex_edit", args=[public_pokedex.pk])
 
         response = self.client.get(path)
 
@@ -270,7 +270,7 @@ class PokedexUpdateViewTests(TestCase):
 
     def test_edit_as_anonymous_user(self):
         """An anonymous user should be redirected to the login page."""
-        path = reverse_lazy("pokedex_edit", args=[self.pokedex.slug])
+        path = reverse_lazy("pokedex_edit", args=[self.pokedex.pk])
         response = self.client.get(path)
 
         expected_response = 302
@@ -291,7 +291,7 @@ class PokedexDeleteViewTests(TestCase):
         self.client.force_login(user)
         # Create own pokedex
         own_pokedex = Pokedex.objects.create(name='test_pokedex', owner=user)
-        path = reverse_lazy("pokedex_delete", args=[own_pokedex.slug])
+        path = reverse_lazy("pokedex_delete", args=[own_pokedex.pk])
 
         response = self.client.post(path)
 
@@ -308,7 +308,7 @@ class PokedexDeleteViewTests(TestCase):
         other_user = get_user_model().objects.create(username='other_user')
         other_pokedex = Pokedex.objects.create(
             name='test_pokedex', owner=other_user)
-        path = reverse_lazy("pokedex_delete", args=[other_pokedex.slug])
+        path = reverse_lazy("pokedex_delete", args=[other_pokedex.pk])
 
         response = self.client.post(path)
 
@@ -324,7 +324,7 @@ class PokedexDeleteViewTests(TestCase):
         # Create public pokedex
         public_pokedex = Pokedex.objects.create(
             name='test_pokedex', owner=None)
-        path = reverse_lazy("pokedex_delete", args=[public_pokedex.slug])
+        path = reverse_lazy("pokedex_delete", args=[public_pokedex.pk])
 
         response = self.client.post(path)
 
@@ -334,7 +334,7 @@ class PokedexDeleteViewTests(TestCase):
 
     def test_delete_as_anonymous_user(self):
         """An anonymous user should be redirected to the login page."""
-        path = reverse_lazy("pokedex_delete", args=[self.pokedex.slug])
+        path = reverse_lazy("pokedex_delete", args=[self.pokedex.pk])
         response = self.client.post(path)
 
         expected_response = 302
@@ -355,7 +355,7 @@ class PokedexEntryListViewTests(TestCase):
         self.client.force_login(user)
         # Create own pokedex
         own_pokedex = Pokedex.objects.create(name='test_pokedex', owner=user)
-        path = reverse_lazy("pokedex_entries", args=[own_pokedex.slug])
+        path = reverse_lazy("pokedex_entries", args=[own_pokedex.pk])
 
         response = self.client.get(path)
 
@@ -372,7 +372,7 @@ class PokedexEntryListViewTests(TestCase):
         other_user = get_user_model().objects.create(username='other_user')
         other_pokedex = Pokedex.objects.create(
             name='test_pokedex', owner=other_user)
-        path = reverse_lazy("pokedex_entries", args=[other_pokedex.slug])
+        path = reverse_lazy("pokedex_entries", args=[other_pokedex.pk])
 
         response = self.client.get(path)
 
@@ -388,7 +388,7 @@ class PokedexEntryListViewTests(TestCase):
         # Create other user's pokedex
         public_pokedex = Pokedex.objects.create(
             name='test_pokedex', owner=None)
-        path = reverse_lazy("pokedex_entries", args=[public_pokedex.slug])
+        path = reverse_lazy("pokedex_entries", args=[public_pokedex.pk])
 
         response = self.client.get(path)
 
@@ -398,7 +398,7 @@ class PokedexEntryListViewTests(TestCase):
 
     def test_view_as_anonymous_user(self):
         """An anonymous user should be redirected to the login page."""
-        path = reverse_lazy("pokedex_entries", args=[self.pokedex.slug])
+        path = reverse_lazy("pokedex_entries", args=[self.pokedex.pk])
         response = self.client.get(path)
 
         expected_response = 302
@@ -426,7 +426,7 @@ class PokedexEntryDetailViewTests(TestCase):
         own_entry = PokedexEntry.objects.create(
             species=self.bulbasaur, pokedex=own_pokedex, number=1)
         path = reverse_lazy("pokedex_entry", args=[
-                            own_pokedex.slug, own_entry.pk])
+                            own_pokedex.pk, own_entry.pk])
 
         response = self.client.get(path)
 
@@ -446,7 +446,7 @@ class PokedexEntryDetailViewTests(TestCase):
         other_entry = PokedexEntry.objects.create(
             species=self.bulbasaur, pokedex=other_pokedex, number=1)
         path = reverse_lazy("pokedex_entry", args=[
-                            other_pokedex.slug, other_entry.pk])
+                            other_pokedex.pk, other_entry.pk])
 
         response = self.client.get(path)
 
@@ -465,7 +465,7 @@ class PokedexEntryDetailViewTests(TestCase):
         public_entry = PokedexEntry.objects.create(
             species=self.bulbasaur, pokedex=public_pokedex, number=1)
         path = reverse_lazy("pokedex_entry", args=[
-                            public_pokedex.slug, public_entry.pk])
+                            public_pokedex.pk, public_entry.pk])
 
         response = self.client.get(path)
 
@@ -476,7 +476,7 @@ class PokedexEntryDetailViewTests(TestCase):
     def test_view_as_anonymous_user(self):
         """An anonymous user should be redirected to the login page."""
         path = reverse_lazy("pokedex_entry", args=[
-                            self.pokedex.slug, self.entry.pk])
+                            self.pokedex.pk, self.entry.pk])
         response = self.client.get(path)
 
         expected_response = 302
@@ -497,7 +497,7 @@ class PokedexEntryCreateViewTests(TestCase):
         self.client.force_login(user)
         # Create own pokedex
         own_pokedex = Pokedex.objects.create(name='test_pokedex', owner=user)
-        path = reverse_lazy("pokedex_entry_add", args=[own_pokedex.slug])
+        path = reverse_lazy("pokedex_entry_add", args=[own_pokedex.pk])
 
         response = self.client.get(path)
 
@@ -514,7 +514,7 @@ class PokedexEntryCreateViewTests(TestCase):
         other_user = get_user_model().objects.create(username='other_user')
         other_pokedex = Pokedex.objects.create(
             name='test_pokedex', owner=other_user)
-        path = reverse_lazy("pokedex_entry_add", args=[other_pokedex.slug])
+        path = reverse_lazy("pokedex_entry_add", args=[other_pokedex.pk])
 
         response = self.client.get(path)
 
@@ -530,7 +530,7 @@ class PokedexEntryCreateViewTests(TestCase):
         # Create other user's pokedex
         public_pokedex = Pokedex.objects.create(
             name='test_pokedex', owner=None)
-        path = reverse_lazy("pokedex_entry_add", args=[public_pokedex.slug])
+        path = reverse_lazy("pokedex_entry_add", args=[public_pokedex.pk])
 
         response = self.client.get(path)
 
@@ -548,7 +548,7 @@ class PokedexEntryCreateViewTests(TestCase):
         # Create other user's pokedex
         public_pokedex = Pokedex.objects.create(
             name='test_pokedex', owner=None)
-        path = reverse_lazy("pokedex_entry_add", args=[public_pokedex.slug])
+        path = reverse_lazy("pokedex_entry_add", args=[public_pokedex.pk])
 
         response = self.client.get(path)
 
@@ -558,7 +558,7 @@ class PokedexEntryCreateViewTests(TestCase):
 
     def test_view_as_anonymous_user(self):
         """An anonymous user should be redirected to the login page."""
-        path = reverse_lazy("pokedex_entries", args=[self.pokedex.slug])
+        path = reverse_lazy("pokedex_entries", args=[self.pokedex.pk])
         response = self.client.get(path)
 
         expected_response = 302
@@ -576,7 +576,7 @@ class PokedexEntryUpdateViewTests(TestCase):
         self.entry = PokedexEntry.objects.create(
             species=self.bulbasaur, pokedex=self.pokedex, number=1)
         self.path = reverse_lazy("pokedex_entry_edit", args=[
-                                 self.pokedex.slug, self.entry.pk])
+                                 self.pokedex.pk, self.entry.pk])
 
     def test_add_entry_own_pokedex_as_regular_user(self):
         """A regular user should be allowed to edit entries in their own pokedex."""
@@ -635,7 +635,7 @@ class PokedexEntryUpdateViewTests(TestCase):
 
     def test_view_as_anonymous_user(self):
         """An anonymous user should be redirected to the login page."""
-        path = reverse_lazy("pokedex_entries", args=[self.pokedex.slug])
+        path = reverse_lazy("pokedex_entries", args=[self.pokedex.pk])
         response = self.client.get(path)
 
         expected_response = 302
@@ -653,9 +653,9 @@ class PokedexEntryDeleteViewTests(TestCase):
         self.entry = PokedexEntry.objects.create(
             species=self.bulbasaur, pokedex=self.pokedex, number=1)
         self.path = reverse_lazy("pokedex_entry_delete", args=[
-                                 self.pokedex.slug, self.entry.pk])
+                                 self.pokedex.pk, self.entry.pk])
 
-    def test_add_entry_own_pokedex_as_regular_user(self):
+    def test_delete_entry_own_pokedex_as_regular_user(self):
         """A regular user should be allowed to delete entries in their own pokedex."""
         # Log In
         user = get_user_model().objects.create(username='test_user')
@@ -670,7 +670,7 @@ class PokedexEntryDeleteViewTests(TestCase):
 
         self.assertEqual(response.status_code, expected_response)
 
-    def test_add_entry_other_users_pokedex_as_regular_user(self):
+    def test_delete_entry_other_users_pokedex_as_regular_user(self):
         """Regular user should not be allowed to delete entries in other users' pokedexes."""
         # Log In
         user = get_user_model().objects.create(username='test_user')
@@ -686,7 +686,7 @@ class PokedexEntryDeleteViewTests(TestCase):
 
         self.assertEqual(response.status_code, expected_response)
 
-    def test_add_entry_public_pokedex_as_regular_user(self):
+    def test_delete_entry_public_pokedex_as_regular_user(self):
         """Regular users should not be allowed to delete entries in public pokedexes."""
         user = get_user_model().objects.create(username='test_user')
         self.client.force_login(user)
@@ -697,7 +697,7 @@ class PokedexEntryDeleteViewTests(TestCase):
 
         self.assertEqual(response.status_code, expected_response)
 
-    def test_add_entry_public_pokedex_as_superuser(self):
+    def test_delete_entry_public_pokedex_as_superuser(self):
         """Superusers should be allowed to delete entries in public pokedexes."""
         user = get_user_model().objects.create(username='test_user')
         user.is_superuser = True
@@ -712,7 +712,7 @@ class PokedexEntryDeleteViewTests(TestCase):
 
     def test_view_as_anonymous_user(self):
         """An anonymous user should be redirected to the login page."""
-        path = reverse_lazy("pokedex_entries", args=[self.pokedex.slug])
+        path = reverse_lazy("pokedex_entries", args=[self.pokedex.pk])
         response = self.client.get(path)
 
         expected_response = 302

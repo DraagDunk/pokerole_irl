@@ -1,3 +1,55 @@
-body {
+.content {
+    height: 80vh;
+    display: flex;
     align-items: center;
+    justify-content: center;
+}
+
+.login,
+.register {
+    width: 90%;
+    font-size: larger;
+    text-align: center;
+}
+
+.login form,
+.register form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login label,
+.register label {
+    display: block;
+    text-align: center;
+}
+
+.login .field,
+.register .field {
+    margin: 0.5rem 0;
+}
+
+.login .field_error,
+.register .field_error {
+    font-size: medium;
+    color: red;
+}
+
+.login input,
+.register input {
+    text-align: center;
+    font-size: larger;
+}
+
+.login button,
+.register .button {
+    width: 100%;
+    font-size: larger;
+    margin-top: 1rem;
+}
+
+.register-message {
+    font-size: medium;
 }

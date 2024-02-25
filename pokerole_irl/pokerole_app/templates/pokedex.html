@@ -1,88 +1,16 @@
+{% extends "partials/base.html" %}
 {% load static %}
-
-{% include "partials/header.html" %}
-
-<head>
-    <link href="{% static 'widget-table.css' %}" rel="stylesheet">
-</head>
-
-<body>
-
+{% block body %}
+    <head>
+        <link href="{% static 'widget-table.css' %}" rel="stylesheet">
+    </head>
     <div class="pokedex full widget">
-        <h1 title="Owned by {{ pokedex.owner }}">{{ pokedex.name }}</h1>
-
+        <h1 {% if pokedex.owner %}title="Owned by {{ pokedex.owner }}"{% endif %}>{{ pokedex.name }}</h1>
         <table class="species-table">
-            <thead>
-                <tr>
-                    <th class="prio-1">#</th>
-                    <th class="prio-1">Image</th>
-                    <th class="prio-1">Name</th>
-                    <th class="prio-2">Category</th>
-                    <th class="prio-2">Types</th>
-                    <th class="prio-3">Abilities</th>
-                    <th class="prio-4">Height</th>
-                    <th class="prio-4">Weight</th>
-                    <th class="prio-3">Evolutions</th>
-                    <th class="prio-4">Base HP</th>
-                    <th class="prio-4">Strength</th>
-                    <th class="prio-4">Dexterity</th>
-                    <th class="prio-4">Vitality</th>
-                    <th class="prio-4">Special</th>
-                    <th class="prio-4">Insight</th>
-                </tr>
-            </thead>
             <tbody>
-                {% for entry in entries %}
-                <tr>
-                    <td class="prio-1">{{ entry.number }}</td>
-                    <td class="prio-1"><img src="{{ entry.species.box_image }}"/></td>
-                    <td class="prio-1"><a href="{% url "pokedex_entry" pokedex.slug entry.pk %}">{{ entry.species.name }}</a></td>
-                    <td class="prio-2">{{ entry.species.category }}</td>
-                    <td class="prio-2" title="Weaknesses: {{ entry.species.weaknesses }}; Resistances: {{ entry.species.resistances }}"><span class="{{ entry.species.primary_type|lower }} type">{{ entry.species.primary_type|upper }}</span>{% if entry.species.secondary_type %}<span class="{{ entry.species.secondary_type|lower }} type">{{ entry.species.secondary_type|upper }}</span>{% endif %}</td>
-                    <td class="prio-3"><ul class="comma-list">
-                        {% for ability in entry.species.abilities.all %}
-                            <li title="{{ ability.effect }}">{{ ability }}</li>
-                        {% endfor %}
-                    </td></ul>
-                    <td class="prio-4">{{ entry.species.height_m }}/{{ entry.species.height_ft }}</td>
-                    <td class="prio-4">{{ entry.species.weight_kg }}/{{ entry.species.weight_lbs }}</td>
-                    <td class="prio-3"><ul class="comma-list">
-                        {% for evo in entry.species.evolutions.all %}
-                            <li>{{ evo }}</li>
-                        {% endfor %}
-                    </td></ul>
-                    <td class="prio-4">{{ entry.species.base_hp }}</td>
-                    <td class="prio-4">{{ entry.species.base_strength }}/{{ entry.species.max_strength }}</td>
-                    <td class="prio-4">{{ entry.species.base_dexterity }}/{{ entry.species.max_dexterity }}</td>
-                    <td class="prio-4">{{ entry.species.base_vitality }}/{{ entry.species.max_vitality }}</td>
-                    <td class="prio-4">{{ entry.species.base_special }}/{{ entry.species.max_special }}</td>
-                    <td class="prio-4">{{ entry.species.base_insight }}/{{ entry.species.max_insight }}</td>
-                </tr>
-                {% endfor%}
+                {% include "partials/pokedex_elements.html" %}
             </tbody>
         </table>
-
-        <div class="pagination">
-            <span class="step-links">
-                {% if page_obj.has_previous %}
-                    <a href="?page=1">&laquo; First</a>
-                    <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
-                {% endif %}
-        
-                <span class="current">
-                    Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
-                </span>
-        
-                {% if page_obj.has_next %}
-                    <a href="?page={{ page_obj.next_page_number }}">Next</a>
-                    <a href="?page={{ page_obj.paginator.num_pages }}">Last &raquo;</a>
-                {% endif %}
-            </span>
-        </div>
     </div>
-
-    
-
     {% include "partials/pokedex_options.html" %}
-    
-</body>
+{% endblock body %}

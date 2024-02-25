@@ -1,30 +1,30 @@
-{% load static %}
+{% extends "partials/base.html" %}
 {% load utilities %}
-
-{% include "partials/header.html" %}
-
-<head>
+{% load static %}
+{% block body %}
+    <link href="{% static 'widget-table.css' %}" rel="stylesheet">
+    <link href="{% static 'info-card.css' %}" rel="stylesheet">
     <link href="{% static 'species-detail.css' %}" rel="stylesheet">
-</head>
-
-<body>
     <div class="species-detail widget">
-        <h1>#{% if entry %}{{entry.number}}{% else %}{{ pokemon.number }}{% endif %}: {{ pokemon.name }}</h1>
+        <h1>
+            <!-- Turning djlint off to avoid unwanted whitespace-->
+            <!--djlint:off-->#{% if entry %}{{ entry.number }}{% else %}{{ pokemon.number }}{% endif %}: {{ pokemon.name }}<!--djlint:on-->
+        </h1>
         <div class="species-category">{{ pokemon.category }}</div>
         <div class="details-container">
-            <img class="species-image" src="{{ pokemon.book_image }}"/>
+            <img height=""
+                 width=""
+                 alt="Picture of {{ pokemon.name }}"
+                 class="species-image"
+                 src="{{ pokemon.book_image }}" />
             <div class="species-description">
                 {% if entry.description %}
-                "{{ entry.description }}"
+                    "{{ entry.description }}"
                 {% else %}
-                "{{ pokemon.description }}"
+                    "{{ pokemon.description }}"
                 {% endif %}
-                {% if pokemon.good_starter %}
-                    <p class="other-info">Good starter</p>
-                {% endif %}
-                {% if pokemon.legendary %}
-                    <p class="other-info">Legendary</p>
-                {% endif %}
+                {% if pokemon.good_starter %}<p class="other-info">Good starter</p>{% endif %}
+                {% if pokemon.legendary %}<p class="other-info">Legendary</p>{% endif %}
                 <div class="species-height-weight">
                     <span>
                         <div class="header">Height</div>
@@ -37,38 +37,58 @@
                 </div>
             </div>
         </div>
-        
         <div class="info-body">
             <div class="column">
                 <table class="info-table">
                     <tbody>
                         <tr>
                             <td>Type:</td>
-                            <td><span class="{{ pokemon.primary_type|lower }} type">{{ pokemon.primary_type|upper }}</span>{% if pokemon.secondary_type %}<span class="{{ pokemon.secondary_type|lower }} type">{{ pokemon.secondary_type|upper }}</span>{% endif %}</td>
+                            <td>
+                                <span class="{{ pokemon.primary_type|lower }} type">{{ pokemon.primary_type|upper }}</span>
+                                {% if pokemon.secondary_type %}
+                                    <span class="{{ pokemon.secondary_type|lower }} type">{{ pokemon.secondary_type|upper }}</span>
+                                {% endif %}
+                            </td>
                         </tr>
                         <tr>
                             <td>Ability:</td>
-                            <td><ul class="comma-list">
-                                {% for ability in pokemon.abilities.all %}
-                                <li title="{{ ability.effect }}"><a href="{% url "ability" ability.pk %}">{{ ability.name }}</a></li>
-                                {% endfor %}
-                            </ul></td>
+                            <td>
+                                <ul class="comma-list">
+                                    {% for ability in pokemon.abilities.all %}
+                                        <!-- Turning djlint off the avoid unwanted whitespace -->
+                                        <!--djlint:off--><li class="show-info-card"><a href="{% url "ability" ability.pk %}">{{ ability.name }}</a></li><!--djlint:on-->
+                                        <div class="ability info-card"
+                                             hx-get="{% url "ability" ability.pk %}"
+                                             hx-swap="innerHTML"
+                                             hx-trigger="revealed"
+                                             hx-target="this"></div>
+                                    {% endfor %}
+                                </ul>
+                            </td>
                         </tr>
                         {% if pokemon.hidden_ability %}
-                        <tr>
-                            <td>Hidden:</td>
-                            <td title="{{ pokemon.hidden_ability.effect }}"><a href="{% url "ability" pokemon.hidden_ability.pk %}">{{ pokemon.hidden_ability }}</a></td>
-                        </tr>
+                            <tr>
+                                <td>Hidden:</td>
+                                <td>
+                                    <a class="show-info-card"
+                                       href="{% url "ability" pokemon.hidden_ability.pk %}">{{ pokemon.hidden_ability }}</a>
+                                    <div class="ability info-card"
+                                         hx-get="{% url "ability" pokemon.hidden_ability.pk %}"
+                                         hx-swap="innerHTML"
+                                         hx-trigger="revealed"
+                                         hx-target="this"></div>
+                                </td>
+                            </tr>
                         {% endif %}
                         <tr>
                             <td>Rec. rank:</td>
                             <td>{{ pokemon.recommended_rank }}</td>
                         </tr>
                         {% if entry and entry.rarity %}
-                        <tr>
-                            <td>Rarity:</td>
-                            <td>{{ entry.get_rarity_display }}</td>
-                        </tr>
+                            <tr>
+                                <td>Rarity:</td>
+                                <td>{{ entry.get_rarity_display }}</td>
+                            </tr>
                         {% endif %}
                     </tbody>
                 </table>
@@ -76,7 +96,9 @@
                     <tbody>
                         <tr>
                             <td>Base HP</td>
-                            <td><div class="hp-val">{{ pokemon.base_hp }}</div></td>
+                            <td>
+                                <div class="hp-val">{{ pokemon.base_hp }}</div>
+                            </td>
                         </tr>
                         <tr>
                             <td colspan="2">Strength</td>
@@ -111,44 +133,50 @@
                     </tbody>
                 </table>
                 {% if evolutions.exists %}
-                <h2>Evolutions</h2>
-                <ul class="evolutions">
-                    {% for evolution in evolutions.all %}
-                    <li>
-                        <img src="{{ evolution.to_species.box_image }}"/>
-                        <div>
-                            <div>
-                                {% comment %} <a href="{% url "species" evolution.to_species.pk %}"> {% endcomment %}
-                                    {{ evolution.to_species.name }}
-                                {% comment %} </a> {% endcomment %}
-                            </div>
-                            <div class="evolution-details">
-                                <span>{{ evolution.kind }}</span><span>{{ evolution.speed }}</span>
-                            </div>
-                        </div>
-                    </li>
-                    {% endfor %}
-                </ul>
+                    <h2>Evolutions</h2>
+                    <ul class="evolutions">
+                        {% for evolution in evolutions.all %}
+                            <li>
+                                <img height="56px"
+                                     width="68px"
+                                     alt="Sprite of {{ evolution.to_species.name }}"
+                                     src="{{ evolution.to_species.box_image }}" />
+                                <div>
+                                    <div>
+                                        {% comment %} <a href="{% url "species" evolution.to_species.pk %}"> {% endcomment %}
+                                        {{ evolution.to_species.name }}
+                                        {% comment %} </a> {% endcomment %}
+                                    </div>
+                                    <div class="evolution-details">
+                                        <span>{{ evolution.kind }}</span><span>{{ evolution.speed }}</span>
+                                    </div>
+                                </div>
+                            </li>
+                        {% endfor %}
+                    </ul>
                 {% endif %}
                 {% if preevolution.exists %}
-                <h2>Pre-evolution</h2>
-                <ul class="evolutions">
-                    {% for preevolution in preevolution.all %}
-                    <li>
-                        <img src="{{ preevolution.from_species.box_image }}"/>
-                        <div>
-                            <div>
-                                {% comment %} <a href="{% url "species" preevolution.from_species.pk %}"> {% endcomment %}
-                                    {{ preevolution.from_species.name }}
-                                {% comment %} </a> {% endcomment %}
-                            </div>
-                            <div class="evolution-details">
-                                <span>{{ preevolution.kind }}</span><span>{{ preevolution.speed }}</span>
-                            </div>
-                        </div>
-                    </li>
-                    {% endfor %}
-                </ul>
+                    <h2>Pre-evolution</h2>
+                    <ul class="evolutions">
+                        {% for preevolution in preevolution.all %}
+                            <li>
+                                <img height="56px"
+                                     width="68px"
+                                     alt="Sprite of {{ preevolution.from_species.name }}"
+                                     src="{{ preevolution.from_species.box_image }}" />
+                                <div>
+                                    <div>
+                                        {% comment %} <a href="{% url "species" preevolution.from_species.pk %}"> {% endcomment %}
+                                        {{ preevolution.from_species.name }}
+                                        {% comment %} </a> {% endcomment %}
+                                    </div>
+                                    <div class="evolution-details">
+                                        <span>{{ preevolution.kind }}</span><span>{{ preevolution.speed }}</span>
+                                    </div>
+                                </div>
+                            </li>
+                        {% endfor %}
+                    </ul>
                 {% endif %}
             </div>
             <div class="column">
@@ -159,26 +187,30 @@
                             <th>Rank</th>
                         </tr>
                         {% for move in moveset %}
-                        <tr>
-                            <td title="{{ move.move.effect }}"><a href="{{ move.move.get_absolute_url }}">{{ move.move.name }}</a></td>
-                            <td>{{ move.get_learned_display }}</td>
-                        </tr>
+                            <tr>
+                                <td>
+                                    <a class="show-info-card" href="{{ move.move.get_absolute_url }}">{{ move.move.name }}</a>
+                                    <div class="info-card"
+                                         hx-get="{% url "move" move.move.pk %}"
+                                         hx-swap="innerHTML"
+                                         hx-trigger="revealed"
+                                         hx-target="this"></div>
+                                </td>
+                                <td>{{ move.get_learned_display }}</td>
+                            </tr>
                         {% endfor %}
                     </tbody>
                 </table>
                 <div class="links">
-                    <a class="back-link button" href="javascript:history.back()">Back</a>
+                    <a class="back-link button" onclick="javascript:history.back()" href="">Back</a>
                     {% if pokedex %}
-                    <a class="back-link button" href="{% url "pokedex_entries" pokedex.slug %}">Back to {{ pokedex.name }}</a>
+                        <a class="back-link button"
+                           href="{% url "pokedex_entries" pokedex.pk %}">Back to {{ pokedex.name }}</a>
                     {% else %}
-                    <a class="back-link button" href="{% url "all_species" %}">Back to species</a>
+                        <a class="back-link button" href="{% url "all_species" %}">Back to species</a>
                     {% endif %}
                 </div>
             </div>
         </div>
     </div>
-    {% if entry %}
-        {% include "partials/pokedex_entry_options.html" %}
-    {% endif %}
-
-</body>
+{% endblock body %}

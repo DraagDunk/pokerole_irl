@@ -1,19 +1,13 @@
+{% extends "partials/base.html" %}
 
 {% load static %}
 
-{% include "partials/header.html" %}
-
-<body>
-    <div class="big widget">
-        <h1>Pokérole_irl</h1>
-        <p>Welcome to pokerole_irl!</p>
-        <p>For now, this page is still being tested.</p>
-        <p>You can access the current pages from here:</p>
-        <u>
-            <li><a href="{% url "login" %}">Log In</a></li>
-            <li><a href="{% url "user-profile" %}">Profile page</a></li>
-            <li><a href="{% url "all_species" %}">Pokémon species</a></li>
-            <li><a href="{% url "pokedex_list" %}">Pokédex list</a></li>
-        </u>
-    </div>
-</body>
+{% block body %}
+<div class="big widget">
+    <h1>Pokérole_irl</h1>
+    <p>Welcome to pokerole_irl!</p>
+    <p>For now, this page is still being tested.</p>
+    
+    {% lorem 10 p %}
+</div>
+{% endblock body %}

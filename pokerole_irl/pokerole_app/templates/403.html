@@ -1,0 +1,10 @@
+{% extends "partials/base.html" %}
+{% load static %}
+{% block body %}
+    <head>
+        <link href="{% static 'error.css' %}" rel="stylesheet">
+    </head>
+    <div class="status_code">403</div>
+    <div>Permission Denied!</div>
+    <div class="exception">{{ exception }}</div>
+{% endblock body %}

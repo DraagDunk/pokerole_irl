@@ -1,55 +1,15 @@
-body {
-    align-items: center;
-}
-
-.widget {
+.profile {
     text-align: center;
 }
 
-h1,
-h2 {
-    font-variant: small-caps;
-}
-
-.general {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-table {
-    width: fit-content;
+.profile td {
     text-align: left;
 }
 
-td {
-    padding: 0.2rem 1rem;
-}
-
-td input {
-    background-color: rgba(0, 0, 0, 0);
-    border: none;
-    border-bottom: 2px solid var(--color-edges);
-    color: var(--color-text)
-}
-
-.field input:focus-visible {
-    outline: none;
-}
-
-textarea {
-    resize: none;
-    background-color: rgba(0, 0, 0, 0);
-    border-color: var(--color-edges);
-    color: var(--color-text);
-    font-family: monospace;
-    padding: 1rem;
-    max-width: 100%;
-    height: 6rem;
+.profile td:first-of-type {
+    padding-right: 1rem;
 }
 
 .buttons {
     margin-top: 1rem;
-    display: flex;
-    justify-content: space-around;
 }

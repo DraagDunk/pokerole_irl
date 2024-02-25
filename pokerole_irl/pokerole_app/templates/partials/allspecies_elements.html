@@ -1,0 +1,13 @@
+{% for pokemon in species %}
+    <tr {% if forloop.last and page_obj.has_next %} name="load-next-page" hx-get="{% url "all_species" %}?page={{ page_obj.next_page_number }}" hx-trigger="intersect once" hx-swap="afterend" {% endif %}>
+        <td>
+            <img src="https://raw.githubusercontent.com/Willowlark/Pokerole-Data/master/images/BoxSprites/{{ pokemon.image_name }}" />
+        </td>
+        <td hx-get="{% url "species" pokemon.pk %}"
+            hx-swap="outerHTML"
+            hx-target=".content"
+            hx-select=".content"
+            hx-trigger="click from:closest tr"
+            hx-push-url="true">{{ pokemon.name }}</td>
+    </tr>
+{% endfor %}

@@ -1,0 +1,43 @@
+{% extends "partials/base.html" %}
+{% load static %}
+{% block body %}
+    <head>
+        <link href="{% static 'profile.css' %}" rel="stylesheet">
+    </head>
+    <div class="profile widget">
+        <h1>Profile</h1>
+        <table class="info-table">
+            <tbody>
+                <tr>
+                    <td>Username</td>
+                    <td>{{ user.username }}</td>
+                </tr>
+                <tr>
+                    <td>First name</td>
+                    <td>{{ user.first_name }}</td>
+                </tr>
+                <tr>
+                    <td>Last name</td>
+                    <td>{{ user.last_name }}</td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>{{ user.email }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Biography</h2>
+        <div class="bio">{{ profile.bio }}</div>
+        <div class="buttons">
+            {% if owned %}
+                <button type="button"
+                        class="button"
+                        hx-get="{% url "user-profile-edit" profile.pk %}"
+                        hx-swap="outerHTML"
+                        hx-target=".content"
+                        hx-select=".content"
+                        hx-push-url="true">Edit</button>
+            {% endif %}
+        </div>
+    </div>
+{% endblock body %}
