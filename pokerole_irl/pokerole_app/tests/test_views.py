@@ -655,7 +655,7 @@ class PokedexEntryDeleteViewTests(TestCase):
         self.path = reverse_lazy("pokedex_entry_delete", args=[
                                  self.pokedex.pk, self.entry.pk])
 
-    def test_add_entry_own_pokedex_as_regular_user(self):
+    def test_delete_entry_own_pokedex_as_regular_user(self):
         """A regular user should be allowed to delete entries in their own pokedex."""
         # Log In
         user = get_user_model().objects.create(username='test_user')
@@ -670,7 +670,7 @@ class PokedexEntryDeleteViewTests(TestCase):
 
         self.assertEqual(response.status_code, expected_response)
 
-    def test_add_entry_other_users_pokedex_as_regular_user(self):
+    def test_delete_entry_other_users_pokedex_as_regular_user(self):
         """Regular user should not be allowed to delete entries in other users' pokedexes."""
         # Log In
         user = get_user_model().objects.create(username='test_user')
@@ -686,7 +686,7 @@ class PokedexEntryDeleteViewTests(TestCase):
 
         self.assertEqual(response.status_code, expected_response)
 
-    def test_add_entry_public_pokedex_as_regular_user(self):
+    def test_delete_entry_public_pokedex_as_regular_user(self):
         """Regular users should not be allowed to delete entries in public pokedexes."""
         user = get_user_model().objects.create(username='test_user')
         self.client.force_login(user)
@@ -697,7 +697,7 @@ class PokedexEntryDeleteViewTests(TestCase):
 
         self.assertEqual(response.status_code, expected_response)
 
-    def test_add_entry_public_pokedex_as_superuser(self):
+    def test_delete_entry_public_pokedex_as_superuser(self):
         """Superusers should be allowed to delete entries in public pokedexes."""
         user = get_user_model().objects.create(username='test_user')
         user.is_superuser = True
