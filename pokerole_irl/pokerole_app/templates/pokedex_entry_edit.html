@@ -1,9 +1,6 @@
+{% extends "partials/base.html" %}
 {% load static %}
-{% include "partials/header.html" %}
-<head>
-    <link href="{% static 'form.css' %}" rel="stylesheet">
-</head>
-<body>
+{% block body %}
     <div class="widget">
         <h1>New entry</h1>
         <form class="edit_form form"
@@ -53,4 +50,4 @@
             <button class="submit_button button" type="submit" value="Save">Save</button>
         </form>
     </div>
-</body>
+{% endblock %}

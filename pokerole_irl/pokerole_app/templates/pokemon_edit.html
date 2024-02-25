@@ -1,12 +1,7 @@
+{% extends "partials/base.html" %}
+
 {% load static %}
-
-{% include "partials/header.html" %}
-
-<head>
-    <link href="{% static 'form.css' %}" rel="stylesheet">
-</head>
-
-<body>
+{% block body %}
 
     <div class="widget">
         <h1>Edit {{ pokemon.name }}</h1>
@@ -60,5 +55,4 @@
         </form>
 
     </div>
-
-</body>
+{% endblock body %}

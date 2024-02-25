@@ -1,48 +1,60 @@
+{% extends "partials/base.html" %}
 {% load static %}
 {% load utilities %}
-
-{% include "partials/header.html" %}
-
-<head>
-    <link href="{% static 'species-detail.css' %}" rel="stylesheet">
-</head>
-
-<body>
+{% block body %}
     <div class="species-detail widget">
         <h1>{{ pokemon.name }}</h1>
         <div class="details-container">
-            <img class="species-image" src="{{ pokemon.species.book_image }}"/>
+            <img class="species-image" src="{{ pokemon.species.book_image }}" />
             <div class="species-description">
                 <table>
                     <tbody>
                         <tr>
-                            <td><b>Species:</b></td>
-                            <td><a href="{{ pokemon.species.get_absolute_url }}">{{ pokemon.species }}</a></td>
+                            <td>
+                                <b>Species:</b>
+                            </td>
+                            <td>
+                                <a href="{{ pokemon.species.get_absolute_url }}">{{ pokemon.species }}</a>
+                            </td>
                         </tr>
                         <tr>
-                            <td><b>Nature:</b></td>
+                            <td>
+                                <b>Nature:</b>
+                            </td>
                             <td title="{{ nature.description }}">{{ nature }}</td>
                         </tr>
                         <tr>
-                            <td><b>Owner:</b></td>
+                            <td>
+                                <b>Owner:</b>
+                            </td>
                             <td>{{ owner }}</td>
                         </tr>
                         {% if trainer %}
-                        <tr>
-                            <td><b>Trainer:</b></td>
-                            <td><a href="{{ trainer.get_absolute_url }}">{{ trainer }}</a></td>
-                        </tr>
+                            <tr>
+                                <td>
+                                    <b>Trainer:</b>
+                                </td>
+                                <td>
+                                    <a href="{{ trainer.get_absolute_url }}">{{ trainer }}</a>
+                                </td>
+                            </tr>
                         {% endif %}
                         <tr>
-                            <td><b>Rank:</b></td>
+                            <td>
+                                <b>Rank:</b>
+                            </td>
                             <td>{{ pokemon.get_rank_display }}</td>
                         </tr>
                         <tr>
-                            <td><b>Battles:</b></td>
+                            <td>
+                                <b>Battles:</b>
+                            </td>
                             <td>{{ pokemon.battle_count }}</td>
                         </tr>
                         <tr>
-                            <td><b>Victories:</b></td>
+                            <td>
+                                <b>Victories:</b>
+                            </td>
                             <td>{{ pokemon.victory_count }}</td>
                         </tr>
                     </tbody>
@@ -55,21 +67,32 @@
                     <tbody>
                         <tr>
                             <td>Type:</td>
-                            <td><span class="{{ pokemon.species.primary_type|lower }} type">{{ pokemon.species.primary_type|upper }}</span>{% if pokemon.species.secondary_type %}<span class="{{ pokemon.species.secondary_type|lower }} type">{{ pokemon.species.secondary_type|upper }}</span>{% endif %}</td>
+                            <td>
+                                <span class="{{ pokemon.species.primary_type|lower }} type">{{ pokemon.species.primary_type|upper }}</span>
+                                {% if pokemon.species.secondary_type %}
+                                    <span class="{{ pokemon.species.secondary_type|lower }} type">{{ pokemon.species.secondary_type|upper }}</span>
+                                {% endif %}
+                            </td>
                         </tr>
                         <tr>
                             <td>Ability:</td>
-                            <td><ul class="comma-list">
-                                {% for ability in pokemon.species.abilities.all %}
-                                <li title="{{ ability.effect }}"><a href="{% url "ability" ability.pk %}">{{ ability.name }}</a></li>
-                                {% endfor %}
-                            </ul></td>
+                            <td>
+                                <ul class="comma-list">
+                                    {% for ability in pokemon.species.abilities.all %}
+                                        <li title="{{ ability.effect }}">
+                                            <a href="{% url "ability" ability.pk %}">{{ ability.name }}</a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </td>
                         </tr>
                         {% if pokemon.species.hidden_ability %}
-                        <tr>
-                            <td>Hidden:</td>
-                            <td title="{{ pokemon.species.hidden_ability.effect }}"><a href="{% url "ability" pokemon.species.hidden_ability.pk %}">{{ pokemon.species.hidden_ability }}</a></td>
-                        </tr>
+                            <tr>
+                                <td>Hidden:</td>
+                                <td title="{{ pokemon.species.hidden_ability.effect }}">
+                                    <a href="{% url "ability" pokemon.species.hidden_ability.pk %}">{{ pokemon.species.hidden_ability }}</a>
+                                </td>
+                            </tr>
                         {% endif %}
                     </tbody>
                 </table>
@@ -77,35 +100,51 @@
                     <tbody>
                         <tr>
                             <td>HP</td>
-                            <td><div class="hp-val">{{ pokemon.hp }}</div></td>
+                            <td>
+                                <div class="hp-val">{{ pokemon.hp }}</div>
+                            </td>
                         </tr>
                         <tr>
                             <td>Will</td>
-                            <td><div class="hp-val">{{ pokemon.will }}</div></td>
+                            <td>
+                                <div class="hp-val">{{ pokemon.will }}</div>
+                            </td>
                         </tr>
                         <tr>
                             <td>Initiative</td>
-                            <td><div class="hp-val">{{ pokemon.initiative }}</div></td>
+                            <td>
+                                <div class="hp-val">{{ pokemon.initiative }}</div>
+                            </td>
                         </tr>
                         <tr>
                             <td>Physical Clash</td>
-                            <td><div class="hp-val">{{ pokemon.physical_clash }}</div></td>
+                            <td>
+                                <div class="hp-val">{{ pokemon.physical_clash }}</div>
+                            </td>
                         </tr>
                         <tr>
                             <td>Special Clash</td>
-                            <td><div class="hp-val">{{ pokemon.special_clash }}</div></td>
+                            <td>
+                                <div class="hp-val">{{ pokemon.special_clash }}</div>
+                            </td>
                         </tr>
                         <tr>
                             <td>Evasion</td>
-                            <td><div class="hp-val">{{ pokemon.evade }}</div></td>
+                            <td>
+                                <div class="hp-val">{{ pokemon.evade }}</div>
+                            </td>
                         </tr>
                         <tr>
                             <td>Defense</td>
-                            <td><div class="hp-val">{{ pokemon.defense }}</div></td>
+                            <td>
+                                <div class="hp-val">{{ pokemon.defense }}</div>
+                            </td>
                         </tr>
                         <tr>
                             <td>Special Defense</td>
-                            <td><div class="hp-val">{{ pokemon.special_defense }}</div></td>
+                            <td>
+                                <div class="hp-val">{{ pokemon.special_defense }}</div>
+                            </td>
                         </tr>
                         <tr>
                             <td colspan="2">Strength</td>
@@ -257,12 +296,17 @@
             {% for move in moves %}
                 <div class="move">
                     <h2>{{ move.name }}</h2>
-                    <div><i>{{ move.description }}</i></div>
+                    <div>
+                        <i>{{ move.description }}</i>
+                    </div>
                     <table>
                         <tbody>
                             <tr>
                                 <td>Type:</td>
-                                <td><span title="{{ move.effectiveness }}" class="{{ move.move_type|lower }} type">{{ move.move_type|upper }}</span></td>
+                                <td>
+                                    <span title="{{ move.effectiveness }}"
+                                          class="{{ move.move_type|lower }} type">{{ move.move_type|upper }}</span>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Category:</td>
@@ -270,13 +314,21 @@
                             </tr>
                             <tr>
                                 <td>Accuracy:</td>
-                                <td>{% calc_accuracy move pokemon %} ({{ move.primary_accuracy }}{% if move.secondary_accuracy %} + {{ move.secondary_accuracy }}{% endif %})</td>
+                                <td>
+                                    {% calc_accuracy move pokemon %} ({{ move.primary_accuracy }}
+                                    {% if move.secondary_accuracy %}+ {{ move.secondary_accuracy }}{% endif %}
+                                    )
+                                </td>
                             </tr>
                             {% if move.damage_stat %}
-                            <tr>
-                                <td>Damage pool:</td>
-                                <td>{% calc_damage move pokemon %} ({{ move.damage_stat }} + {{ move.power }}{% if move.damage_modifier %} + {{ damage_modifier }}{% endif %})</td>
-                            </tr>
+                                <tr>
+                                    <td>Damage pool:</td>
+                                    <td>
+                                        {% calc_damage move pokemon %} ({{ move.damage_stat }} + {{ move.power }}
+                                        {% if move.damage_modifier %}+ {{ damage_modifier }}{% endif %}
+                                        )
+                                    </td>
+                                </tr>
                             {% endif %}
                             <tr>
                                 <td>Effect:</td>
@@ -288,4 +340,4 @@
             {% endfor %}
         </div>
     </div>
-</body>
+{% endblock %}
