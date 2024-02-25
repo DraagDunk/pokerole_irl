@@ -99,6 +99,8 @@ class PokedexEntryListView(LoginRequiredMixin, NextPageMixin, ListView):
         context["is_owner"] = self.request.user == context["pokedex"].owner
         context["search_field"] = self.request.GET.get("search", "")
         context["types"] = Type.objects.all()
+        context["filtered_types"] = [
+            int(pk) for pk in self.request.GET.getlist("types")]
         return context
 
 

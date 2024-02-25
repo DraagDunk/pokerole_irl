@@ -3,6 +3,7 @@
         <tr name="load-next-page"
             hx-get="{% url "pokedex_entries" pokedex.pk %}?page={{ page_obj.next_page_number }}"
             hx-trigger="intersect once"
+            hx-include="[id='pokedex_filter_form']"
             hx-swap="afterend">
         {% else %}
             <tr>

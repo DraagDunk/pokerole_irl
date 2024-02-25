@@ -11,19 +11,18 @@
         </div>
         <div class="filter_menu menu closed">
             <div class="filters">
-                <form method="get">
+                <form method="get" name="pokedex_filter_form" id="pokedex_filter_form">
                     <input class="search"
                            name="search"
                            id="id_search"
                            type="search"
                            value="{{ search_field }}"
                            placeholder="Search for a pokémon" />
-                    <select class="types"
-                            name="types"
-                            id="id_types"
-                            multiple
-                            value="{{ filtered_types }}">
-                        {% for type in types %}<option value="{{ type.pk }}">{{ type.name }}</option>{% endfor %}
+                    <select class="types" name="types" id="id_types" multiple autocomplete="off">
+                        {% for type in types %}
+                            <option value="{{ type.pk }}"
+                                    {% if type.pk in filtered_types %}selected{% endif %}>{{ type.name }}</option>
+                        {% endfor %}
                     </select>
                     <button type="submit" class="button">Filter</button>
                 </form>

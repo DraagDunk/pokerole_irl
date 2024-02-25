@@ -72,6 +72,10 @@ header .header_menu {
     padding: 1rem 0;
 }
 
+.main_menu .button {
+    border-radius: 0;
+}
+
 .menu .button:hover {
     background-color: var(--color-header-active);
 }
