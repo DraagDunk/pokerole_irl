@@ -30,20 +30,22 @@ ul.comma-list {
     content: ", "
 }
 
-button {
+.button {
     background-color: var(--color-header-bg);
     border: none;
     padding: 0.5rem;
     border-radius: var(--button-corner-radius);
     transition: background-color 0.2s linear;
     cursor: pointer;
+    color: black;
+    text-decoration: none;
 }
 
-button.cancel:hover,
-button:hover {
+.button.cancel:hover,
+.button:hover {
     background-color: var(--color-header-active);
 }
 
-button.cancel {
+.button.cancel {
     background-color: grey;
 }

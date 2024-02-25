@@ -8,7 +8,7 @@
     flex-direction: column;
 }
 
-.filters form button {
+.filters form .button {
     margin: 0.2rem;
 }
 

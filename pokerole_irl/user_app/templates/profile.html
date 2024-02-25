@@ -31,6 +31,7 @@
         <div class="buttons">
             {% if owned %}
                 <button type="button"
+                        class="button"
                         hx-get="{% url "user-profile-edit" profile.pk %}"
                         hx-swap="outerHTML"
                         hx-target=".content"

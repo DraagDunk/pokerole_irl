@@ -44,7 +44,7 @@
 }
 
 .login button,
-.register button {
+.register .button {
     width: 100%;
     font-size: larger;
     margin-top: 1rem;
