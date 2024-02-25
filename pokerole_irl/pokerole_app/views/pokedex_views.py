@@ -165,7 +165,7 @@ class PokedexEntryCreateView(LoginRequiredMixin, CreateView):
 
     def check_dex(self, request, **kwargs):
         self.pokedex = get_object_or_404(
-            Pokedex, slug=kwargs.get('dex_slug'))
+            Pokedex, pk=kwargs.get('dex_pk'))
         if request.user.is_superuser or self.pokedex.owner == request.user:
             return
         else:

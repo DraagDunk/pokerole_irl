@@ -1,34 +1,25 @@
+{% extends "partials/base.html" %}
 {% load static %}
-
-{% include "partials/header.html" %}
-
-<head>
-    <link href="{% static 'form.css' %}" rel="stylesheet">
-</head>
-
-<body>
-
-    <div class="widget">
-        <h1>New Pokédex</h1>
-        <form class="create_form form" method="post" action="{% url 'pokedex_add' %}">
-            {% csrf_token %}
-
-            <div class="field">
-                <label for="id_name">Name</label>
-                {{ form.name }}
-                <div>
-                {% for error in form.name.errors %}
-                    <div class="field_error">
-                        {{ error }}
+{% block body %}
+    <head>
+        <link href="{% static 'form.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <div class="widget">
+            <h1>New Pokédex</h1>
+            <form class="create_form form"
+                  method="post"
+                  action="{% url 'pokedex_add' %}">
+                {% csrf_token %}
+                <div class="field">
+                    <label for="id_name">Name</label>
+                    {{ form.name }}
+                    <div>
+                        {% for error in form.name.errors %}<div class="field_error">{{ error }}</div>{% endfor %}
                     </div>
-                {% endfor %}
                 </div>
-            </div>
-
-            <button class="submit_button button" type="submit" value="Create">Create</button>
-
-        </form>
-
-    </div>
-
-</body>
+                <button class="submit_button button" type="submit" value="Create">Create</button>
+            </form>
+        </div>
+    </body>
+{% endblock body %}
