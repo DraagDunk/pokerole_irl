@@ -9,7 +9,7 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('pokerole_app', '0012_delete_profile'),
+        ('pokerole_app', '0004_delete_profile'),
     ]
 
     operations = [

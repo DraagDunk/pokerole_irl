@@ -10,7 +10,7 @@ class Migration(migrations.Migration):
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
         ('worlds_app', '0003_alter_world_options'),
-        ('pokerole_app', '0016_auto_20230529_1939'),
+        ('pokerole_app', '0008_change_learned_ranks_to_integers'),
     ]
 
     operations = [

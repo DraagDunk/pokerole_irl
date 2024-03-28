@@ -16,7 +16,7 @@ def populate_slugs(apps, schema_editor):
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('pokerole_app', '0017_pokemon'),
+        ('pokerole_app', '0009_pokemon'),
     ]
 
     operations = [

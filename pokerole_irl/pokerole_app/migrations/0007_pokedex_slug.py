@@ -16,7 +16,7 @@ def populate_pokedex_slugs(apps, schema_editor):
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('pokerole_app', '0014_pokedexentry_description_and_rarity_change'),
+        ('pokerole_app', '0006_pokedexentry_description_and_rarity_change'),
     ]
 
     operations = [
