@@ -79,9 +79,13 @@
                             <td>
                                 <ul class="comma-list">
                                     {% for ability in pokemon.species.abilities.all %}
-                                        <li title="{{ ability.effect }}">
-                                            <a href="{% url "ability" ability.pk %}">{{ ability.name }}</a>
-                                        </li>
+                                        <!-- Turning djlint off the avoid unwanted whitespace -->
+                                        <!--djlint:off--><li class="show-info-card"><a href="{% url "ability" ability.pk %}">{{ ability.name }}</a></li><!--djlint:on-->
+                                        <div class="ability info-card"
+                                             hx-get="{% url "ability" ability.pk %}"
+                                             hx-swap="innerHTML"
+                                             hx-trigger="revealed"
+                                             hx-target="this"></div>
                                     {% endfor %}
                                 </ul>
                             </td>
@@ -89,8 +93,14 @@
                         {% if pokemon.species.hidden_ability %}
                             <tr>
                                 <td>Hidden:</td>
-                                <td title="{{ pokemon.species.hidden_ability.effect }}">
-                                    <a href="{% url "ability" pokemon.species.hidden_ability.pk %}">{{ pokemon.species.hidden_ability }}</a>
+                                <td>
+                                    <a class="show-info-card"
+                                       href="{% url "ability" pokemon.species.hidden_ability.pk %}">{{ pokemon.species.hidden_ability }}</a>
+                                    <div class="ability info-card"
+                                         hx-get="{% url "ability" pokemon.species.hidden_ability.pk %}"
+                                         hx-swap="innerHTML"
+                                         hx-trigger="revealed"
+                                         hx-target="this"></div>
                                 </td>
                             </tr>
                         {% endif %}
