@@ -1,5 +1,11 @@
 # Changelog
 
+## 28/3-2024
+
+- Removed populating functions from migrations.
+
+- Added management command to populate database.
+
 ## 20/6-2023
 
 - It is now possible to add moves to a pokémon from the UI.
