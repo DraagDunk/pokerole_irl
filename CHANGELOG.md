@@ -8,6 +8,8 @@
 
 - Add search fields to some models in django admin.
 
+- Drastically reduce the number of SQL queries when viewing a pokedex.
+
 
 ## 20/6-2023
 
