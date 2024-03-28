@@ -6,7 +6,7 @@ def create_types(apps, _):
     types = ('normal', 'bug', 'dark', 'dragon', 'electric', 'fairy', 'fighting', 'fire', 'flying',
              'ghost', 'grass', 'ground', 'ice', 'poison', 'psychic', 'rock', 'steel', 'water')
     for type in types:
-        Type.objects.update_or_create(name=type.capitalize())
+        Type.objects.get_or_create(name=type.capitalize())
 
 
 def add_weaknesses(apps, _):
@@ -90,12 +90,12 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        # migrations.RunPython(
-        #     create_types, reverse_code=migrations.RunPython.noop),
-        # migrations.RunPython(
-        #     add_weaknesses, reverse_code=migrations.RunPython.noop),
-        # migrations.RunPython(
-        #     add_resistances, reverse_code=migrations.RunPython.noop),
-        # migrations.RunPython(
-        #     add_immunities, reverse_code=migrations.RunPython.noop)
+        migrations.RunPython(
+            create_types, reverse_code=migrations.RunPython.noop),
+        migrations.RunPython(
+            add_weaknesses, reverse_code=migrations.RunPython.noop),
+        migrations.RunPython(
+            add_resistances, reverse_code=migrations.RunPython.noop),
+        migrations.RunPython(
+            add_immunities, reverse_code=migrations.RunPython.noop)
     ]
