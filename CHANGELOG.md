@@ -6,6 +6,9 @@
 
 - Added management command to populate database.
 
+- Add search fields to some models in django admin.
+
+
 ## 20/6-2023
 
 - It is now possible to add moves to a pokémon from the UI.
