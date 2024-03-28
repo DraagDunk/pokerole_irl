@@ -15,16 +15,19 @@ from .models.pokemon_models import Pokemon
 @admin.register(Move)
 class MoveAdmin(admin.ModelAdmin):
     list_display = ('__str__', 'move_type', 'damage_type')
+    search_fields = ('name',)
 
 
 @admin.register(Ability)
 class AbilityAdmin(admin.ModelAdmin):
     list_display = ('__str__',)
+    search_fields = ('name',)
 
 
 @admin.register(Pokemon)
 class PokemonAdmin(admin.ModelAdmin):
     list_display = ('__str__', 'rank')
+    search_fields = ('name', 'species__name')
 
     def get_object(self, request, object_id, from_field):
         self.object = super().get_object(request, object_id, from_field)
@@ -41,6 +44,7 @@ class PokemonAdmin(admin.ModelAdmin):
 @admin.register(PokemonSpecies)
 class SpeciesAdmin(admin.ModelAdmin):
     list_display = ('__str__',)
+    search_fields = ('name',)
 
     filter_horizontal = ('abilities',)
 
@@ -76,6 +80,7 @@ class PokedexEntryAdmin(admin.ModelAdmin):
 @admin.register(Pokedex)
 class PokedexAdmin(admin.ModelAdmin):
     list_display = ('__str__', 'owner')
+    search_fields = ('name',)
 
 
 @admin.register(Nature)
@@ -86,13 +91,16 @@ class NatureAdmin(admin.ModelAdmin):
 @admin.register(Item)
 class ItemAdmin(admin.ModelAdmin):
     list_display = ('__str__', 'species', 'suggested_price', 'PMD_price')
+    search_fields = ('name',)
 
 
 @admin.register(Evolution)
 class EvolutionAdmin(admin.ModelAdmin):
     list_display = ('from_species', 'to_species', 'kind', 'speed')
+    search_fields = ('from_species__name', 'to_species__name')
 
 
 @admin.register(MoveSet)
 class MoveSetAdmin(admin.ModelAdmin):
     list_display = ('move', 'species', 'learned')
+    search_fields = ('species__name',)
