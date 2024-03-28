@@ -53,4 +53,5 @@ class PokemonUpdateView(LoginRequiredMixin, UpdateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["species"] = self.object.species
+        context["max_skill"] = min(self.object.rank+1, 5)
         return context

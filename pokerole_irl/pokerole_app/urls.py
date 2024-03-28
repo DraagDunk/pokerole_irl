@@ -33,7 +33,7 @@ urlpatterns = [
     path('abilities/', AbilityListView.as_view(), name="abilities"),
     path('abilities/<int:pk>/', AbilityDetailView.as_view(), name="ability"),
     path('pokemon/add/', PokemonCreateView.as_view(), name="pokemon_add"),
-    path('pokemon/<int:pk>/', PokemonDetailView.as_view(), name="pokemon"),
-    path('pokemon/<int:pk>/edit/',
+    path('pokemon/<slug:slug>/', PokemonDetailView.as_view(), name="pokemon"),
+    path('pokemon/<slug:slug>/edit/',
          PokemonUpdateView.as_view(), name="pokemon_edit"),
 ]

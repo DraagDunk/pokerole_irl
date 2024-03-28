@@ -1,0 +1,11 @@
+<div class="field">
+    <label for="id_{{ field.name }}">{{ field.label|capfirst }}</label>
+    <input type="number"
+           name="{{ field.name }}"
+           min="{{ min }}"
+           max="{{ max }}"
+           required
+           id="id_{{ field.name }}"
+           value="{{ field.value }}">
+    {{ field.errors }}
+</div>

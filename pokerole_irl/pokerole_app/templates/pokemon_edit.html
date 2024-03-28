@@ -1,58 +1,57 @@
 {% extends "partials/base.html" %}
-
 {% load static %}
 {% block body %}
-
     <div class="widget">
         <h1>Edit {{ pokemon.name }}</h1>
-        <form class="edit_form form" method="post" action="{% url 'pokemon_edit' pokemon.slug %}">
+        <form class="edit_form form"
+              method="post"
+              action="{% url 'pokemon_edit' pokemon.slug %}">
             {% csrf_token %}
-
-            {{ form.errors }}
-
+            <h2>General info</h2>
             <div class="field">
                 <label for="id_nickname">Nickname</label>
                 {{ form.nickname }}
+                {{ form.nickname.errors }}
             </div>
-
             <div class="field">
                 <label for="id_rank">Rank</label>
                 {{ form.rank }}
+                {{ form.rank.errors }}
             </div>
-
+            <h2>Attributes</h2>
+            {% include "components/range_value_field.html" with field=form.strength min=pokemon.species.base_strength max=pokemon.species.max_strength %}
+            {% include "components/range_value_field.html" with field=form.dexterity min=pokemon.species.base_dexterity max=pokemon.species.max_dexterity %}
+            {% include "components/range_value_field.html" with field=form.vitality min=pokemon.species.base_vitality max=pokemon.species.max_vitality %}
+            {% include "components/range_value_field.html" with field=form.special min=pokemon.species.base_special max=pokemon.species.max_special %}
+            {% include "components/range_value_field.html" with field=form.insight min=pokemon.species.base_insight max=pokemon.species.max_insight %}
+            <h2>Social attributes</h2>
+            {% include "components/range_value_field.html" with field=form.tough min=1 max=5 %}
+            {% include "components/range_value_field.html" with field=form.cool min=1 max=5 %}
+            {% include "components/range_value_field.html" with field=form.beauty min=1 max=5 %}
+            {% include "components/range_value_field.html" with field=form.cute min=1 max=5 %}
+            {% include "components/range_value_field.html" with field=form.clever min=1 max=5 %}
+            <h2>Skills</h2>
+            <h3>Fight</h3>
+            {% include "components/range_value_field.html" with field=form.brawl min=0 max=max_skill %}
+            {% include "components/range_value_field.html" with field=form.channel min=0 max=max_skill %}
+            {% include "components/range_value_field.html" with field=form.clash min=0 max=max_skill %}
+            {% include "components/range_value_field.html" with field=form.evasion min=0 max=max_skill %}
+            <h3>Survival</h3>
+            {% include "components/range_value_field.html" with field=form.alert min=0 max=max_skill %}
+            {% include "components/range_value_field.html" with field=form.athletic min=0 max=max_skill %}
+            {% include "components/range_value_field.html" with field=form.nature min=0 max=max_skill %}
+            {% include "components/range_value_field.html" with field=form.stealth min=0 max=max_skill %}
+            <h3>Social</h3>
+            {% include "components/range_value_field.html" with field=form.allure min=0 max=max_skill %}
+            {% include "components/range_value_field.html" with field=form.etiquette min=0 max=max_skill %}
+            {% include "components/range_value_field.html" with field=form.intimidate min=0 max=max_skill %}
+            {% include "components/range_value_field.html" with field=form.perform min=0 max=max_skill %}
+            <h2>Moves</h2>
             <div class="field">
-                <label for="id_strength">Strength</label>
-                <input type="number" name="strength" min="{{ species.base_strength }}" max="{{ species.max_strength }}" required id="id_strength" value="{{ pokemon.strength }}">
-            </div>
-
-            <div class="field">
-                <label for="id_dexterity">Dexterity</label>
-                <input type="number" name="dexterity" min="{{ species.base_dexterity }}" max="{{ species.max_dexterity }}" required id="id_dexterity" value="{{ pokemon.dexterity }}">
-            </div>
-
-            <div class="field">
-                <label for="id_vitality">Vitality</label>
-                <input type="number" name="vitality" min="{{ species.base_vitality }}" max="{{ species.max_vitality }}" required id="id_vitality" value="{{ pokemon.vitality }}">
-            </div>
-
-            <div class="field">
-                <label for="id_special">Special</label>
-                <input type="number" name="special" min="{{ species.base_special }}" max="{{ species.max_special }}" required id="id_special" value="{{ pokemon.special }}">
-            </div>
-
-            <div class="field">
-                <label for="id_insight">Insight</label>
-                <input type="number" name="insight" min="{{ species.base_insight }}" max="{{ species.max_insight }}" required id="id_insight" value="{{ pokemon.insight }}">
-            </div>
-
-            <div class="field">
-                <label for="id_moves">Moves</label>
                 {{ form.moves }}
+                {{ form.moves.errors }}
             </div>
-
             <button class="submit_button button" type="submit" value="Create">Save</button>
-
         </form>
-
     </div>
 {% endblock body %}
