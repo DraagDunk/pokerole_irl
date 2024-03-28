@@ -84,7 +84,16 @@ class PokedexEntryListView(LoginRequiredMixin, NextPageMixin, ListView):
     def get_queryset(self):
         queryset = super().get_queryset()
         queryset = queryset.filter(
-            pokedex_id=self.kwargs.get("dex_pk")).order_by("number").prefetch_related("species__primary_type", "species__secondary_type")
+            pokedex_id=self.kwargs.get("dex_pk")).order_by("number"
+                                                           ).prefetch_related(
+            "species__primary_type",
+            "species__secondary_type",
+            "species__primary_type__weaknesses",
+            "species__secondary_type__weaknesses",
+            "species__primary_type__immunities",
+            "species__secondary_type__immunities",
+            "species__primary_type__resistances",
+            "species__secondary_type__resistances")
         if search := self.request.GET.get("search"):
             queryset = queryset.filter(species__name__icontains=search)
         if type_query := self.request.GET.getlist("types"):
