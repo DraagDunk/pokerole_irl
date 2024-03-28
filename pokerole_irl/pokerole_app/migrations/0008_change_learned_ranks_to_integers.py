@@ -17,7 +17,7 @@ def change_learned_ranks_to_integers(apps, schema_editor):
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('pokerole_app', '0015_pokedex_slug'),
+        ('pokerole_app', '0007_pokedex_slug'),
     ]
 
     operations = [

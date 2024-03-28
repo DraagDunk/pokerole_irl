@@ -2,7 +2,12 @@
 
 ## 28/3-2024
 
+- Removed populating functions from migrations.
+
+- Added management command to populate database.
+
 - Add search fields to some models in django admin.
+
 
 ## 20/6-2023
 

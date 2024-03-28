@@ -6,7 +6,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('pokerole_app', '0013_pokedex_owner'),
+        ('pokerole_app', '0005_pokedex_owner'),
     ]
 
     operations = [
