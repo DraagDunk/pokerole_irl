@@ -1,11 +1,29 @@
 <div class="field">
     <label for="id_{{ field.name }}">{{ field.label|capfirst }}</label>
-    <input type="number"
-           name="{{ field.name }}"
-           min="{{ min }}"
-           max="{{ max }}"
-           required
-           id="id_{{ field.name }}"
-           value="{{ field.value }}">
+    <div>
+        <button type="button"
+                class="decrease_value button"
+                onclick="decreaseValue('id_{{ field.name }}')"
+                autocomplete="off"
+                {% if field.value == min %}disabled{% endif %}>
+            <span class="material-symbols-outlined">stat_minus_1</span>
+        </button>
+        <input type="number"
+               class="simple_number"
+               name="{{ field.name }}"
+               min="{{ min }}"
+               max="{{ max }}"
+               required
+               id="id_{{ field.name }}"
+               value="{{ field.value }}"
+               autocomplete="off"
+               readonly>
+        <button type="button"
+                class="increase_value button"
+                onclick="increaseValue('id_{{ field.name }}')"
+                autocomplete="off">
+            <span class="material-symbols-outlined">keyboard_arrow_up</span>
+        </button>
+    </div>
     {{ field.errors }}
 </div>

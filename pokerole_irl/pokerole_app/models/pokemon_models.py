@@ -1,3 +1,5 @@
+from functools import cached_property
+
 from django.db import models
 from django.contrib.auth import get_user_model
 from django.urls import reverse_lazy
@@ -161,3 +163,45 @@ class Pokemon(models.Model):
 
     def get_absolute_url(self):
         return reverse_lazy("pokemon", kwargs={"slug": self.slug})
+
+    def get_spent_attribute_points(self):
+        spent_points = 0
+        for attribute in ("strength", "dexterity", "vitality", "special", "insight"):
+            base = getattr(self.species, "base_" + attribute)
+            spent_points += getattr(self, attribute) - base
+        return spent_points
+
+    def get_spent_social_attribute_points(self):
+        spent_points = 0
+        for attribute in ("tough", "cool", "beauty", "cute", "clever"):
+            spent_points += getattr(self, attribute) - 1
+        return spent_points
+
+    def get_spent_skill_points(self):
+        spent_points = 0
+        for skill in ("brawl", "channel", "clash", "evasion",
+                      "alert", "athletic", "nature", "stealth",
+                      "allure", "etiquette", "intimidate", "perform"):
+            spent_points += getattr(self, skill)
+        return spent_points
+
+    @cached_property
+    def total_attribute_points(self):
+        return min(self.rank * 2, 8)
+
+    @cached_property
+    def total_social_attribute_points(self):
+        return min(self.rank * 2, 8)
+
+    @cached_property
+    def total_skill_points(self):
+        return sum([5-rank for rank in range(min(5, self.rank+1))])
+
+    def get_remaining_attribute_points(self):
+        return self.total_attribute_points - self.get_spent_attribute_points()
+
+    def get_remaining_social_attribute_points(self):
+        return self.total_social_attribute_points - self.get_spent_social_attribute_points()
+
+    def get_remaining_skill_points(self):
+        return self.total_skill_points - self.get_spent_skill_points()

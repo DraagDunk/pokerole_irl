@@ -41,8 +41,13 @@ ul.comma-list {
     text-decoration: none;
 }
 
-.button.cancel:hover,
-.button:hover {
+.button:disabled {
+    background-color: darkgray;
+    cursor: not-allowed;
+}
+
+.button:not(:disabled):hover,
+.button:not(:disabled):hover {
     background-color: var(--color-header-active);
 }
 

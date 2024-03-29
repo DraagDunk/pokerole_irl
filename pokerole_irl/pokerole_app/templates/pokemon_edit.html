@@ -19,33 +19,48 @@
                 {{ form.rank.errors }}
             </div>
             <h2>Attributes</h2>
-            {% include "components/range_value_field.html" with field=form.strength min=pokemon.species.base_strength max=pokemon.species.max_strength %}
-            {% include "components/range_value_field.html" with field=form.dexterity min=pokemon.species.base_dexterity max=pokemon.species.max_dexterity %}
-            {% include "components/range_value_field.html" with field=form.vitality min=pokemon.species.base_vitality max=pokemon.species.max_vitality %}
-            {% include "components/range_value_field.html" with field=form.special min=pokemon.species.base_special max=pokemon.species.max_special %}
-            {% include "components/range_value_field.html" with field=form.insight min=pokemon.species.base_insight max=pokemon.species.max_insight %}
+            <div>
+                <p>
+                    Remaining points: <span class="remaining_points" id="remaining_attribute_points">{{ pokemon.get_remaining_attribute_points }}</span>/<span id="total_attribute_points">{{ pokemon.total_attribute_points }}</span>
+                </p>
+                {% include "components/range_value_field.html" with field=form.strength min=pokemon.species.base_strength max=pokemon.species.max_strength %}
+                {% include "components/range_value_field.html" with field=form.dexterity min=pokemon.species.base_dexterity max=pokemon.species.max_dexterity %}
+                {% include "components/range_value_field.html" with field=form.vitality min=pokemon.species.base_vitality max=pokemon.species.max_vitality %}
+                {% include "components/range_value_field.html" with field=form.special min=pokemon.species.base_special max=pokemon.species.max_special %}
+                {% include "components/range_value_field.html" with field=form.insight min=pokemon.species.base_insight max=pokemon.species.max_insight %}
+            </div>
             <h2>Social attributes</h2>
-            {% include "components/range_value_field.html" with field=form.tough min=1 max=5 %}
-            {% include "components/range_value_field.html" with field=form.cool min=1 max=5 %}
-            {% include "components/range_value_field.html" with field=form.beauty min=1 max=5 %}
-            {% include "components/range_value_field.html" with field=form.cute min=1 max=5 %}
-            {% include "components/range_value_field.html" with field=form.clever min=1 max=5 %}
+            <div>
+                <p>
+                    Remaining points: <span class="remaining_points" id="remaining_social_attribute_points">{{ pokemon.get_remaining_social_attribute_points }}</span>/<span id="total_social_attribute_points">{{ pokemon.total_social_attribute_points }}</span>
+                </p>
+                {% include "components/range_value_field.html" with field=form.tough min=1 max=5 %}
+                {% include "components/range_value_field.html" with field=form.cool min=1 max=5 %}
+                {% include "components/range_value_field.html" with field=form.beauty min=1 max=5 %}
+                {% include "components/range_value_field.html" with field=form.cute min=1 max=5 %}
+                {% include "components/range_value_field.html" with field=form.clever min=1 max=5 %}
+            </div>
             <h2>Skills</h2>
-            <h3>Fight</h3>
-            {% include "components/range_value_field.html" with field=form.brawl min=0 max=max_skill %}
-            {% include "components/range_value_field.html" with field=form.channel min=0 max=max_skill %}
-            {% include "components/range_value_field.html" with field=form.clash min=0 max=max_skill %}
-            {% include "components/range_value_field.html" with field=form.evasion min=0 max=max_skill %}
-            <h3>Survival</h3>
-            {% include "components/range_value_field.html" with field=form.alert min=0 max=max_skill %}
-            {% include "components/range_value_field.html" with field=form.athletic min=0 max=max_skill %}
-            {% include "components/range_value_field.html" with field=form.nature min=0 max=max_skill %}
-            {% include "components/range_value_field.html" with field=form.stealth min=0 max=max_skill %}
-            <h3>Social</h3>
-            {% include "components/range_value_field.html" with field=form.allure min=0 max=max_skill %}
-            {% include "components/range_value_field.html" with field=form.etiquette min=0 max=max_skill %}
-            {% include "components/range_value_field.html" with field=form.intimidate min=0 max=max_skill %}
-            {% include "components/range_value_field.html" with field=form.perform min=0 max=max_skill %}
+            <div>
+                <p>
+                    Remaining points: <span class="remaining_points" id="remaining_skill_points">{{ pokemon.get_remaining_skill_points }}</span>/<span id="total_skill_points">{{ pokemon.total_skill_points }}</span>
+                </p>
+                <h3>Fight</h3>
+                {% include "components/range_value_field.html" with field=form.brawl min=0 max=max_skill %}
+                {% include "components/range_value_field.html" with field=form.channel min=0 max=max_skill %}
+                {% include "components/range_value_field.html" with field=form.clash min=0 max=max_skill %}
+                {% include "components/range_value_field.html" with field=form.evasion min=0 max=max_skill %}
+                <h3>Survival</h3>
+                {% include "components/range_value_field.html" with field=form.alert min=0 max=max_skill %}
+                {% include "components/range_value_field.html" with field=form.athletic min=0 max=max_skill %}
+                {% include "components/range_value_field.html" with field=form.nature min=0 max=max_skill %}
+                {% include "components/range_value_field.html" with field=form.stealth min=0 max=max_skill %}
+                <h3>Social</h3>
+                {% include "components/range_value_field.html" with field=form.allure min=0 max=max_skill %}
+                {% include "components/range_value_field.html" with field=form.etiquette min=0 max=max_skill %}
+                {% include "components/range_value_field.html" with field=form.intimidate min=0 max=max_skill %}
+                {% include "components/range_value_field.html" with field=form.perform min=0 max=max_skill %}
+            </div>
             <h2>Moves</h2>
             <div class="field">
                 {{ form.moves }}
