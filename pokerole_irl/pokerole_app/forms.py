@@ -21,7 +21,7 @@ class PokemonCreateForm(ModelForm):
 class PokemonEditForm(ModelForm):
     class Meta:
         model = Pokemon
-        fields = ("nickname", "rank", "strength", "dexterity",
+        fields = ("nickname", "strength", "dexterity",
                   "vitality", "special", "insight", "moves",
                   "tough", "cool", "beauty", "cute", "clever",
                   "brawl", "channel", "clash", "evasion",

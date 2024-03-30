@@ -2,6 +2,7 @@
 {% load static %}
 {% load utilities %}
 {% block body %}
+    <link href="{% static 'species-detail.css' %}" rel="stylesheet">
     <div class="species-detail widget">
         <h1>{{ pokemon.name }}</h1>
         <div class="details-container">
@@ -156,6 +157,13 @@
                                 <div class="hp-val">{{ pokemon.special_defense }}</div>
                             </td>
                         </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="column">
+                <h2>Attributes</h2>
+                <table class="stat-table">
+                    <tbody>
                         <tr>
                             <td colspan="2">Strength</td>
                         </tr>
@@ -188,6 +196,7 @@
                         </tr>
                     </tbody>
                 </table>
+                <h2>Social attributes</h2>
                 <table class="stat-table">
                     <tbody>
                         <tr>
@@ -224,6 +233,7 @@
                 </table>
             </div>
             <div class="column">
+                <h2>Skills</h2>
                 <table class="stat-table">
                     <tbody>
                         <tr>

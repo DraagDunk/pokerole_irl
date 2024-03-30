@@ -24,3 +24,21 @@ textarea {
     color: var(--color-text);
     font-size: large;
 }
+
+.form-header {
+    text-align: center;
+}
+
+.columns {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.big.button {
+    margin-top: 2rem;
+    width: 100%;
+    line-height: 3rem;
+    font-size: 2rem;
+}

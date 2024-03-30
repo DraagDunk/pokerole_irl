@@ -14,26 +14,36 @@ function randomizeAddPokemon() {
 }
 
 
+function disableAllIncreaseButtons(parent) {
+    let increaseButtons = parent.querySelectorAll(".button.increase_value");
+    increaseButtons.forEach(button => {
+        button.setAttribute("disabled", true);
+    });
+}
+
+
 function increaseValue(id) {
     let numberElement = document.getElementById(id);
     const parent = numberElement.parentElement.parentElement.parentElement;
     let remPoints = parent.getElementsByClassName("remaining_points")[0]
 
     if (numberElement.value < numberElement.max) {
-        remPoints.innerHTML--;
-        numberElement.value++;
+        // Only increase value if there are remaining points
+        if (remPoints.innerHTML > 0) {
+            remPoints.innerHTML--;
+            numberElement.value++;
+        }
 
-        // Disable increase buttons if no more points remain.
+        // Disable increase buttons if no more points remain, or if the value is maxed.
         if (remPoints.innerHTML === "0") {
-            let increaseButtons = parent.querySelectorAll(".button.increase_value");
-            increaseButtons.forEach(button => {
-                button.setAttribute("disabled", true);
-            })
+            disableAllIncreaseButtons(parent);
+        } else if (numberElement.value === numberElement.max) {
+            let increaseButton = numberElement.parentElement.querySelector('.button.increase_value');
+            increaseButton.setAttribute("disabled", true);
         }
 
         // Enable decrease button.
         let decreaseButton = numberElement.parentElement.getElementsByClassName('decrease_value')[0];
-        console.log(decreaseButton)
         decreaseButton.removeAttribute("disabled");
     }
 
@@ -63,6 +73,13 @@ function decreaseValue(id) {
             decreaseButton.setAttribute("disabled", true);
         }
     }
-
-
 }
+
+htmx.onLoad(element => {
+    const remPointsEls = element.querySelectorAll(".remaining_points");
+    remPointsEls.forEach(remPoints => {
+        if (remPoints.innerHTML === "0") {
+            disableAllIncreaseButtons(remPoints.parentElement.parentElement);
+        }
+    });
+})

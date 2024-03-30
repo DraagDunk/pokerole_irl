@@ -1,3 +1,7 @@
+{% load static %}
+<head>
+    <link href="{% static 'inputs.css' %}" rel="stylesheet">
+</head>
 <div class="field">
     <label for="id_{{ field.name }}">{{ field.label|capfirst }}</label>
     <div>
@@ -21,7 +25,8 @@
         <button type="button"
                 class="increase_value button"
                 onclick="increaseValue('id_{{ field.name }}')"
-                autocomplete="off">
+                autocomplete="off"
+                {% if field.value == max %}disabled{% endif %}>
             <span class="material-symbols-outlined">keyboard_arrow_up</span>
         </button>
     </div>
