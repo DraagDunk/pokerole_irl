@@ -1,5 +1,9 @@
 # Changelog
 
+## 30/3-2024
+
+- Added frontend and backend validation for creating Pokémon characters.
+
 ## 28/3-2024
 
 - Removed populating functions from migrations.

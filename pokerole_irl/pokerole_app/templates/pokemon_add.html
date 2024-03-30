@@ -14,19 +14,34 @@
             <div class="field">
                 <label for="id_species">Species</label>
                 {{ form.species }}
+                <button class="button" type="button" onclick="randomizeSelect('id_species')">
+                    <span class="material-symbols-outlined">shuffle</span>
+                </button>
             </div>
             <div class="field">
                 <label for="id_pokemon_nature">Nature</label>
                 {{ form.pokemon_nature }}
+                <button class="button"
+                        type="button"
+                        onclick="randomizeSelect('id_pokemon_nature')">
+                    <span class="material-symbols-outlined">shuffle</span>
+                </button>
             </div>
             <div class="field">
                 <label for="id_trainer">Trainer</label>
                 {{ form.trainer }}
+                <button class="button" type="button" onclick="randomizeSelect('id_trainer')">
+                    <span class="material-symbols-outlined">shuffle</span>
+                </button>
             </div>
             <div class="field">
                 <label for="id_rank">Rank</label>
                 {{ form.rank }}
+                <button class="button" type="button" onclick="randomizeSelect('id_rank')">
+                    <span class="material-symbols-outlined">shuffle</span>
+                </button>
             </div>
+            <button class="button" type="button" onclick="randomizeAddPokemon()">Randomize</button>
             <button class="submit_button button" type="submit" value="Create">Create</button>
         </form>
     </div>

@@ -1,0 +1,15 @@
+input[type=number].simple_number {
+    width: 3rem;
+    border: none;
+    cursor: default;
+    font-size: 2rem;
+    text-align: center;
+
+    /* Remove arrows from field */
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+input[type=number].simple_number:focus {
+    outline: none;
+}

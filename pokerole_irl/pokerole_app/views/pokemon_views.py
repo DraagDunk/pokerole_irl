@@ -1,4 +1,5 @@
 
+from django.http import HttpResponseRedirect
 from django.views.generic import DetailView, CreateView, UpdateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
@@ -53,4 +54,20 @@ class PokemonUpdateView(LoginRequiredMixin, UpdateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["species"] = self.object.species
+        context["max_skill"] = min(self.object.rank+1, 5)
         return context
+
+
+class PokemonRankUpView(LoginRequiredMixin, UpdateView):
+    model = Pokemon
+    fields = ()
+
+    def post(self, request, *args, **kwargs):
+        _ = super().post(request, *args, **kwargs)
+        # Cannot rank further than the highest rank.
+        if self.object.rank < 6:
+            self.object.rank += 1
+            self.object.save()
+        redirect_url = reverse_lazy(
+            'pokemon', kwargs={"slug": self.object.slug})
+        return HttpResponseRedirect(redirect_url)

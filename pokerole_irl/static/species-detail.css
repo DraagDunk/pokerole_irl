@@ -30,13 +30,15 @@
 
 .details-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: space-around;
 }
 
 .details-container img {
     max-height: 200px;
-    max-width: 50%;
+    max-width: 200px;
     border: 2px solid var(--color-edges);
     background-color: var(--color-secondary);
     padding: 10px;
@@ -45,6 +47,12 @@
 
 .species-category {
     font-style: italic;
+}
+
+.info-body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .info-body .column {
@@ -135,29 +143,25 @@
     align-items: center;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 800px) {
     .content {
         display: flex;
         justify-content: center;
     }
 
+    .species-description {
+        max-width: 50%;
+    }
+
     .species-detail {
-        width: 500px;
+        width: 800px;
     }
 
     .species-category {
         text-align: left;
     }
 
-    .details-container {
-        flex-direction: row;
-    }
-
     .info-body {
-        display: flex;
-    }
-
-    .info-body .column {
-        width: 50%;
+        justify-content: space-between;
     }
 }
