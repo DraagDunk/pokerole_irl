@@ -144,17 +144,9 @@
 }
 
 @media (min-width: 800px) {
-    .content {
-        display: flex;
-        justify-content: center;
-    }
 
     .species-description {
         max-width: 50%;
-    }
-
-    .species-detail {
-        width: 800px;
     }
 
     .species-category {

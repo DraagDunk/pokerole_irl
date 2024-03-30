@@ -1,0 +1,9 @@
+{% if object_list %}
+    {% for obj in object_list %}
+        <div>
+            <a href="{{ obj.get_absolute_url }}">{{ obj }}</a>
+        </div>
+    {% endfor %}
+{% else %}
+    Nothing ...
+{% endif %}

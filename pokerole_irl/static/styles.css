@@ -30,6 +30,22 @@ ul.comma-list {
     content: ", "
 }
 
+.columns {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.columns .column {
+    min-width: 260px;
+}
+
+.scrollable {
+    height: 15rem;
+    overflow-y: scroll;
+}
+
 .button {
     background-color: var(--color-header-bg);
     border: none;

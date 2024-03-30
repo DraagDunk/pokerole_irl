@@ -29,13 +29,6 @@ textarea {
     text-align: center;
 }
 
-.columns {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
 .big.button {
     margin-top: 2rem;
     width: 100%;

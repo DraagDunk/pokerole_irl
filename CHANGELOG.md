@@ -4,6 +4,8 @@
 
 - Added frontend and backend validation for creating Pokémon characters.
 
+- Added info about pokemon, characters, and worlds on profile page.
+
 ## 28/3-2024
 
 - Removed populating functions from migrations.
