@@ -1,0 +1,15 @@
+.big.widget {
+    width: 100%;
+}
+
+@media (min-width: 800px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .big.widget {
+        width: 800px;
+    }
+}

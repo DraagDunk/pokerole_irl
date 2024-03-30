@@ -1,12 +1,9 @@
-from typing import Any, Dict
+from django.contrib.auth import get_user_model
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import get_object_or_404
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, ListView, DetailView
-from django.core.exceptions import PermissionDenied
 from .models import World, Character, WorldMember
-
-# Create your views here.
 
 
 class WorldListView(LoginRequiredMixin, ListView):
@@ -101,3 +98,24 @@ class CharacterCreateView(LoginRequiredMixin, CreateView):
         allowed_worlds = World.objects.filter(members=request.user)
         self.world = get_object_or_404(
             allowed_worlds, slug=kwargs.get("world_slug"))
+
+
+class UserCharacterListView(LoginRequiredMixin, ListView):
+    model = Character
+
+    template_name = "simple_list_template.html"
+
+    def get_queryset(self):
+        qs = super().get_queryset()
+        qs = qs.filter(owner_id=self.kwargs.get("pk"))
+        return qs
+
+
+class UserWorldListView(WorldListView):
+    template_name = "simple_list_template.html"
+
+    def get_queryset(self):
+        qs = super().get_queryset()
+        user = get_user_model().objects.get(pk=self.kwargs.get("pk"))
+        qs = qs.filter(members=user)
+        return qs

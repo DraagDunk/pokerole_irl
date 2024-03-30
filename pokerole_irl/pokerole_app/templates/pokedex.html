@@ -4,7 +4,7 @@
     <head>
         <link href="{% static 'widget-table.css' %}" rel="stylesheet">
     </head>
-    <div class="pokedex full widget">
+    <div class="pokedex big widget">
         <h1 {% if pokedex.owner %}title="Owned by {{ pokedex.owner }}"{% endif %}>{{ pokedex.name }}</h1>
         <table class="species-table">
             <tbody>

@@ -17,6 +17,9 @@ class World(models.Model):
     def __str__(self):
         return self.name
 
+    def get_absolute_url(self):
+        return reverse_lazy("world", kwargs={"slug": self.slug})
+
     def save(self, **kwargs):
         self.slug = slugify(self.name)
         super().save(**kwargs)

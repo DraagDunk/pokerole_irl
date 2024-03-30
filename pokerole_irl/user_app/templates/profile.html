@@ -6,38 +6,80 @@
     </head>
     <div class="profile widget">
         <h1>Profile</h1>
-        <table class="info-table">
-            <tbody>
-                <tr>
-                    <td>Username</td>
-                    <td>{{ user.username }}</td>
-                </tr>
-                <tr>
-                    <td>First name</td>
-                    <td>{{ user.first_name }}</td>
-                </tr>
-                <tr>
-                    <td>Last name</td>
-                    <td>{{ user.last_name }}</td>
-                </tr>
-                <tr>
-                    <td>Email</td>
-                    <td>{{ user.email }}</td>
-                </tr>
-            </tbody>
-        </table>
-        <h2>Biography</h2>
-        <div class="bio">{{ profile.bio }}</div>
-        <div class="buttons">
-            {% if owned %}
-                <button type="button"
-                        class="button"
-                        hx-get="{% url "user-profile-edit" profile.pk %}"
+        <div class="columns">
+            <div class="column">
+                <h2>General info</h2>
+                <table class="info-table">
+                    <tbody>
+                        <tr>
+                            <td>Username</td>
+                            <td>{{ user.username }}</td>
+                        </tr>
+                        <tr>
+                            <td>First name</td>
+                            <td>{{ user.first_name }}</td>
+                        </tr>
+                        <tr>
+                            <td>Last name</td>
+                            <td>{{ user.last_name }}</td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td>{{ user.email }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="column">
+                <h2>Biography</h2>
+                <div class="bio">{{ profile.bio }}</div>
+                <div class="buttons">
+                    {% if owned %}
+                        <button type="button"
+                                class="button"
+                                hx-get="{% url "user-profile-edit" profile.pk %}"
+                                hx-swap="outerHTML"
+                                hx-target=".content"
+                                hx-select=".content"
+                                hx-push-url="true">Edit</button>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="column">
+                <h2>Worlds</h2>
+                <div class="scrollable"
+                     hx-get="{% url "user-worlds" user.pk %}"
+                     hx-target="this"
+                     hx-swap="innerHTML"
+                     hx-trigger="revealed">Loading worlds ...</div>
+                <button class="button"
+                        hx-get="{% url "world-create" %}"
                         hx-swap="outerHTML"
                         hx-target=".content"
-                        hx-select=".content"
-                        hx-push-url="true">Edit</button>
-            {% endif %}
+                        hx-select=".content">Add</button>
+            </div>
+            <div class="column">
+                <h2>Characters</h2>
+                <div class="scrollable"
+                     hx-get="{% url "user-characters" user.pk %}"
+                     hx-target="this"
+                     hx-swap="innerHTML"
+                     hx-trigger="revealed">Loading characters ...</div>
+                <button class="button" disabled>Add</button>
+            </div>
+            <div class="column">
+                <h2>Pokémon</h2>
+                <div class="scrollable"
+                     hx-get="{% url "user-pokemon" user.pk %}"
+                     hx-target="this"
+                     hx-swap="innerHTML"
+                     hx-trigger="revealed">Loading pokémon ...</div>
+                <button class="button"
+                        hx-get="{% url "pokemon_add" %}"
+                        hx-swap="outerHTML"
+                        hx-target=".content"
+                        hx-select=".content">Add</button>
+            </div>
         </div>
     </div>
 {% endblock body %}

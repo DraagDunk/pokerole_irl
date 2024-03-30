@@ -1,6 +1,6 @@
 
 from django.http import HttpResponseRedirect
-from django.views.generic import DetailView, CreateView, UpdateView
+from django.views.generic import DetailView, CreateView, UpdateView, ListView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
 
@@ -71,3 +71,13 @@ class PokemonRankUpView(LoginRequiredMixin, UpdateView):
         redirect_url = reverse_lazy(
             'pokemon', kwargs={"slug": self.object.slug})
         return HttpResponseRedirect(redirect_url)
+
+
+class UserPokemonListView(LoginRequiredMixin, ListView):
+    model = Pokemon
+    template_name = "simple_list_template.html"
+
+    def get_queryset(self):
+        qs = super().get_queryset()
+        qs = qs.filter(owner_id=self.kwargs.get("pk"))
+        return qs
