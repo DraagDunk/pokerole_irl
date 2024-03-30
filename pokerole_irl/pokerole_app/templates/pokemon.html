@@ -44,7 +44,15 @@
                             <td>
                                 <b>Rank:</b>
                             </td>
-                            <td>{{ pokemon.get_rank_display }}</td>
+                            <td>
+                                {{ pokemon.get_rank_display }} {% if pokemon.rank < 6 %}<a class="button"
+    name="rank_up"
+    hx-post="{% url "pokemon_rankup" pokemon.slug %}"
+    hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'
+    hx-target=".content"
+    hx-select=".content"
+    hx-swap="innerHTML">Rank up</a>{% endif %}
+                            </td>
                         </tr>
                         <tr>
                             <td>

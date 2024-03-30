@@ -61,7 +61,7 @@ class PokemonEditForm(ModelForm):
         return added_points
 
     def clean(self) -> dict[str, Any]:
-        allowed_points = min(8, int(self.cleaned_data['rank']) * 2)
+        allowed_points = min(8, int(self.instance.rank) * 2)
         added_points = self._calculate_added_attribute_points()
         if added_points > allowed_points:
             for field in ("strength", "dexterity", "vitality", "special", "insight"):
@@ -75,8 +75,7 @@ class PokemonEditForm(ModelForm):
                     field, f"You added {added_social_points}, you are only allowed to add {allowed_points} at this rank!")
 
         added_skill_points = self._calculate_added_skill_points()
-        allowed_skill_points = sum(
-            [5-rank for rank in range(min(5, self.cleaned_data['rank']+1))])
+        allowed_skill_points = self.instance.total_skill_points
         if added_skill_points > allowed_skill_points:
             for field in ("brawl", "channel", "clash", "evasion", "alert", "athletic", "nature", "stealth", "allure", "etiquette", "intimidate", "perform"):
                 if self.cleaned_data[field] > 0:

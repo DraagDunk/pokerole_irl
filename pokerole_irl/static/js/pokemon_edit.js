@@ -27,9 +27,9 @@ function increaseValue(id) {
     const parent = numberElement.parentElement.parentElement.parentElement;
     let remPoints = parent.getElementsByClassName("remaining_points")[0]
 
-    if (numberElement.value < numberElement.max) {
+    if (parseInt(numberElement.value) < parseInt(numberElement.max)) {
         // Only increase value if there are remaining points
-        if (remPoints.innerHTML > 0) {
+        if (parseInt(remPoints.innerHTML) > 0) {
             remPoints.innerHTML--;
             numberElement.value++;
         }
