@@ -1,9 +1,23 @@
 services:
   web:
-    build: ./app
+    build: .
+    container_name: pokerole_app
     command: gunicorn pokerole_irl.pokerole_irl.wsgi:application --bind 0.0.0.0:8000
     ports:
       - 8000:8000
+    environment:
+      DJANGO_SECRET_KEY: ${DJANGO_SECRET_KEY}
+      DEBUG: ${DEBUG}
+      DEVELOPMENT_MODE: ${DEVELOPMENT_MODE}
+      DJANGO_LOGLEVEL: ${DJANGO_LOGLEVEL}
+      DJANGO_ALLOWED_HOSTS: ${DJANGO_ALLOWED_HOSTS}
+      DATABASE_ENGINE: ${DATABASE_ENGINE}
+      DATABASE_NAME: ${DATABASE_NAME}
+      DATABASE_USERNAME: ${DATABASE_USERNAME}
+
+      DATABASE_PASSWORD: ${DATABASE_PASSWORD}
+      DATABASE_HOST: ${DATABASE_HOST}
+      DATABASE_PORT: ${DATABASE_PORT}
     env_file:
       - ./.env.prod
     depends_on:
