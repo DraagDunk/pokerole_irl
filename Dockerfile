@@ -27,6 +27,3 @@ COPY . /app/
  
 # Expose the Django port
 EXPOSE 8000
- 
-# Run Django’s development server
-CMD ["python", "pokerole_irl/manage.py", "runserver", "0.0.0.0:8000"]
