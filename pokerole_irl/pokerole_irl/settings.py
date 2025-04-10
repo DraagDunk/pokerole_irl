@@ -45,9 +45,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'debug_toolbar',
-    'pokerole_app',
-    'user_app',
-    'worlds_app'
+    'pokerole_irl.pokerole_app',
+    'pokerole_irl.user_app',
+    'pokerole_irl.worlds_app'
 ]
 
 MIDDLEWARE = [
